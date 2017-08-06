@@ -1,0 +1,26 @@
+{% assign postsByYearMonth = site.posts | group_by_exp:"post", "post.date | date: '%Y %b'"  %}
+
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    {% for yearMonth in postsByYearMonth %}
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{ yearMonth.name | replace:' ','' }}" aria-expanded="true" aria-controls="collapseOne" style="display: block">
+          {{ yearMonth.name }}
+        </a>
+      </h4>
+    </div>
+    <div id="{{ yearMonth.name | replace:' ',''}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <ul>
+            {% for post in yearMonth.items %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+     {% endfor %}
+  
+</div>

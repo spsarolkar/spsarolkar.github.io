@@ -1,14 +1,37 @@
+<div class="container-fixed">
+    <div class="footer navbar navbar-inverse navbar-bottom" style="border-radius: 0 !important;" role="navigation">
+      <div class="container">
+    		<div class="navbar-text pull-left">
+    			<p>© 2017 Sunil Sarolkar</p>
+    		</div>
+    	</div>
+      </div>
+      </div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+<!--#####Older content
+
+
 <footer class="site-footer">
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
+    <h2 class="footer-heading">{{ site.title | escape }}</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li>
+            {% if site.author %}
+              {{ site.author | escape }}
+            {% else %}
+              {{ site.title | escape }}
+            {% endif %}
+            </li>
+            {% if site.email %}
+            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+            {% endif %}
         </ul>
       </div>
 
@@ -29,10 +52,10 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
+        <p>{{ site.description | escape }}</p>
       </div>
     </div>
 
   </div>
 
-</footer>
+</footer>-->

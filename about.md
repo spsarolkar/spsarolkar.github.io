@@ -1,15 +1,11 @@
 ---
-layout: page
+layout: aboutSOInfill
 title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+I am a software developer working mainly in Java related technologies but I keep exploring different avenues in technical world. I have 7 years of experience in Software development and currently working with Deutsche Bank as Software Developer. I have developed applications in Java, J2EE, Struts2, Hibernate and Spring.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+I keep improving myself as I learn new things. This website designed by me using Jekyll static page generator and am working on adding comment feature in it.
+

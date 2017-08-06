@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+
+    <div class="container-fluid text-center">
+        <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+         {% include tags-cloud.html %}
+         {{ content }}
+        </div>
+    </div>
