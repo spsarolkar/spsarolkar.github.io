@@ -34,10 +34,17 @@ plugins:
 
 kramdown:
   input: GFM
-  # https://github.com/jekyll/jekyll/pull/4090
-  syntax_highlighter: rouge
+  syntax_highlighter: redcarpet
+  syntax_highlighter_opts:
+      css_class: 'highlight'
+      span:
+        line_numbers: false
+      block:
+        line_numbers: true
 
 
+redcarpet:
+    extensions: ["fenced_code_blocks","no_intra_emphasis", "tables", "autolink", "strikethrough", "with_toc_data"]
 
 
 # Exclude from processing.
