@@ -9,7 +9,7 @@ Recently while working with Findbugs plugin for Eclipse I discovered that Findbu
 Below is the sample code in which Findbugs fails to detect resource leak
 
 
-```javascript
+``` javascript
 var vm=this;
 ```
 
@@ -21,7 +21,7 @@ puts markdown.to_html
 
 ~~This is striked~~
 
-{% highlight java linenos%}
+``` java
 public class TestConn {
  // JDBC driver name and database URL
  static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
@@ -89,13 +89,13 @@ public class TestConn {
   return DriverManager.getConnection(DB_URL, USER, PASS);
  }
 }
-{% endhighlight %}
+```
 
 As you might already recognized the leak situation where connection object initialized at line 23.
 
-{% highlight java linenos%}
+``` java
 conn = getConn();//<===Findbugs fails to detect connection leak
-{% endhighlight %}
+``` 
 
 The solution for the problem is not that straightforward and separate plugin was required to recognize the resource leak situations. This new plugin would act as add on for Findbugs to detect leak in this specific scenario. 
 
