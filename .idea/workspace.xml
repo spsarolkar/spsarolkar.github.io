@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1ad5f97-2b15-40e4-8767-faea7e31f016" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/_layouts/post.html" afterPath="$PROJECT_DIR$/_layouts/post.html" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
-      <change beforePath="$PROJECT_DIR$/_site/findbugs/issue/with/detecting/resource/leaks/2014/03/09/Findbugs-issue-with-detecting-resource-leaks.html" afterPath="$PROJECT_DIR$/_site/findbugs/issue/with/detecting/resource/leaks/2014/03/09/Findbugs-issue-with-detecting-resource-leaks.html" />
-      <change beforePath="$PROJECT_DIR$/_site/struts/13/backword/compatibility/2016/10/11/CompilingESP8266-examples.html" afterPath="$PROJECT_DIR$/_site/struts/13/backword/compatibility/2016/10/11/CompilingESP8266-examples.html" />
-      <change beforePath="$PROJECT_DIR$/_site/struts/13/backword/compatibility/2016/10/11/Struts2-backward-compatibility-issue.html" afterPath="$PROJECT_DIR$/_site/struts/13/backword/compatibility/2016/10/11/Struts2-backward-compatibility-issue.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,8 +27,8 @@
       <file leaf-file-name="post.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_layouts/post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" column="69" lean-forward="false" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="69" />
+            <state relative-caret-position="660">
+              <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -676,8 +672,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="69" lean-forward="false" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="69" />
+        <state relative-caret-position="660">
+          <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
           <folding />
         </state>
       </provider>
