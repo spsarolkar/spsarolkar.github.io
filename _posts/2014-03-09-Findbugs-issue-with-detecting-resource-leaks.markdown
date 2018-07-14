@@ -9,18 +9,6 @@ Recently while working with Findbugs plugin for Eclipse I discovered that Findbu
 Below is the sample code in which Findbugs fails to detect resource leak
 
 
-``` javascript
-var vm=this;
-```
-
-``` ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
-
-~~This is striked~~
-
 ``` java
 public class TestConn {
  // JDBC driver name and database URL
