@@ -2,43 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1ad5f97-2b15-40e4-8767-faea7e31f016" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/_posts/2018-03-2018-Blinking-Blue-LED-of-Death-ESP8266.markdown" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/_posts/2018-03-2018-homeassistant-mqtt-discovery.markdown" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/_posts/2018-04-22-CompilingESP8266-examples.markdown" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change beforePath="$PROJECT_DIR$/_includes/footer.html" afterPath="$PROJECT_DIR$/_includes/footer.html" />
-      <change beforePath="$PROJECT_DIR$/_includes/head.html" afterPath="$PROJECT_DIR$/_includes/head.html" />
-      <change beforePath="$PROJECT_DIR$/_includes/header.html" afterPath="$PROJECT_DIR$/_includes/header.html" />
-      <change beforePath="$PROJECT_DIR$/_layouts/aboutSOInfill.html" afterPath="$PROJECT_DIR$/_layouts/aboutSOInfill.html" />
-      <change beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
-      <change beforePath="$PROJECT_DIR$/_layouts/home.html" afterPath="$PROJECT_DIR$/_layouts/home.html" />
       <change beforePath="$PROJECT_DIR$/_layouts/post.html" afterPath="$PROJECT_DIR$/_layouts/post.html" />
-      <change beforePath="$PROJECT_DIR$/_posts/2014-03-09-Findbugs-issue-with-detecting-resource-leaks.markdown" afterPath="$PROJECT_DIR$/_posts/2014-03-09-Findbugs-issue-with-detecting-resource-leaks.markdown" />
-      <change beforePath="$PROJECT_DIR$/_site/about/index.html" afterPath="$PROJECT_DIR$/_site/about/index.html" />
-      <change beforePath="$PROJECT_DIR$/_site/css/main.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
-      <change beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change beforePath="$PROJECT_DIR$/_site/jekyll/update/2017/04/03/welcome-to-jekyll.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/_site/js/html5shiv.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/_site/js/respond.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap-theme.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap-theme.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap-theme.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap-theme.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap-treeview.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/css/bootstrap.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/css/heighlight.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/css/main.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/js/bootstrap-treeview.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/js/bootstrap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/js/html5shiv.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/js/npm.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/js/respond.js" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,11 +23,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="post.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_layouts/post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="13" column="62" lean-forward="false" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="62" />
+            <state relative-caret-position="197">
+              <caret line="13" column="107" lean-forward="false" selection-start-line="13" selection-start-column="107" selection-end-line="13" selection-end-column="107" />
               <folding />
             </state>
           </provider>
@@ -142,7 +106,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="staticman.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="staticman.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/staticman.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="320">
@@ -215,6 +179,21 @@
             <path>
               <item name="spsarolkar.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="spsarolkar.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spsarolkar.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spsarolkar.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spsarolkar.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spsarolkar.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spsarolkar.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spsarolkar.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_posts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -682,18 +661,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="62" lean-forward="false" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/staticman.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="13" column="107" lean-forward="false" selection-start-line="13" selection-start-column="107" selection-end-line="13" selection-end-column="107" />
           <folding />
         </state>
       </provider>
