@@ -11,8 +11,12 @@ layout: default
     <p>{{ content }}</p>
     <p class="border-top border-primary">
     <h3 class="text-primary">Add Comment</h3>
-      <form method="POST" action="https://api.staticman.net/v2/entry/spsarolkar/spsarolkar.github.io/master/comments">
-    <div class="form-group">
+      <form method="POST"  action="https://api.staticman.net/v2/entry/spsarolkar/spsarolkar.github.io/master/comments">
+
+        <input name="options[redirect]" type="hidden" value="{{ page.url }}">
+        <!-- e.g. "2016-01-02-this-is-a-post" -->
+        <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+        <div class="form-group">
       <label for="inputEmail">Email address</label>
       <input type="email" name="fields[email]" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" />
       <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
