@@ -39,6 +39,11 @@
 *::after {
   box-sizing: border-box; }
 
+.loading-animation:before {
+    display:block;
+    background-image: url("images/Blocks-1s-200px.gif");
+}
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
