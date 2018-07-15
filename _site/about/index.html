@@ -18,6 +18,7 @@
           src="https://code.jquery.com/jquery-3.3.1.min.js"
           integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
           crossorigin="anonymous"></script>
+  <script src="/js/effects.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
   
 </head>
@@ -57,62 +58,12 @@
             <img src="/images/image1.png" />
 <h3>Sunil Sarolkar</h3>
 <h4><i>Loves developing softwares</i></h4>
-<div id="sotags">
+<div class="text-sm-center content-align-center">
+<div id="sotags" class="dynamic">
 
 </div>
+</div>
 
-<script type="application/javascript">
-    
-var tags=new Array();
-    
-$( document ).ready(function() {
-$.ajax({url: "https://api.stackexchange.com/2.2/users/138604/top-answer-tags?site=stackoverflow", success: function(result){
-        var tagsFroSO=eval(result);
-
-    
-      for(var i=0;i<tagsFroSO.items.length;i++){
-          var strTag=new String(tagsFroSO.items[i].tag_name); 
-          
-          var matched=strTag.match(/^javascript$|^java$|^xml$|^json$|^jquery$|^java-ee$|^jsp$|^php$|^vim$|^python$|^c$|^c\+\+$/i);
-          if(matched != null) {
-               
-           
-          tags.push(matched);
-          //$('#sotags').html="test";
-          //$('#sotags').append=" appended";
-         $('#sotags').append('<a href="https://stackoverflow.com/search?tab=votes&q=user%3a138604%20%5b'+matched+'%5d" tabindex="0" class="btn btn-sm btn btn-default btn-square" role="button" data-toggle="popover" data-trigger="focus" title="Please visit below link for my Stack Overflow contribution for '+matched+'" data-content="">'+matched+'</a>');
-            
-        }
-      }
-    var options = {
-    placement: function (context, source) {
-        var position = $(source).position();
-
-        if (position.left > 515) {
-            return "left";
-        }
-
-        if (position.left < 515) {
-            return "right";
-        }
-
-        if (position.top < 110){
-            return "bottom";
-        }
-
-        return "top";
-    }
-    , trigger: "focus"
-};
-      
- //   $("[data-toggle=popover]").popover(options);
-    }});
-     
-});
-    
-   
-
-</script>
             <p>I am a software developer working mainly in Java related technologies but I keep exploring different avenues in technical world. I have 7 years of experience in Software development and currently working with Deutsche Bank as Software Developer. I have developed applications in Java, J2EE, Struts2, Hibernate and Spring.</p>
 
 <p>I keep improving myself as I learn new things. This website designed by me using Jekyll static page generator and am working on adding comment feature in it.</p>

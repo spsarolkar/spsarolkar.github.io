@@ -18,6 +18,7 @@
           src="https://code.jquery.com/jquery-3.3.1.min.js"
           integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
           crossorigin="anonymous"></script>
+  <script src="/js/effects.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
   
 </head>
@@ -64,13 +65,17 @@
 
 <p>sudo env “PATH=$PATH” esptool.py –port /dev/ttyUSB0 –baud 921600 write_flash 0x00000 ../../ESP8266_NONOS_SDK/bin/eagle.flash.bin 0x10000 ../../ESP8266_NONOS_SDK/bin/eagle.irom0text.bin 0x3FB000 ../../ESP8266_NONOS_SDK/bin/blank.bin 0x3FC000 ../../ESP8266_NONOS_SDK/bin/esp_init_data_default_v08.bin 0x3FE000 ../../ESP8266_NONOS_SDK/bin/blank.bi</p>
 </p>
+
+      
+
+    </p>
     <p class="border-top border-primary">
     <h3 class="text-primary">Add Comment</h3>
       <form method="POST"  action="https://api.staticman.net/v2/entry/spsarolkar/spsarolkar.github.io/master/comments">
 
-        <input name="options[redirect]" type="hidden" value="/struts/13/backword/compatibility/2016/10/11/CompilingESP8266-examples.html">
+        <input name="options[redirect]" type="hidden" value="http://localhost:4000/struts/13/backword/compatibility/2016/10/11/CompilingESP8266-examples.html" />
         <!-- e.g. "2016-01-02-this-is-a-post" -->
-        <input name="options[slug]" type="hidden" value="CompilingESP8266-examples">
+        <input name="options[slug]" type="hidden" value="CompilingESP8266-examples" />
         <div class="form-group">
       <label for="inputEmail">Email address</label>
       <input type="email" name="fields[email]" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" />
@@ -91,6 +96,7 @@
 
       </form>
     </p>
+
   </div>
   <div class="col-sm-1"></div>
 </div>
