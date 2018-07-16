@@ -49,6 +49,11 @@ kramdown:
 redcarpet:
     extensions: ["fenced_code_blocks","no_intra_emphasis", "tables", "autolink", "strikethrough", "with_toc_data"]
 
+repository  : spsarolkar/spsarolkar.github.io
+comments:
+  provider  : "staticman_v2"
+staticman:
+  branch    : "master"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
