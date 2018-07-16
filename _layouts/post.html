@@ -3,61 +3,28 @@ layout: default
 ---
 
 <div class="row mt-4">
-  <div class="col-sm-1"></div>
-  <div class="col-sm-10">
-    <h3>{{ page.title | escape }}</h3>
-    <p class="lead">Posted on {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-      {{ page.date | date: date_format }} {% if page.author %} by {{ page.author }}{% endif %}</p>
-    <p>{{ content }}</p>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <h3>{{ page.title | escape }}</h3>
+        <p class="lead">Posted on {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+            {{ page.date | date: date_format }} {% if page.author %} by {{ page.author }}{% endif %}</p>
+        <p>{{ content }}</p>
 
-      {%if site.data.comments[page.slug] !=null %}
-      {% assign comments = site.data.comments[page.slug] | sort %}
-      <p class="border-top border-primary">
-      <h3 class="text-primary">Comments</h3>
-      </p>
+        {%if site.data.comments[page.slug] !=null %}
+        {% assign comments = site.data.comments[page.slug] | sort %}
+        <p class="border-top border-primary">
+        <h3 class="text-primary">Comments</h3>
+        </p>
 
-    
-    <p>
 
-        {% for comment in comments %}
-      {% assign email       = comment[1].email %}
-      {% assign name        = comment[1].name %}
-      {% assign url         = comment[1].url %}
-      {% assign date        = comment[1].date %}
-      {% assign message     = comment[1].message %}
-    <div class="border border-secondary rounded bg-light shadow p-3 mb-2">{{ message }}<div class="mt-4">--{{ name }}</div></div>
-    {% endfor %}
-    {% endif %}
+        <script>
+var idcomments_acct = '123943de458e901d1378394749908902';
+var idcomments_post_id;
+var idcomments_post_url;
+</script>
+        <span id="IDCommentsPostTitle" style="display:none"></span>
+        <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
 
-    </p>
-    <p class="border-top border-primary">
-    <h3 class="text-primary">Add Comment</h3>
-      <form method="POST"  action="https://api.staticman.net/v2/entry/spsarolkar/spsarolkar.github.io/master/comments">
-
-        <input name="options[redirect]" type="hidden" value="https://spsarolkar.github.io{{ page.url | absolute_url }}" />
-        <!-- e.g. "2016-01-02-this-is-a-post" -->
-        <input name="options[slug]" type="hidden" value="{{ page.slug }}" />
-        <div class="form-group">
-      <label for="inputEmail">Email address</label>
-      <input type="email" name="fields[email]" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" />
-      <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
     </div>
-    <div class="form-group">
-      <label for="inputName">Name</label>
-      <input type="text" name="fields[name]" class="form-control" id="inputName" aria-describedby="nameHelp" placeholder="Enter name" />
-      <small id="nameHelp" class="form-text text-muted">Your Name as will be printed on the screen</small>
-    </div>
-    <div class="form-group">
-      <label for="inputMessage">Message</label>
-      <textarea id="inputMessage" class="form-control"  name="fields[message]" aria-label="Add comment message"></textarea>
-    </div>
-    <div class="form-group mt-4">
-      <button type="submit" class="btn btn-primary btn-lg ">Go !</button>
-    </div>
-
-      </form>
-    </p>
-
-  </div>
-  <div class="col-sm-1"></div>
+    <div class="col-sm-1"></div>
 </div>
