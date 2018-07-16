@@ -33,6 +33,8 @@ plugins:
 
 timezone: Asia/Kolkata
 
+future: true
+
 kramdown:
   input: GFM
   syntax_highlighter: redcarpet
