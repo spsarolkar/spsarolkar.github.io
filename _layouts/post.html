@@ -33,7 +33,7 @@ layout: default
     <h3 class="text-primary">Add Comment</h3>
       <form method="POST"  action="https://api.staticman.net/v2/entry/spsarolkar/spsarolkar.github.io/master/comments">
 
-        <input name="options[redirect]" type="hidden" value="{{ site.url }}{{ page.url | absolute_url }}" />
+        <input name="options[redirect]" type="hidden" value="https://spsarolkar.github.io/{{ page.url | absolute_url }}" />
         <!-- e.g. "2016-01-02-this-is-a-post" -->
         <input name="options[slug]" type="hidden" value="{{ page.slug }}" />
         <div class="form-group">
