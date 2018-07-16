@@ -31,6 +31,7 @@ highlighter: rouge
 plugins:
   - jekyll-feed
 
+timezone: Asia/Kolkata
 
 kramdown:
   input: GFM
