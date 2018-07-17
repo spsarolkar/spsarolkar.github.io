@@ -1,0 +1,10 @@
+IoT Device->HomeAssistant:Register Device by \npublishing the MQTT message
+Note right of HomeAssistant:HomeAssistant adds the device\n on UI with unavailable status
+Note left of IoT Device:Device is initialised
+IoT Device->HomeAssistant:MQTT message is \npublished with status "device available"
+Note right of HomeAssistant:HomeAssistant updates the device\n on UI with available status
+IoT Device->HomeAssistant:IoT Device subscribes \nto command topic of MQTT
+HomeAssistant->IoT Device:HomeAssistant publishes the \nstatus on Command Topic when \nuser updates the device from UI
+Note left of IoT Device:When IoT device receives the \nmessage on command topic \nit updates the device
+IoT Device->HomeAssistant:IoT device publishes the message on \nState Topic HomeAssistant informing \nthe command has been executed
+Note right of HomeAssistant:HomeAssistant updates the \ndevice on UI with state \nreceived on State Topic

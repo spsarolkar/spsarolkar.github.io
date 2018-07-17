@@ -3,10 +3,49 @@ var tags=new Array();
 $( document ).ready(function() {
 $dynamic = $(".dynamic");
 
+
+$('#newCommentFormSubmit').click(function (e) {
+e.preventDefault();
+          $.ajax({
+            type: 'post',
+            url: $('#newCommentForm').attr('action'),
+            data: $('#newCommentForm').serialize(),
+            dataType: 'text',
+            success: function (response) {
+             // $('#successAlert').html('<div class="alert alert-success" role="alert">'+response+'</div>');
+             var res=JSON.parse(response);
+             if(res['success']){
+                $('#snackbar').html("Comment added succesfully, it will take some time to appear on page");
+                $('#snackbar').addClass('alert-success');
+                $('#snackbar').addClass('show');
+              }
+              else{
+              //"{"success":false,"data":["name"],"rawError":{"_smErrorCode":"MISSING_REQUIRED_FIELDS","data":["name"]},"errorCode":"MISSING_REQUIRED_FIELDS"}"
+                    $('#snackbar').html("Error adding comment, "+res['data'] +", "+res['rawError']['_smErrorCode']);
+                    $('#snackbar').addClass('alert-success');
+                    $('#snackbar').addClass('show');
+              }
+            },
+            error:function(response, statusText, xhr) {
+            //"{"success":false,"data":["name","email","message"],"rawError":{"_smErrorCode":"MISSING_REQUIRED_FIELDS","data":["name","email","message"]},"errorCode":"MISSING_REQUIRED_FIELDS"}"
+               var res=JSON.parse(response.responseText);
+
+               $('#snackbar').html("Error adding comment, "+res['data'] +", "+res['rawError']['_smErrorCode']);
+                                   $('#snackbar').addClass('alert-danger');
+                                   $('#snackbar').addClass('show');
+
+
+            }
+          });
+
+          return false;
+          });
+
 $(document).on({
     ajaxStart: function() { $dynamic.addClass("loader");    },
      ajaxStop: function() { $dynamic.removeClass("loader"); }
 });
+
 $.ajax({url: "https://api.stackexchange.com/2.2/users/138604/top-answer-tags?site=stackoverflow", success: function(result){
         var tagsFroSO=eval(result);
 
