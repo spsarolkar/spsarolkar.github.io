@@ -28,9 +28,11 @@ e.preventDefault();
             },
             error:function(response, statusText, xhr) {
             //"{"success":false,"data":["name","email","message"],"rawError":{"_smErrorCode":"MISSING_REQUIRED_FIELDS","data":["name","email","message"]},"errorCode":"MISSING_REQUIRED_FIELDS"}"
+            //"{"error":{"text":"Too many requests in this time frame.","nextValidRequestDate":"2018-07-21T06:31:26.871Z"}}"
+            //"{"success":false,"message":"reCAPTCHA: The response parameter is invalid or malformed","rawError":{"_smErrorCode":"invalid-input-response"},"errorCode":"RECAPTCHA_INVALID_INPUT_RESPONSE"}"
                var res=JSON.parse(response.responseText);
 
-               $('#snackbar').html("Error adding comment, "+res['data'] +", "+res['rawError']['_smErrorCode']);
+               $('#snackbar').html("Error adding comment: " + (res['message']!='undefined'?res['message']+",":"") + (res['data'] !='undefined'?res['data']+", ":"") +(res['rawError']!='undefined'?(res['rawError']['_smErrorCode']!='undefined'?res['rawError']['_smErrorCode']:""):""));
                                    $('#snackbar').addClass('alert-danger');
                                    $('#snackbar').addClass('show');
 
