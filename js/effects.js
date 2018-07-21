@@ -6,6 +6,9 @@ $dynamic = $(".dynamic");
 
 $('#newCommentFormSubmit').click(function (e) {
 e.preventDefault();
+
+$('#snackbar').html("Please wait while comment is added");
+                    $('#snackbar').removeClass('alert-success').removeClass('alert-danger').addClass('alert-secondary').addClass('show');
           $.ajax({
             type: 'post',
             url: $('#newCommentForm').attr('action'),
@@ -32,7 +35,7 @@ e.preventDefault();
             //"{"success":false,"message":"reCAPTCHA: The response parameter is invalid or malformed","rawError":{"_smErrorCode":"invalid-input-response"},"errorCode":"RECAPTCHA_INVALID_INPUT_RESPONSE"}"
                var res=JSON.parse(response.responseText);
 
-               $('#snackbar').html("Error adding comment: " + (res['message']!='undefined'?res['message']+",":"") + (res['data'] !='undefined'?res['data']+", ":"") +(res['rawError']!='undefined'?(res['rawError']['_smErrorCode']!='undefined'?res['rawError']['_smErrorCode']:""):""));
+               $('#snackbar').html("Error adding comment: " + (res['error']!=undefined?res['error']['text']:""+res['message']!=undefined?res['message']+",":"") + (res['data'] !=undefined?res['data']+", ":"") +(res['rawError']!=undefined?(res['rawError']['_smErrorCode']!=undefined?res['rawError']['_smErrorCode']:""):""));
                                    $('#snackbar').addClass('alert-danger');
                                    $('#snackbar').addClass('show');
 
