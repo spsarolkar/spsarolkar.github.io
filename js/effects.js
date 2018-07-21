@@ -15,7 +15,7 @@ e.preventDefault();
              // $('#successAlert').html('<div class="alert alert-success" role="alert">'+response+'</div>');
              var res=JSON.parse(response);
              if(res['success']){
-                $('#snackbar').html("Comment added succesfully, it will take some time to appear on page");
+                $('#snackbar').html("Comment added succesfully, it will appear on page once approved");
                 $('#snackbar').addClass('alert-success');
                 $('#snackbar').addClass('show');
               }
