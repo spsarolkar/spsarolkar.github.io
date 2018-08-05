@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Preview of themes for Rouge syntax highlighter"
-date:   2018-05-08 22:55:00 +0530
+date:   2018-08-05 22:55:00 +0530
 categories: rouge themes syntax-highlighter
 ---
 
