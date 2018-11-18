@@ -291,4 +291,4 @@ redis-replica   ClusterIP      10.39.240.117   <none>           6379/TCP       4
 
 This will show you all the services running and their respective IP addresses. Also it will show external ip address for container exposed as a `LoadBalancer` service
 
-I have currently hosted the application on [http://google-cloud-example-project.sunilsarolkar.com/](http://google-cloud-example-project.sunilsarolkar.com/). I will keep it alive until I can afford it.
+I have currently hosted the application on [http://gcp-kube-demo.sunilsarolkar.com:32737](http://gcp-kube-demo.sunilsarolkar.com:32737). I will keep it alive until I can afford it.
