@@ -18,7 +18,7 @@ interface = br0
 interval = 3.0
 
 format-connected-underline = #55aa55
-format-connected-prefix = " "
+format-connected-prefix = ""
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 ```
