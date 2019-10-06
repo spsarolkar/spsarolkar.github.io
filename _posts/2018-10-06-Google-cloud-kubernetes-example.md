@@ -129,13 +129,15 @@ kubectl apply -f redis-slave.yml
 
 We will have cowsay rest service exposing its rest endpoint which will in turn be used in the front end.
 
+cowsay.yml
 ```yaml
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: cowsay
+  namespace: web
 spec:
-  replicas: 2
+  replicas: 2 
   template:
     metadata:
       labels:
@@ -206,10 +208,11 @@ We need deployment and service configuration for our application. Deployment fil
 
 cowsay-ui.yml
 ```yaml
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: cowsay-ui
+  namespace: web
 spec:
   replicas: 2
   selector:
@@ -222,18 +225,18 @@ spec:
     spec:
       containers:
       - name: cowsay-ui
-        image: asia.gcr.io/fortune-teller-215315/fortune-teller-ui@sha256:416792ad7f37af47c1f775d6289ab63744df90fe7afd3cd3fcb5c8dc7b96270c
+        image: asia.gcr.io/fortune-teller-215315/fortune-teller-ui@sha256:416792ad7f37af47c1f775d6289ab63744df90fe7afd3cd3fcb5c8dc7b96270c 
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
           name: http
         resources:
           limits:
-             cpu: 150m
-             memory: 300Mi
+             cpu: 50m
+             memory: 500Mi
           requests:
-             cpu: 150m
-             memory: 300Mi
+             cpu: 50m
+             memory: 500Mi
         env:
           - name: COWSAY_SERVER_NAME
             value: 'cowsay'
@@ -261,7 +264,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: cowsay-ui
-  labels:
+  namespace: web
+  labels: 
     app: cowsay-ui
 spec:
   type: LoadBalancer
@@ -291,4 +295,4 @@ redis-replica   ClusterIP      10.39.240.117   <none>           6379/TCP       4
 
 This will show you all the services running and their respective IP addresses. Also it will show external ip address for container exposed as a `LoadBalancer` service
 
-I have currently hosted the application on [http://gcp-kube-demo.sunilsarolkar.com:32737](http://gcp-kube-demo.sunilsarolkar.com:32737). I will keep it alive until I can afford it.
+I have currently hosted the application on [http://gcp-kube-demo.sunilsarolkar.com](http://gcp-kube-demo.sunilsarolkar.com). I will keep it alive until I can afford it.
