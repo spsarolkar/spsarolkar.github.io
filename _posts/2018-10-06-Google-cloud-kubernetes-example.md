@@ -124,6 +124,28 @@ spec:
 ```
 kubectl apply -f redis-slave.yml
 ```
+redis-slave-service.yml
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+     name: redis-replica
+     namespace: web
+     labels:
+        app: redis
+        role: replica
+        tier: backend
+spec: 
+     ports:
+     - port: 6379
+     selector:
+       app: redis
+       role: replica
+       tier: backend
+```
+```
+kubectl apply -f redis-slave-service.yml
+```
 
 ####  Cowsay rest service
 
