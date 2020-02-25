@@ -390,4 +390,6 @@ I have created simple application using spring that has one deamon service and o
           app: cowsay-deployment
     ```
 
-I have deployed example application on minikube and is accesible from link [http://gcp-kube-demo.sunilsarolkar.com:31737/](http://gcp-kube-demo.sunilsarolkar.com:31737/)
+I have deployed example application on minikube and is accesible from link [http://gcp-kube-demo.sunilsarolkar.com/](http://gcp-kube-demo.sunilsarolkar.com/). 
+
+Source code available in Github repository [https://github.com/spsarolkar/kube-redis-sample-setup](https://github.com/spsarolkar/kube-redis-sample-setup). 
