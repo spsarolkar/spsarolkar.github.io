@@ -1,7 +1,9 @@
 ---
 layout: default
+title: Blog Posts
 ---
 
+<<<<<<< HEAD
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -49,3 +51,27 @@ layout: default
     </div>
   </div>
 </div>
+=======
+{% comment %}
+  This is your blog index.html or home.html layout (under _layouts if used globally)
+  Use this to show modern blog cards in a responsive grid layout
+{% endcomment %}
+
+<div class="container py-5">
+  <h1 class="text-center text-4xl font-bold mb-10">📝 Recent Posts</h1>
+  <div class="grid md:grid-cols-2 gap-8">
+    {% for post in site.posts %}
+      <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition duration-300 border border-gray-200 dark:border-gray-700 p-6">
+        <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">{{ post.date | date: "%B %d, %Y" }}</div>
+        <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+          <a href="{{ post.url | relative_url }}" class="hover:text-blue-600">{{ post.title }}</a>
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+          {{ post.excerpt | strip_html | truncate: 140 }}
+        </p>
+        <a href="{{ post.url | relative_url }}" class="text-blue-600 dark:text-blue-400 font-medium hover:underline">Read more →</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+>>>>>>> gh-pages

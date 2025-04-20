@@ -55,20 +55,30 @@ $.ajax({url: "https://api.stackexchange.com/2.2/users/138604/top-answer-tags?sit
         var tagsFroSO=eval(result);
 
 
-      for(var i=0;i<tagsFroSO.items.length;i++){
-          var strTag=new String(tagsFroSO.items[i].tag_name);
-
-          var matched=strTag.match(/^javascript$|^java$|^xml$|^json$|^jquery$|^java-ee$|^jsp$|^php$|^vim$|^python$|^c$|^c\+\+$/i);
-          if(matched != null) {
-
-
-          tags.push(matched);
-          //$('#sotags').html="test";
-          //$('#sotags').append=" appended";
-         $('#sotags').append('<a href="https://stackoverflow.com/search?tab=votes&q=user%3a138604%20%5b'+matched+'%5d" tabindex="0" class="btn btn-sm btn btn-default btn-square" role="button" data-toggle="popover" data-trigger="focus" title="Please visit below link for my Stack Overflow contribution for '+matched+'" data-content="">'+matched+'</a>');
-
-        }
-      }
+        for (var i = 0; i < tagsFroSO.items.length; i++) {
+            var strTag = new String(tagsFroSO.items[i].tag_name);
+          
+            var matched = strTag.match(/^javascript$|^java$|^xml$|^json$|^jquery$|^java-ee$|^jsp$|^php$|^vim$|^python$|^c$|^c\+\+$/i);
+            if (matched != null) {
+              var safeTag = matched.toString();
+          
+              var tagHTML = `
+                <a href="https://stackoverflow.com/search?tab=votes&q=user%3a138604%20%5b${safeTag}%5d"
+                   tabindex="0"
+                   role="button"
+                   class="tag-pill"
+                   data-toggle="popover"
+                   data-trigger="focus"
+                   title="Please visit below link for my Stack Overflow contribution for ${safeTag}"
+                   data-content="">
+                   ${safeTag}
+                </a>
+              `;
+          
+              $('#sotags').append(tagHTML);
+            }
+          }
+          
     var options = {
     placement: function (context, source) {
         var position = $(source).position();

@@ -1,41 +1,75 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Sunil Sarolkar
 email: spsarolkar@gmail.com
+<<<<<<< HEAD
 description: > # this means to ignore newlines until "baseurl:"
   Sunil Sarolkar Profile Page
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://spsarolkar.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
+=======
+description: > 
+  Software Engineer | AI Explorer | 14+ Years of Java & ML Experience
+
+baseurl: "" # Leave this empty if deploying to GitHub Pages root
+url: "https://spsarolkar.github.io" # Update with your GitHub Pages URL
+
+author:
+  name: "Sunil Sarolkar"
+  email: "spsarolkar@gmail.com"
+
+twitter_username: sunilsarolkar
+github_username: spsarolkar
+>>>>>>> gh-pages
 
 # Build settings
 markdown: kramdown
 theme: minima
 highlighter: rouge
+timezone: Asia/Kolkata
+
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
+<<<<<<< HEAD
 timezone: Asia/Kolkata
 
 future: true
+=======
+social_links:
+  github: spsarolkar
+  linkedin: sunil-sarolkar-451b2023
+  email: spsarolkar@gmail.com
+
+future: true
+
+# Markdown Rendering Settings
+kramdown:
+  input: GFM
+  syntax_highlighter: redcarpet
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+
+# Optional: Extensions for redcarpet if ever used
+redcarpet:
+  extensions: 
+    - fenced_code_blocks
+    - no_intra_emphasis
+    - tables
+    - autolink
+    - strikethrough
+    - with_toc_data
+>>>>>>> gh-pages
 
 redcarpet:
     extensions: ["fenced_code_blocks","no_intra_emphasis", "tables", "autolink", "strikethrough", "with_toc_data"]
 
+<<<<<<< HEAD
 repository  : spsarolkar/spsarolkar.github.io
 comments:
   provider  : "staticman_v2"
@@ -53,3 +87,11 @@ staticman:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+=======
+# Exclude files from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+>>>>>>> gh-pages
