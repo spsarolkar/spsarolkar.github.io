@@ -6,12 +6,12 @@ subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>+91-9823578815</p>
+    <p>DSK Vishwa, Dhayri</p>
+    <p>Pune, Maharashtra 411041</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,8 +27,16 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hi, I’m Sunil Sarolkar, a passionate and versatile software engineer with 14+ years of experience in designing and building enterprise-grade applications using Java, Spring, J2EE, and a wide range of modern technologies. I currently work as an Associate at Deutsche Bank, where I contribute to building secure, scalable, and cloud-ready financial applications.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+In addition to my core Java expertise, I’m an avid explorer of emerging technologies, with hands-on experience in data science, machine learning, Spark, Kafka, and Python-based neural networks. I've successfully completed the CDS (Computational Data Science) certification from IISc Bangalore and built advanced projects including:
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+🤟 [Indian Sign Language Translator](https://huggingface.co/spaces/sunilsarolkar/ISL-SignLanguageTranslation): A neural translation system for ISL using Pose Estimation and Transformers (Live Demo)
+
+🔁 StructFormer: A transformer-based system that translates structured validation errors into SQL adjustment queries with near 96% validation accuracy
+
+🚗 Vehicle Telemetry Console: A Raspberry Pi + ELM327-based real-time dashboard for OBD-II car data, with Kafka-Spark based anomaly detection
+
+This website is designed and developed by me using Jekyll and hosted on GitHub Pages. I constantly update it with new blog posts, projects, and experiments. Currently, I’m working on integrating a custom commenting feature and expanding this into a product platform for AI-assisted structured data transformation.
+
+📫 Feel free to explore, connect with me on [LinkedIn](https://www.linkedin.com/in/sunil-sarolkar-451b2023/), or check out my code on [GitHub](https://github.com/spsarolkar).
