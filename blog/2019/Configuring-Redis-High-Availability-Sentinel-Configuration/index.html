@@ -1,0 +1,244 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Redis High Availability Solution using Redis Sentinel and docker | Sunil P. Sarolkar </title> <meta name="author" content="Sunil P. Sarolkar"> <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. "> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://spsarolkar.github.io/blog/2019/Configuring-Redis-High-Availability-Sentinel-Configuration/"> <script src="/assets/js/theme.js?a81d82887dd692e91686b43de4542f18"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Sunil</span> P. Sarolkar </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item "> <a class="nav-link" href="/teaching/">teaching </a> </li> <li class="nav-item "> <a class="nav-link" href="/people/">people </a> </li> <li class="nav-item "> <a class="nav-link" href="/people/">people </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">submenus </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/books/">bookshelf</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/blog/">blog</a> </div> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link">ctrl k <i class="ti ti-search"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="ti ti-sun-moon" id="light-toggle-system"></i> <i class="ti ti-moon-filled" id="light-toggle-dark"></i> <i class="ti ti-sun-filled" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Redis High Availability Solution using Redis Sentinel and docker</h1> <p class="post-meta"> Created on December 29, 2019 </p> <p class="post-tags"> <a href="/blog/2019"> <i class="fa-solid fa-calendar fa-sm"></i> 2019 </a>   ·   <a href="/blog/category/redis"> <i class="fa-solid fa-tag fa-sm"></i> Redis</a>   <a href="/blog/category/high-availability"> <i class="fa-solid fa-tag fa-sm"></i> High-Availability</a>   <a href="/blog/category/sentinel"> <i class="fa-solid fa-tag fa-sm"></i> Sentinel</a>   <a href="/blog/category/kubernetes"> <i class="fa-solid fa-tag fa-sm"></i> kubernetes</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <p>In this post we will configure the Redis high availability server using kubernetes. Below will be our final configuration for redis cluster.</p> <p><img src="/images/redis-high-availability-server/Redis-High-Availability-server-block-diagram.png" alt="Redis-High-Availability-server-block-diagram"></p> <p>For each block present above we will have seperate docker container. So we have below list of images</p> <ol> <li>master-sentinel: This will be single copy of container which will run resid master node and redis sentinel node</li> <li>replica-sentinel: This will be multiple(two in our case above) copy of container which will run redis replica node and redis sentinel node</li> </ol> <h6 id="creating-docker-image-for-master-sentinel"><strong>Creating Docker image for master-sentinel</strong></h6> <p>To configure master-sentinel image we need to two redis instances running, one with master configuration and one with sentinel configuration. So there will be two seperate configurations for both thes instances.</p> <ol> <li> <p><strong>redis-master.conf</strong></p> <p>This configuration file will be used for starting Redis as a master node. As we are running the redis inside docker container it will aquire the local ip address assigned by Kubernetes, redis replica and redis sentinel processes on different container will need docker pod ip address to connect to this master node. So we need special configuration –cluster-announce-ip, –cluster-announce-port and –sentinel announce-ip, –sentinel announce-port that will be provided as a environment variable by Kubernetes deployment configuration. As we need master to listen connections from other docker machines we need to comment the line <code class="language-plaintext highlighter-rouge">bind 127.0.0.1</code> in default configurations of redis.</p> <div class="language-plaintext highlighter-rouge"> <div class="highlight"><pre class="highlight"><code># bind 127.0.0.1
+</code></pre></div> </div> <p>Also protected mode should be turned off by commenting <code class="language-plaintext highlighter-rouge">protected-mode yes</code></p> <div class="language-plaintext highlighter-rouge"> <div class="highlight"><pre class="highlight"><code># protected-mode yes
+</code></pre></div> </div> <p>We also need configuration added from command line so that process outside container will be able to connect to master node.</p> <div class="language-plaintext highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>    --cluster-announce-ip $MY_POD_IP
+    --cluster-announce-port $MASTER_ANNOUNCE_PORT
+</code></pre></div> </div> </li> <li> <p><strong>redis-sentinel.conf</strong> We will be configurting ht sentinel configuration from command line while starting the sentinel process from start script using below arguments</p> <div class="language-plaintext highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>--sentinel announce-ip $MY_POD_IP --sentinel announce-port $SENTINEL_ANNOUNCE_PORT
+
+--sentinel monitor mymaster $MY_POD_IP $MASTER_ANNOUNCE_PORT 2
+
+--sentinel down-after-milliseconds mymaster 30000
+
+--sentinel parallel-syncs mymaster 1
+
+--sentinel failover-timeout mymaster 180000
+</code></pre></div> </div> <p>Please note that we have hardcoded the master group <code class="language-plaintext highlighter-rouge">mymaster</code>. We need to use this while connecting from client.</p> </li> <li> <p><strong>start.sh</strong></p> <p>We need start script that will start both instances of redis(master and sentinel) with configuration discussed above.</p> <div class="language-bash highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>redis-server /usr/local/etc/redis/redis.conf <span class="nt">--cluster-announce-ip</span> <span class="nv">$MY_POD_IP</span> <span class="nt">--cluster-announce-port</span> <span class="nv">$MASTER_ANNOUNCE_PORT</span>
+</code></pre></div> </div> <p>Note that we are using environment variable for <code class="language-plaintext highlighter-rouge">--cluster-announce-ip</code> and <code class="language-plaintext highlighter-rouge">--cluster-announce-port</code> this needs to be a part of kubernetes deployment cofiguration</p> <div class="language-bash highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>redis-server /usr/local/etc/redis/sentinel.conf <span class="nt">--sentinel</span> announce-ip <span class="nv">$MY_POD_IP</span> <span class="nt">--sentinel</span> announce-port <span class="nv">$SENTINEL_ANNOUNCE_PORT</span> <span class="nt">--sentinel</span> monitor mymaster <span class="nv">$MY_POD_IP</span> <span class="nv">$MASTER_ANNOUNCE_PORT</span> 2 <span class="nt">--sentinel</span> down-after-milliseconds mymaster 30000 <span class="nt">--sentinel</span> parallel-syncs mymaster 1 <span class="nt">--sentinel</span> failover-timeout mymaster 180000
+</code></pre></div> </div> </li> </ol> <h6 id="creating-docker-image-for-replica-sentinel"><strong>Creating docker image for replica-sentinel</strong></h6> <p>For creating image for replica-sentinel we need docker replica and docker sentinel running in same container and both should be connecting to redis master instance inside master-sentinel image. We will have configurations for redis-replica and redis-sentinel for the same.</p> <ol> <li> <p><strong>redis-replicator.conf</strong></p> <p>We need redis-master to be able to connect to redis-replicator so we need below configuration commented</p> <div class="language-plaintext highlighter-rouge"> <div class="highlight"><pre class="highlight"><code># bind 127.0.0.1
+</code></pre></div> </div> <p>Also we need to turn off protected mode by commenting below line</p> <div class="language-plaintext highlighter-rouge"> <div class="highlight"><pre class="highlight"><code># protected-mode yes
+</code></pre></div> </div> <p>We will also use below configuration from command line arguments</p> <div class="language-plaintext highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>--replica-announce-ip $MY_POD_IP
+--replicaof $REDIS_MASTER_SERVICE_HOST $REDIS_MASTER_SERVICE_PORT
+
+</code></pre></div> </div> <p>We need to pass $MY_POD_IP, $REDIS_MASTER_SERVICE_HOST and $REDIS_MASTER_SERVICE_PORT environment varialbles from kubernetes deployment configurations</p> </li> <li> <p><strong>redis-sentinel.conf</strong></p> <p>Sentinel configuration will be similar to the sentinel configuration inside master-sentinel, only different is instead of connecting to master node on the same machine it will read the master hostname from environment variable,</p> <div class="language-plaintext highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>--sentinel monitor mymaster $REDIS_MASTER_SERVICE_HOST $REDIS_MASTER_SERVICE_PORT 2
+</code></pre></div> </div> <p>Rest of the configuration is same as sentinel in master-sentinel image.</p> </li> <li> <p><strong>start.sh</strong></p> <p>Finally we will have start.sh starting the replica and sentinel processes</p> <p>Starting replica instance</p> <div class="language-plaintext highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>redis-server /usr/local/etc/redis/redis-replicator.conf --replica-announce-ip $MY_POD_IP --replicaof $REDIS_MASTER_SERVICE_HOST $REDIS_MASTER_SERVICE_PORT &amp;&gt; /var/log/redis-replica.log &amp;
+</code></pre></div> </div> <p>Starting sentinel instance</p> <div class="language-plaintext highlighter-rouge"> <div class="highlight"><pre class="highlight"><code>redis-server /usr/local/etc/redis/sentinel.conf --sentinel announce-ip $MY_POD_IP --sentinel announce-port $SENTINEL_ANNOUNCE_PORT --sentinel monitor mymaster $REDIS_MASTER_SERVICE_HOST $REDIS_MASTER_SERVICE_PORT 2 --sentinel down-after-milliseconds mymaster 30000 --sentinel parallel-syncs mymaster 1 --sentinel failover-timeout mymaster 180000
+</code></pre></div> </div> </li> </ol> <h6 id="kubernetes-configuration-for-master-sentinel-and-replica-sentinel"><strong>Kubernetes configuration for master-sentinel and replica-sentinel</strong></h6> <p>For deploying the redis cluster on Kubernetes we need to create deployment and services as below <img src="/images/redis-high-availability-server/Kubernetes-deployment-redis-high-availability.png" alt="Kubernetes-deployment-redis-high-availability"></p> <p><strong>master-sentinel deployment</strong></p> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">redis-primary</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">web</span>
+  <span class="na">labels</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">redis-primary</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">redis-primary</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">1</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="na">app</span><span class="pi">:</span> <span class="s">redis-primary</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">containers</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">redis</span>
+          <span class="na">image</span><span class="pi">:</span> <span class="s">spsarolkar/master-sentinel:1.0</span>
+          <span class="na">resources</span><span class="pi">:</span>
+            <span class="na">requests</span><span class="pi">:</span>
+              <span class="na">cpu</span><span class="pi">:</span> <span class="s">100m</span>
+              <span class="na">memory</span><span class="pi">:</span> <span class="s">100Mi</span>
+          <span class="na">env</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">MY_POD_IP</span>
+              <span class="na">valueFrom</span><span class="pi">:</span>
+                <span class="na">fieldRef</span><span class="pi">:</span>
+                  <span class="na">fieldPath</span><span class="pi">:</span> <span class="s">status.podIP</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">MASTER_ANNOUNCE_PORT</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">6379"</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">SENTINEL_ANNOUNCE_PORT</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">26379"</span>
+          <span class="na">ports</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">containerPort</span><span class="pi">:</span> <span class="m">6379</span>
+              <span class="na">name</span><span class="pi">:</span> <span class="s">redis-master</span>
+            <span class="pi">-</span> <span class="na">containerPort</span><span class="pi">:</span> <span class="m">26379</span>
+              <span class="na">name</span><span class="pi">:</span> <span class="s">redis-sentinel</span>
+</code></pre></div></div> <p><strong>master-sentinel service</strong></p> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">redis-primary</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">web</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">port</span><span class="pi">:</span> <span class="m">6379</span>
+      <span class="na">targetPort</span><span class="pi">:</span> <span class="m">6379</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">redis-master</span>
+    <span class="pi">-</span> <span class="na">port</span><span class="pi">:</span> <span class="m">26379</span>
+      <span class="na">targetPort</span><span class="pi">:</span> <span class="m">26379</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">redis-sentinel</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">redis-primary</span>
+</code></pre></div></div> <p><strong>replica-sentinel deployment</strong></p> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">redis-secondary</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">web</span>
+  <span class="na">labels</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">redis-secondary</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">redis-secondary</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">2</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="na">app</span><span class="pi">:</span> <span class="s">redis-secondary</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">containers</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">replica</span>
+          <span class="na">image</span><span class="pi">:</span> <span class="s">spsarolkar/replica-sentinel:1.0</span>
+          <span class="na">resources</span><span class="pi">:</span>
+            <span class="na">requests</span><span class="pi">:</span>
+              <span class="na">cpu</span><span class="pi">:</span> <span class="s">100m</span>
+              <span class="na">memory</span><span class="pi">:</span> <span class="s">100Mi</span>
+          <span class="na">env</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">REDIS_MASTER_SERVICE_HOST</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s">redis-primary</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">REDIS_MASTER_SERVICE_PORT</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">6379"</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">SENTINEL_ANNOUNCE_PORT</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">26379"</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">MY_POD_IP</span>
+              <span class="na">valueFrom</span><span class="pi">:</span>
+                <span class="na">fieldRef</span><span class="pi">:</span>
+                  <span class="na">fieldPath</span><span class="pi">:</span> <span class="s">status.podIP</span>
+          <span class="na">ports</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">containerPort</span><span class="pi">:</span> <span class="m">26379</span>
+              <span class="na">name</span><span class="pi">:</span> <span class="s">redis-sentinel</span>
+</code></pre></div></div> <p><strong>replica-sentinel service</strong></p> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">redis-secondary</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">web</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">port</span><span class="pi">:</span> <span class="m">26379</span>
+      <span class="na">targetPort</span><span class="pi">:</span> <span class="m">26379</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">redis-secondary</span>
+</code></pre></div></div> <h6 id="connecting-to-redis-from-client-application"><strong>Connecting to redis from client application</strong></h6> <p>To use this high availability cluster we need client capable of connecting to redis sentinel. In the example application we will use spring based configuration for connecting to redis sentinel.</p> <p>I have created simple application using spring that has one deamon service and one front end service. The application block diagram is as below</p> <p><img src="/images/redis-high-availability-server/FortuneTeller-cowsay-block-diagram.png" alt="FortuneTeller-cowsay-block-diagram"></p> <ol> <li> <p><strong>Fortune Teller UI</strong></p> <p>This is simple spring boot application configured to use open id from google for authorization purpose. We have configured the HTTP session to connect to redis sentinel using below configuration</p> <div class="language-java highlighter-rouge"> <div class="highlight"><pre class="highlight"><code><span class="nd">@Bean</span>
+<span class="kd">public</span> <span class="nc">LettuceConnectionFactory</span> <span class="nf">connectionFactory</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">RedisSentinelConfiguration</span> <span class="n">config</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RedisSentinelConfiguration</span><span class="o">()</span>
+            <span class="o">.</span><span class="na">master</span><span class="o">(</span><span class="n">appConfig</span><span class="o">.</span><span class="na">getRedisSentinelMasterGroup</span><span class="o">())</span>
+            <span class="o">.</span><span class="na">sentinel</span><span class="o">(</span><span class="n">appConfig</span><span class="o">.</span><span class="na">getRedisMasterSentinelName</span><span class="o">(),</span><span class="n">appConfig</span><span class="o">.</span><span class="na">getRedisMasterSentinelPort</span><span class="o">())</span>
+            <span class="o">.</span><span class="na">sentinel</span><span class="o">(</span><span class="n">appConfig</span><span class="o">.</span><span class="na">getRedisReplicaSentinelName</span><span class="o">(),</span><span class="n">appConfig</span><span class="o">.</span><span class="na">getRedisReplicaSentinelPort</span><span class="o">());</span>
+    <span class="nc">LettuceConnectionFactory</span> <span class="n">connection</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LettuceConnectionFactory</span><span class="o">(</span><span class="n">config</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">connection</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div> </div> <p><strong>fortune-teller deployment</strong></p> <div class="language-yaml highlighter-rouge"> <div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">fortune-teller</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">web</span>
+  <span class="na">labels</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">fortune-teller</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">3</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">fortune-teller</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="na">app</span><span class="pi">:</span> <span class="s">fortune-teller</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">containers</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">fortune-teller</span>
+          <span class="na">image</span><span class="pi">:</span> <span class="s">spsarolkar/fortune-teller:2.0</span>
+          <span class="na">imagePullPolicy</span><span class="pi">:</span> <span class="s">IfNotPresent</span>
+          <span class="na">ports</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">containerPort</span><span class="pi">:</span> <span class="m">8080</span>
+              <span class="na">name</span><span class="pi">:</span> <span class="s">http</span>
+          <span class="na">resources</span><span class="pi">:</span>
+            <span class="na">limits</span><span class="pi">:</span>
+              <span class="na">cpu</span><span class="pi">:</span> <span class="s">500m</span>
+              <span class="na">memory</span><span class="pi">:</span> <span class="s">700Mi</span>
+            <span class="na">requests</span><span class="pi">:</span>
+              <span class="na">cpu</span><span class="pi">:</span> <span class="s">100m</span>
+              <span class="na">memory</span><span class="pi">:</span> <span class="s">300Mi</span>
+          <span class="na">env</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">COWSAY_SERVER_NAME</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">cowsay-deamon"</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">COWSAY_SERVER_PORT</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">8000"</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">REDIS_MASTER_NAME</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">redis-primary"</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">MASTER_SENTINEL_PORT</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">26379"</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">REDIS_REPLICA_NAME</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">redis-secondary"</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">REPLICA_SENTINEL_PORT</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">26379"</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">REDIS_SENTINEL_MASTER_GROUP</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">mymaster"</span>
+</code></pre></div> </div> <p><strong>fortune-teller-service</strong></p> <div class="language-yaml highlighter-rouge"> <div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">fortune-teller-service</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">web</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">LoadBalancer</span>
+  <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">http</span>
+      <span class="na">protocol</span><span class="pi">:</span> <span class="s">TCP</span>
+      <span class="na">port</span><span class="pi">:</span> <span class="m">80</span>
+      <span class="na">targetPort</span><span class="pi">:</span> <span class="m">8080</span>
+      <span class="na">nodePort</span><span class="pi">:</span> <span class="m">31737</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">fortune-teller</span>
+</code></pre></div> </div> </li> <li> <p><strong>Cowsay deamon</strong></p> <p>This is rest API built using Django python framework. Front end will call rest service exposed by this deamon and will produce the fortune messages.</p> <p><strong>cowsay-deployment</strong></p> <div class="language-yaml highlighter-rouge"> <div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">cowsay-deployment</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">web</span>
+  <span class="na">labels</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">cowsay-deployment</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">2</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">cowsay-deployment</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="na">app</span><span class="pi">:</span> <span class="s">cowsay-deployment</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">containers</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">cowsay-deployment</span>
+          <span class="na">image</span><span class="pi">:</span> <span class="s">spsarolkar/cowsay-deamon:1.0</span>
+          <span class="na">imagePullPolicy</span><span class="pi">:</span> <span class="s">IfNotPresent</span>
+          <span class="na">ports</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">containerPort</span><span class="pi">:</span> <span class="m">8000</span>
+              <span class="na">name</span><span class="pi">:</span> <span class="s">http</span>
+          <span class="na">resources</span><span class="pi">:</span>
+            <span class="na">limits</span><span class="pi">:</span>
+              <span class="na">cpu</span><span class="pi">:</span> <span class="s">200m</span>
+              <span class="na">memory</span><span class="pi">:</span> <span class="s">300Mi</span>
+            <span class="na">requests</span><span class="pi">:</span>
+              <span class="na">cpu</span><span class="pi">:</span> <span class="s">200m</span>
+              <span class="na">memory</span><span class="pi">:</span> <span class="s">300Mi</span>
+</code></pre></div> </div> <p><strong>cowsay-service</strong></p> <div class="language-yaml highlighter-rouge"> <div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">cowsay-deamon</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">web</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">http</span>
+      <span class="na">protocol</span><span class="pi">:</span> <span class="s">TCP</span>
+      <span class="na">port</span><span class="pi">:</span> <span class="m">8000</span>
+      <span class="na">targetPort</span><span class="pi">:</span> <span class="s">http</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">cowsay-deployment</span>
+</code></pre></div> </div> </li> </ol> <p>I have deployed example application on minikube and is accesible from link <a href="http://gcp-kube-demo.sunilsarolkar.com/" rel="external nofollow noopener" target="_blank">http://gcp-kube-demo.sunilsarolkar.com/</a>.</p> <p>Source code available in Github repository <a href="https://github.com/spsarolkar/kube-redis-sample-setup" rel="external nofollow noopener" target="_blank">https://github.com/spsarolkar/kube-redis-sample-setup</a>.</p> </div> </article> <br> <hr> <br> <ul class="list-disc pl-8"></ul> <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2> <p class="mb-2">Here are some more articles you might like to read next:</p> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/" target="_blank" rel="external nofollow noopener">Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra</a> <svg width="1rem" height="1rem" viewbox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"> <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </li> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2" target="_blank" rel="external nofollow noopener">Displaying External Posts on Your al-folio Blog</a> <svg width="1rem" height="1rem" viewbox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"> <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </li> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2018/Plybar-does-not-support-bridge-interface/">Polybar does not support the bridge interface for network tracking</a> </li> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2018/Google-cloud-kubernetes-example/">Google cloud kubernetes example</a> </li> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2018/Building-Microservices-Using-Docker/">Building microservices using docker swarm with Oauth2</a> </li> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2025 Sunil P. Sarolkar. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script> <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?e0514a05c5c95ac1a93a8dfd5249b92e"></script> <script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?d9f17b6adc2311cbabd747f4538bb15f"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/js/mathjax-setup.js?a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script defer src="/assets/js/progress-bar.js?2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> <script src="/assets/js/vanilla-back-to-top.min.js?f40d453793ff4f64e238e420181a1d17"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/js/search/ninja-keys.min.js?a3446f084dcaecc5f75aa1757d087dcf"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/js/search-setup.js?6c304f7b1992d4b60f7a07956e52f04a"></script> <script src="/assets/js/search-data.js"></script> <script src="/assets/js/shortcut-key.js?6f508d74becd347268a7f822bca7309d"></script> </body> </html>

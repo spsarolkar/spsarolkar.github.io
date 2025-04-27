@@ -1,0 +1,220 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Google cloud kubernetes example | Sunil P. Sarolkar </title> <meta name="author" content="Sunil P. Sarolkar"> <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. "> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://spsarolkar.github.io/blog/2018/Google-cloud-kubernetes-example/"> <script src="/assets/js/theme.js?a81d82887dd692e91686b43de4542f18"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Sunil</span> P. Sarolkar </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item "> <a class="nav-link" href="/teaching/">teaching </a> </li> <li class="nav-item "> <a class="nav-link" href="/people/">people </a> </li> <li class="nav-item "> <a class="nav-link" href="/people/">people </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">submenus </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/books/">bookshelf</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/blog/">blog</a> </div> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link">ctrl k <i class="ti ti-search"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="ti ti-sun-moon" id="light-toggle-system"></i> <i class="ti ti-moon-filled" id="light-toggle-dark"></i> <i class="ti ti-sun-filled" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Google cloud kubernetes example</h1> <p class="post-meta"> Created on October 06, 2018 </p> <p class="post-tags"> <a href="/blog/2018"> <i class="fa-solid fa-calendar fa-sm"></i> 2018 </a>   ·   <a href="/blog/category/docker"> <i class="fa-solid fa-tag fa-sm"></i> docker</a>   <a href="/blog/category/microservices"> <i class="fa-solid fa-tag fa-sm"></i> microservices</a>   <a href="/blog/category/google-cloud"> <i class="fa-solid fa-tag fa-sm"></i> google-cloud</a>   <a href="/blog/category/kubernetes"> <i class="fa-solid fa-tag fa-sm"></i> kubernetes</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <p>We will convert the microservice we built in <a href="https://spsarolkar.github.io/docker/microservices/2018/09/30/Building-Microservices-Using-Docker.html">earlier post</a> and we will port it in google cloud platform using kubernetes. All the source code is available on <a href="https://github.com/spsarolkar/google-cloud-kubernetes-example" rel="external nofollow noopener" target="_blank">Github</a></p> <p>Our microservice consists of following parts</p> <ul> <li>Redis database for session management across multiple UI instances</li> <li>Backend rest service which generates the message text written using Django</li> <li>Fortune Teller front end written in Spring with Oauth2 authorization using Google account</li> </ul> <h4 id="redis-database-master-and-slave-configuration">Redis database master and slave configuration</h4> <p>We will create the deployment of master and slave using existing images available on Google registry.</p> <h5 id="redis-master">Redis master</h5> <p>We will configure the single instance deployment of redis master, below is the configuration for the same</p> <p>redis-master.yml</p> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">redis-master</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">web</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">redis</span>
+      <span class="na">role</span><span class="pi">:</span> <span class="s">primary</span>
+      <span class="na">tier</span><span class="pi">:</span> <span class="s">backend</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">1</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="na">app</span><span class="pi">:</span> <span class="s">redis</span>
+        <span class="na">role</span><span class="pi">:</span> <span class="s">primary</span>
+        <span class="na">tier</span><span class="pi">:</span> <span class="s">backend</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">containers</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">redis</span>
+          <span class="na">image</span><span class="pi">:</span> <span class="s">gcr.io/google_containers/redis:e2e</span>
+          <span class="na">resources</span><span class="pi">:</span>
+            <span class="na">requests</span><span class="pi">:</span>
+              <span class="na">cpu</span><span class="pi">:</span> <span class="s">100m</span>
+              <span class="na">memory</span><span class="pi">:</span> <span class="s">100Mi</span>
+          <span class="na">ports</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">containerPort</span><span class="pi">:</span> <span class="m">6379</span>
+</code></pre></div></div> <p>On Kubernetes we will create the deployment of redis master using below command</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply <span class="nt">-f</span> redis-master.yml
+</code></pre></div></div> <p>Redis master will be exposed on external port <code class="language-plaintext highlighter-rouge">port: 6379</code> with below service configuration</p> <p>redis-master-service.yml</p> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">redis-master</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">web</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">port</span><span class="pi">:</span> <span class="m">6379</span>
+      <span class="na">targetPort</span><span class="pi">:</span> <span class="m">6379</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">redis</span>
+    <span class="na">role</span><span class="pi">:</span> <span class="s">primary</span>
+    <span class="na">tier</span><span class="pi">:</span> <span class="s">backend</span>
+</code></pre></div></div> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply <span class="nt">-f</span> redis-master-service.yml
+</code></pre></div></div> <h5 id="redis-slave">Redis slave</h5> <p>We will need redis-slave which would be doing actual work behind the scenes, in case of slave we will have 2 replicas. Redis slave will register itself on master using environment variable <code class="language-plaintext highlighter-rouge">REDIS_MASTER_SERVICE_HOST</code></p> <p>redis-slave.yml</p> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">redis-replica</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">web</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">redis</span>
+      <span class="na">role</span><span class="pi">:</span> <span class="s">replica</span>
+      <span class="na">tier</span><span class="pi">:</span> <span class="s">backend</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">2</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="na">app</span><span class="pi">:</span> <span class="s">redis</span>
+        <span class="na">role</span><span class="pi">:</span> <span class="s">replica</span>
+        <span class="na">tier</span><span class="pi">:</span> <span class="s">backend</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">containers</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">replica</span>
+          <span class="na">image</span><span class="pi">:</span> <span class="s">gcr.io/google-samples/gb-redisslave@sha256:57730a481f97b3321138161ba2c8c9ca3b32df32ce9180e4029e6940446800ec</span>
+          <span class="na">resources</span><span class="pi">:</span>
+            <span class="na">requests</span><span class="pi">:</span>
+              <span class="na">cpu</span><span class="pi">:</span> <span class="s">100m</span>
+              <span class="na">memory</span><span class="pi">:</span> <span class="s">100Mi</span>
+          <span class="na">env</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">GET_HOSTS_FROM</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s">env</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">REDIS_MASTER_SERVICE_HOST</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s">redis-master</span>
+          <span class="na">ports</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">containerPort</span><span class="pi">:</span> <span class="m">6379</span>
+</code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply -f redis-slave.yml
+</code></pre></div></div> <p>redis-slave-service.yml</p> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">redis-replica</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">web</span>
+  <span class="na">labels</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">redis</span>
+    <span class="na">role</span><span class="pi">:</span> <span class="s">replica</span>
+    <span class="na">tier</span><span class="pi">:</span> <span class="s">backend</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">port</span><span class="pi">:</span> <span class="m">6379</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">redis</span>
+    <span class="na">role</span><span class="pi">:</span> <span class="s">replica</span>
+    <span class="na">tier</span><span class="pi">:</span> <span class="s">backend</span>
+</code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply -f redis-slave-service.yml
+</code></pre></div></div> <h4 id="cowsay-rest-service">Cowsay rest service</h4> <p>We will have cowsay rest service exposing its rest endpoint which will in turn be used in the front end.</p> <p>cowsay.yml</p> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">extensions/v1beta1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">cowsay</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">web</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">2</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="na">app</span><span class="pi">:</span> <span class="s">cowsay</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">containers</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">cowsay</span>
+          <span class="na">image</span><span class="pi">:</span> <span class="s">asia.gcr.io/fortune-teller-215315/cowsay@sha256:7f8e43af9af53cf59265836814eb21b9260b478f4ae5e4e8244ef322c20307ef</span>
+          <span class="na">imagePullPolicy</span><span class="pi">:</span> <span class="s">IfNotPresent</span>
+          <span class="na">livenessProbe</span><span class="pi">:</span>
+            <span class="na">failureThreshold</span><span class="pi">:</span> <span class="m">3</span>
+            <span class="na">httpGet</span><span class="pi">:</span>
+              <span class="na">path</span><span class="pi">:</span> <span class="s">/</span>
+              <span class="na">port</span><span class="pi">:</span> <span class="m">8000</span>
+              <span class="na">scheme</span><span class="pi">:</span> <span class="s">HTTP</span>
+            <span class="na">initialDelaySeconds</span><span class="pi">:</span> <span class="m">3</span>
+            <span class="na">periodSeconds</span><span class="pi">:</span> <span class="m">3</span>
+            <span class="na">successThreshold</span><span class="pi">:</span> <span class="m">1</span>
+            <span class="na">timeoutSeconds</span><span class="pi">:</span> <span class="m">1</span>
+          <span class="na">readinessProbe</span><span class="pi">:</span>
+            <span class="na">failureThreshold</span><span class="pi">:</span> <span class="m">1</span>
+            <span class="na">httpGet</span><span class="pi">:</span>
+              <span class="na">path</span><span class="pi">:</span> <span class="s">/</span>
+              <span class="na">port</span><span class="pi">:</span> <span class="m">8000</span>
+              <span class="na">scheme</span><span class="pi">:</span> <span class="s">HTTP</span>
+          <span class="na">ports</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">containerPort</span><span class="pi">:</span> <span class="m">8000</span>
+              <span class="na">name</span><span class="pi">:</span> <span class="s">http</span>
+          <span class="na">resources</span><span class="pi">:</span>
+            <span class="na">limits</span><span class="pi">:</span>
+              <span class="na">cpu</span><span class="pi">:</span> <span class="s">200m</span>
+              <span class="na">memory</span><span class="pi">:</span> <span class="s">300Mi</span>
+            <span class="na">requests</span><span class="pi">:</span>
+              <span class="na">cpu</span><span class="pi">:</span> <span class="s">200m</span>
+              <span class="na">memory</span><span class="pi">:</span> <span class="s">300Mi</span>
+</code></pre></div></div> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply <span class="nt">-f</span> cowsay.yml
+</code></pre></div></div> <p>cowsay-service.yml</p> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">cowsay</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">web</span>
+  <span class="na">labels</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">cowsay</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">http</span>
+      <span class="na">protocol</span><span class="pi">:</span> <span class="s">TCP</span>
+      <span class="na">port</span><span class="pi">:</span> <span class="m">8000</span>
+      <span class="na">targetPort</span><span class="pi">:</span> <span class="s">http</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">cowsay</span>
+</code></pre></div></div> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply <span class="nt">-f</span> cowsay-service.yml
+</code></pre></div></div> <h4 id="fortune-teller-front-end">Fortune Teller front end</h4> <p>We need deployment and service configuration for our application. Deployment file contains the configuration with respect to docker image, number of replicas of the runtime pods and other details like CPU /memory requirement. Our deployment file looks like below</p> <p>cowsay-ui.yml</p> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">extensions/v1beta1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">cowsay-ui</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">web</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">2</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">cowsay-ui</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="na">app</span><span class="pi">:</span> <span class="s">cowsay-ui</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">containers</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">cowsay-ui</span>
+          <span class="na">image</span><span class="pi">:</span> <span class="s">asia.gcr.io/fortune-teller-215315/fortune-teller-ui@sha256:416792ad7f37af47c1f775d6289ab63744df90fe7afd3cd3fcb5c8dc7b96270c</span>
+          <span class="na">imagePullPolicy</span><span class="pi">:</span> <span class="s">IfNotPresent</span>
+          <span class="na">ports</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">containerPort</span><span class="pi">:</span> <span class="m">8080</span>
+              <span class="na">name</span><span class="pi">:</span> <span class="s">http</span>
+          <span class="na">resources</span><span class="pi">:</span>
+            <span class="na">limits</span><span class="pi">:</span>
+              <span class="na">cpu</span><span class="pi">:</span> <span class="s">50m</span>
+              <span class="na">memory</span><span class="pi">:</span> <span class="s">500Mi</span>
+            <span class="na">requests</span><span class="pi">:</span>
+              <span class="na">cpu</span><span class="pi">:</span> <span class="s">50m</span>
+              <span class="na">memory</span><span class="pi">:</span> <span class="s">500Mi</span>
+          <span class="na">env</span><span class="pi">:</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">COWSAY_SERVER_NAME</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">cowsay"</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">COWSAY_SERVER_PORT</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">8000"</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">REDIS_SERVER_NAME</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">redis-master"</span>
+            <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">REDIS_SERVER_PORT</span>
+              <span class="na">value</span><span class="pi">:</span> <span class="s2">"</span><span class="s">6379"</span>
+</code></pre></div></div> <p>As you can see above configuration contains the docker image details. In this case we are referring to image from Google registry but images from dockerhub should also work fine. We also mentioned the <code class="language-plaintext highlighter-rouge">REDIS</code> and backend <code class="language-plaintext highlighter-rouge">cowsay</code> service details.</p> <p>We can create the deployment using below command on Kubernetes cluster</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply -f cowsay-ui.yml
+</code></pre></div></div> <p>Once deployment is finished our front end container will be started. We need expose this to external world using <code class="language-plaintext highlighter-rouge">LoadBalancer</code> service as below</p> <p>cowsay-ui-service.yml</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apiVersion: v1
+kind: Service
+metadata:
+  name: cowsay-ui
+  namespace: web
+  labels:
+    app: cowsay-ui
+spec:
+  type: LoadBalancer
+  ports:
+     - name: http
+       protocol: TCP
+       port: 80
+       targetPort: 8080
+  selector:
+      app: cowsay-ui
+</code></pre></div></div> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply -f cowsay-ui-service.yml
+</code></pre></div></div> <p>To check all the services running on kubernetes use command <code class="language-plaintext highlighter-rouge">kubectl get service</code></p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get service
+NAME            TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)        AGE
+cowsay          ClusterIP      10.39.241.184   &lt;none&gt;           8000/TCP       3d
+cowsay-ui       LoadBalancer   10.39.253.234   35.200.227.184   80:32099/TCP   3d
+redis-master    ClusterIP      10.39.250.176   &lt;none&gt;           6379/TCP       4d
+redis-replica   ClusterIP      10.39.240.117   &lt;none&gt;           6379/TCP       4d
+</code></pre></div></div> <p>This will show you all the services running and their respective IP addresses. Also it will show external ip address for container exposed as a <code class="language-plaintext highlighter-rouge">LoadBalancer</code> service</p> <p>I have currently hosted the application on <a href="http://gcp-kube-demo.sunilsarolkar.com" rel="external nofollow noopener" target="_blank">http://gcp-kube-demo.sunilsarolkar.com</a>. I will keep it alive until I can afford it.</p> </div> </article> <br> <hr> <br> <ul class="list-disc pl-8"></ul> <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2> <p class="mb-2">Here are some more articles you might like to read next:</p> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/" target="_blank" rel="external nofollow noopener">Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra</a> <svg width="1rem" height="1rem" viewbox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"> <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </li> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2" target="_blank" rel="external nofollow noopener">Displaying External Posts on Your al-folio Blog</a> <svg width="1rem" height="1rem" viewbox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"> <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </li> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2019/Configuring-Redis-High-Availability-Sentinel-Configuration/">Redis High Availability Solution using Redis Sentinel and docker</a> </li> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2018/Plybar-does-not-support-bridge-interface/">Polybar does not support the bridge interface for network tracking</a> </li> <li class="my-2"> <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2018/Building-Microservices-Using-Docker/">Building microservices using docker swarm with Oauth2</a> </li> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2025 Sunil P. Sarolkar. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script> <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?e0514a05c5c95ac1a93a8dfd5249b92e"></script> <script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?d9f17b6adc2311cbabd747f4538bb15f"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/js/mathjax-setup.js?a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script defer src="/assets/js/progress-bar.js?2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> <script src="/assets/js/vanilla-back-to-top.min.js?f40d453793ff4f64e238e420181a1d17"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/js/search/ninja-keys.min.js?a3446f084dcaecc5f75aa1757d087dcf"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/js/search-setup.js?6c304f7b1992d4b60f7a07956e52f04a"></script> <script src="/assets/js/search-data.js"></script> <script src="/assets/js/shortcut-key.js?6f508d74becd347268a7f822bca7309d"></script> </body> </html>
