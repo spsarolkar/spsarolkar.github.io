@@ -2,7 +2,7 @@
 layout: page
 title: Vehicle Telemetry with Raspberry Pi & Kafka
 description: Capturing vehicle parameters using Raspberry Pi & ELM327 with real-time anomaly detection planned using Kafka and Spark
-img: assets/projects/vehicletelemetry/Vehicle_Telemetry_Thumbnail.png
+img: assets/projects/VehicleTelemetry/OBD2_Thumbnail.png
 importance: 3
 category: fun
 giscus_comments: true
