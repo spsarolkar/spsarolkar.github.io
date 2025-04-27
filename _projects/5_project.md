@@ -6,11 +6,12 @@ importance: 5
 category: work
 giscus_comments: true
 ---
-Recently while working with Findbugs plugin for Eclipse I discovered that Findbugs fails to identify resource leak in the scenarios where resource is initialized outside the method scope. 
+
+Recently while working with Findbugs plugin for Eclipse I discovered that Findbugs fails to identify resource leak in the scenarios where resource is initialized outside the method scope.
 
 Below is the sample code in which Findbugs fails to detect resource leak
 
-``` java
+```java
 public class TestConn {
  // JDBC driver name and database URL
  static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
@@ -56,7 +57,7 @@ public class TestConn {
     System.out.print(", First: " + first);
     System.out.println(", Last: " + last);
    }
-   
+
   } catch (SQLException se) {
    // Handle errors for JDBC
    se.printStackTrace();
@@ -82,11 +83,11 @@ public class TestConn {
 
 As you might already recognized the leak situation where connection object initialized at line 23.
 
-``` java
+```java
 conn = getConn();//<===Findbugs fails to detect connection leak
-``` 
+```
 
-The solution for the problem is not that straightforward and separate plugin was required to recognize the resource leak situations. This new plugin would act as add on for Findbugs to detect leak in this specific scenario. 
+The solution for the problem is not that straightforward and separate plugin was required to recognize the resource leak situations. This new plugin would act as add on for Findbugs to detect leak in this specific scenario.
 
 You download the plugin at https://github.com/spsarolkar/Findbugs_AdResTrackr/blob/master/AdvancedResourceTrackr/dist/LeakedResourceDetector.jar
 

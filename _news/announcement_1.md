@@ -11,6 +11,7 @@ At the 2024 Danaher Summit, leaders from academia, industry, and healthcare gath
 ---
 
 ### 🌟 Key Takeaways:
+
 > Human-centered AI design was a dominant theme. Speakers emphasized that ethical deployment, trust-building, and explainability are now just as important as model accuracy.
 
 > AI is being shaped not just by data scientists, but by interdisciplinary teams, including psychologists, clinicians, ethicists, and UX designers, to better serve human needs.

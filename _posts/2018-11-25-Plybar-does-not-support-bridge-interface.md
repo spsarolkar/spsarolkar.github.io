@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Polybar does not support the bridge interface for network tracking"
-date:   2018-11-25 18:02:15 +0530
+title: "Polybar does not support the bridge interface for network tracking"
+date: 2018-11-25 18:02:15 +0530
 categories: Polybar bridge
 ---
 
@@ -33,13 +33,13 @@ warn: module/eth: Failed to query interface 'br0'
 
 After few google searches I found the existing issue reported by someone with respect to bridge interface. So I took up the challenge to dig up the code to figure out the problem.
 
-Polybar has network modules which makes use of ```ioctl``` to determine the link speed of the physical interface which of course fails for bridge network being the virtual rather than physical.
+Polybar has network modules which makes use of `ioctl` to determine the link speed of the physical interface which of course fails for bridge network being the virtual rather than physical.
 
 ```c
 ioctl(*m_socketfd, SIOCETHTOOL, &request) == -1
 ```
 
-So even though it could compute the network ip address and upload download speed, it fails on the call to ```ioctl```. On close observation of the code I could see there is already a special case for `tun`/`tap` interface which is also a virtual device but code was not designed to handle bridge interface.
+So even though it could compute the network ip address and upload download speed, it fails on the call to `ioctl`. On close observation of the code I could see there is already a special case for `tun`/`tap` interface which is also a virtual device but code was not designed to handle bridge interface.
 
 So I updated the code to handle this special case for bridge interface along with `tun` `tap`.
 

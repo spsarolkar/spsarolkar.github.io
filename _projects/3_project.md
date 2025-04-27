@@ -65,12 +65,12 @@ In the future, we plan to stream data over **Kafka** using a 4G modem and analyz
 ---
 
 ## 📽️ Demo Video
+
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include video.liquid path="https://youtu.be/X3aA26rKwIs?si=mEJq76wGndq43bpp" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-
 
 ---
 
@@ -91,4 +91,3 @@ In the future, we plan to stream data over **Kafka** using a 4G modem and analyz
 ---
 
 If you're interested in IoT meets machine learning, or automotive diagnostics — feel free to explore the repo, suggest enhancements, or fork it!
-

@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Maven cheatsheet
-date:   2018-09-01 18:02:15 +0530
+title: Maven cheatsheet
+date: 2018-09-01 18:02:15 +0530
 categories: maven cheatsheet
 ---
 
@@ -15,6 +15,7 @@ Our obvious starting point would be check what goals available for the plugin, b
 ```bash
 mvn help:describe -DgroupId=org.springframework.boot -DartifactId=spring-boot-maven-plugin
 ```
+
 Output:
 
 ```bash
@@ -73,18 +74,21 @@ For more information, run 'mvn help:describe [...] -Ddetail'
 [INFO] Finished at: 2018-09-01T18:17:41+05:30
 [INFO] ------------------------------------------------------------------------
 ```
-You can see that it has given you all the goals available for the plugin. For example ```spring-boot:run``` is the plugin goal to be used when we want to run the Spring Application.
+
+You can see that it has given you all the goals available for the plugin. For example `spring-boot:run` is the plugin goal to be used when we want to run the Spring Application.
 
 #### Get the details of any specific goal
 
-If we need to check bindings of any specific goal to the maven lifecycle phases it can be done using ```-Ddetail``` and ```-Dgoal=<goal name>```.
+If we need to check bindings of any specific goal to the maven lifecycle phases it can be done using `-Ddetail` and `-Dgoal=<goal name>`.
 
 Command:
 
 ```bash
 mvn help:describe -Ddetail -Dgoal=start -DgroupId=org.springframework.boot -DartifactId=spring-boot-maven-plugin
 ```
+
 Output:
+
 ```
 [INFO] Scanning for projects...
 [INFO]
@@ -228,19 +232,21 @@ As you noticed it also printed which phase this goal in our case its the start g
 Bound to phase: pre-integration-test
 ```
 
-This line tells us that start goal will automatically get executed during ```pre-integration-test``` maven phase
+This line tells us that start goal will automatically get executed during `pre-integration-test` maven phase
 
-Similarly we have ```stop``` goal which is bound to ```post-integration-test``` maven lifecycle phase. So that during integration test the application will be turned on so that integration testing can be performed on it.
+Similarly we have `stop` goal which is bound to `post-integration-test` maven lifecycle phase. So that during integration test the application will be turned on so that integration testing can be performed on it.
 
 #### Check which goals executed when execution of any command
 
-If we need to check what goals are invoked by any specific command execution, we can use ```-Dcmd``` and pass it the exact command,
-For example below command will check what goals are executed when we execute ```mvn spring-boot:run```
+If we need to check what goals are invoked by any specific command execution, we can use `-Dcmd` and pass it the exact command,
+For example below command will check what goals are executed when we execute `mvn spring-boot:run`
 
 ```
 mvn help:describe -Dcmd=spring-boot:run -Ddetail
 ```
+
 Output:
+
 ```
 [INFO] Scanning for projects...
 [INFO]
@@ -361,7 +367,7 @@ spring-boot:run
 [INFO] ------------------------------------------------------------------------
 ```
 
-As we can see we get below message indicating test-compile will get executed when ```spring-boot:run``` is executed
+As we can see we get below message indicating test-compile will get executed when `spring-boot:run` is executed
 
 ```
   Before this mojo executes, it will call:

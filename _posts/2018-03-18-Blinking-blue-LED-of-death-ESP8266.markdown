@@ -1,18 +1,18 @@
 ---
 layout: post
-title:  Blinking blue LED of death of ESP8266
-date:   2018-03-18 10:54:44 +0530
+title: Blinking blue LED of death of ESP8266
+date: 2018-03-18 10:54:44 +0530
 categories: ESP8266
 ---
-I have been working with ESP8266 for adding WIFI capability for home devices, when one day I was trying to test my setup with one older chip on ESP 12E, I stuck across the problem. After the sketch uploaded succesfully ESP started with death loop where the blue led on it started blinking contineously. 
-I almost though I have bricked it somehow. 
+
+I have been working with ESP8266 for adding WIFI capability for home devices, when one day I was trying to test my setup with one older chip on ESP 12E, I stuck across the problem. After the sketch uploaded succesfully ESP started with death loop where the blue led on it started blinking contineously.
+I almost though I have bricked it somehow.
 
 After some investigation I found that the ESP chip is somehow not able to start executing the code. The most possible cause it its trying to start execution from some predefined address but fails to find the executable code from that location.
 Later I understood that this was the issue with flash memory of ESP8266 module which got corrupted. When it happens it can show symptoms of recursive restart as the the ESP module not able to locate the bootloader.
 
-
 I followed the instructions mentioned in the documentation at below location, (5.2. Compilation & 5.2.1. Compile ESP8266_NONOS_SDK_v0.9.5 and Later Versions)
- 
+
 https://www.espressif.com/sites/default/files/documentation/2a-esp8266-sdk_getting_started_guide_en.pdf
 
 #### Memory Address Map of ESP 8266
@@ -28,7 +28,7 @@ sudo env "PATH=$PATH" esptool.py --port /dev/ttyUSB0 --baud 921600 write_flash 0
 ```
 
 For any customisation please refer to [documentation of ESP8266](http://www.kloppenborg.net/images/blog/esp8266/esp8266-esp12e-specs.pdf)
- 
+
 Once you flash the code ESP8266 should start normally.
 
 References:

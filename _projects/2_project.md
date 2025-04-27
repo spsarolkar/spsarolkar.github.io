@@ -17,8 +17,7 @@ Our system uses OpenPose to extract body‐ and hand-keypoints from video frames
   </div>
 </div>
 
-
-We preprocess each frame’s keypoints into a flat vector and stack them across time to form the network input.  The LSTM learns to map these motion patterns to text tokens—for example, translating the sign for “HELLO,” “THANK YOU,” or “WHERE” in real time.
+We preprocess each frame’s keypoints into a flat vector and stack them across time to form the network input. The LSTM learns to map these motion patterns to text tokens—for example, translating the sign for “HELLO,” “THANK YOU,” or “WHERE” in real time.
 
 <div class="caption">
   Diagram of the end-to-end pipeline: video frames → keypoint extraction → sequence model → final translation.
@@ -35,38 +34,38 @@ We preprocess each frame’s keypoints into a flat vector and stack them across 
 ## Key Statistics for the dataset is as follows
 
 ```markdown
-| Characteristic | Details |
-| :----------- | :------------: |
-| Categories       |    15    |
-| Words       |    263    |
-| Videos       |    4292    |
-| Avg Videos per Class       |    16.3    |
-| Avg Video Length       |    2.57s    |
-| Min Video Length       |    1.28s    |
-| Max Video Length       |    6.16s    |
-| Frame Rate       |    25 fps    |
-| Resolution       |    1920x1080    |
+| Characteristic       |  Details  |
+| :------------------- | :-------: |
+| Categories           |    15     |
+| Words                |    263    |
+| Videos               |   4292    |
+| Avg Videos per Class |   16.3    |
+| Avg Video Length     |   2.57s   |
+| Min Video Length     |   1.28s   |
+| Max Video Length     |   6.16s   |
+| Frame Rate           |  25 fps   |
+| Resolution           | 1920x1080 |
 ```
 
 ### Size of each category
-| Category | Number of Classes | Number of Videos |
-| :----------- | :------------: | :------------: |
-| Adjectives        |    59                 | 791               |
-| Animals           |    8                  | 166               |
-| Clothes           |    10                 | 198               |
-| Colours           |    11                 | 222               |
-| Days and Time     |    22                 | 306               |
-| Greetings         |    9                  | 185               |
-| Means of Transport|    9                  | 186               |
-| Objects at Home   |    27                 | 379               |
-| Occupations       |    16                 | 225               |
-| People            |    26                 | 513               |
-| Places            |    19                 | 399               |
-| Pronouns          |    8                  | 168               |
-| Seasons           |    6                  | 85                |
-| Society           |    23                 | 324               |
-|                   |    Categories# 263    | Total Videos-4287 |
 
+| Category           | Number of Classes | Number of Videos  |
+| :----------------- | :---------------: | :---------------: |
+| Adjectives         |        59         |        791        |
+| Animals            |         8         |        166        |
+| Clothes            |        10         |        198        |
+| Colours            |        11         |        222        |
+| Days and Time      |        22         |        306        |
+| Greetings          |         9         |        185        |
+| Means of Transport |         9         |        186        |
+| Objects at Home    |        27         |        379        |
+| Occupations        |        16         |        225        |
+| People             |        26         |        513        |
+| Places             |        19         |        399        |
+| Pronouns           |         8         |        168        |
+| Seasons            |         6         |        85         |
+| Society            |        23         |        324        |
+|                    |  Categories# 263  | Total Videos-4287 |
 
 ### Model Structure
 
@@ -99,8 +98,8 @@ Total params: 82,679 (322.96 KB)
 Trainable params: 82,239 (321.25 KB)
 Non-trainable params: 440 (1.72 KB)
 
-
 ### Videos processed per category
+
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid loading="eager" path="assets/projects/ISL/isl_videos_processed_per_category.png" title="Videos processed per category" class="img-fluid rounded z-depth-1" %}
@@ -108,12 +107,12 @@ Non-trainable params: 440 (1.72 KB)
 </div>
 
 ### Videos count per label
+
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
     {% include figure.liquid loading="eager" path="assets/projects/ISL/isl_video_count_per_label.jpg" title="Count of videos per Label" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
-
 
 ### Tensorboard training stats
 
@@ -121,14 +120,11 @@ Non-trainable params: 440 (1.72 KB)
 
 ### Features
 
-- **Real-time inference** on live webcam or uploaded videos  
-- **Works offline** once the model is loaded in the browser via TensorFlow.js  
-- **Custom vocabulary**: you can retrain on your own signs by supplying new CSV keypoint trajectories  
-
-
+- **Real-time inference** on live webcam or uploaded videos
+- **Works offline** once the model is loaded in the browser via TensorFlow.js
+- **Custom vocabulary**: you can retrain on your own signs by supplying new CSV keypoint trajectories
 
 ### Future Expansion
 
 - We need to use Transformer instead of LSTM to avoid exploding and diminishing gradient problems
 - This model can be enhanced further using more data, Door Darshan has huge dataset of news published for sign language translation, we are planning to request the same from Govt of India
-

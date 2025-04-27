@@ -45,13 +45,13 @@
       institution: Deutsche Bank, Pune
       year: 2015 - 2025
       description:
-        - Implemented business logic for new functionalities, fixed security vulnerabilities, migrated platform to cloud hosting, and integrated OAuth authentication. 
+        - Implemented business logic for new functionalities, fixed security vulnerabilities, migrated platform to cloud hosting, and integrated OAuth authentication.
         - Worked on projects like Feed and Adjustment Workstation and Accounting Subledger.
     - title: Software Engineer
       institution: Cognizant Technology Solutions, Pune
       year: 2023 - 2025
       description:
-        - Developed TestSuite using JUnit for end-to-end testing of Position Management applications. 
+        - Developed TestSuite using JUnit for end-to-end testing of Position Management applications.
         - Contributed to Global Securities Infrastructure (GSI), ensuring code quality and maintaining stock and cash positions.
 
     - title: Software Engineer
@@ -65,7 +65,7 @@
       institution: High Mark Credit Information Services
       year: 2010 - 2011
       description:
-        - Developed Java and J2EE applications using Struts, Spring, and Hibernate. 
+        - Developed Java and J2EE applications using Struts, Spring, and Hibernate.
         - Worked on Credit Bureau reports like Overlap report and Incidence High Default (IHD) report.
 
 - title: Open Source Projects
@@ -88,7 +88,6 @@
       items:
         - GBM, AMG & GBP
         - Barracude DR support during Sandy Hurricane
-
 
 - title: Academic Interests
   type: nested_list

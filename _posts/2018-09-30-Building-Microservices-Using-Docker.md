@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Building microservices using docker swarm with Oauth2
-date:   2018-09-30 18:02:15 +0530
+title: Building microservices using docker swarm with Oauth2
+date: 2018-09-30 18:02:15 +0530
 categories: docker microservices
 ---
 
@@ -9,7 +9,6 @@ Today we will learn how to build simple multi tier microservice using Oauth2 aut
 
 <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile userAgent=\&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36\&quot; version=\&quot;9.1.8\&quot; editor=\&quot;www.draw.io\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;2ae52b09-a662-b48f-7fa8-6262e6cde334\&quot; name=\&quot;Page-1\&quot;&gt;zVfbcpswEP0az7QPyXCzcR4TJ007004ydWeSPMpoDZoAokIYnK/vCgSYiy+TS9sXvDparaTdoyN5Yi+i4laQJPjBKYQTy6DFxL6eWJY7t/CrgK0GbA34gtEKMltgyV5Ag4ZGM0Yh7ThKzkPJki7o8TgGT3YwIgTPu25rHnZnTYgPA2DpkXCIPjAqgwqdT40W/wrMD+qZTUP3RKR21kAaEMrzHci+mdgLwbmsrKhYQKhyV+elGvdlT2+zMAGxPGWANZ3PiGub5mrueJTQMx1hQ8JMb3ZizUKMdbVCw1dGDaw5zoFbkFudl9nvjNcdZ2lZtUt0MC+Sou2sozwABjS+xRLEmnhQB8WlVnG7cyE8mH8lauTTMhEs9jFeFZUkScg8IhmPsZUzTLpl3HLu40It445kMiipgL9csJfS8fMwrC5Rsz8rD5iEZaKWa1/nSG10CmQUYstEk6RJxbY1K4A2ATYgJBR7C2Q2ZcfjAjwCKbboogc0nNdHxXR1O2+JZ841FuySrgaJJrvfxG75gIamxIn0sD+AHtMxevwEylIlEas3MgPStKJBKrnAg3lKnfFUJsr0tiGLKQj0OVL6Fc/QkX5fNQDxnn2h0LtMYhTQ+DtQwnG7lBhjhDXCiA8hxGyEEL1sepnYqONQ7h9ieqkUWGU3JFgbr5tIKJh8RNs4n+rWk2o1mQM6kOZe3nBungkPDgucJMIHeYjlw/zvJHg6kt8aExCiomy6yxxLup7hnrPypOw58Y7Vq1u1PT1qV9v7gWbdQLbbC1TlYBAI60O2O26Jckj3L9ju8dF0OncOGlXElmBNTl/HOfcDRGg+JkILfCmoVLxBgK5QB5Dzag0gNkxddEYumJSgNImpz/0WryFlyIDIkmbl9n2IQRAJZQeUzxQhs1hZEYoaSll6jvavoNRJPSgiz8ohS9WXr5UZs6J8ClVbMUi5mDZWJlnIpOpJBPcFicrH1OH5UbsUIf7H+9Lpk94aUcex09uA7yqP8+PyeFQRY1zEoxbBsvHU6ONf1ET3X2qi43Sral28UhOdi14g5zRNPC5b2Gyf7ZV7+9/HvvkD&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
 <script type="text/javascript" src="https://www.draw.io/js/viewer.min.js"></script>
-
 
 ### User Interface
 
@@ -23,10 +22,9 @@ Once you generate the keys you are ready to use it in our Spring application.
 
 ##### Configure the Spring application with Oauth2 client and client secret
 
-Before using the client and client secret we need to enable Oauth2 for Spring application. We will make use of  `@EnableOAuth2Sso` annotation for this. This annotation allows us to configure OAuth endpoints using simple configuration in `application.yml` file.
+Before using the client and client secret we need to enable Oauth2 for Spring application. We will make use of `@EnableOAuth2Sso` annotation for this. This annotation allows us to configure OAuth endpoints using simple configuration in `application.yml` file.
 
 application.yml
-
 
 ```yml
 security:
@@ -51,9 +49,7 @@ logging:
     org.springframework.security: DEBUG
 ```
 
-
 Spring boot application configuration
-
 
 ```java
 @SpringBootApplication
@@ -218,77 +214,75 @@ We will trigger the build for above two docker images using `build.sh`
 
 `(cd cowsay-service/cowsay; docker build -t spsarolkar/cowsay .)` --> This is a used for generating docker image for Cowsay Rest service
 
-
 #### Docker swarm configuration
 
 Once we have both the images build we will move on the creating the docker Swarm configuration. create new file `docker-compose.yml` under root of the project.
 
 ```yml
-version: '3.2'
+version: "3.2"
 
 services:
-    sessions:
-        image: redis:4
-        ports:
-            - 6379:6379
-        networks:
-           web:
-               aliases:
-                   - redis
+  sessions:
+    image: redis:4
+    ports:
+      - 6379:6379
+    networks:
+      web:
+        aliases:
+          - redis
 
-    cowsay-service:
-        image: spsarolkar/cowsay
-        ports:
-                - 8000
-        environment:
-            - SERVICE_PORTS=8000
-        deploy:
-            replicas: 5
-            restart_policy:
-                condition: on-failure
-                max_attempts: 3
-                window: 120s
-        networks:
-                web:
-                   aliases:
-                        - cowsay-cluster
+  cowsay-service:
+    image: spsarolkar/cowsay
+    ports:
+      - 8000
+    environment:
+      - SERVICE_PORTS=8000
+    deploy:
+      replicas: 5
+      restart_policy:
+        condition: on-failure
+        max_attempts: 3
+        window: 120s
+    networks:
+      web:
+        aliases:
+          - cowsay-cluster
 
+  cowsay-proxy:
+    image: dockercloud/haproxy:1.6.7
+    depends_on:
+      - cowsay-service
+    environment:
+      - BALANCE=leastconn
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "8000:80"
+    networks:
+      web:
+        aliases:
+          - cowsay
+    deploy:
+      placement:
+        constraints: [node.role == manager]
 
-    cowsay-proxy:
-        image: dockercloud/haproxy:1.6.7
-        depends_on:
-            - cowsay-service
-        environment:
-            - BALANCE=leastconn
-        volumes:
-            - /var/run/docker.sock:/var/run/docker.sock
-        ports:
-                - "8000:80"
-        networks:
-            web:
-               aliases:
-                    - cowsay
-        deploy:
-            placement:
-                constraints: [node.role == manager]
-
-    cowsay-ui:
-        image: spsarolkar/cowsay-ui
-        ports:
-                - "8080:8080"
-        environment:
-             - COWSAY_SERVER_NAME=cowsay
-             - COWSAY_SERVER_PORT=80
-             - REDIS_SERVER_NAME=redis
-             - REDIS_SERVER_PORT=6379
-        depends_on:
-            - redis
-            - cowsay
-        networks:
-            web:
+  cowsay-ui:
+    image: spsarolkar/cowsay-ui
+    ports:
+      - "8080:8080"
+    environment:
+      - COWSAY_SERVER_NAME=cowsay
+      - COWSAY_SERVER_PORT=80
+      - REDIS_SERVER_NAME=redis
+      - REDIS_SERVER_PORT=6379
+    depends_on:
+      - redis
+      - cowsay
+    networks:
+      web:
 
 networks:
-        web:
+  web:
 ```
 
 Along with the images we built, there are two more images configured. Please find the details below.
@@ -311,15 +305,14 @@ Once all images deployed you will see out UI once you visit the browser http://1
 
 ![landing-page]
 
-[landing-page]:/images/1_docker_swarm_example_landing_page.png
+[landing-page]: /images/1_docker_swarm_example_landing_page.png
 
 Click on "Login with Google" button and you will be directed to Google OAuth authentication page. Once you login to your google account you will be redirected to home page and the `fortune` message will be displayed with `cowsay` decoration. Also notice the servername displayed in red to confirm that any subsequent requests are responded using different backend server handled by `haproxy` for load balancing purpose.
 
 ![cowsay-message-1]
 
-[cowsay-message-1]:/images/2_Rest_Server_Response.png
+[cowsay-message-1]: /images/2_Rest_Server_Response.png
 
 ![cowsay-message-2]
 
-[cowsay-message-2]:/images/3_Rest_Server_Response.png
-
+[cowsay-message-2]: /images/3_Rest_Server_Response.png

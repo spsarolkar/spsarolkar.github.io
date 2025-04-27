@@ -8,7 +8,6 @@ My objective is to secure a challenging position in an esteemed organization, ut
 
 My personal interests include trekking, reading books, swimming, and exploring astrophysics[cite: 12]. I am also active on Stack Overflow (username Xinus) and maintain a blog where I share my insights and experiences[cite: 12].
 
-
 DSK Vishwa,
 
 Dhayari Pune 411041

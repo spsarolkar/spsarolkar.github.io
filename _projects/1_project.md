@@ -58,7 +58,7 @@ Structured datasets in enterprises often have issues such as missing values, mis
 Achieved 99% validation accuracy on a custom error-adjustment dataset with a vocabulary size of 3000 and positional sequence length of 100. Below are a few prediction samples:
 
 ```text
-🧾 Input: TradeID=29216 AccountID=ACC1003 ErrorType=Incorrect Account Type  
-🎯 Expected: UPDATE Accounts SET AccountType='Savings' WHERE AccountID='ACC1003'; ...  
+🧾 Input: TradeID=29216 AccountID=ACC1003 ErrorType=Incorrect Account Type
+🎯 Expected: UPDATE Accounts SET AccountType='Savings' WHERE AccountID='ACC1003'; ...
 🧪 Predicted: UPDATE Accounts SET AccountType='Checking' WHERE AccountID='ACC1003'; ...
 ```

@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Google cloud kubernetes example"
-date:   2018-10-06 18:02:15 +0530
+title: "Google cloud kubernetes example"
+date: 2018-10-06 18:02:15 +0530
 categories: docker microservices google-cloud kubernetes
 ---
 
@@ -9,17 +9,20 @@ We will convert the microservice we built in [earlier post](https://spsarolkar.g
 
 Our microservice consists of following parts
 
-* Redis database for session management across multiple UI instances
-* Backend rest service which generates the message text written using Django
-* Fortune Teller front end written in Spring with Oauth2 authorization using Google account
+- Redis database for session management across multiple UI instances
+- Backend rest service which generates the message text written using Django
+- Fortune Teller front end written in Spring with Oauth2 authorization using Google account
 
 #### Redis database master and slave configuration
+
 We will create the deployment of master and slave using existing images available on Google registry.
 
 ##### Redis master
+
 We will configure the single instance deployment of redis master, below is the configuration for the same
 
 redis-master.yml
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -28,27 +31,27 @@ metadata:
   namespace: web
 spec:
   selector:
-     matchLabels:
-        app: redis
-        role: primary
-        tier: backend
+    matchLabels:
+      app: redis
+      role: primary
+      tier: backend
   replicas: 1
   template:
     metadata:
       labels:
-         app: redis
-         role: primary
-         tier: backend
+        app: redis
+        role: primary
+        tier: backend
     spec:
       containers:
-      - name: redis
-        image: gcr.io/google_containers/redis:e2e
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
-        ports:
-        - containerPort: 6379
+        - name: redis
+          image: gcr.io/google_containers/redis:e2e
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          ports:
+            - containerPort: 6379
 ```
 
 On Kubernetes we will create the deployment of redis master using below command
@@ -60,6 +63,7 @@ kubectl apply -f redis-master.yml
 Redis master will be exposed on external port `port: 6379` with below service configuration
 
 redis-master-service.yml
+
 ```yaml
 apiVersion: v1
 kind: Service
@@ -68,14 +72,13 @@ metadata:
   namespace: web
 spec:
   ports:
-  - port: 6379
-    targetPort: 6379
+    - port: 6379
+      targetPort: 6379
   selector:
     app: redis
     role: primary
     tier: backend
 ```
-
 
 ```bash
 kubectl apply -f redis-master-service.yml
@@ -86,6 +89,7 @@ kubectl apply -f redis-master-service.yml
 We will need redis-slave which would be doing actual work behind the scenes, in case of slave we will have 2 replicas. Redis slave will register itself on master using environment variable `REDIS_MASTER_SERVICE_HOST`
 
 redis-slave.yml
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -95,9 +99,9 @@ metadata:
 spec:
   selector:
     matchLabels:
-        app: redis
-        role: replica
-        tier: backend
+      app: redis
+      role: replica
+      tier: backend
   replicas: 2
   template:
     metadata:
@@ -107,51 +111,56 @@ spec:
         tier: backend
     spec:
       containers:
-      - name: replica
-        image: gcr.io/google-samples/gb-redisslave@sha256:57730a481f97b3321138161ba2c8c9ca3b32df32ce9180e4029e6940446800ec
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
-        env:
-        - name: GET_HOSTS_FROM
-          value: env
-        - name: REDIS_MASTER_SERVICE_HOST
-          value: redis-master
-        ports:
-        - containerPort: 6379
+        - name: replica
+          image: gcr.io/google-samples/gb-redisslave@sha256:57730a481f97b3321138161ba2c8c9ca3b32df32ce9180e4029e6940446800ec
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          env:
+            - name: GET_HOSTS_FROM
+              value: env
+            - name: REDIS_MASTER_SERVICE_HOST
+              value: redis-master
+          ports:
+            - containerPort: 6379
 ```
+
 ```
 kubectl apply -f redis-slave.yml
 ```
+
 redis-slave-service.yml
+
 ```yaml
 apiVersion: v1
 kind: Service
 metadata:
-     name: redis-replica
-     namespace: web
-     labels:
-        app: redis
-        role: replica
-        tier: backend
-spec: 
-     ports:
-     - port: 6379
-     selector:
-       app: redis
-       role: replica
-       tier: backend
+  name: redis-replica
+  namespace: web
+  labels:
+    app: redis
+    role: replica
+    tier: backend
+spec:
+  ports:
+    - port: 6379
+  selector:
+    app: redis
+    role: replica
+    tier: backend
 ```
+
 ```
 kubectl apply -f redis-slave-service.yml
 ```
 
-####  Cowsay rest service
+#### Cowsay rest service
 
 We will have cowsay rest service exposing its rest endpoint which will in turn be used in the front end.
 
 cowsay.yml
+
 ```yaml
 apiVersion: extensions/v1beta1
 kind: Deployment
@@ -159,49 +168,50 @@ metadata:
   name: cowsay
   namespace: web
 spec:
-  replicas: 2 
+  replicas: 2
   template:
     metadata:
       labels:
         app: cowsay
     spec:
       containers:
-      - name: cowsay
-        image: asia.gcr.io/fortune-teller-215315/cowsay@sha256:7f8e43af9af53cf59265836814eb21b9260b478f4ae5e4e8244ef322c20307ef
-        imagePullPolicy: IfNotPresent
-        livenessProbe:
-           failureThreshold: 3
-           httpGet:
+        - name: cowsay
+          image: asia.gcr.io/fortune-teller-215315/cowsay@sha256:7f8e43af9af53cf59265836814eb21b9260b478f4ae5e4e8244ef322c20307ef
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
               path: /
               port: 8000
               scheme: HTTP
-           initialDelaySeconds: 3
-           periodSeconds: 3
-           successThreshold: 1
-           timeoutSeconds: 1
-        readinessProbe:
-           failureThreshold: 1
-           httpGet:
+            initialDelaySeconds: 3
+            periodSeconds: 3
+            successThreshold: 1
+            timeoutSeconds: 1
+          readinessProbe:
+            failureThreshold: 1
+            httpGet:
               path: /
               port: 8000
               scheme: HTTP
-        ports:
-        - containerPort: 8000
-          name: http
-        resources:
-          limits:
-             cpu: 200m
-             memory: 300Mi
-          requests:
-             cpu: 200m
-             memory: 300Mi
-
+          ports:
+            - containerPort: 8000
+              name: http
+          resources:
+            limits:
+              cpu: 200m
+              memory: 300Mi
+            requests:
+              cpu: 200m
+              memory: 300Mi
 ```
+
 ```bash
 kubectl apply -f cowsay.yml
 ```
 
 cowsay-service.yml
+
 ```yaml
 apiVersion: v1
 kind: Service
@@ -212,23 +222,24 @@ metadata:
     app: cowsay
 spec:
   ports:
-     - name: http
-       protocol: TCP
-       port: 8000
-       targetPort: http
+    - name: http
+      protocol: TCP
+      port: 8000
+      targetPort: http
   selector:
-      app: cowsay
+    app: cowsay
 ```
+
 ```bash
 kubectl apply -f cowsay-service.yml
 ```
 
-
-####  Fortune Teller front end
+#### Fortune Teller front end
 
 We need deployment and service configuration for our application. Deployment file contains the configuration with respect to docker image, number of replicas of the runtime pods and other details like CPU /memory requirement. Our deployment file looks like below
 
 cowsay-ui.yml
+
 ```yaml
 apiVersion: extensions/v1beta1
 kind: Deployment
@@ -246,28 +257,28 @@ spec:
         app: cowsay-ui
     spec:
       containers:
-      - name: cowsay-ui
-        image: asia.gcr.io/fortune-teller-215315/fortune-teller-ui@sha256:416792ad7f37af47c1f775d6289ab63744df90fe7afd3cd3fcb5c8dc7b96270c 
-        imagePullPolicy: IfNotPresent
-        ports:
-        - containerPort: 8080
-          name: http
-        resources:
-          limits:
-             cpu: 50m
-             memory: 500Mi
-          requests:
-             cpu: 50m
-             memory: 500Mi
-        env:
-          - name: COWSAY_SERVER_NAME
-            value: 'cowsay'
-          - name: COWSAY_SERVER_PORT
-            value: '8000'
-          - name: REDIS_SERVER_NAME
-            value: 'redis-master'
-          - name: REDIS_SERVER_PORT
-            value: '6379'
+        - name: cowsay-ui
+          image: asia.gcr.io/fortune-teller-215315/fortune-teller-ui@sha256:416792ad7f37af47c1f775d6289ab63744df90fe7afd3cd3fcb5c8dc7b96270c
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+              name: http
+          resources:
+            limits:
+              cpu: 50m
+              memory: 500Mi
+            requests:
+              cpu: 50m
+              memory: 500Mi
+          env:
+            - name: COWSAY_SERVER_NAME
+              value: "cowsay"
+            - name: COWSAY_SERVER_PORT
+              value: "8000"
+            - name: REDIS_SERVER_NAME
+              value: "redis-master"
+            - name: REDIS_SERVER_PORT
+              value: "6379"
 ```
 
 As you can see above configuration contains the docker image details. In this case we are referring to image from Google registry but images from dockerhub should also work fine. We also mentioned the `REDIS` and backend `cowsay` service details.
@@ -281,13 +292,14 @@ kubectl apply -f cowsay-ui.yml
 Once deployment is finished our front end container will be started. We need expose this to external world using `LoadBalancer` service as below
 
 cowsay-ui-service.yml
+
 ```
 apiVersion: v1
 kind: Service
 metadata:
   name: cowsay-ui
   namespace: web
-  labels: 
+  labels:
     app: cowsay-ui
 spec:
   type: LoadBalancer
