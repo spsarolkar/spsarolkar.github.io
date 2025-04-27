@@ -1,9 +1,0 @@
-github_users:
-  - spsarolkar
-
-repo_description_lines_max: 2
-
-github_repos:
-  - spsarolkar/StructFormer
-  - spsarolkar/rouge-theme-preview
-  - spsarolkar/Findbugs_AdResTrackr

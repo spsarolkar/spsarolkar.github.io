@@ -22,7 +22,7 @@ Once the switch is registered it should be visible on home assistant UI.
 
 ![switch-registered]
 
-[switch-registered]: /images/1_switch_registered.png
+[switch-registered]: assets/blog/home_assistant/1_switch_registered.png
 
 As seen in the screenshot above the switch is still not in available state.To turn on its availability, we need to publish "online" status to its availability topic. We will do just that using below command,
 
@@ -32,7 +32,7 @@ mosquitto_pub -V mqttv311 -h 192.168.0.17 -p 1883 -t "homeassistant/switch/bedro
 
 ![switch-online]
 
-[switch-online]: /images/2_switch_available_online.png
+[switch-online]: assets/blog/home_assistant/2_switch_available_online.png
 
 Now we need to understand the what state and command topics are used. When user of Home Assistant changes the state of the device from Home Assistant UI, command topic is used to convey state change to device from Home Assistant. Home Assistant publishes the relevant message on command topic. Any device intended to receive the command messages have to subscribe to the command topic so that any UI commands are received by the device.
 The actual IoT device will subscribe to command_topic and once it makes the changes it will publish the message on state topic of the final status.
@@ -60,7 +60,7 @@ mosquitto_pub -V mqttv311 -h 192.168.0.17 -p 1883 -t "homeassistant/bedroom/stat
 
 ![switch-turn-on]
 
-[switch-turn-on]: /images/3_switch_turned_on.png
+[switch-turn-on]: assets/blog/home_assistant/3_switch_turned_on.png
 
 Once you execute this command you may notice that Home Assistant state on UI is now permanent.
 
@@ -68,4 +68,4 @@ Below is the sequence of events that happen,
 
 ![home_assistant_discovery_sequence_diagram]
 
-[home_assistant_discovery_sequence_diagram]: /images/home_assistant_discovery_Sequence_diagram.svg
+[home_assistant_discovery_sequence_diagram]: assets/blog/home_assistant/home_assistant_discovery_Sequence_diagram.svg

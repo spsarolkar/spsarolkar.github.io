@@ -19,7 +19,7 @@ https://www.espressif.com/sites/default/files/documentation/2a-esp8266-sdk_getti
 
 ![memorymap]
 
-[memorymap]: /images/memory_map_nonOTA.png "Memory map ESP8266 non OTA"
+[memorymap]: assets/blog/ESP8266MemoryMap/memory_map_nonOTA.png "Memory map ESP8266 non OTA"
 
 We need to flash the chip according to the memory supported by specific chip. For ESP 12E I used the below command to flash the generated code.
 

@@ -305,14 +305,14 @@ Once all images deployed you will see out UI once you visit the browser http://1
 
 ![landing-page]
 
-[landing-page]: /images/1_docker_swarm_example_landing_page.png
+[landing-page]: assets/blog/BuildingMicroservicesUsingDocker/1_docker_swarm_example_landing_page.png
 
 Click on "Login with Google" button and you will be directed to Google OAuth authentication page. Once you login to your google account you will be redirected to home page and the `fortune` message will be displayed with `cowsay` decoration. Also notice the servername displayed in red to confirm that any subsequent requests are responded using different backend server handled by `haproxy` for load balancing purpose.
 
 ![cowsay-message-1]
 
-[cowsay-message-1]: /images/2_Rest_Server_Response.png
+[cowsay-message-1]: assets/blog/BuildingMicroservicesUsingDocker/2_Rest_Server_Response.png
 
 ![cowsay-message-2]
 
-[cowsay-message-2]: /images/3_Rest_Server_Response.png
+[cowsay-message-2]: assets/blog/BuildingMicroservicesUsingDocker/3_Rest_Server_Response.png
