@@ -2,7 +2,7 @@
 layout: post
 title: AI: Engineering for the human factor
 date: 2024-12-03 16:11:00-0400
-inline: false
+inline: true
 related_posts: false
 ---
 

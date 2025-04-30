@@ -2,7 +2,7 @@
 layout: profiles
 permalink: /people/
 title: people
-description: members of the lab or group
+description: Contributors
 nav: true
 nav_order: 7
 
@@ -14,15 +14,14 @@ profiles:
     content: about_Sunil.md
     image_circular: false # crops the image to make it circular
     more_info: >
-      <p>555 your office number</p>
-      <p>123 your address street</p>
-      <p>Your City, State 12345</p>
-  - align: left
-    image: prof_pic.jpg
-    content: about_Sunil.md
-    image_circular: false # crops the image to make it circular
-    more_info: >
-      <p>555 your office number</p>
-      <p>123 your address street</p>
-      <p>Your City, State 12345</p>
+      <p>DSK Vishwa, Dhayri</p>
+      <p>Pune, Maharashtra 411041</p>
+  # - align: left
+  #   image: prof_pic.jpg
+  #   content: about_Sunil.md
+  #   image_circular: false # crops the image to make it circular
+  #   more_info: >
+  #     <p>555 your office number</p>
+  #     <p>123 your address street</p>
+  #     <p>Your City, State 12345</p>
 ---
