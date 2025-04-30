@@ -188,12 +188,10 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/How_Machines_Learn/";
-            },},{id: "news-",
-          title: '',
+            },},{id: "news-a-simple-inline-announcement",
+          title: 'A simple inline announcement.',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_1/";
-            },},{id: "news-",
+          section: "News",},{id: "news-",
           title: '',
           description: "",
           section: "News",handler: () => {
