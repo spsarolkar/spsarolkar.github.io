@@ -93,4 +93,4 @@ This will start the tomcat without building the application. Its assumed that yo
 
 Entire source code for above code is available under [example-maven-tomcat-plugin](https://github.com/spsarolkar/example-maven-tomcat-plugin)
 
-[intellij-tomcat-run-configuration]: /images/intellij-tomcat-run-configuration.png
+[intellij-tomcat-run-configuration]: /assets/blog/tomcat_maven_plugin/intellij-tomcat-run-configuration.png

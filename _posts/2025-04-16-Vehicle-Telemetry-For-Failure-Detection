@@ -7,7 +7,9 @@ categories: vehicle telemetry anomaly detection raspberrypi kafka
 
 In 2019, I built a hobby project to collect real-time vehicle parameters from the **OBD-II port** using an **ELM327 Bluetooth adapter** and a **Raspberry Pi**. This setup allowed me to display **vehicle speed** and **RPM** on a custom instrument console. As a demonstration, the Raspberry Pi connected to the ELM327 via Bluetooth and parsed live vehicle data directly from the CAN bus.
 
-![Architecture Diagram](./A_flowchart-style_digital_illustration_depicts_a_v.png)
+![Architecture Diagram][Architecture Diagram]
+
+[Architecture Diagram]: (/assets/projects/VehicleTelemetry/OBD2_Vehicle_detection.png)
 
 The hardware flow looked like this:
 

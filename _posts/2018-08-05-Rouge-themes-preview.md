@@ -58,4 +58,4 @@ I feel the utility is still at basic level and it does not allow selecting the c
 
 Please feel free to [fork the repository](https://github.com/spsarolkar/rouge-theme-preview) if you feel adding any new feature. Please note that all the code is present under `gh-pages` branch
 
-[rouge_syntax_highlighter_preview_page_select_theme]: /images/rouge_syntax_highlighter_preview_page_select_theme.png
+[rouge_syntax_highlighter_preview_page_select_theme]: /assets/blog/RougeSyntaxHeighlighterPreviewPage/rouge_syntax_highlighter_preview_page_select_theme.png

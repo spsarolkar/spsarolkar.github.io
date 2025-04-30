@@ -265,7 +265,7 @@ I have created simple application using spring that has one deamon service and o
 
 ![FortuneTeller-cowsay-block-diagram][FortuneTeller-cowsay-block-diagram]
 
-[FortuneTeller-cowsay-block-diagram]: /images/redis-high-availability-server/FortuneTeller-cowsay-block-diagram.png
+[FortuneTeller-cowsay-block-diagram]: /assets/blog/RedisHighAvailability/Redis-High-Availability-server-block-diagram.png
 
 1. **Fortune Teller UI**
 
