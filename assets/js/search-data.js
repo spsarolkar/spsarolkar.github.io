@@ -51,7 +51,14 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/people/";
           },
-        },{id: "post-redis-high-availability-solution-using-redis-sentinel-and-docker",
+        },{id: "dropdown-bookshelf",
+              title: "bookshelf",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/books/";
+              },
+            },{id: "post-redis-high-availability-solution-using-redis-sentinel-and-docker",
         
           title: "Redis High Availability Solution using Redis Sentinel and docker",
         
@@ -188,8 +195,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/How_Machines_Learn/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-at-the-2024-danaher-summit-leaders-from-academia-industry-and-healthcare-gathered-to-explore-the-theme-from-promise-to-practice-focusing-on-bridging-cutting-edge-ai-technologies-with-real-world-applications-especially-those-affecting-human-lives-key-takeaways-human-centered-ai-design-was-a-dominant-theme-speakers-emphasized-that-ethical-deployment-trust-building-and-explainability-are-now-just-as-important-as-model-accuracy-ai-is-being-shaped-not-just-by-data-scientists-but-by-interdisciplinary-teams-including-psychologists-clinicians-ethicists-and-ux-designers-to-better-serve-human-needs-in-sectors-like-life-sciences-health-diagnostics-and-robotics-ai-is-transitioning-from-experimental-to-applied-and-regulated-systems-a-major-shift-is-visible-from-can-it-be-done-to-should-it-be-done-and-how-will-it-affect-people-innovation-in-ai-must-account-for-the-human-factor-not-just-in-performance-metrics-but-in-empathy-usability-and-long-term-trust",
+          title: 'At the 2024 Danaher Summit, leaders from academia, industry, and healthcare gathered to...',
           description: "",
           section: "News",},{id: "news-",
           title: '',
