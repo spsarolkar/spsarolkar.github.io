@@ -4,6 +4,8 @@ title: AI: Engineering for the human factor
 date: 2024-12-03 16:11:00-0400
 inline: true
 related_posts: false
+excerpt: >
+  Insights from the 2024 Danaher Summit on applying AI to real-world, human-centered challenges.
 ---
 
 At the 2024 Danaher Summit, leaders from academia, industry, and healthcare gathered to explore the theme: “From Promise to Practice”, focusing on bridging cutting-edge AI technologies with real-world applications—especially those affecting human lives.
