@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href="#affiliations">Affiliations</a> | Pune, India | Contact: spsarolkar@gmail.com | Motto: "Build. Learn. Simplify."
+subtitle: "<a href='#affiliations'>Affiliations</a> | Pune, India | Contact: spsarolkar@gmail.com | Motto: 'Build. Learn. Simplify.'"
 
 profile:
   align: right
