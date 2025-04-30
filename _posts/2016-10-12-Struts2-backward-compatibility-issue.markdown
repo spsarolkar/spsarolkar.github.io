@@ -14,7 +14,7 @@ Fortunately good people at Apache Software Foundation have already thought about
 1. I created one blank maven project in Eclipse
 2. Updated the pom.xml as follows
 
-{% highlight xml linenos%}
+```java
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 <modelVersion>4.0.0</modelVersion>
 <groupId>org.test</groupId>
@@ -54,13 +54,13 @@ Fortunately good people at Apache Software Foundation have already thought about
 </dependency>
     </dependencies>
 </project>
-{% endhighlight %}
+```
 
 As highlighted in above pom.xml dependencies plugin will execute on maven install phase and will store its dependencies in
 
-{% highlight shell linenos%}
+```xml
 ${project.build.directory}/dependencies
-{% endhighlight %}
+```
 
 folder which as per Maven convention is your target/dependencies directory.
 

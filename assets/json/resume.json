@@ -16,6 +16,10 @@
     },
     "profiles": [
       {
+        "network": "Linked In",
+        "username": "Sunil Sarolkar",
+        "url": "https://www.linkedin.com/in/sunil-sarolkar-451b2023/"
+      } ,{
         "network": "Stackoverflow",
         "username": "Xinus",
         "url": "https://stackoverflow.com/users/138604/xinus"
@@ -25,11 +29,11 @@
   "work": [
     {
       "name": "Deutsche Bank",
-      "position": "Software Engineer/System Architect",
+      "position": "Software Architect (with hands-on development)",
       "url": "https://g.co/kgs/2cFgwTc",
       "startDate": "2014-07-27",
       "endDate": "2025-07-25",
-      "summary": "Implemented business logic for new functionalities, fixed security vulnerabilities, migrated platform to cloud hosting, and integrated OAuth authentication. Worked on projects like Feed and Adjustment Workstation and Accounting Subledger.",
+      "summary": "Led architecture and design for secure banking applications while actively contributing as a hands-on developer in Java and Spring Boot.Implemented microservices architecture and improved system scalability by 40%.Collaborated with cross-functional teams, reviewed code, and mentored junior developers.",
       "highlights": ["Spark", "Data Pipelines", "Java", "Spring"]
     },
     {
@@ -64,7 +68,7 @@
       "location": "Pune University",
       "url": "http://www.unipune.ac.in/",
       "area": "Software Development",
-      "studyType": "PhD",
+      "studyType": "Bachelors Degree",
       "startDate": "2001-05-01",
       "endDate": "2006-04-01",
       "courses": ["Electronics"]
@@ -72,11 +76,10 @@
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "Got excellence award during Sandy Hurricane.",
+      "date": "2012-12-12",
+      "awarder": "HSBC GLT",
+      "summary": "We needed to bring up the application of completely seperate serevrs when both PROD and DR servers werer affected"
     }
   ],
   "certificates": [

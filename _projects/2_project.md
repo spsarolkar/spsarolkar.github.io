@@ -116,7 +116,7 @@ Non-trainable params: 440 (1.72 KB)
 
 ### Tensorboard training stats
 
-(Tensorboard)[https://huggingface.co/cdsteameight/ISL-SignLanguageTranslation/tensorboard]
+🔗 [Tensorboard](https://huggingface.co/cdsteameight/ISL-SignLanguageTranslation/tensorboard)
 
 ### Features
 

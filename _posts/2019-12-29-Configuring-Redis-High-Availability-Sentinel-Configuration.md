@@ -9,7 +9,7 @@ In this post we will configure the Redis high availability server using kubernet
 
 ![Redis-High-Availability-server-block-diagram]
 
-[Redis-High-Availability-server-block-diagram]: /images/redis-high-availability-server/Redis-High-Availability-server-block-diagram.png
+[Redis-High-Availability-server-block-diagram]: assets/blog/RedisHighAvailability/Redis-High-Availability-server-block-diagram.png
 
 For each block present above we will have seperate docker container. So we have below list of images
 
@@ -131,10 +131,9 @@ We will have configurations for redis-replica and redis-sentinel for the same.
 ###### **Kubernetes configuration for master-sentinel and replica-sentinel**
 
 For deploying the redis cluster on Kubernetes we need to create deployment and services as below
-![Kubernetes-deployment-redis-high-availability]
+![Kubernetes-deployment-redis-high-availability][Kubernetes-deployment-redis-high-availability]
 
-[Kubernetes-deployment-redis-high-availability]: /images/redis-high-availability-server/Kubernetes-deployment-redis-high-availability.png
-
+[Kubernetes-deployment-redis-high-availability]: assets/blog/RedisHighAvailability/Kubernetes-deployment-redis-high-availability.png
 **master-sentinel deployment**
 
 ```yaml
@@ -263,7 +262,7 @@ To use this high availability cluster we need client capable of connecting to re
 
 I have created simple application using spring that has one deamon service and one front end service. The application block diagram is as below
 
-![FortuneTeller-cowsay-block-diagram]
+![FortuneTeller-cowsay-block-diagram][FortuneTeller-cowsay-block-diagram]
 
 [FortuneTeller-cowsay-block-diagram]: /images/redis-high-availability-server/FortuneTeller-cowsay-block-diagram.png
 
