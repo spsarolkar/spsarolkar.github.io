@@ -45,7 +45,7 @@ Fortunately good people at Apache Software Foundation have already thought about
       </plugin>
     </plugins>
  </build>
-    
+
     <dependencies>
     <dependency>
     <groupId>org.apache.struts</groupId>

@@ -134,6 +134,7 @@ For deploying the redis cluster on Kubernetes we need to create deployment and s
 ![Kubernetes-deployment-redis-high-availability][Kubernetes-deployment-redis-high-availability]
 
 [Kubernetes-deployment-redis-high-availability]: assets/blog/RedisHighAvailability/Kubernetes-deployment-redis-high-availability.png
+
 **master-sentinel deployment**
 
 ```yaml
