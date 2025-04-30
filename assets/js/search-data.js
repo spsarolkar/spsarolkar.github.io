@@ -198,12 +198,10 @@ ninja.data = [{
             },},{id: "news-at-the-2024-danaher-summit-leaders-from-academia-industry-and-healthcare-gathered-to-explore-the-theme-from-promise-to-practice-focusing-on-bridging-cutting-edge-ai-technologies-with-real-world-applications-especially-those-affecting-human-lives-key-takeaways-human-centered-ai-design-was-a-dominant-theme-speakers-emphasized-that-ethical-deployment-trust-building-and-explainability-are-now-just-as-important-as-model-accuracy-ai-is-being-shaped-not-just-by-data-scientists-but-by-interdisciplinary-teams-including-psychologists-clinicians-ethicists-and-ux-designers-to-better-serve-human-needs-in-sectors-like-life-sciences-health-diagnostics-and-robotics-ai-is-transitioning-from-experimental-to-applied-and-regulated-systems-a-major-shift-is-visible-from-can-it-be-done-to-should-it-be-done-and-how-will-it-affect-people-innovation-in-ai-must-account-for-the-human-factor-not-just-in-performance-metrics-but-in-empathy-usability-and-long-term-trust",
           title: 'At the 2024 Danaher Summit, leaders from academia, industry, and healthcare gathered to...',
           description: "",
-          section: "News",},{id: "news-",
-          title: '',
+          section: "News",},{id: "news-backpropagation-introduced-in-1986-is-a-widely-used-and-effective-method-for-training-neural-networks-but-it-has-drawbacks-like-high-memory-usage-and-limited-parallelism-researchers-at-the-university-of-oxford-have-now-proposed-a-new-algorithm-that-trains-neural-networks-without-relying-on-backpropagation-potentially-overcoming-these-limitations-more-details-backpropagation-introduced-in-1986-is-a-widely-used-and-effective-method-for-training-neural-networks-but-it-has-drawbacks-like-high-memory-usage-and-limited-parallelism-researchers-at-the-university-of-oxford-have-now-proposed-a-new-algorithm-that-trains-neural-networks-without-relying-on-backpropagation-potentially-overcoming-these-limitations-more-details-key-takeaways",
+          title: 'Backpropagation, introduced in 1986, is a widely used and effective method for training...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "projects-structformer",
+          section: "News",},{id: "projects-structformer",
           title: 'StructFormer',
           description: "Transformer-based model built to automate structured data transformation from one schema to another",
           section: "Projects",handler: () => {
