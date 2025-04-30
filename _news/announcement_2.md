@@ -1,5 +1,4 @@
 ---
-layout: post
 title: AI: You Don’t Need Backpropagation To Train Neural Networks Anymore
 date: 2025-04-26 11:12:00 -0400
 inline: true
