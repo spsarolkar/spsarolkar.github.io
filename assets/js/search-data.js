@@ -16,12 +16,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "nav-publications",
-          title: "publications",
+        },{id: "nav-apps",
+          title: "apps",
           description: "Publications by Sunil Sarolkar",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/publications/";
+            window.location.href = "/apps/";
           },
         },{id: "nav-projects",
           title: "projects",
@@ -58,7 +58,29 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/books/";
               },
-            },{id: "post-redis-high-availability-solution-using-redis-sentinel-and-docker",
+            },{id: "post-structformer-transformer-based-structured-data-adjustment-generator",
+        
+          title: "StructFormer: Transformer-based Structured Data Adjustment Generator",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/Structformer-Structural-Data-Transformer/";
+          
+        },
+      },{id: "post-vehicle-telemetry-using-raspberry-pi-with-kafka-based-anomaly-detection",
+        
+          title: "Vehicle Telemetry using Raspberry Pi with Kafka-based Anomaly Detection",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/Vehicle-Telemetry-For-Failure-Detection/";
+          
+        },
+      },{id: "post-redis-high-availability-solution-using-redis-sentinel-and-docker",
         
           title: "Redis High Availability Solution using Redis Sentinel and docker",
         
