@@ -194,11 +194,22 @@ ninja.data = [{
         
           title: "Struts 1.3.10 not backward compatible with Struts 1.2.9/1.2.4",
         
-        description: "",
+        description: "Issue with Struts compatibility",
         section: "Posts",
         handler: () => {
           
             window.location.href = "/blog/2016/Struts2-backward-compatibility-issue/";
+          
+        },
+      },{id: "post-a-post-with-disqus-comments",
+        
+          title: "a post with disqus comments",
+        
+        description: "an example of a blog post with disqus comments",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/disqus-comments/";
           
         },
       },{id: "post-findbugs-issue-with-detecting-resource-leaks-for-resource-initialized-outside-methods-scope",
