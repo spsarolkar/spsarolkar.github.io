@@ -3,6 +3,7 @@ layout: post
 title: Blinking blue LED of death of ESP8266
 date: 2018-03-18 10:54:44 +0530
 categories: ESP8266
+disqus_comments: true
 ---
 
 I have been working with ESP8266 for adding WIFI capability for home devices, when one day I was trying to test my setup with one older chip on ESP 12E, I stuck across the problem. After the sketch uploaded succesfully ESP started with death loop where the blue led on it started blinking contineously.

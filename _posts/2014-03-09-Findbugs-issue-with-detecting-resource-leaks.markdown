@@ -3,6 +3,7 @@ layout: post
 title: Findbugs issue with detecting resource leaks for resource initialized outside methods scope
 date: 2014-03-09 10:54:44 +0530
 categories: Findbugs issue with detecting resource leaks
+disqus_comments: true
 ---
 
 Recently while working with Findbugs plugin for Eclipse I discovered that Findbugs fails to identify resource leak in the scenarios where resource is initialized outside the method scope.

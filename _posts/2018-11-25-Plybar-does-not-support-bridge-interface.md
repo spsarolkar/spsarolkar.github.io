@@ -3,6 +3,7 @@ layout: post
 title: "Polybar does not support the bridge interface for network tracking"
 date: 2018-11-25 18:02:15 +0530
 categories: Polybar bridge
+disqus_comments: true
 ---
 
 [Polybar](https://github.com/jaagr/polybar) is one of the most popular status bar for tiled window manager. Like most of the statusbars it has network module to track upload and download traffic for interface configured in the configuration file.

@@ -3,6 +3,7 @@ layout: post
 title: MQTT discovery with Home Assistant
 date: 2018-01-11 10:54:44 +0530
 categories: Home Assistant
+disqus_comments: true
 ---
 
 Home Assistant is a opensource platform that is customisable enough to accomodate many different types IoT devices.
@@ -20,9 +21,7 @@ mosquitto_pub -V mqttv311 -h 192.168.0.17 -p 1883 -t "homeassistant/switch/bedro
 
 Once the switch is registered it should be visible on home assistant UI.
 
-![switch-registered]
-
-[switch-registered]: /assets/blog/home_assistant/1_switch_registered.png
+{% include figure.liquid path="assets/blog/home_assistant/1_switch_registered.png" title="switch-registered" class="img-fluid rounded z-depth-1" %}
 
 As seen in the screenshot above the switch is still not in available state.To turn on its availability, we need to publish "online" status to its availability topic. We will do just that using below command,
 

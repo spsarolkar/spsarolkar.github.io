@@ -3,6 +3,7 @@ layout: post
 title: Maven cheatsheet
 date: 2018-09-01 18:02:15 +0530
 categories: maven cheatsheet
+disqus_comments: true
 ---
 
 Maven has many different plugins and many times its very time consuming to google and find the suitable configuration to achieve your goal. Fortunately maven itself comes with help plugin which allows you to fetch all the necessary information about any plugin.

@@ -3,6 +3,7 @@ layout: post
 title: Building microservices using docker swarm with Oauth2
 date: 2018-09-30 18:02:15 +0530
 categories: docker microservices
+disqus_comments: true
 ---
 
 Today we will learn how to build simple multi tier microservice using Oauth2 authorization with Redis session management. Our front end will be build using Spring Boot which will use backend python service for fetching the fortune message to be displayed. The block diagram for the application is as below. All the example code is uploaded to github at [Github](https://github.com/spsarolkar/docker-swarm-example)

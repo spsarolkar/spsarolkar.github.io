@@ -18,7 +18,7 @@ In the future, we plan to stream data over **Kafka** using a 4G modem and analyz
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid path="/assets/projects/vehicletelemetry/Vehicle_Telemetry_Architecture.png" title="System Architecture" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="assets/projects/vehicletelemetry/Vehicle_Telemetry_Architecture.png" title="System Architecture" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
@@ -48,13 +48,13 @@ In the future, we plan to stream data over **Kafka** using a 4G modem and analyz
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="/assets/projects/vehicletelemetry/demo1.png" title="OBD-II Dashboard" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="assets/projects/vehicletelemetry/demo1.png" title="OBD-II Dashboard" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="/assets/projects/vehicletelemetry/demo2.png" title="Live RPM & Speed" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="assets/projects/vehicletelemetry/demo2.png" title="Live RPM & Speed" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="/assets/projects/vehicletelemetry/demo3.png" title="Python UI Console" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="assets/projects/vehicletelemetry/demo3.png" title="Python UI Console" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 

@@ -3,6 +3,7 @@ layout: post
 title: Understanding Spring Boot Security configuration
 date: 2018-09-09 14:48:36 +0530
 categories: spring-boot spring-security
+disqus_comments: true
 ---
 
 Spring boot came with many useful features and for most of the usual use cases we have all implementation already provided by Spring its just a matter of configuring it that suite our needs. One of the feature is spring security. I would assume that you have basic understanding of how Servlet Containers work. We will start with creating the sample application from [Spring Initializr](https://start.spring.io). Make sure you select Web and Security under "Search for dependencies" field.

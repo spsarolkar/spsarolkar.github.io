@@ -3,6 +3,7 @@ layout: post
 title: "Google cloud kubernetes example"
 date: 2018-10-06 18:02:15 +0530
 categories: docker microservices google-cloud kubernetes
+disqus_comments: true
 ---
 
 We will convert the microservice we built in [earlier post](https://spsarolkar.github.io/docker/microservices/2018/09/30/Building-Microservices-Using-Docker.html) and we will port it in google cloud platform using kubernetes. All the source code is available on [Github](https://github.com/spsarolkar/google-cloud-kubernetes-example)

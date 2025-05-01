@@ -3,6 +3,7 @@ layout: post
 title: "Vehicle Telemetry using Raspberry Pi with Kafka-based Anomaly Detection"
 date: 2025-04-16 20:10:00 +0530
 categories: vehicle telemetry anomaly detection raspberrypi kafka
+disqus_comments: true
 ---
 
 In 2019, I built a hobby project to collect real-time vehicle parameters from the **OBD-II port** using an **ELM327 Bluetooth adapter** and a **Raspberry Pi**. This setup allowed me to display **vehicle speed** and **RPM** on a custom instrument console. As a demonstration, the Raspberry Pi connected to the ELM327 via Bluetooth and parsed live vehicle data directly from the CAN bus.

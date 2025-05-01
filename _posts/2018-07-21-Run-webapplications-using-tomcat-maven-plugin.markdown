@@ -3,6 +3,7 @@ layout: post
 title: Running web applications with tomcat maven plugin
 date: 2018-03-18 10:54:44 +0530
 categories: ESP8266
+disqus_comments: true
 ---
 
 Intellij Idea offers the two variants of their de-facto IDE for Java related projects. One it their feature rich Enterprise edition and another one community supported Community edition. In community edition though they restricted some of the features, one of them is Tomcat plugin. Tomcat plugin for intellij Idea currently only supported in their Enterprise edition. If you have your pockets empty or do not want to buy it there is easy solution available in case you are using maven for managing lifecycle of your project.

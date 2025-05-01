@@ -3,6 +3,7 @@ layout: post
 title: Preview of themes for Rouge syntax highlighter
 date: 2018-08-05 22:55:00 +0530
 categories: rouge themes syntax-highlighter
+disqus_comments: true
 ---
 
 Rouge is a popular syntax highlighter written in Ruby to provide the capability of syntax highlighting for code written on html pages. Rouge supports many different themes. While implementing the same feature for my blog I realized that there is no preview page where I can see how these themes look like. So I took the challenge and written my own, its written using javascript and all the static code gets generated using Jekyll. Please follow this link - [Rouge Syntax highlighter preview page](https://spsarolkar.github.io/rouge-theme-preview/)

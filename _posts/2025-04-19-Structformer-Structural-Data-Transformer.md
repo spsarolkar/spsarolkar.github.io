@@ -3,6 +3,7 @@ layout: post
 title: "StructFormer: Transformer-based Structured Data Adjustment Generator"
 date: 2025-04-19 18:10:00 +0530
 categories: Transformer Structured Data NLP
+disqus_comments: true
 ---
 
 I recently completed a project called **StructFormer**, a Transformer-based model that generates **SQL adjustment statements** from structured error records. The model is particularly useful in enterprise data processing pipelines where large-scale reconciliation or error adjustment tasks are automated.

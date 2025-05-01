@@ -3,13 +3,14 @@ layout: post
 title: "Redis High Availability Solution using Redis Sentinel and docker"
 date: 2019-12-29 17:45:00 +0530
 categories: Redis High-Availability Sentinel kubernetes
+disqus_comments: true
 ---
 
 In this post we will configure the Redis high availability server using kubernetes. Below will be our final configuration for redis cluster.
 
 ![Redis-High-Availability-server-block-diagram]
 
-[Redis-High-Availability-server-block-diagram]: assets/blog/RedisHighAvailability/Redis-High-Availability-server-block-diagram.png
+[Redis-High-Availability-server-block-diagram]: /assets/blog/RedisHighAvailability/Redis-High-Availability-server-block-diagram.png
 
 For each block present above we will have seperate docker container. So we have below list of images
 
@@ -133,7 +134,7 @@ We will have configurations for redis-replica and redis-sentinel for the same.
 For deploying the redis cluster on Kubernetes we need to create deployment and services as below
 ![Kubernetes-deployment-redis-high-availability][Kubernetes-deployment-redis-high-availability]
 
-[Kubernetes-deployment-redis-high-availability]: assets/blog/RedisHighAvailability/Kubernetes-deployment-redis-high-availability.png
+[Kubernetes-deployment-redis-high-availability]: /assets/blog/RedisHighAvailability/Kubernetes-deployment-redis-high-availability.png
 
 **master-sentinel deployment**
 
