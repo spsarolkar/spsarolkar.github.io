@@ -40,7 +40,10 @@ I have now planned to enhance the project with real-time streaming and anomaly d
 
 You can check out the working video demo and the source code in the GitHub repository:
 
-📽️ **[Demo Video](#)** (replace this with your actual video link)  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/X3aA26rKwIs?si=Wro3g8q26U2lR8Gr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Github Repo
+
 💻 **[GitHub Repo](https://github.com/spsarolkar/Tesla/tree/master)**
 
 ## Tech Stack
