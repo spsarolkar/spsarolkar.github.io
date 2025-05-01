@@ -2,8 +2,11 @@
 layout: post
 title: Struts 1.3.10 not backward compatible with Struts 1.2.9/1.2.4
 date: 2016-10-11 10:54:44 +0530
+description: Issue with Struts compatibility
+tags: comments
 categories: Struts 13 backword compatibility
 disqus_comments: true
+related_posts: false
 ---
 
 Recently while working on one of the application built on top of Struts 1.2.4, there was a security vulnerability reported by Varacode scan asking us to upgrade to latest Struts 1 version 1.3.10.
