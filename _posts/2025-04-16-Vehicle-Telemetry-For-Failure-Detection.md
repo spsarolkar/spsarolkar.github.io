@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Vehicle Telemetry using Raspberry Pi with Kafka-based Anomaly Detection"
-date:   2025-04-16 20:10:00 +0530
+title: "Vehicle Telemetry using Raspberry Pi with Kafka-based Anomaly Detection"
+date: 2025-04-16 20:10:00 +0530
 categories: vehicle telemetry anomaly detection raspberrypi kafka
 ---
 

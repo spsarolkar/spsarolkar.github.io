@@ -18,7 +18,7 @@ In the future, we plan to stream data over **Kafka** using a 4G modem and analyz
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/projects/vehicletelemetry/Vehicle_Telemetry_Architecture.png" title="System Architecture" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid path="/assets/projects/vehicletelemetry/Vehicle_Telemetry_Architecture.png" title="System Architecture" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
@@ -48,13 +48,13 @@ In the future, we plan to stream data over **Kafka** using a 4G modem and analyz
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/projects/vehicletelemetry/demo1.png" title="OBD-II Dashboard" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="/assets/projects/vehicletelemetry/demo1.png" title="OBD-II Dashboard" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/projects/vehicletelemetry/demo2.png" title="Live RPM & Speed" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="/assets/projects/vehicletelemetry/demo2.png" title="Live RPM & Speed" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/projects/vehicletelemetry/demo3.png" title="Python UI Console" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="/assets/projects/vehicletelemetry/demo3.png" title="Python UI Console" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
@@ -68,7 +68,8 @@ In the future, we plan to stream data over **Kafka** using a 4G modem and analyz
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid path="https://youtu.be/X3aA26rKwIs?si=mEJq76wGndq43bpp" class="img-fluid rounded z-depth-1" %}
+        <!-- {% include video.liquid path="https://youtu.be/X3aA26rKwIs?si=mEJq76wGndq43bpp" class="img-fluid rounded z-depth-1" %} -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/X3aA26rKwIs?si=Wro3g8q26U2lR8Gr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </div>
 

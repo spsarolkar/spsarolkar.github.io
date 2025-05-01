@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /publications/
-title: publications
+permalink: /apps/
+title: apps
 description: Publications by Sunil Sarolkar
 nav: true
 nav_order: 2
