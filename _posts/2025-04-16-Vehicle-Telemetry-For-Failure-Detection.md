@@ -24,22 +24,26 @@ I have now planned to enhance the project with real-time streaming and anomaly d
 - These streams are processed using **Apache Spark**, and anomalies are detected with a trained **ML model**.
 
 ## ✅ Implemented Components:
+
 - ELM327 Bluetooth integration
 - Real-time data collection on Raspberry Pi
 - Custom instrument display for speed and RPM
 
 ## 🔜 Planned Enhancements:
+
 - Kafka streaming pipeline with 4G modem
 - Apache Spark for telemetry processing
 - ML-based failure detection using vehicle health indicators
 
 ## Demo & Source Code
+
 You can check out the working video demo and the source code in the GitHub repository:
 
 📽️ **[Demo Video](#)** (replace this with your actual video link)  
 💻 **[GitHub Repo](https://github.com/spsarolkar/Tesla/tree/master)**
 
 ## Tech Stack
+
 - Raspberry Pi 3B+
 - Python 3
 - ELM327 OBD-II Adapter
@@ -48,6 +52,7 @@ You can check out the working video demo and the source code in the GitHub repos
 - 4G USB Modem
 
 ## Final Thoughts
+
 This project connects the physical and digital world by capturing automotive telemetry and enabling intelligent, ML-based diagnostics. It's an exciting intersection of **IoT**, **machine learning**, and **real-time streaming**—a great example of applying data science beyond traditional dashboards.
 
 If you’re working on similar projects or have suggestions for failure prediction features, feel free to connect or fork the repo!

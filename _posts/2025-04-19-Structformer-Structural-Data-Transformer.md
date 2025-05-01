@@ -14,11 +14,13 @@ In financial or trading systems, data errors such as "Incorrect Account Type" or
 Example:
 
 **Input:**
+
 ```
 TradeID=50874 AccountID=ACC1003 ErrorType=Negative Amount
 ```
 
 **Expected Output:**
+
 ```sql
 UPDATE Trades SET Amount=831.05 WHERE TradeID=50874; INSERT INTO AdjustmentLog(ErrorID, AdjustedBy) VALUES('ERR5827', 'User1');
 ```
@@ -60,8 +62,6 @@ class TransformerEncoder(keras.layers.Layer):
       x = self.ff_layer_norm(x)
       return x
 ```
-
-
 
 The decoder is similarly structured, using both causal and cross attention.
 
@@ -144,4 +144,3 @@ Check out the full codebase, training script, and inference pipeline here:
 This was a fascinating experiment, and I plan to evolve it into a plug-and-play solution for **automated structured data correction** in enterprise applications.
 
 Feel free to fork, contribute, or try it on your own datasets! 🚀
-
