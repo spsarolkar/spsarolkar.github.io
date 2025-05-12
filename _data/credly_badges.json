@@ -1,7 +1,6 @@
 [
   {
     "name": "Develop Your Google Cloud Network Skill Badge",
-    "url": "https://www.credly.com/badges/b126c61c-4781-4f03-9b2b-062963003abf",
     "issuer": "Google Cloud",
     "image": "https://images.credly.com/size/80x80/images/b126c61c-4781-4f03-9b2b-062963003abf/image.png",
     "uuid": "b126c61c-4781-4f03-9b2b-062963003abf",
@@ -10,7 +9,6 @@
   },
   {
     "name": "Build Infrastructure with Terraform on Google Cloud Skill Badge",
-    "url": "https://www.credly.com/badges/b18154fb-9bd3-47e5-a6f1-554be512947d",
     "issuer": "Google Cloud",
     "image": "https://images.credly.com/size/80x80/images/b18154fb-9bd3-47e5-a6f1-554be512947d/image.png",
     "uuid": "b18154fb-9bd3-47e5-a6f1-554be512947d",
@@ -19,7 +17,6 @@
   },
   {
     "name": "Set Up an App Dev Environment on Google Cloud Skill Badge",
-    "url": "https://www.credly.com/badges/42326d44-14ff-4eda-b9c5-7d8f12919253",
     "issuer": "Google Cloud",
     "image": "https://images.credly.com/size/80x80/images/42326d44-14ff-4eda-b9c5-7d8f12919253/image.png",
     "uuid": "42326d44-14ff-4eda-b9c5-7d8f12919253",
@@ -28,7 +25,6 @@
   },
   {
     "name": "Implement Cloud Security Fundamentals on Google Cloud Skill Badge",
-    "url": "https://www.credly.com/badges/f1dbea96-0ef4-4857-bb85-3d208a82de10",
     "issuer": "Google Cloud",
     "image": "https://images.credly.com/size/80x80/images/f1dbea96-0ef4-4857-bb85-3d208a82de10/image.png",
     "uuid": "f1dbea96-0ef4-4857-bb85-3d208a82de10",
@@ -37,7 +33,6 @@
   },
   {
     "name": "Implement Load Balancing on Compute Engine Skill Badge",
-    "url": "https://www.credly.com/badges/eea11cba-2a98-4bbe-bad2-447878dd34a2",
     "issuer": "Google Cloud",
     "image": "https://images.credly.com/size/80x80/images/eea11cba-2a98-4bbe-bad2-447878dd34a2/image.png",
     "uuid": "eea11cba-2a98-4bbe-bad2-447878dd34a2",
@@ -46,7 +41,6 @@
   },
   {
     "name": "Build a Secure Google Cloud Network Skill Badge",
-    "url": "https://www.credly.com/badges/e1131ae3-4a52-4af1-9801-b7853767cf79",
     "issuer": "Google Cloud",
     "image": "https://images.credly.com/size/80x80/images/e1131ae3-4a52-4af1-9801-b7853767cf79/image.png",
     "uuid": "e1131ae3-4a52-4af1-9801-b7853767cf79",
@@ -55,7 +49,6 @@
   },
   {
     "name": "Deploy Kubernetes Applications on Google Cloud Skill Badge",
-    "url": "https://www.credly.com/badges/f0388a0c-130f-47cd-8750-d6357e907e58",
     "issuer": "Google Cloud",
     "image": "https://images.credly.com/size/80x80/images/f0388a0c-130f-47cd-8750-d6357e907e58/image.png",
     "uuid": "f0388a0c-130f-47cd-8750-d6357e907e58",
@@ -64,7 +57,6 @@
   },
   {
     "name": "Prepare Data for ML APIs on Google Cloud Skill Badge",
-    "url": "https://www.credly.com/badges/68756311-9319-4eeb-a2b7-76defc8dd8a2",
     "issuer": "Google Cloud",
     "image": "https://images.credly.com/size/80x80/images/68756311-9319-4eeb-a2b7-76defc8dd8a2/image.png",
     "uuid": "68756311-9319-4eeb-a2b7-76defc8dd8a2",
@@ -73,7 +65,6 @@
   },
   {
     "name": "Classify Images with TensorFlow on Google Cloud",
-    "url": "https://www.credly.com/badges/ba7d317c-0441-493d-9297-840162892581",
     "issuer": "Google Cloud",
     "image": "https://images.credly.com/size/80x80/images/ba7d317c-0441-493d-9297-840162892581/image.png",
     "uuid": "ba7d317c-0441-493d-9297-840162892581",
@@ -82,7 +73,6 @@
   },
   {
     "name": "Engineer Data for Predictive Modeling with BigQuery ML Skill Badge",
-    "url": "https://www.credly.com/badges/6160e2c1-4a95-4f47-8c5b-f2dde7bb6a67",
     "issuer": "Google Cloud",
     "image": "https://images.credly.com/size/80x80/images/6160e2c1-4a95-4f47-8c5b-f2dde7bb6a67/image.png",
     "uuid": "6160e2c1-4a95-4f47-8c5b-f2dde7bb6a67",
@@ -91,7 +81,6 @@
   },
   {
     "name": "Build and Deploy Machine Learning Solutions on Vertex AI Skill Badge",
-    "url": "https://www.credly.com/badges/f4c342c9-af98-4352-b54a-a8a166ee8f68",
     "issuer": "Google Cloud",
     "image": "https://images.credly.com/size/80x80/images/f4c342c9-af98-4352-b54a-a8a166ee8f68/image.png",
     "uuid": "f4c342c9-af98-4352-b54a-a8a166ee8f68",

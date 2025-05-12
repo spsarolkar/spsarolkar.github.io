@@ -69,7 +69,6 @@ for card in soup.select("div.settings__skills-profile__edit-skills-profile__badg
 
         badges.append({
             "name": badge_name,
-            "url" : 'https://www.credly.com/badges/'+badge_uuid,
             "issuer": badge_issuer,
             "image": badge_url,
             "uuid": badge_uuid,
