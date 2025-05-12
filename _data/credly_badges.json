@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Develop Your Google Cloud Network Skill Badge",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/size/80x80/images/b126c61c-4781-4f03-9b2b-062963003abf/image.png",
+    "uuid": "b126c61c-4781-4f03-9b2b-062963003abf",
+    "issued": "5/2/25",
+    "image340": "https://images.credly.com/size/340x340/images/b126c61c-4781-4f03-9b2b-062963003abf/image.png"
+  },
+  {
+    "name": "Build Infrastructure with Terraform on Google Cloud Skill Badge",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/size/80x80/images/b18154fb-9bd3-47e5-a6f1-554be512947d/image.png",
+    "uuid": "b18154fb-9bd3-47e5-a6f1-554be512947d",
+    "issued": "5/2/25",
+    "image340": "https://images.credly.com/size/340x340/images/b18154fb-9bd3-47e5-a6f1-554be512947d/image.png"
+  },
+  {
+    "name": "Set Up an App Dev Environment on Google Cloud Skill Badge",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/size/80x80/images/42326d44-14ff-4eda-b9c5-7d8f12919253/image.png",
+    "uuid": "42326d44-14ff-4eda-b9c5-7d8f12919253",
+    "issued": "5/2/25",
+    "image340": "https://images.credly.com/size/340x340/images/42326d44-14ff-4eda-b9c5-7d8f12919253/image.png"
+  },
+  {
+    "name": "Implement Cloud Security Fundamentals on Google Cloud Skill Badge",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/size/80x80/images/f1dbea96-0ef4-4857-bb85-3d208a82de10/image.png",
+    "uuid": "f1dbea96-0ef4-4857-bb85-3d208a82de10",
+    "issued": "5/2/25",
+    "image340": "https://images.credly.com/size/340x340/images/f1dbea96-0ef4-4857-bb85-3d208a82de10/image.png"
+  },
+  {
+    "name": "Implement Load Balancing on Compute Engine Skill Badge",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/size/80x80/images/eea11cba-2a98-4bbe-bad2-447878dd34a2/image.png",
+    "uuid": "eea11cba-2a98-4bbe-bad2-447878dd34a2",
+    "issued": "5/2/25",
+    "image340": "https://images.credly.com/size/340x340/images/eea11cba-2a98-4bbe-bad2-447878dd34a2/image.png"
+  },
+  {
+    "name": "Build a Secure Google Cloud Network Skill Badge",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/size/80x80/images/e1131ae3-4a52-4af1-9801-b7853767cf79/image.png",
+    "uuid": "e1131ae3-4a52-4af1-9801-b7853767cf79",
+    "issued": "5/2/25",
+    "image340": "https://images.credly.com/size/340x340/images/e1131ae3-4a52-4af1-9801-b7853767cf79/image.png"
+  },
+  {
+    "name": "Deploy Kubernetes Applications on Google Cloud Skill Badge",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/size/80x80/images/f0388a0c-130f-47cd-8750-d6357e907e58/image.png",
+    "uuid": "f0388a0c-130f-47cd-8750-d6357e907e58",
+    "issued": "5/2/25",
+    "image340": "https://images.credly.com/size/340x340/images/f0388a0c-130f-47cd-8750-d6357e907e58/image.png"
+  },
+  {
+    "name": "Prepare Data for ML APIs on Google Cloud Skill Badge",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/size/80x80/images/68756311-9319-4eeb-a2b7-76defc8dd8a2/image.png",
+    "uuid": "68756311-9319-4eeb-a2b7-76defc8dd8a2",
+    "issued": "5/2/25",
+    "image340": "https://images.credly.com/size/340x340/images/68756311-9319-4eeb-a2b7-76defc8dd8a2/image.png"
+  },
+  {
+    "name": "Classify Images with TensorFlow on Google Cloud",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/size/80x80/images/ba7d317c-0441-493d-9297-840162892581/image.png",
+    "uuid": "ba7d317c-0441-493d-9297-840162892581",
+    "issued": "5/5/25",
+    "image340": "https://images.credly.com/size/340x340/images/ba7d317c-0441-493d-9297-840162892581/image.png"
+  },
+  {
+    "name": "Engineer Data for Predictive Modeling with BigQuery ML Skill Badge",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/size/80x80/images/6160e2c1-4a95-4f47-8c5b-f2dde7bb6a67/image.png",
+    "uuid": "6160e2c1-4a95-4f47-8c5b-f2dde7bb6a67",
+    "issued": "5/6/25",
+    "image340": "https://images.credly.com/size/340x340/images/6160e2c1-4a95-4f47-8c5b-f2dde7bb6a67/image.png"
+  },
+  {
+    "name": "Build and Deploy Machine Learning Solutions on Vertex AI Skill Badge",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/size/80x80/images/f4c342c9-af98-4352-b54a-a8a166ee8f68/image.png",
+    "uuid": "f4c342c9-af98-4352-b54a-a8a166ee8f68",
+    "issued": "5/11/25",
+    "image340": "https://images.credly.com/size/340x340/images/f4c342c9-af98-4352-b54a-a8a166ee8f68/image.png"
+  }
+]

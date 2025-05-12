@@ -1,0 +1,39 @@
+name: Update Credly Badges via Selenium
+
+on:
+  schedule:
+    - cron: "0 3 * * 1" # Weekly on Monday
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  update-badges:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-chromedriver
+          pip install selenium beautifulsoup4
+
+      - name: Fetch Credly badges using Selenium
+        env:
+          CREDLY_USERNAME: sunil-sarolkar # Change to your username if needed
+        run: |
+          python fetch_credly_badges.py
+
+      - name: Commit and push badge updates
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add _data/credly_badges.json
+          git commit -m "Update Credly badges [auto]" || echo "No changes to commit"
+          git push

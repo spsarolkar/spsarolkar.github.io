@@ -64,6 +64,21 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
+    <!-- Credly Badges Section -->
+    <h2>My Credly Badges</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
+      {% for badge in site.data.credly_badges %}
+        <div style="width: 150px; text-align: center; border: 1px solid #ddd; padding: 10px; border-radius: 10px; background: #fafafa;">
+          <a href="{{ badge.url }}" target="_blank" title="{{ badge.name }}">
+            <img src="{{ badge.image340 }}" alt="{{ badge.name }}" style="width: 100px; height: auto; margin-bottom: 10px;">
+          </a>
+          <div style="font-weight: bold; font-size: 0.9rem;">{{ badge.name }}</div>
+          <div style="font-size: 0.8rem; color: #666;">{{ badge.issuer }}</div>
+          <div style="font-size: 0.75rem; color: #999;">Issued: {{ badge.issued }}</div>
+        </div>
+      {% endfor %}
+    </div>
+
     <!-- Social -->
     {% if page.social %}
       <div class="social">
