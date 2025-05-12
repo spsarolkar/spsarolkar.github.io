@@ -65,16 +65,16 @@ layout: default
     {% endif %}
 
     <!-- Credly Badges Section -->
-    <h2><a href="https://www.credly.com/users/sunil-sarolkar">My Credly Badges</a></h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
+    <h2><a href="https://www.credly.com/users/sunil-sarolkar" style="color: inherit">My Credly Badges</a></h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; color: inherit;">
       {% for badge in site.data.credly_badges %}
-        <div style="width: 150px; text-align: center; border: 1px solid #ddd; padding: 10px; border-radius: 10px; background: #fafafa;">
-          <a href="{{ badge.url }}" target="_blank" title="{{ badge.name }}">
-            <img src="{{ badge.image340 }}" alt="{{ badge.name }}" style="width: 100px; height: auto; margin-bottom: 10px;">
+        <div style="width: 150px; text-align: center; border: 1px solid #ddd; padding: 10px; border-radius: 10px; color: inherit;">
+          <a href="{{ badge.url }}" target="_blank" style="color: inherit" title="{{ badge.name }}">
+            <img src="{{ badge.image340 }}" alt="{{ badge.name }}" style="width: 100px; height: auto; margin-bottom: 10px; color: inherit;">
           </a>
-          <div style="font-weight: bold; font-size: 0.9rem;">{{ badge.name }}</div>
-          <div style="font-size: 0.8rem; color: #666;">{{ badge.issuer }}</div>
-          <div style="font-size: 0.75rem; color: #999;">Issued: {{ badge.issued }}</div>
+          <div style="font-weight: bold; font-size: 0.9rem;  color: inherit;">{{ badge.name }}</div>
+          <div style="font-size: 0.8rem;  color: inherit;">{{ badge.issuer }}</div>
+          <div style="font-size: 0.75rem;  color: inherit;">Issued: {{ badge.issued }}</div>
         </div>
       {% endfor %}
     </div>
