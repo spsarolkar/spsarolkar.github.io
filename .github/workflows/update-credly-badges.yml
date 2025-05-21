@@ -30,6 +30,12 @@ jobs:
           sudo apt-get install -y wget curl gnupg
           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
           sudo apt-get install -y ./google-chrome-stable_current_amd64.deb || sudo apt --fix-broken install -y
+      
+      - name: Debug Chrome install
+        run: |
+          which google-chrome || echo "google-chrome not found"
+          which google-chrome-stable || echo "google-chrome-stable not found"
+          ls -l /usr/bin/google-chrome* || true
 
       - name: Fetch Credly badges using Selenium
         env:
