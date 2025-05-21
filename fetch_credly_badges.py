@@ -8,16 +8,24 @@ import os
 import re
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+import chromedriver_autoinstaller
+import shutil
 
 USERNAME = os.getenv("CREDLY_USERNAME", "sunil-sarolkar")
 URL = f"https://www.credly.com/users/{USERNAME}"
 OUTPUT_FILE = "_data/credly_badges.json"
 
-# Setup headless Chrome
-options = Options()
-options.add_argument("--headless=new")
-options.add_argument("--no-sandbox")
-options.add_argument("--disable-dev-shm-usage")
+# 1. Install matching ChromeDriver automatically
+chromedriver_autoinstaller.install()
+
+# 2. Set Chrome binary path manually
+chrome_path = shutil.which("google-chrome") or "/opt/google/chrome/google-chrome"
+
+options = webdriver.ChromeOptions()
+options.binary_location = chrome_path
+options.add_argument('--headless')
+options.add_argument('--no-sandbox')
+options.add_argument('--disable-dev-shm-usage')
 
 driver = webdriver.Chrome(options=options)
 
