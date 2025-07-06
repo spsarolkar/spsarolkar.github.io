@@ -263,7 +263,7 @@ ninja.data = [{
               window.location.href = "/projects/5_project/";
             },},{id: "projects-build-your-own-gcp-ml-engineer-mock-exam-app-with-github-pages",
           title: 'Build Your Own GCP ML Engineer Mock Exam App with GitHub Pages',
-          description: "",
+          description: "Mock exam for GCP ML Engineer",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
             },},{
