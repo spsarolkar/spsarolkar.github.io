@@ -3,7 +3,7 @@ layout: page
 title: Rouge Syntax Heighlighter Preview
 description: rouge themes syntax-highlighter
 img: assets/projects/SyntaxHeighlighting/syntax_heighlighte-thumbnail.png
-importance: 4
+importance: 5
 category: fun
 giscus_comments: true
 ---

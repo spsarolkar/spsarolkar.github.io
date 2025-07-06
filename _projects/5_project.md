@@ -1,12 +1,10 @@
-    ---
-
+---
 layout: page
 title: Findbugs Plugin to fix connection leak detection issue
 description: Findbugs Plugin
-importance: 5
+importance: 6
 category: work
 giscus_comments: true
-
 ---
 
 Recently while working with Findbugs plugin for Eclipse I discovered that Findbugs fails to identify resource leak in the scenarios where resource is initialized outside the method scope.

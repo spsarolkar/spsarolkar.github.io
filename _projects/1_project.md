@@ -3,7 +3,7 @@ layout: page
 title: StructFormer
 description: Transformer-based model built to automate structured data transformation from one schema to another
 img: assets/projects/StructFormer/Structformer_Thumbnail.png
-importance: 1
+importance: 2
 category: work
 related_publications: true
 ---

@@ -3,7 +3,7 @@ layout: page
 title: Indian Sign Language Translation
 description: A neural-network based system for translating Indian Sign Language using OpenPose keypoints and LSTM.
 img: assets/projects/ISL/ISL-Thumbnail.png
-importance: 2
+importance: 3
 category: work
 giscus_comments: true
 ---
