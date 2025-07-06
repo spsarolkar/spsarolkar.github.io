@@ -2,6 +2,7 @@
 layout: page
 title: Build Your Own GCP ML Engineer Mock Exam App with GitHub Pages
 description: Mock exam for GCP ML Engineer
+img: assets/projects/GCPML_ENG_MOCK_EXAM/GCP_ml_exam_thumbnail.png
 importance: 1
 category: work
 giscus_comments: true
