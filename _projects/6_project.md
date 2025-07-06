@@ -16,9 +16,8 @@ No login. No cookies. Just practice.
 
 ---
 
-
 ## Check blog post for more details
 
-👉 **[Blog - Building GCP ML Engineer Mock Exam App with GitHub Pages](https://spsarolkar.github.io/blog/2025/Building-GCP-ML-Engineer-MockExam-app-with-Github-pages/)**  
+👉 **[Blog - Building GCP ML Engineer Mock Exam App with GitHub Pages](https://spsarolkar.github.io/blog/2025/Building-GCP-ML-Engineer-MockExam-app-with-Github-pages/)**
 
 Check the blog post for more details
