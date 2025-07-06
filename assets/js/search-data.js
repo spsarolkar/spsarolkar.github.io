@@ -256,6 +256,11 @@ ninja.data = [{
           description: "rouge themes syntax-highlighter",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
+            },},{id: "projects-findbugs-plugin-to-fix-connection-leak-detection-issue",
+          title: 'Findbugs Plugin to fix connection leak detection issue',
+          description: "Findbugs Plugin",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/5_project/";
             },},{id: "projects-build-your-own-gcp-ml-engineer-mock-exam-app-with-github-pages",
           title: 'Build Your Own GCP ML Engineer Mock Exam App with GitHub Pages',
           description: "",
