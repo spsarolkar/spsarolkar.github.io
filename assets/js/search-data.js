@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "nav-repositories",
           title: "repositories",
-          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
@@ -58,7 +58,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/books/";
               },
-            },{id: "post-structformer-transformer-based-structured-data-adjustment-generator",
+            },{id: "post-building-gcp-ml-engineer-mock-exam-app-with-github-pages",
+        
+          title: "Building GCP ML Engineer Mock Exam App with GitHub Pages",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/Building-GCP-ML-Engineer-MockExam-app-with-Github-pages/";
+          
+        },
+      },{id: "post-structformer-transformer-based-structured-data-adjustment-generator",
         
           title: "StructFormer: Transformer-based Structured Data Adjustment Generator",
         
@@ -245,11 +256,11 @@ ninja.data = [{
           description: "rouge themes syntax-highlighter",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
-            },},{id: "projects-findbugs-plugin-to-fix-connection-leak-detection-issue",
-          title: 'Findbugs Plugin to fix connection leak detection issue',
-          description: "Findbugs Plugin",
+            },},{id: "projects-build-your-own-gcp-ml-engineer-mock-exam-app-with-github-pages",
+          title: 'Build Your Own GCP ML Engineer Mock Exam App with GitHub Pages',
+          description: "",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/5_project/";
+              window.location.href = "/projects/6_project/";
             },},{
         id: 'social-email',
         title: 'email',
