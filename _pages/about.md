@@ -29,7 +29,7 @@ Notable AI/ML contributions:
 
 Built an Indian Sign Language Translator using Pose Estimation + Transformers (Keras, PyTorch), hosted on Hugging Face.
 
-Designed predictive maintenance pipelines with digital twins and IoT data for enterprise automation.
+Contributed in AIML Community of practice team for using Generative AI within bank business users.
 
 Developed a LangChain + Hugging Face solution for generative AI-based JUnit test case automation.
 

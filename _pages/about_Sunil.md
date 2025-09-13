@@ -4,7 +4,7 @@ Notable AI/ML contributions:
 
 Built an Indian Sign Language Translator using Pose Estimation + Transformers (Keras, PyTorch), hosted on Hugging Face.
 
-Designed predictive maintenance pipelines with digital twins and IoT data for enterprise automation.
+Contributed in AIML Community of practice team for using Generative AI within bank business users.
 
 Developed a LangChain + Hugging Face solution for generative AI-based JUnit test case automation.
 
@@ -14,7 +14,7 @@ Previously, I have contributed to major enterprise projects such as the Feed and
 
 I hold a PG Certification in Computational Data Science from IISc Bangalore, an Associate Cloud Engineer Certification, a Diploma in Advanced Computing (DAC), and a B.E. in Electronics.
 
-Outside of work, I enjoy trekking, reading, swimming, and exploring astrophysics. I am also active on Stack Overflow (username: Xinus) and share projects and insights on my (personal blog)[https://spsarolkar.github.io/blog/]
+Outside of work, I enjoy trekking, reading, swimming, and exploring astrophysics. I am also active on Stack Overflow (username: Xinus) and share projects and insights on my [personal blog](https://spsarolkar.github.io/blog/)
 .
 
 📍 DSK Vishwa, Dhayari, Pune – 411041, Maharashtra, India
