@@ -1,15 +1,20 @@
-I am Sunil Sarolkar, a seasoned software engineer with 15 years of experience in Java-related technologies, currently working as an Associate at Deutsche Bank in Pune, India[cite: 4]. My expertise includes developing and optimizing Java-based backend services for enterprise applications, cloud migration and security enhancements, and enhancing encryption security[cite: 4, 5, 6].
+I am Sunil Sarolkar, an Assistant Vice President at Deutsche Bank in Pune, India, with 15 years of experience in enterprise software engineering and architecture and 5 years of active contributions in AI/ML and Generative AI projects. My core expertise lies in Java, Spring Boot, microservices, distributed systems, and cloud-native platforms, while my AI/ML focus includes predictive maintenance, generative AI automation, structured data transformation, and computer vision models.
 
-Throughout my career, I have contributed to various projects, including the development of a Sign Language Recognition system using Neural Networks, working on the Feed and Adjustment Workstation at Deutsche Bank, the Global Securities Infrastructure (GSI) initiative at Cognizant, and the Barracuda trading platform at HSBC GLT[cite: 14, 7, 8]. I have worked with diverse technologies such as Spark, Kafka, Tensorflow, Pytorch, Python, AWS Lambda, Java, Spring, and Hibernate[cite: 11].
+Notable AI/ML contributions:
 
-I hold a PG Certification in Computational Data Science from IISc, Bangalore, an Associate Cloud Engineer Certification, a Diploma in Advanced Computing (DAC) from ACTS, Pune, and a BE in Electronics from Pune University[cite: 11].
+Built an Indian Sign Language Translator using Pose Estimation + Transformers (Keras, PyTorch), hosted on Hugging Face.
 
-My objective is to secure a challenging position in an esteemed organization, utilizing my skills in organizational development and maintaining a continuous learning mindset[cite: 1].
+Designed predictive maintenance pipelines with digital twins and IoT data for enterprise automation.
 
-My personal interests include trekking, reading books, swimming, and exploring astrophysics[cite: 12]. I am also active on Stack Overflow (username Xinus) and maintain a blog where I share my insights and experiences[cite: 12].
+Developed a LangChain + Hugging Face solution for generative AI-based JUnit test case automation.
 
-DSK Vishwa,
+Created Structform, an open-source Transformer-based data transformation engine with 99% accuracy.
 
-Dhayari Pune 411041
+Previously, I have contributed to major enterprise projects such as the Feed and Adjustment Workstation at Deutsche Bank, the Global Securities Infrastructure (GSI) initiative at Cognizant, and the award-winning Barracuda trading platform at HSBC.
 
-Maharashtra, India [cite: 1]
+I hold a PG Certification in Computational Data Science from IISc Bangalore, an Associate Cloud Engineer Certification, a Diploma in Advanced Computing (DAC), and a B.E. in Electronics.
+
+Outside of work, I enjoy trekking, reading, swimming, and exploring astrophysics. I am also active on Stack Overflow (username: Xinus) and share projects and insights on my (personal blog)[https://spsarolkar.github.io/blog/]
+.
+
+📍 DSK Vishwa, Dhayari, Pune – 411041, Maharashtra, India
