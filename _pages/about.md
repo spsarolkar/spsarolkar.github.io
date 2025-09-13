@@ -100,7 +100,7 @@ Contributions to **HSBC Barracuda trading platform** (FIXML integrations with DT
 ## Download Resume
 
 You can download my ATS-optimized resume here:  
-`[Resume_Sunil_Sarolkar_Resume.pdf](/assets/pdf/Resume_Sunil_Sarolkar_Resume.pdf)`
+`[Resume_Sunil_Sarolkar_Resume.pdf](https://spsarolkar.github.io/assets/pdf/Resume_Sunil_Sarolkar.pdf)`
 
 ---
 
