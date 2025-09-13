@@ -39,16 +39,16 @@ Previously, I have contributed to major enterprise projects such as the Feed and
 
 I hold a PG Certification in Computational Data Science from IISc Bangalore, an Associate Cloud Engineer Certification, a Diploma in Advanced Computing (DAC), and a B.E. in Electronics.
 
-Outside of work, I enjoy trekking, reading, swimming, and exploring astrophysics. I am also active on Stack Overflow (username: Xinus) and share projects and insights on my (personal blog)[https://spsarolkar.github.io/blog/]
+Outside of work, I enjoy trekking, reading, swimming, and exploring astrophysics. I am also active on Stack Overflow (username: Xinus) and share projects and insights on my [personal blog](https://spsarolkar.github.io/blog/)
 .
 
 📍 DSK Vishwa, Dhayari, Pune – 411041, Maharashtra, India
 
 ## Education & Certifications
 
-- (**Google Cloud — Professional Machine Learning Engineer**)[https://www.credly.com/badges/0c8f21e3-1228-461c-97ce-a1a5be401c34/public_url] (2025)
+- **[Google Cloud — Professional Machine Learning Engineer](https://www.credly.com/badges/0c8f21e3-1228-461c-97ce-a1a5be401c34/public_url)** (2025)
 - **PG Certification — Computational Data Science (CDS)**, IISc Bangalore (2024)
-- (**Associate Cloud Engineer Certification**)[https://www.credly.com/badges/97997fd6-bd29-4f49-8e39-4741f3ca0719/public_url] (2023)
+- **[Associate Cloud Engineer Certification](https://www.credly.com/badges/97997fd6-bd29-4f49-8e39-4741f3ca0719/public_url)** (2023)
 - **Diploma in Advanced Computing (DAC)** — ACTS, Pune (2007)
 - **B.E. (Electronics)** — Pune University / VIT College (2006)
 
@@ -57,6 +57,6 @@ Outside of work, I enjoy trekking, reading, swimming, and exploring astrophysics
 ## Download Resume
 
 You can download my ATS-optimized resume here:  
-`[Resume_Sunil_Sarolkar_Resume.pdf](https://spsarolkar.github.io/assets/pdf/Resume_Sunil_Sarolkar.pdf)`
+**[Resume_Sunil_Sarolkar_Resume.pdf](https://spsarolkar.github.io/assets/pdf/Resume_Sunil_Sarolkar.pdf)**
 
 ---
