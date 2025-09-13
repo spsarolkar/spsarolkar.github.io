@@ -22,7 +22,7 @@ latest_posts:
   scrollable: true
   limit: 3
 ---
-  
+
 Hi — I’m **Sunil Sarolkar**, a senior technologist based in **Pune, India**. I combine **15+ years of enterprise software & architecture experience** with **5 years of hands-on AI/ML collaboration**, delivering production-ready systems for finance, IoT, and infrastructure automation.
 
 ## Dual-Track Professional Summary
@@ -37,11 +37,11 @@ For the past 5 years I’ve actively collaborated with AI/ML teams to deliver pr
 
 ## Core Skills
 
-- **Languages & Frameworks:** Java, Spring Boot, Python, TensorFlow, PyTorch  
-- **Streaming & Big Data:** Apache Spark (Structured Streaming), Kafka  
-- **Generative AI & LLMs:** Hugging Face, LangChain, OpenAI APIs, LLM fine-tuning, Transformers  
-- **Cloud & MLOps:** AWS, GCP, Kubernetes, Docker, Jenkins, CoreML  
-- **Enterprise Tech:** FIX/FIXML, REST/SOAP, Oracle/Postgres/MongoDB, Hazelcast  
+- **Languages & Frameworks:** Java, Spring Boot, Python, TensorFlow, PyTorch
+- **Streaming & Big Data:** Apache Spark (Structured Streaming), Kafka
+- **Generative AI & LLMs:** Hugging Face, LangChain, OpenAI APIs, LLM fine-tuning, Transformers
+- **Cloud & MLOps:** AWS, GCP, Kubernetes, Docker, Jenkins, CoreML
+- **Enterprise Tech:** FIX/FIXML, REST/SOAP, Oracle/Postgres/MongoDB, Hazelcast
 - **Specialties:** Predictive Maintenance, Digital Twins, Structured Data Transformation, Explainable AI
 
 ---
@@ -49,32 +49,40 @@ For the past 5 years I’ve actively collaborated with AI/ML teams to deliver pr
 ## Selected Projects
 
 ### Generative AI Test Automation
+
 Developed a **LangChain + Hugging Face pipeline** for automated generation of JUnit test cases — accelerated test coverage and reduced manual effort in service onboarding workflows.
 
 ### Structform / StructFormer (Open Source)
+
 Transformer-based engine for **structured → structured** data transformation. Maps validation errors to SQL adjustment queries and achieved high validation accuracy in tests.
 
 ### Indian Sign Language Translator (ISL)
+
 Prototype using **BlazePose + Transformers** (Keras / PyTorch) for ISL → English translation. Live demo hosted as a Hugging Face Space:  
 [ISL Sign Language Translation Demo](https://huggingface.co/spaces/sunilsarolkar/ISL-SignLanguageTranslation)
 
 ### Real-time Vehicle Telemetry Dashboard
+
 Raspberry Pi + ELM327 OBD-II console with Kafka + Spark-based anomaly detection and streaming ingestion.
 
 ### Banking & Trading Systems
+
 Contributions to **HSBC Barracuda trading platform** (FIXML integrations with DTCC, MarkitWire) and Deutsche Bank’s **Feed & Adjustment Workstation** (Hazelcast, MongoDB, Spring).
 
 ---
 
 ## Experience Snapshot
 
-**AIML COP Group** — Senior Java Architect | AI/ML Collaborator (2020 – Present)  
+**AIML COP Group** — Senior Java Architect | AI/ML Collaborator (2020 – Present)
+
 - AI/ML: Collaborative work on predictive maintenance, generative AI automation, structured data transformers and production ML pipelines.
 
-**Deutsche Bank** — Associate Software Architect (2015 – 2020)  
+**Deutsche Bank** — Associate Software Architect (2015 – 2020)
+
 - Built backend services for high-performance financial applications; led cloud migrations and improved security posture.
 
-**Cognizant / HSBC / High Mark** — Software Engineer (2010 – 2015)  
+**Cognizant / HSBC / High Mark** — Software Engineer (2010 – 2015)
+
 - Java/J2EE system design, trading platform modules, position management and large enterprise integrations.
 
 ---
@@ -82,25 +90,25 @@ Contributions to **HSBC Barracuda trading platform** (FIXML integrations with DT
 ## Education & Certifications
 
 - (**Google Cloud — Professional Machine Learning Engineer**)[https://www.credly.com/badges/0c8f21e3-1228-461c-97ce-a1a5be401c34/public_url] (2025)
-- **PG Certification — Computational Data Science (CDS)**, IISc Bangalore (2024)  
-- (**Associate Cloud Engineer Certification**)[https://www.credly.com/badges/97997fd6-bd29-4f49-8e39-4741f3ca0719/public_url] (2023)  
-- **Diploma in Advanced Computing (DAC)** — ACTS, Pune (2007)  
-- **B.E. (Electronics)** — Pune University / VIT College (2006)  
-
+- **PG Certification — Computational Data Science (CDS)**, IISc Bangalore (2024)
+- (**Associate Cloud Engineer Certification**)[https://www.credly.com/badges/97997fd6-bd29-4f49-8e39-4741f3ca0719/public_url] (2023)
+- **Diploma in Advanced Computing (DAC)** — ACTS, Pune (2007)
+- **B.E. (Electronics)** — Pune University / VIT College (2006)
 
 ---
 
 ## Download Resume
+
 You can download my ATS-optimized resume here:  
-`[Resume_Sunil_Sarolkar_Resume.pdf](/assets/pdf/Resume_Sunil_Sarolkar_Resume.pdf)`  
+`[Resume_Sunil_Sarolkar_Resume.pdf](/assets/pdf/Resume_Sunil_Sarolkar_Resume.pdf)`
 
 ---
 
 ## Contact & Links
 
-- Email: **spsarolkar@gmail.com**  
-- Phone: **+91-9823578815**  
-- Website / Blog: **https://sunilsarolkar.in/**  
-- LinkedIn: **https://www.linkedin.com/in/sunil-sarolkar-451b2023/**  
-- GitHub: **https://github.com/spsarolkar**  
+- Email: **spsarolkar@gmail.com**
+- Phone: **+91-9823578815**
+- Website / Blog: **https://sunilsarolkar.in/**
+- LinkedIn: **https://www.linkedin.com/in/sunil-sarolkar-451b2023/**
+- GitHub: **https://github.com/spsarolkar**
 - Hugging Face: **https://huggingface.co/spaces/sunilsarolkar/ISL-SignLanguageTranslation**
