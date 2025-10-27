@@ -1,5 +1,29 @@
 [
   {
+    "name": "Explore Generative AI with the Vertex AI Gemini API Skill Badge",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/images/9ecc031b-5f5a-418d-8397-1612c0f40fce/image.png",
+    "uuid": "9ecc031b-5f5a-418d-8397-1612c0f40fce",
+    "issued": "",
+    "image340": "https://images.credly.com/size/340x340/images/9ecc031b-5f5a-418d-8397-1612c0f40fce/image.png"
+  },
+  {
+    "name": "Inspect Rich Documents with Gemini Multimodality and Multimodal RAG Skill Badge",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/images/86a3283f-3e35-494f-82da-3fb3e89ba223/image.png",
+    "uuid": "86a3283f-3e35-494f-82da-3fb3e89ba223",
+    "issued": "",
+    "image340": "https://images.credly.com/size/340x340/images/86a3283f-3e35-494f-82da-3fb3e89ba223/image.png"
+  },
+  {
+    "name": "Develop GenAI Apps with Gemini and Streamlit Skill Badge",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/images/1dbef1bd-cdb0-40e1-bff4-8200448c3161/blob",
+    "uuid": "1dbef1bd-cdb0-40e1-bff4-8200448c3161",
+    "issued": "",
+    "image340": "https://images.credly.com/size/340x340/images/1dbef1bd-cdb0-40e1-bff4-8200448c3161/image.png"
+  },
+  {
     "name": "Prompt Design in Vertex AI Skill Badge",
     "issuer": "Google Cloud",
     "image": "https://images.credly.com/images/cef82b2e-970a-4318-8e59-c3e26b7f5c19/image.png",
