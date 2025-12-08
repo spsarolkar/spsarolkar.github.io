@@ -1,5 +1,13 @@
 [
   {
+    "name": "Build a Data Warehouse with BigQuery Skill Badge",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/images/8ab21779-042f-4616-a6ab-fd0d62648b24/image.png",
+    "uuid": "8ab21779-042f-4616-a6ab-fd0d62648b24",
+    "issued": "",
+    "image340": "https://images.credly.com/size/340x340/images/8ab21779-042f-4616-a6ab-fd0d62648b24/image.png"
+  },
+  {
     "name": "Explore Generative AI with the Vertex AI Gemini API Skill Badge",
     "issuer": "Google Cloud",
     "image": "https://images.credly.com/images/9ecc031b-5f5a-418d-8397-1612c0f40fce/image.png",
