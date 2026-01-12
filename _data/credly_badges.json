@@ -1,5 +1,13 @@
 [
   {
+    "name": "Build a Data Mesh with Dataplex Skill Badge",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/images/c4acff27-5baa-452f-a6b2-ab875da12dfd/image.png",
+    "uuid": "c4acff27-5baa-452f-a6b2-ab875da12dfd",
+    "issued": "",
+    "image340": "https://images.credly.com/size/340x340/images/c4acff27-5baa-452f-a6b2-ab875da12dfd/image.png"
+  },
+  {
     "name": "Build a Data Warehouse with BigQuery Skill Badge",
     "issuer": "Google Cloud",
     "image": "https://images.credly.com/images/8ab21779-042f-4616-a6ab-fd0d62648b24/image.png",
