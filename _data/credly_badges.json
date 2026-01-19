@@ -1,5 +1,13 @@
 [
   {
+    "name": "Derive Insights from BigQuery Data Skill Badge",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/images/11088b22-7be5-4fe3-995d-c014514c8dc3/image.png",
+    "uuid": "11088b22-7be5-4fe3-995d-c014514c8dc3",
+    "issued": "",
+    "image340": "https://images.credly.com/size/340x340/images/11088b22-7be5-4fe3-995d-c014514c8dc3/image.png"
+  },
+  {
     "name": "Build a Data Mesh with Dataplex Skill Badge",
     "issuer": "Google Cloud",
     "image": "https://images.credly.com/images/c4acff27-5baa-452f-a6b2-ab875da12dfd/image.png",
