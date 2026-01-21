@@ -1,196 +1,244 @@
 /*******************************************************************************
  * Custom Enhancements for Modern Look & Feel
- * Phase 1: Hero Section Enhancement
+ * Phase 2: Modern Hero Redesign (Minimalist Light / Tech Dark)
  ******************************************************************************/
 
-// Modern gradient color variables
-$gradient-start: #667eea;
-$gradient-end: #764ba2;
-$gradient-accent: #f093fb;
-$gradient-secondary: #4facfe;
+// Modern Color Variables
+// Light Mode (Option 1: Minimalist)
+$light-bg: #ffffff;
+$light-text-primary: #1a2332;
+$light-text-secondary: #64748b;
+$light-accent: #3b82f6;
+$light-border: #e2e8f0;
 
-// Dark mode gradients
-$dark-gradient-start: #434343;
-$dark-gradient-end: #1a1a2e;
-$dark-gradient-accent: #16213e;
+// Dark Mode (Option 2: Tech-Forward)
+$dark-bg: #18181b;
+$dark-text-primary: #ffffff;
+$dark-text-secondary: #a1a1aa;
+$dark-accent: #06b6d4;
+$dark-border: #27272a;
+$dark-glow: rgba(6, 182, 212, 0.15);
 
 /*******************************************************************************
- * Hero Section with Animated Gradient Background
+ * Hero Section Redesign
  ******************************************************************************/
 
 .post-header {
   position: relative;
-  padding: 3rem 0 2rem;
-  margin: -2rem -1rem 2rem;
-  background: linear-gradient(
-    135deg,
-    $gradient-start 0%,
-    $gradient-end 100%
-  );
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
-  border-radius: 0 0 30px 30px;
-  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+  padding: 4rem 0 3rem;
+  margin: -2rem -1rem 3rem;
+  border-bottom: 1px solid var(--global-divider-color);
+  background: var(--global-bg-color);
+  transition: all 0.3s ease;
 
-  // Overlay for text readability
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 0 0 30px 30px;
-    z-index: 0;
-  }
-
-  // Ensure content is above overlay
-  > * {
-    position: relative;
-    z-index: 1;
-  }
+  // Background Patterns defined in theme blocks below
 
   .post-title {
-    color: $white-color !important;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    margin-bottom: 0.5rem;
+    font-family: "Roboto", sans-serif; // Ensure clean sans-serif
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
 
     .font-weight-bold {
-      background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(255, 255, 255, 0.9) 100%
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      animation: shimmer 3s ease-in-out infinite;
+      font-weight: 800; // Extra bold for name
     }
   }
 
   .desc {
-    color: rgba(255, 255, 255, 0.95) !important;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 400;
-    
-    a {
-      color: $white-color !important;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-      text-decoration: none;
-      
-      &:hover {
-        border-bottom: 1px solid $white-color;
+    margin-top: 1rem;
+    line-height: 1.6;
+    max-width: 600px;
+  }
+}
+
+/*******************************************************************************
+ * Theme-Specific Styles
+ ******************************************************************************/
+
+// LIGHT THEME (Option 1: Clean Minimalist)
+html[data-theme="light"] {
+  .post-header {
+    background-color: $light-bg;
+    background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+    background-size: 24px 24px; // Subtle dot pattern
+
+    .post-title {
+      color: $light-text-primary !important;
+    }
+
+    .desc {
+      color: $light-text-secondary !important;
+
+      a {
+        color: $light-accent;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+          border-bottom-color: $light-accent;
+        }
       }
     }
   }
+
+  .profile {
+    img {
+      border: 1px solid $light-border;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        border-color: $light-accent;
+      }
+    }
+
+    .more-info {
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid $light-border;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+      color: $light-text-secondary;
+    }
+  }
 }
 
-// Gradient animation
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+// DARK THEME (Option 2: Tech-Forward)
+html[data-theme="dark"] {
+  .post-header {
+    background-color: $dark-bg;
+    // Cyberpunk/Tech grid background
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
 
-// Shimmer effect for name
-@keyframes shimmer {
-  0%,
-  100% {
-    opacity: 1;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .post-title {
+      color: $dark-text-primary !important;
+      text-shadow: 0 0 20px rgba(6, 182, 212, 0.3); // Subtle glow
+    }
+
+    .desc {
+      color: $dark-text-secondary !important;
+
+      a {
+        color: $dark-accent;
+        text-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+        border-bottom: 1px dashed rgba(6, 182, 212, 0.3);
+
+        &:hover {
+          color: lighten($dark-accent, 10%);
+          border-bottom-style: solid;
+        }
+      }
+    }
   }
-  50% {
-    opacity: 0.95;
+
+  .profile {
+    img {
+      border: 2px solid rgba(6, 182, 212, 0.3);
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.1);
+
+      &:hover {
+        transform: scale(1.02);
+        border-color: $dark-accent;
+        box-shadow: 0 0 30px rgba(6, 182, 212, 0.25);
+      }
+    }
+
+    .more-info {
+      background: rgba(24, 24, 27, 0.8);
+      border: 1px solid $dark-border;
+      color: $dark-text-secondary;
+      backdrop-filter: blur(8px);
+    }
   }
 }
 
 /*******************************************************************************
- * Profile Image Enhancements
+ * Shared Modern Enhancements
  ******************************************************************************/
 
-.profile {
+// Typography Clean-up
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.02em;
+}
+
+// Section Headings
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
   position: relative;
-  transition: transform 0.3s ease;
+  display: inline-block;
 
-  img {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    border: 4px solid rgba(255, 255, 255, 0.9);
-
-    &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4);
-      border-color: $gradient-start;
-    }
-  }
-
-  // Add a subtle pulse animation
+  // Modern minimalist underline
   &::after {
     content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 50%;
-    border: 2px solid $gradient-start;
-    opacity: 0;
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    pointer-events: none;
-  }
-
-  .more-info {
-    background: linear-gradient(
-      135deg,
-      rgba(102, 126, 234, 0.1) 0%,
-      rgba(118, 75, 162, 0.1) 100%
-    );
-    padding: 1rem;
-    border-radius: 10px;
-    margin-top: 1rem;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(102, 126, 234, 0.2);
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: var(--global-theme-color);
+    opacity: 0.2;
+    margin-top: -8px;
+    border-radius: 2px;
     transition: all 0.3s ease;
+  }
 
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-    }
+  &:hover::after {
+    opacity: 0.4;
+    height: 6px;
+    margin-top: -10px;
   }
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 0.5;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 0;
-  }
+// Typing Cursor - Refined
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background-color: var(--global-theme-color);
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+  vertical-align: text-bottom;
+  opacity: 0.7;
+}
+
+@keyframes blink {
+
+  0%,
   100% {
-    transform: scale(1);
+    opacity: 0.7;
+  }
+
+  50% {
     opacity: 0;
   }
 }
 
-/*******************************************************************************
- * Scroll Animations
- ******************************************************************************/
-
+// Scroll Animations
 [data-animate] {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); // More natural ease
 
   &.animated {
     opacity: 1;
@@ -198,240 +246,44 @@ $dark-gradient-accent: #16213e;
   }
 }
 
-// Stagger delay for multiple items
-[data-animate-delay="1"] {
-  transition-delay: 0.1s;
-}
-
-[data-animate-delay="2"] {
-  transition-delay: 0.2s;
-}
-
-[data-animate-delay="3"] {
-  transition-delay: 0.3s;
-}
-
-[data-animate-delay="4"] {
-  transition-delay: 0.4s;
-}
-
-[data-animate-delay="5"] {
-  transition-delay: 0.5s;
-}
-
-/*******************************************************************************
- * Enhanced Typography
- ******************************************************************************/
-
-h2 {
-  position: relative;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1.5rem;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, $gradient-start, $gradient-end);
-    border-radius: 2px;
-  }
-
-  a {
-    transition: all 0.3s ease;
-
-    &:hover {
-      transform: translateX(5px);
-      display: inline-block;
-    }
-  }
-}
-
-/*******************************************************************************
- * Enhanced Cards and Sections
- ******************************************************************************/
-
-.card {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(102, 126, 234, 0.1);
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2) !important;
-  }
-}
-
-// Education & Certifications styling
-ul li {
-  transition: all 0.3s ease;
-  padding-left: 1.5rem;
-  position: relative;
-
-  &::before {
-    content: "▸";
-    position: absolute;
-    left: 0;
-    color: $gradient-start;
-    font-weight: bold;
-    transition: all 0.3s ease;
-  }
-
-  &:hover {
-    transform: translateX(5px);
-    
-    &::before {
-      color: $gradient-end;
-    }
-  }
-}
-
-// Credly Badges enhancement
-div[style*="border"] {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
-    border-color: $gradient-start !important;
-  }
-}
-
-/*******************************************************************************
- * Social Icons Enhancement
- ******************************************************************************/
-
-.social .contact-icons {
-  a {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    display: inline-block;
-
-    &:hover {
-      transform: translateY(-5px) scale(1.1);
-      
-      i::before {
-        background: linear-gradient(135deg, $gradient-start, $gradient-end);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-  }
-}
-
-/*******************************************************************************
- * Dark Mode Adjustments
- ******************************************************************************/
-
-html[data-theme="dark"] {
-  .post-header {
-    background: linear-gradient(
-      135deg,
-      $dark-gradient-start 0%,
-      $dark-gradient-end 100%
-    );
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-
-    &::before {
-      background: rgba(0, 0, 0, 0.3);
-    }
-  }
-
-  .profile {
-    img {
-      border-color: rgba(255, 255, 255, 0.2);
-
-      &:hover {
-        border-color: $gradient-secondary;
-      }
-    }
-
-    &::after {
-      border-color: $gradient-secondary;
-    }
-
-    .more-info {
-      background: rgba(255, 255, 255, 0.05);
-      border-color: rgba(255, 255, 255, 0.1);
-    }
-  }
-
-  h2::after {
-    background: linear-gradient(90deg, $gradient-secondary, $cyan-color);
-  }
-}
-
-/*******************************************************************************
- * Responsive Adjustments
- ******************************************************************************/
-
+// Responsive Adjustments
 @media (max-width: 768px) {
   .post-header {
-    margin: -1rem -0.5rem 1rem;
-    padding: 2rem 1rem 1.5rem;
-    border-radius: 0 0 20px 20px;
+    padding: 3rem 1rem 2rem;
+    margin: -1rem -0.5rem 2rem; // Reset negative margins
+    text-align: center;
 
     .post-title {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
 
     .desc {
-      font-size: 0.95rem;
-    }
-  }
-
-  .profile {
-    &::after {
-      display: none; // Disable pulse on mobile for performance
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
 
-/*******************************************************************************
- * Typing Cursor for Motto
- ******************************************************************************/
+// Card Modernization
+.card {
+  border-radius: 12px;
+  border: 1px solid var(--global-divider-color);
+  transition: all 0.3s ease;
+  overflow: hidden;
 
-.typing-cursor {
-  display: inline-block;
-  width: 2px;
-  height: 1em;
-  background-color: currentColor;
-  margin-left: 4px;
-  animation: blink 1s step-end infinite;
-  vertical-align: text-bottom;
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   }
-  50% {
-    opacity: 0;
+
+  .card-body {
+    padding: 1.5rem;
   }
 }
 
-/*******************************************************************************
- * Smooth Scroll Behavior
- ******************************************************************************/
-
-html {
-  scroll-behavior: smooth;
-}
-
-// Add subtle entrance animation to main content
-article {
-  animation: fadeInUp 0.8s ease-out;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+// Badge Modernization
+div[style*="border"] {
+  border-radius: 12px !important;
+  background: var(--global-bg-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
