@@ -44,6 +44,10 @@ Outside of work, I enjoy trekking, reading, swimming, and exploring astrophysics
 
 📍 DSK Vishwa, Dhayari, Pune – 411041, Maharashtra, India
 
+## Skills & Technologies
+{% include skills.liquid %}
+
+
 ## Education & Certifications
 
 - **[Google Cloud — Professional Machine Learning Engineer](https://www.credly.com/badges/0c8f21e3-1228-461c-97ce-a1a5be401c34/public_url)** (2025)

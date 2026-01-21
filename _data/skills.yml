@@ -1,0 +1,75 @@
+# Skills & Technologies Data
+
+- name: Languages
+  icon: "fas fa-code"
+  color: "#667eea" # Light/Purple
+  items:
+    - name: Java
+      icon: "devicon-java-plain"
+      level: 95
+    - name: Python
+      icon: "devicon-python-plain"
+      level: 90
+    - name: C++
+      icon: "devicon-cplusplus-plain"
+      level: 80
+    - name: HTML/CSS
+      icon: "devicon-html5-plain"
+      level: 85
+    - name: SQL
+      icon: "devicon-mysql-plain"
+      level: 85
+
+- name: Frameworks & Libraries
+  icon: "fas fa-layer-group"
+  color: "#06b6d4" # Cyan
+  items:
+    - name: Spring Boot
+      icon: "devicon-spring-plain"
+      level: 95
+    - name: PyTorch
+      icon: "devicon-pytorch-original"
+      level: 85
+    - name: Keras
+      icon: "devicon-keras-plain"
+      level: 80
+    - name: LangChain
+      icon: "fas fa-link" # Fallback if devicon missing
+      level: 90
+    - name: Transformers
+      icon: "fas fa-robot"
+      level: 85
+
+- name: Cloud & DevOps
+  icon: "fas fa-cloud"
+  color: "#f59e0b" # Amber
+  items:
+    - name: Google Cloud
+      icon: "devicon-googlecloud-plain"
+      level: 90
+    - name: Docker
+      icon: "devicon-docker-plain"
+      level: 85
+    - name: Microservices
+      icon: "fas fa-network-wired"
+      level: 90
+    - name: Distributed Systems
+      icon: "fas fa-server"
+      level: 85
+
+- name: AI / ML
+  icon: "fas fa-brain"
+  color: "#ec4899" # Pink
+  items:
+    - name: Generative AI
+      icon: "fas fa-magic"
+      level: 95
+    - name: Computer Vision
+      icon: "fas fa-eye"
+      level: 85
+    - name: Predictive Maintenance
+      icon: "fas fa-chart-line"
+      level: 80
+    - name: NLP
+      icon: "fas fa-comment-dots"
+      level: 85
