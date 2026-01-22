@@ -389,7 +389,7 @@ html[data-theme="dark"] .skill-badge:hover {
   border: 1px solid var(--global-divider-color);
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-  background: var(--global-card-bg-color);
+  background: #ffffff; // Explicit white background
 
   &:hover {
     transform: translateY(-8px);
@@ -464,16 +464,17 @@ html[data-theme="dark"] .skill-badge:hover {
 .project-tech-badge-small {
   padding: 0.25rem 0.6rem;
   border-radius: 12px;
-  background: var(--global-bg-color);
-  border: 1px solid var(--global-divider-color);
+  background: #f3f4f6; // Light gray background for visibility
+  border: 1px solid #d1d5db;
   font-size: 0.7rem;
   font-weight: 500;
-  color: var(--global-text-color-light);
+  color: #374151; // Dark gray text
   transition: all 0.2s ease;
 
   &:hover {
     border-color: var(--global-theme-color);
     color: var(--global-theme-color);
+    background: #e5e7eb;
   }
 }
 
@@ -482,7 +483,7 @@ html[data-theme="dark"] .skill-badge:hover {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
-  color: var(--global-text-color);
+  color: #1a202c; // Dark text for light backgrounds
   transition: color 0.3s ease;
 }
 
@@ -493,7 +494,7 @@ html[data-theme="dark"] .skill-badge:hover {
 .project-description {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: var(--global-text-color-light);
+  color: #4a5568; // Medium gray for readability
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -503,11 +504,11 @@ html[data-theme="dark"] .skill-badge:hover {
 /* Dark Mode Adjustments */
 html[data-theme="dark"] {
   .project-card {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(255, 255, 255, 0.05); // Slight light tint on dark
     border-color: rgba(255, 255, 255, 0.1);
 
     &:hover {
-      background: rgba(255, 255, 255, 0.04);
+      background: rgba(255, 255, 255, 0.08);
       box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 30px rgba(6, 182, 212, 0.1);
     }
   }
@@ -523,7 +524,21 @@ html[data-theme="dark"] {
   }
 
   .project-tech-badge-small {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(6, 182, 212, 0.15);
+    border-color: rgba(6, 182, 212, 0.3);
+    color: #67e8f9; // Cyan text
+
+    &:hover {
+      background: rgba(6, 182, 212, 0.25);
+      border-color: #06b6d4;
+    }
+  }
+
+  .project-title {
+    color: #f7fafc; // Light text for dark backgrounds
+  }
+
+  .project-description {
+    color: #cbd5e0; // Light gray for dark mode
   }
 }
