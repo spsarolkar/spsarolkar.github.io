@@ -5,6 +5,11 @@ description: Transformer-based model built to automate structured data transform
 img: assets/projects/StructFormer/Structformer_Thumbnail.png
 importance: 2
 category: work
+tech_stack:
+  - Python
+  - TensorFlow
+  - FastAPI
+  - SentencePiece
 related_publications: true
 ---
 

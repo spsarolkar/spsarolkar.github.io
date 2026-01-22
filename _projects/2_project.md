@@ -5,6 +5,11 @@ description: A neural-network based system for translating Indian Sign Language 
 img: assets/projects/ISL/ISL-Thumbnail.png
 importance: 3
 category: work
+tech_stack:
+  - Python
+  - TensorFlow
+  - OpenPose
+  - LSTM
 giscus_comments: true
 ---
 

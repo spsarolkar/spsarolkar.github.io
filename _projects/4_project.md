@@ -5,6 +5,10 @@ description: rouge themes syntax-highlighter
 img: assets/projects/SyntaxHeighlighting/syntax_heighlighte-thumbnail.png
 importance: 5
 category: fun
+tech_stack:
+  - Ruby
+  - Jekyll
+  - JavaScript
 giscus_comments: true
 ---
 

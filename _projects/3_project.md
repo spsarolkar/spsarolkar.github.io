@@ -5,6 +5,11 @@ description: Capturing vehicle parameters using Raspberry Pi & ELM327 with real-
 img: assets/projects/VehicleTelemetry/OBD2_Thumbnail.png
 importance: 4
 category: fun
+tech_stack:
+  - Python
+  - Raspberry Pi
+  - Kafka
+  - Spark
 giscus_comments: true
 ---
 

@@ -378,3 +378,152 @@ html[data-theme="dark"] .skill-badge:hover {
   box-shadow: 0 0 15px rgba(6, 182, 212, 0.15);
   /* Tech glow */
 }
+
+/*******************************************************************************
+ * Project Cards Section Styles
+ * Added for Phase 3: Projects Section Modernization
+ ******************************************************************************/
+
+.project-card {
+  border-radius: 16px;
+  border: 1px solid var(--global-divider-color);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  background: var(--global-card-bg-color);
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+    border-color: var(--global-theme-color);
+  }
+}
+
+/* Image Container with Overlay */
+.project-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+
+  .project-image {
+    transition: transform 0.4s ease, filter 0.4s ease;
+  }
+
+  &:hover .project-image {
+    transform: scale(1.05);
+    filter: brightness(0.7);
+  }
+}
+
+/* Tech Stack Overlay (shown on hover) */
+.project-tech-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.project-image-container:hover .project-tech-overlay {
+  opacity: 1;
+}
+
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.project-tech-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a2332;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* Inline badges (below description) */
+.project-tech-badges-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.project-tech-badge-small {
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  background: var(--global-bg-color);
+  border: 1px solid var(--global-divider-color);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--global-text-color-light);
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: var(--global-theme-color);
+    color: var(--global-theme-color);
+  }
+}
+
+/* Title and Description */
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--global-text-color);
+  transition: color 0.3s ease;
+}
+
+.project-card:hover .project-title {
+  color: var(--global-theme-color);
+}
+
+.project-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--global-text-color-light);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Dark Mode Adjustments */
+html[data-theme="dark"] {
+  .project-card {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.1);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.04);
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 30px rgba(6, 182, 212, 0.1);
+    }
+  }
+
+  .project-tech-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 100%);
+  }
+
+  .project-tech-badge {
+    background: rgba(6, 182, 212, 0.2);
+    color: #06b6d4;
+    border-color: rgba(6, 182, 212, 0.4);
+  }
+
+  .project-tech-badge-small {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
