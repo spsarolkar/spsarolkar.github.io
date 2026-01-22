@@ -1,7 +1,17 @@
 // Force project cards to be visible even if Isotope is waiting for images
 document.addEventListener('DOMContentLoaded', function () {
-    // Wait a bit for Isotope to try initializing
+    // Check immediately in case layout is already done
     setTimeout(function () {
+        forceVisibility();
+    }, 100);
+
+    // Backup check at 500ms
+    setTimeout(function () {
+        forceVisibility();
+        console.log('Project cards visibility enforced');
+    }, 500);
+
+    function forceVisibility() {
         const gridItems = document.querySelectorAll('.grid-item, .col[data-animate]');
 
         // Force visibility if cards are still hidden
@@ -13,7 +23,5 @@ document.addEventListener('DOMContentLoaded', function () {
                 item.style.transform = 'none';
             }
         });
-
-        console.log('Project cards visibility forced');
-    }, 2000); // Wait 2 seconds for Isotope
+    }
 });
