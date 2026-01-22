@@ -29,3 +29,9 @@ layout: default
     {% include giscus.liquid %}
   {% endif %}
 </div>
+
+{% if page.permalink == "/projects/" %}
+  <!-- Force project cards visibility if Isotope is stuck -->
+  <script src="{{ '/assets/js/force-project-visibility.js' | relative_url }}"></script>
+{% endif %}
+
