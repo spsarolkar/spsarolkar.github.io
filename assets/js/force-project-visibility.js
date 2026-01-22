@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){setTimeout(function(){document.querySelectorAll(".grid-item, .col[data-animate]").forEach(function(t){const e=window.getComputedStyle(t);"0"!==e.opacity&&"hidden"!==e.visibility||(t.style.opacity="1",t.style.visibility="visible",t.style.transform="none")})},2e3)});
