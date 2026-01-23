@@ -122,7 +122,7 @@ for card in soup.select("div[data-testid='desktop-badge-card']"):
             "uuid": badge_uuid, # Now using the correct badge UUID for links
             "url": f"https://www.credly.com/badges/{badge_uuid}" if badge_uuid else None,
             "issued": issued_date,
-            "image340": f"https://images.credly.com/size/340x340/images/{image_uuid}/image.png" if image_uuid else badge_url
+            "image340": f"https://images.credly.com/size/340x340/images/{image_uuid}/{badge_url.split('/')[-1]}" if image_uuid else badge_url
         })
 
 print(f"✅ Extracted {len(badges)} badges with issue dates.")
