@@ -91,6 +91,8 @@ for card in soup.select("div[data-testid='desktop-badge-card']"):
     issuer_tag = card.select_one("span:nth-of-type(2)")
     issued_tag = card.select_one("span:nth-of-type(3)")
 
+    badge_link = card.get("href")
+    
     if img_tag and name_tag and issuer_tag:
         badge_url = img_tag["src"]
         badge_name = name_tag.text.strip()
@@ -99,18 +101,28 @@ for card in soup.select("div[data-testid='desktop-badge-card']"):
 
         issued_date = issued_text.replace("Issued ", "").strip() if issued_text.startswith("Issued") else ""
 
-        # Extract UUID from image URL
-        badge_uuid_match = re.search(r"/images/([0-9a-fA-F-]+)/", badge_url)
-        badge_uuid = badge_uuid_match.group(1) if badge_uuid_match else None
+        # Extract UUID from the href link (e.g., /badges/UUID)
+        # This is the correct UUID for the public badge page
+        badge_uuid = None
+        if badge_link:
+            match = re.search(r"/badges/([0-9a-fA-F-]+)", badge_link)
+            if match:
+                badge_uuid = match.group(1)
+
+        # Fallback: Extract ID from image URL (usually different, but better than nothing if href fails)
+        image_uuid = None
+        image_uuid_match = re.search(r"/images/([0-9a-fA-F-]+)/", badge_url)
+        if image_uuid_match:
+            image_uuid = image_uuid_match.group(1)
 
         badges.append({
             "name": badge_name,
             "issuer": badge_issuer,
             "image": badge_url,
-            "uuid": badge_uuid,
+            "uuid": badge_uuid, # Now using the correct badge UUID for links
             "url": f"https://www.credly.com/badges/{badge_uuid}" if badge_uuid else None,
             "issued": issued_date,
-            "image340": f"https://images.credly.com/size/340x340/images/{badge_uuid}/image.png" if badge_uuid else None
+            "image340": f"https://images.credly.com/size/340x340/images/{image_uuid}/{badge_url.split('/')[-1]}" if image_uuid else badge_url
         })
 
 print(f"✅ Extracted {len(badges)} badges with issue dates.")
