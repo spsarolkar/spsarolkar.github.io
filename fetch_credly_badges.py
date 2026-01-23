@@ -108,6 +108,7 @@ for card in soup.select("div[data-testid='desktop-badge-card']"):
             "issuer": badge_issuer,
             "image": badge_url,
             "uuid": badge_uuid,
+            "url": f"https://www.credly.com/badges/{badge_uuid}" if badge_uuid else None,
             "issued": issued_date,
             "image340": f"https://images.credly.com/size/340x340/images/{badge_uuid}/image.png" if badge_uuid else None
         })
