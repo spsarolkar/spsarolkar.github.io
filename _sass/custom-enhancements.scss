@@ -636,24 +636,25 @@ footer.fixed-bottom {
 .news-list-item {
   display: flex;
   align-items: baseline;
-  padding: 1rem;
-  margin-bottom: 0.75rem;
-  border-radius: 12px;
-  background: var(--global-card-bg-color);
-  border: 1px solid var(--global-divider-color);
-  transition: all 0.2s ease;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px dashed var(--global-divider-color);
+  background: transparent;
+  transition: opacity 0.2s ease;
+
+  &:last-child {
+    border-bottom: none;
+  }
 
   &:hover {
-    transform: translateX(4px);
-    background: var(--global-hover-color);
-    border-color: var(--global-theme-color);
+    opacity: 0.8;
   }
 
   .news-date {
     min-width: 120px;
     font-size: 0.9rem;
     color: var(--global-text-color-light);
-    font-weight: 500;
+    font-weight: 400;
   }
 
   .news-content {
@@ -666,22 +667,23 @@ footer.fixed-bottom {
 
       &:hover {
         color: var(--global-theme-color);
+        text-decoration: underline;
       }
     }
   }
 }
 
-// Dark Mode Adjustments
+// Dark Mode Adjustments (Minimal)
 html[data-theme="dark"] .news-list-item {
-  background: rgba(255, 255, 255, 0.03);
   border-color: rgba(255, 255, 255, 0.1);
+  background: transparent;
+  box-shadow: none;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 0 15px rgba(6, 182, 212, 0.1);
+    background: transparent;
+    box-shadow: none;
   }
 }
-
 
 // Responsive
 @media (max-width: 576px) {
@@ -704,33 +706,35 @@ html[data-theme="dark"] .news-list-item {
 .btn-resume {
   display: inline-flex;
   align-items: center;
-  padding: 0.6rem 1.2rem;
-  border-radius: 50px;
-  background: linear-gradient(135deg, var(--global-theme-color), #764ba2);
-  color: white !important;
-  font-weight: 600;
-  font-size: 0.95rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  padding: 0;
+  background: transparent;
+  color: var(--global-theme-color) !important;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: none;
   margin-top: 1rem;
   text-decoration: none !important;
+  border-bottom: 1px solid transparent;
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 15px rgba(118, 75, 162, 0.3);
-    filter: brightness(1.1);
+    transform: none;
+    box-shadow: none;
+    border-bottom-color: currentColor;
+    filter: none;
   }
 
   i {
-    margin-right: 8px;
+    margin-right: 6px;
+    font-size: 0.9em;
   }
 }
 
 html[data-theme="dark"] .btn-resume {
-  background: linear-gradient(135deg, #06b6d4, #3b82f6);
-  box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+  background: transparent;
+  box-shadow: none;
+  color: var(--global-theme-color) !important;
 
   &:hover {
-    box-shadow: 0 0 25px rgba(6, 182, 212, 0.5);
+    box-shadow: none;
   }
 }
