@@ -627,8 +627,110 @@ footer.fixed-bottom {
   font-size: 0.9rem;
 }
 
-html[data-theme="dark"] footer.fixed-bottom {
-  background: rgba(28, 28, 29, 0.9);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  color: #8b949e;
+
+/*******************************************************************************
+ * News & Latest Posts Modernization
+ * Phase 6: List Layouts
+ ******************************************************************************/
+
+.news-list-item {
+  display: flex;
+  align-items: baseline;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 12px;
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateX(4px);
+    background: var(--global-hover-color);
+    border-color: var(--global-theme-color);
+  }
+
+  .news-date {
+    min-width: 120px;
+    font-size: 0.9rem;
+    color: var(--global-text-color-light);
+    font-weight: 500;
+  }
+
+  .news-content {
+    flex: 1;
+
+    a {
+      font-weight: 500;
+      color: var(--global-text-color);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+}
+
+// Dark Mode Adjustments
+html[data-theme="dark"] .news-list-item {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.1);
+  }
+}
+
+
+// Responsive
+@media (max-width: 576px) {
+  .news-list-item {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .news-date {
+      margin-bottom: 0.25rem;
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+  }
+}
+
+/*******************************************************************************
+ * Resume CTA Button
+ * Phase 6: Call to Action
+ ******************************************************************************/
+.btn-resume {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--global-theme-color), #764ba2);
+  color: white !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  text-decoration: none !important;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(118, 75, 162, 0.3);
+    filter: brightness(1.1);
+  }
+
+  i {
+    margin-right: 8px;
+  }
+}
+
+html[data-theme="dark"] .btn-resume {
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+
+  &:hover {
+    box-shadow: 0 0 25px rgba(6, 182, 212, 0.5);
+  }
 }
