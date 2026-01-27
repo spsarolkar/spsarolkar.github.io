@@ -46,7 +46,7 @@
       year: 2010 - 2011
       description:
         - "**Data Product Development**: Developed analytical engines for Credit Bureau reports using Java/J2EE ecosystem (Struts, Spring, Hibernate)."
-        - "**Risk Analytics**: Built the \"Overlap Report\" and \"Incidence High Default (IHD)\" report generators, key products used by banks for risk assessment and decision-making.
+        - "**Risk Analytics**: Built the \"Overlap Report\" and \"Incidence High Default (IHD)\" report generators, key products used by banks for risk assessment and decision-making."
 
 - title: Education
   type: time_table
