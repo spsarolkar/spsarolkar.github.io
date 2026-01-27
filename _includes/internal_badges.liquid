@@ -1,0 +1,33 @@
+<div class="skills-section mt-4 mb-5">
+  <div class="row justify-content-center">
+    {% for badge in site.data.internal_badges %}
+    <div class="col-6 col-md-3 mb-4 text-center" data-animate data-animate-delay="{{ forloop.index }}">
+       <div class="card h-100 border-0 shadow-sm badge-card">
+         <div class="card-body d-flex flex-column align-items-center justify-content-center p-3">
+           <img src="{{ badge.image | relative_url }}" alt="{{ badge.name }}" class="img-fluid mb-3" style="max-height: 120px; object-fit: contain;">
+           <h6 class="card-title text-muted mb-0 small font-weight-bold">{{ badge.name }}</h6>
+         </div>
+       </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.badge-card {
+  transition: transform 0.3s ease;
+  background-color: #f8f9fa; /* Light background for contrast */
+}
+.badge-card:hover {
+  transform: translateY(-5px);
+}
+/* Dark mode support if applicable, or general style tweaking */
+@media (prefers-color-scheme: dark) {
+  .badge-card {
+    background-color: #2d2d2d;
+  }
+  .card-title {
+    color: #e0e0e0 !important;
+  }
+}
+</style>

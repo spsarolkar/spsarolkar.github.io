@@ -50,8 +50,13 @@ Outside of work, I enjoy trekking, reading, swimming, and exploring astrophysics
 
 📍 DSK Vishwa, Dhayari, Pune – 411041, Maharashtra, India
 
+
 ## Skills & Technologies
 {% include skills.liquid %}
+
+## Internal Recognition
+{% include internal_badges.liquid %}
+
 
 
 ## Education & Certifications
