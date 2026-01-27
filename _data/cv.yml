@@ -22,8 +22,8 @@
         - "**Engineering Excellence**: Led the development of \"Feed and Adjustment Workstation,\" a critical accounting sub-ledger system processing millions of daily transactions. Optimized data pipelines using Spark and BigQuery."
         - "**Team Management**: Mentored a cross-functional team of 10+ engineers, establishing best practices in CI/CD, microservices architecture (Spring Boot), and TDD."
         - "**Key Projects**:"
-          - "**Structform**: Designed a high-performance Data Transformation Engine using Transformer models, achieving 99% accuracy in mapping complex financial message formats."
-          - "**GenAI Test Automation**: Built a LangChain-based framework to automate JUnit test case generation, cutting developer testing time by 40%."
+        - "&nbsp;&nbsp;• **Structform**: Designed a high-performance Data Transformation Engine using Transformer models, achieving 99% accuracy in mapping complex financial message formats."
+        - "&nbsp;&nbsp;• **GenAI Test Automation**: Built a LangChain-based framework to automate JUnit test case generation, cutting developer testing time by 40%."
     
     - title: Senior Software Engineer
       institution: Cognizant Technology Solutions, Pune
@@ -77,7 +77,7 @@
       description: "**Creator**. An open-source, Transformer-based engine for structured data transformation. Demonstrates the application of Deep Learning to solve traditional ETL challenges with 99% accuracy."
     - title: <a href="#">Indian Sign Language Translator</a>
       year: 2024
-      description: "**Lead Developer**. A computer vision solution combining Pose Estimation and Transformers to translate sign language in real-time. Hosted on Hugging Face."
+      description: "**Lead Developer**. A computer vision solution combining Pose Estimation and Transformers to translate sign language in real-time. Hosted on Hugging Face. Hosted on Hugging Face."
 
 - title: Honors and Awards
   type: time_table
