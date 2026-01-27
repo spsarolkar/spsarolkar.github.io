@@ -31,7 +31,7 @@
       description:
         - "**Core Systems Development**: Played a pivotal role in the \"Global Securities Infrastructure (GSI)\" initiative, designing robust backend services for managing complex stock and cash positions."
         - "**Quality Assurance**: Engineered a custom TestSuite using JUnit for comprehensive end-to-end testing of position management applications, significantly reducing production defects."
-        - "**Performance Optimization**: Refactored critical database queries and application logic, resulting in a 20% improvement in transaction processing speed.
+        - "**Performance Optimization**: Refactored critical database queries and application logic, resulting in a 20% improvement in transaction processing speed."
 
     - title: Senior Software Engineer
       institution: HSBC GLT
@@ -39,7 +39,7 @@
       description:
         - "**Trading Platform Development**: Core contributor to the award-winning \"Barracuda\" trading platform. Collaborated directly with global stakeholders in the UK and US to interpret and implement complex DFA regulatory requirements."
         - "**System Integration**: successfully integrated the trading platform with major external financial networks (DTCC, MarkitWire), ensuring seamless real-time data exchange."
-        - "**Crisis Management**: provided critical disaster recovery support for the trading desk during Hurricane Sandy, ensuring business continuity.
+        - "**Crisis Management**: provided critical disaster recovery support for the trading desk during Hurricane Sandy, ensuring business continuity."
 
     - title: Software Engineer
       institution: High Mark Credit Information Services
@@ -64,6 +64,14 @@
     - title: Bachelor of Engineering, Electronics
       institution: Pune University / VIT, Pune
       year: 2006
+
+- title: Certifications & Badges
+  type: badges
+  contents: []
+
+- title: Open Source Projects
+  type: time_table
+  contents:
     - title: <a href="https://github.com/spsarolkar/structform">Structform</a>
       year: 2024
       description: "**Creator**. An open-source, Transformer-based engine for structured data transformation. Demonstrates the application of Deep Learning to solve traditional ETL challenges with 99% accuracy."
