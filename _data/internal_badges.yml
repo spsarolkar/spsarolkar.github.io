@@ -1,9 +1,9 @@
 
-- name: DB AI Badge Blue Distinction
+- name: Deutsche Bank Generative AI Developer
   image: /assets/badges/db_ai_badge_blue_distinction.png
-- name: DB Cloud Engineer Distinction
+- name: Deutsche Bank Cloud Engineer
   image: /assets/badges/db_cloud_engineer_distinction.png
-- name: GCP Cloud Data Engineer Distinction
+- name: Deutsche Bank Cloud Data Engineer
   image: /assets/badges/gcp_cloud_data_eng_distinction.png
-- name: DB Machine Learning Engineer
+- name: Deutsche Bank Machine Learning Engineer
   image: /assets/badges/db_ml_engineer.png
