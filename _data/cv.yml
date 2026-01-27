@@ -17,36 +17,36 @@
       institution: Deutsche Bank, Pune
       year: 2015 - Present
       description:
-        - **Strategic Leadership**: Spearheaded the architectural migration of legacy financial platforms to Google Cloud (GCP), reducing infrastructure costs by 30% and improving scalability.
-        - **AI/ML Innovation**: Architected and deployed GenAI solutions for "Community of Practice," enabling business users to leverage LLMs for automated document processing and insight generation.
-        - **Engineering Excellence**: Led the development of "Feed and Adjustment Workstation," a critical accounting sub-ledger system processing millions of daily transactions. Optimized data pipelines using Spark and BigQuery.
-        - **Team Management**: Mentored a cross-functional team of 10+ engineers, establishing best practices in CI/CD, microservices architecture (Spring Boot), and TDD.
-        - **Key Projects**:
-          - **Structform**: Designed a high-performance Data Transformation Engine using Transformer models, achieving 99% accuracy in mapping complex financial message formats.
-          - **GenAI Test Automation**: Built a LangChain-based framework to automate JUnit test case generation, cutting developer testing time by 40%.
+        - "**Strategic Leadership**: Spearheaded the architectural migration of legacy financial platforms to Google Cloud (GCP), reducing infrastructure costs by 30% and improving scalability."
+        - "**AI/ML Innovation**: Architected and deployed GenAI solutions for \"Community of Practice,\" enabling business users to leverage LLMs for automated document processing and insight generation."
+        - "**Engineering Excellence**: Led the development of \"Feed and Adjustment Workstation,\" a critical accounting sub-ledger system processing millions of daily transactions. Optimized data pipelines using Spark and BigQuery."
+        - "**Team Management**: Mentored a cross-functional team of 10+ engineers, establishing best practices in CI/CD, microservices architecture (Spring Boot), and TDD."
+        - "**Key Projects**:"
+          - "**Structform**: Designed a high-performance Data Transformation Engine using Transformer models, achieving 99% accuracy in mapping complex financial message formats."
+          - "**GenAI Test Automation**: Built a LangChain-based framework to automate JUnit test case generation, cutting developer testing time by 40%."
     
     - title: Senior Software Engineer
       institution: Cognizant Technology Solutions, Pune
       year: 2013 - 2015
       description:
-        - **Core Systems Development**: Played a pivotal role in the "Global Securities Infrastructure (GSI)" initiative, designing robust backend services for managing complex stock and cash positions.
-        - **Quality Assurance**: Engineered a custom TestSuite using JUnit for comprehensive end-to-end testing of position management applications, significantly reducing production defects.
-        - **Performance Optimization**: Refactored critical database queries and application logic, resulting in a 20% improvement in transaction processing speed.
+        - "**Core Systems Development**: Played a pivotal role in the \"Global Securities Infrastructure (GSI)\" initiative, designing robust backend services for managing complex stock and cash positions."
+        - "**Quality Assurance**: Engineered a custom TestSuite using JUnit for comprehensive end-to-end testing of position management applications, significantly reducing production defects."
+        - "**Performance Optimization**: Refactored critical database queries and application logic, resulting in a 20% improvement in transaction processing speed.
 
     - title: Senior Software Engineer
       institution: HSBC GLT
       year: 2011 - 2013
       description:
-        - **Trading Platform Development**: Core contributor to the award-winning "Barracuda" trading platform. Collaborated directly with global stakeholders in the UK and US to interpret and implement complex DFA regulatory requirements.
-        - **System Integration**: successfully integrated the trading platform with major external financial networks (DTCC, MarkitWire), ensuring seamless real-time data exchange.
-        - **Crisis Management**: provided critical disaster recovery support for the trading desk during Hurricane Sandy, ensuring business continuity.
+        - "**Trading Platform Development**: Core contributor to the award-winning \"Barracuda\" trading platform. Collaborated directly with global stakeholders in the UK and US to interpret and implement complex DFA regulatory requirements."
+        - "**System Integration**: successfully integrated the trading platform with major external financial networks (DTCC, MarkitWire), ensuring seamless real-time data exchange."
+        - "**Crisis Management**: provided critical disaster recovery support for the trading desk during Hurricane Sandy, ensuring business continuity.
 
     - title: Software Engineer
       institution: High Mark Credit Information Services
       year: 2010 - 2011
       description:
-        - **Data Product Development**: Developed analytical engines for Credit Bureau reports using Java/J2EE ecosystem (Struts, Spring, Hibernate).
-        - **Risk Analytics**: Built the "Overlap Report" and "Incidence High Default (IHD)" report generators, key products used by banks for risk assessment and decision-making.
+        - "**Data Product Development**: Developed analytical engines for Credit Bureau reports using Java/J2EE ecosystem (Struts, Spring, Hibernate)."
+        - "**Risk Analytics**: Built the \"Overlap Report\" and \"Incidence High Default (IHD)\" report generators, key products used by banks for risk assessment and decision-making.
 
 - title: Education
   type: time_table
@@ -55,45 +55,37 @@
       institution: Indian Institute of Science, Bangalore
       year: 2024
       description:
-        - Specialized in **Scalable Computing for AI/ML**, **Neural Networks**, and **Data Engineering**. Capstone project focused on maximizing parallel processing efficiency.
+        - "Specialized in **Scalable Computing for AI/ML**, **Neural Networks**, and **Data Engineering**. Capstone project focused on maximizing parallel processing efficiency."
     - title: Diploma in Advanced Computing (DAC)
       institution: ACTS, Pune
       year: 2007
       description:
-        - Intensive training in System Programming, Enterprise Java, and Database Technologies.
+        - "Intensive training in System Programming, Enterprise Java, and Database Technologies."
     - title: Bachelor of Engineering, Electronics
       institution: Pune University / VIT, Pune
       year: 2006
-
-- title: Certifications & Badges
-  type: badges
-  contents: []
-
-- title: Open Source Projects
-  type: time_table
-  contents:
     - title: <a href="https://github.com/spsarolkar/structform">Structform</a>
       year: 2024
-      description: **Creator**. An open-source, Transformer-based engine for structured data transformation. Demonstrates the application of Deep Learning to solve traditional ETL challenges with 99% accuracy.
+      description: "**Creator**. An open-source, Transformer-based engine for structured data transformation. Demonstrates the application of Deep Learning to solve traditional ETL challenges with 99% accuracy."
     - title: <a href="#">Indian Sign Language Translator</a>
       year: 2024
-      description: **Lead Developer**. A computer vision solution combining Pose Estimation and Transformers to translate sign language in real-time. Hosted on Hugging Face.
+      description: "**Lead Developer**. A computer vision solution combining Pose Estimation and Transformers to translate sign language in real-time. Hosted on Hugging Face."
 
 - title: Honors and Awards
   type: time_table
   contents:
     - year: 2022
       items:
-        - **Deutsche Bank Excellence Award**: Recognized for outstanding contribution to Cloud Migration initiatives.
+        - "**Deutsche Bank Excellence Award**: Recognized for outstanding contribution to Cloud Migration initiatives."
     - year: 2018
       items:
-        - **Deutsche Bank Excellence Award**: Awarded for delivery excellence in the Accounting Subledger project.
+        - "**Deutsche Bank Excellence Award**: Awarded for delivery excellence in the Accounting Subledger project."
     - year: 2012
       items:
-        - **GBM, AMG & GBP Awards (HSBC)**: For exceptional delivery and crisis support.
+        - "**GBM, AMG & GBP Awards (HSBC)**: For exceptional delivery and crisis support."
 
 - title: Interests
   type: list
   contents:
-    - <u>Professional:</u> **GenAI & LLMs**, **Distributed Systems Architecture**, **Astrophysics**, **Quantum Computing**.
-    - <u>Personal:</u> Trekking (Himalayas), Chess Strategy, Yoga & Mindfulness.
+    - "<u>Professional:</u> **GenAI & LLMs**, **Distributed Systems Architecture**, **Astrophysics**, **Quantum Computing**."
+    - "<u>Personal:</u> Trekking (Himalayas), Chess Strategy, Yoga & Mindfulness."
