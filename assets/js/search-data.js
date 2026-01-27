@@ -39,7 +39,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "cv",
-          description: "Seeking a data engineering/science role focused on big data, Spark, and intelligent pipelines—blending my software expertise with a passion for scalable analytics and continuous learning.",
+          description: "Lead Data Engineer and AI/ML Architect blending 15+ years of distributed systems expertise with cutting-edge Generative AI and Computer Vision solutions.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
