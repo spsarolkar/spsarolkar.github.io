@@ -70,7 +70,7 @@
                       {% endfor %}
                     </ul>
                   {% else %}
-                    <span class="item">{{ item }}</span>
+                    <span class="item">{{ item | markdownify }}</span>
                   {% endif %}
                 </li>
               {% endfor %}
