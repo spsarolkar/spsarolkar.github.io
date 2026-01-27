@@ -23,10 +23,10 @@ latest_posts:
   limit: 3
 ---
 
-I am Sunil Sarolkar, an Assistant Vice President at Deutsche Bank in Pune, India, with 15 years of experience in enterprise software engineering and architecture and 5 years of active contributions in AI/ML and Generative AI projects. My core expertise lies in Java, Spring Boot, microservices, distributed systems, and cloud-native platforms, while my AI/ML focus includes predictive maintenance, generative AI automation, structured data transformation, and computer vision models.
+I am **Sunil Sarolkar**, a **Lead Data Engineer** and **AI/ML Architect** with over 15 years of experience in building scalable enterprise systems. Currently serving as an **Assistant Vice President at Deutsche Bank** in Pune, India, I specialize in bridging the gap between distributed data engineering and cutting-edge AI solutions. My expertise spans **Generative AI**, **LLMs**, and **Computer Vision**, integrated with robust cloud-native platforms on **Google Cloud**. I combine deep technical strategies in **Java/Spring Boot** and **Python/TensorFlow** to deliver intelligent, high-performance software.
 
 <div style="text-align: left; margin-top: 1rem; margin-bottom: 2rem;">
-  <a href="https://spsarolkar.github.io/assets/pdf/Resume_Sunil_Sarolkar.pdf" class="btn-resume" target="_blank">
+  <a href="https://spsarolkar.github.io/assets/pdf/Sunil_Sarolkar_Lead_Data_Engineer.pdf" class="btn-resume" target="_blank">
     <i class="fas fa-file-pdf"></i> Resume
   </a>
 </div>
@@ -72,7 +72,7 @@ Outside of work, I enjoy trekking, reading, swimming, and exploring astrophysics
 ## Download Resume
 
 <div style="text-align: center;">
-  <a href="https://spsarolkar.github.io/assets/pdf/Resume_Sunil_Sarolkar.pdf" class="btn-resume" target="_blank" style="margin: 0;">
+  <a href="https://spsarolkar.github.io/assets/pdf/Sunil_Sarolkar_Lead_Data_Engineer.pdf" class="btn-resume" target="_blank" style="margin: 0;">
     View Full Resume <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
   </a>
 </div>
