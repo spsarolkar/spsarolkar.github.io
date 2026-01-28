@@ -61,11 +61,71 @@ Outside of work, I enjoy trekking, reading, swimming, and exploring astrophysics
 
 ## Education & Certifications
 
-- **[Google Cloud — Professional Machine Learning Engineer](https://www.credly.com/badges/0c8f21e3-1228-461c-97ce-a1a5be401c34/public_url)** (2025)
-- **PG Certification — Computational Data Science (CDS)**, IISc Bangalore (2024)
-- **[Associate Cloud Engineer Certification](https://www.credly.com/badges/97997fd6-bd29-4f49-8e39-4741f3ca0719/public_url)** (2023)
-- **Diploma in Advanced Computing (DAC)** — ACTS, Pune (2007)
-- **B.E. (Electronics)** — Pune University / VIT College (2006)
+
+<div class="row">
+    <div class="col-12">
+        <div class="card mt-3">
+             <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <img src="assets/img/gcp_logo.png" alt="Google Cloud Logo" style="max-height: 50px; max-width: 60px;">
+                        </div>
+                        <div class="col">
+                            <h6 class="mb-0 font-weight-bold"><a href="https://www.credly.com/badges/0c8f21e3-1228-461c-97ce-a1a5be401c34/public_url">Professional Machine Learning Engineer</a></h6>
+                            <small class="text-muted">Google Cloud (2025)</small>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <img src="assets/img/iisc_logo.png" alt="IISc Logo" style="max-height: 50px; max-width: 60px;">
+                        </div>
+                        <div class="col">
+                            <h6 class="mb-0 font-weight-bold">PG Certification — Computational Data Science (CDS)</h6>
+                            <small class="text-muted">Indian Institute of Science, Bangalore (2024)</small>
+                        </div>
+                    </div>
+                </li>
+                 <li class="list-group-item">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                             <img src="assets/img/gcp_logo.png" alt="Google Cloud Logo" style="max-height: 50px; max-width: 60px;">
+                        </div>
+                        <div class="col">
+                            <h6 class="mb-0 font-weight-bold"><a href="https://www.credly.com/badges/97997fd6-bd29-4f49-8e39-4741f3ca0719/public_url">Associate Cloud Engineer Certification</a></h6>
+                             <small class="text-muted">Google Cloud (2023)</small>
+                        </div>
+                    </div>
+                </li>
+                 <li class="list-group-item">
+                    <div class="row align-items-center">
+                         <div class="col-auto">
+                            <img src="assets/img/C-DAC_LogoTransp.png" alt="CDAC Logo" style="max-height: 50px; max-width: 60px;">
+                        </div>
+                        <div class="col">
+                            <h6 class="mb-0 font-weight-bold">Diploma in Advanced Computing (DAC)</h6>
+                            <small class="text-muted">ACTS, Pune (2007)</small>
+                        </div>
+                    </div>
+                </li>
+                  <li class="list-group-item">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <img src="assets/img/sppu_logo.png" alt="Pune University Logo" style="max-height: 50px; max-width: 60px;">
+                        </div>
+                         <div class="col">
+                            <h6 class="mb-0 font-weight-bold">B.E. (Electronics)</h6>
+                            <small class="text-muted">Pune University / VIT College (2006)</small>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 
 ---
 

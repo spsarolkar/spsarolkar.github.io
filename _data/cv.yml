@@ -60,6 +60,7 @@
     - title: Diploma in Advanced Computing (DAC)
       institution: ACTS, Pune
       year: 2007
+      logo: assets/img/C-DAC_LogoTransp.png
       description:
         - "Intensive training in System Programming, Enterprise Java, and Database Technologies."
     - title: Bachelor of Engineering, Electronics
