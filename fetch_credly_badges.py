@@ -125,15 +125,46 @@ for card in soup.select("div[data-testid='desktop-badge-card']"):
             "image340": f"https://images.credly.com/size/340x340/images/{image_uuid}/{badge_url.split('/')[-1]}" if image_uuid else badge_url
         })
 
+MANUAL_BADGES = [
+    {
+        "name": "Google Cloud Certified - Professional Machine Learning Engineer",
+        "issuer": "Google Cloud",
+        "image": "https://images.credly.com/images/05e71e7e-92a1-4821-8530-4176b2e3c4b4/image.png",
+        "uuid": "0c8f21e3-1228-461c-97ce-a1a5be401c34",
+        "url": "https://www.credly.com/badges/0c8f21e3-1228-461c-97ce-a1a5be401c34",
+        "issued": "August 03, 2025",
+        "image340": "https://images.credly.com/size/340x340/images/05e71e7e-92a1-4821-8530-4176b2e3c4b4/image.png"
+    },
+    {
+        "name": "Google Cloud Certified - Associate Cloud Engineer",
+        "issuer": "Google Cloud",
+        "image": "https://images.credly.com/images/08096465-cbfc-4c3e-93e5-93c5aa61f23e/image.png",
+        "uuid": "97997fd6-bd29-4f49-8e39-4741f3ca0719",
+        "url": "https://www.credly.com/badges/97997fd6-bd29-4f49-8e39-4741f3ca0719",
+        "issued": "April 09, 2023",
+        "image340": "https://images.credly.com/size/340x340/images/08096465-cbfc-4c3e-93e5-93c5aa61f23e/image.png"
+    }
+]
+
 print(f"✅ Extracted {len(badges)} badges with issue dates.")
 
 driver.quit()
+
+# Merge fetched badges with manual badges, prioritizing manual badges or ensuring uniqueness
+all_badges_map = {b['uuid']: b for b in badges}
+for mb in MANUAL_BADGES:
+    all_badges_map[mb['uuid']] = mb # Add or overwrite with manual badge details
+
+# Convert back to list
+final_badges = list(all_badges_map.values())
 
 # Ensure _data folder exists
 os.makedirs("_data", exist_ok=True)
 
 # Save to JSON
 with open(OUTPUT_FILE, "w") as f:
-    json.dump(badges, f, indent=2)
+    json.dump(final_badges, f, indent=2)
+
+print(f"✅ Extracted {len(badges)} badges. Total saved: {len(final_badges)} badges to {OUTPUT_FILE}")
 
 print(f"✅ Extracted {len(badges)} badges to {OUTPUT_FILE}")
