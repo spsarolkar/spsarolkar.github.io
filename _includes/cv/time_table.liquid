@@ -3,7 +3,14 @@
     <li class="list-group-item">
       <div class="row">
         {% if content.year %}
-          <div class="col-xs-2 cl-sm-2 col-md-2 text-center" style="width: 75px">
+          <div class="col-xs-2 cl-sm-2 col-md-2 text-center date-column">
+            {% if content.logo %}
+              <div class="row align-items-center" style="height: 100%;">
+                  <div class="col-12 p-0">
+                      <img src="{{ content.logo | relative_url }}" class="img-fluid" style="max-height: 80px; width: auto; display: block; margin: 0 auto 10px auto;" alt="logo" />
+                  </div>
+              </div>
+            {% endif %}
             <table class="table-cv">
               <tbody>
                 <tr>

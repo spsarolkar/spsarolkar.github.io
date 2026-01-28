@@ -54,6 +54,7 @@
     - title: PG Certification in Computational Data Science (CDS)
       institution: Indian Institute of Science, Bangalore
       year: 2024
+      logo: assets/img/iisc_logo.png
       description:
         - "Specialized in **Scalable Computing for AI/ML**, **Neural Networks**, and **Data Engineering**. Capstone project focused on maximizing parallel processing efficiency."
     - title: Diploma in Advanced Computing (DAC)
@@ -64,7 +65,13 @@
     - title: Bachelor of Engineering, Electronics
       institution: Pune University / VIT, Pune
       year: 2006
-
+      logo: assets/img/sppu_logo.png
+    - title: Professional Data Engineer
+      institution: Google Cloud
+      year: 2024
+      logo: assets/img/gcp_logo.png
+      description:
+        - "Demonstrated proficiency in designing and building data processing systems and operationalizing machine learning models on Google Cloud."
 - title: Certifications & Badges
   type: badges
   contents: []
