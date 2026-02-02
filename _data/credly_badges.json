@@ -1,23 +1,5 @@
 [
   {
-    "name": "Google Cloud Certified - Professional Machine Learning Engineer",
-    "issuer": "Google Cloud",
-    "image": "https://images.credly.com/images/05e71e7e-92a1-4821-8530-4176b2e3c4b4/image.png",
-    "uuid": "0c8f21e3-1228-461c-97ce-a1a5be401c34",
-    "url": "https://www.credly.com/badges/0c8f21e3-1228-461c-97ce-a1a5be401c34",
-    "issued": "August 03, 2025",
-    "image340": "https://images.credly.com/size/340x340/images/05e71e7e-92a1-4821-8530-4176b2e3c4b4/image.png"
-  },
-  {
-    "name": "Google Cloud Certified - Associate Cloud Engineer",
-    "issuer": "Google Cloud",
-    "image": "https://images.credly.com/images/08096465-cbfc-4c3e-93e5-93c5aa61f23e/image.png",
-    "uuid": "97997fd6-bd29-4f49-8e39-4741f3ca0719",
-    "url": "https://www.credly.com/badges/97997fd6-bd29-4f49-8e39-4741f3ca0719",
-    "issued": "April 09, 2023",
-    "image340": "https://images.credly.com/size/340x340/images/08096465-cbfc-4c3e-93e5-93c5aa61f23e/image.png"
-  },
-  {
     "name": "Derive Insights from BigQuery Data Skill Badge",
     "issuer": "Google Cloud",
     "image": "https://images.credly.com/images/11088b22-7be5-4fe3-995d-c014514c8dc3/image.png",
@@ -178,5 +160,23 @@
     "url": "https://www.credly.com/badges/f4c26ff6-31b7-4d43-be5d-e98c7912f75f",
     "issued": "",
     "image340": "https://images.credly.com/size/340x340/images/42326d44-14ff-4eda-b9c5-7d8f12919253/image.png"
+  },
+  {
+    "name": "Google Cloud Certified - Professional Machine Learning Engineer",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/images/05e71e7e-92a1-4821-8530-4176b2e3c4b4/image.png",
+    "uuid": "0c8f21e3-1228-461c-97ce-a1a5be401c34",
+    "url": "https://www.credly.com/badges/0c8f21e3-1228-461c-97ce-a1a5be401c34",
+    "issued": "August 03, 2025",
+    "image340": "https://images.credly.com/size/340x340/images/05e71e7e-92a1-4821-8530-4176b2e3c4b4/image.png"
+  },
+  {
+    "name": "Google Cloud Certified - Associate Cloud Engineer",
+    "issuer": "Google Cloud",
+    "image": "https://images.credly.com/images/08096465-cbfc-4c3e-93e5-93c5aa61f23e/image.png",
+    "uuid": "97997fd6-bd29-4f49-8e39-4741f3ca0719",
+    "url": "https://www.credly.com/badges/97997fd6-bd29-4f49-8e39-4741f3ca0719",
+    "issued": "April 09, 2023",
+    "image340": "https://images.credly.com/size/340x340/images/08096465-cbfc-4c3e-93e5-93c5aa61f23e/image.png"
   }
 ]
