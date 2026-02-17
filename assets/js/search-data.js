@@ -267,11 +267,18 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
             },},{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/sunil-sarolkar-451b2023", "_blank");
+        },
+      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%73%70%73%61%72%6F%6C%6B%61%72@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+          window.open("mailto:%73%75%6E%69%6C.%73%61%72%6F%6C%6B%61%72@%67%6D%61%69%6C.%63%6F%6D", "_blank");
         },
       },{
         id: 'social-github',
