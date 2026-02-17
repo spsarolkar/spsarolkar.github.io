@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: "<a href='/cv/'>Affiliations</a> | Pune, India | Contact: spsarolkar@gmail.com | Motto: 'Build. Learn. Simplify.'"
+subtitle: "<a href='/cv/'>Affiliations</a> | Pune, India | Contact: sunil.sarolkar@gmail.com | Motto: 'Build. Learn. Simplify.'"
 profile:
   align: right
   image: prof_pic.png

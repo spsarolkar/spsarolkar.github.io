@@ -3,7 +3,7 @@
     "name": "Sunil Sarolkar",
     "label": "Data Scientist/ML Engineer/Software Developer",
     "image": "",
-    "email": "spsarolkar@gmail.com",
+    "email": "sunil.sarolkar@gmail.com",
     "phone": "(+91) 9823578815",
     "url": "https://sunilsarolkar.in",
     "summary": "Seeking a data engineering/science role focused on big data, Spark, and intelligent pipelines—blending my software expertise with a passion for scalable analytics and continuous learning.",
@@ -35,7 +35,12 @@
       "startDate": "2014-07-27",
       "endDate": "2025-07-25",
       "summary": "Led architecture and design for secure banking applications while actively contributing as a hands-on developer in Java and Spring Boot.Implemented microservices architecture and improved system scalability by 40%.Collaborated with cross-functional teams, reviewed code, and mentored junior developers.",
-      "highlights": ["Spark", "Data Pipelines", "Java", "Spring"]
+      "highlights": [
+        "Spark",
+        "Data Pipelines",
+        "Java",
+        "Spring"
+      ]
     },
     {
       "name": "Cognizant Technology Solutions",
@@ -43,7 +48,11 @@
       "startDate": "2013-12-01",
       "endDate": "2015-07-26",
       "summary": "Implemented business logic for new functionalities, fixed security vulnerabilities, migrated platform to cloud hosting, and integrated OAuth authentication. Worked on projects like Feed and Adjustment Workstation and Accounting Subledger.",
-      "highlights": ["Java", "EJB", "Spring"]
+      "highlights": [
+        "Java",
+        "EJB",
+        "Spring"
+      ]
     },
     {
       "name": "HSBC GLT",
@@ -51,7 +60,10 @@
       "startDate": "2011-09-01",
       "endDate": "2013-12-01",
       "summary": "Contributed to the Barracuda trading platform, collaborating with clients in the UK and US, implementing DFA requirements, and integrating with financial systems like DTCC and MarkitWire.",
-      "highlights": ["Java", ".NET"]
+      "highlights": [
+        "Java",
+        ".NET"
+      ]
     },
     {
       "name": "High Mark Credit Information Services",
@@ -59,7 +71,10 @@
       "startDate": "2010-03-01",
       "endDate": "2011-09-01",
       "summary": "Developed Java and J2EE applications using Struts, Spring, and Hibernate. Worked on Credit Bureau reports like Overlap report and Incidence High Default (IHD) report",
-      "highlights": ["Java", ".NET"]
+      "highlights": [
+        "Java",
+        ".NET"
+      ]
     }
   ],
   "volunteer": [],
@@ -72,7 +87,9 @@
       "studyType": "Bachelors Degree",
       "startDate": "2001-05-01",
       "endDate": "2006-04-01",
-      "courses": ["Electronics"]
+      "courses": [
+        "Electronics"
+      ]
     }
   ],
   "awards": [
@@ -113,7 +130,13 @@
       "name": "Data Engineer/Software Architect",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
-      "keywords": ["Spark", "Java", "Python", "Keras", "Tensorflow"]
+      "keywords": [
+        "Spark",
+        "Java",
+        "Python",
+        "Keras",
+        "Tensorflow"
+      ]
     }
   ],
   "languages": [
@@ -137,15 +160,24 @@
     {
       "name": "Trekking",
       "icon": "fa-solid fa-tag",
-      "keywords": ["Sinhagad Trek (Favourite)", "Himalaya Trek", "Adventure", "Chess"]
+      "keywords": [
+        "Sinhagad Trek (Favourite)",
+        "Himalaya Trek",
+        "Adventure",
+        "Chess"
+      ]
     }
   ],
-
   "projects": [
     {
       "name": "Sign Language Recognition using Neural Network",
       "summary": "Designed a time series neural network using LSTM for Indian Sign Language translation, targeting improved communication for those with speaking and hearing impairments.",
-      "highlights": ["Pytorch", "Keras3", "Python", "Openpose"],
+      "highlights": [
+        "Pytorch",
+        "Keras3",
+        "Python",
+        "Openpose"
+      ],
       "startDate": "2024-05-01",
       "endDate": "2023-08-01",
       "url": "https://huggingface.co/spaces/sunilsarolkar/ISL-SignLanguageTranslation"
@@ -175,28 +207,51 @@
     {
       "name": "Accounting Subledger/SPE Accounting",
       "summary": "Upgraded an on-premise application to a cloud platform, migrated from JDK4 to JDK7, and resolved security vulnerabilities.",
-      "highlights": ["WebSSO", "Struts2", "Oracle", "JavaScript"],
+      "highlights": [
+        "WebSSO",
+        "Struts2",
+        "Oracle",
+        "JavaScript"
+      ],
       "startDate": "2016-05-01",
       "endDate": "20285-02-01"
     },
     {
       "name": "Global Securities Infrastructure (GSI)",
       "summary": "Implemented requirements, maintained code quality using PMD, Checkstyle, and FindBugs.",
-      "highlights": ["Java", "JPA", "EJB 3.0", "Oracle", "JavaScript"],
+      "highlights": [
+        "Java",
+        "JPA",
+        "EJB 3.0",
+        "Oracle",
+        "JavaScript"
+      ],
       "startDate": "2013-12-25",
       "endDate": "2015-07-27"
     },
     {
       "name": "Barracuda",
       "summary": "Communicated with clients in the UK and US, implemented DFA requirements, maintained code quality using SONAR, Junits, and JBehave",
-      "highlights": ["Java", "Hibernate", "Spring", "Berkeley DB", "Jess", "JavaScript"],
+      "highlights": [
+        "Java",
+        "Hibernate",
+        "Spring",
+        "Berkeley DB",
+        "Jess",
+        "JavaScript"
+      ],
       "startDate": "2012-10-01",
       "endDate": "2013-12-21"
     },
     {
       "name": "HSBC Smart Client Framework (HSCF)",
       "summary": "Maintained code in Java and .NET, communicated with clients, and implemented changes under strict deadlines.",
-      "highlights": ["Java", "Hibernate", "Spring", ".NET"],
+      "highlights": [
+        "Java",
+        "Hibernate",
+        "Spring",
+        ".NET"
+      ],
       "startDate": "2011-12-01",
       "endDate": "2012-07-21"
     }
