@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Professional Machine Learning Engineer",
+    "image": "/assets/badges/gcp-professional-machine-learning-engineer.png",
+    "url": "https://www.credly.com/badges/0c8f21e3-1228-461c-97ce-a1a5be401c34/public_url",
+    "issued": "2025-08-03",
+    "issuedLabel": "3 August 2025",
+    "expires": "2027-08-03",
+    "expiresLabel": "3 August 2027"
+  },
+  {
+    "title": "Associate Cloud Engineer",
+    "image": "/assets/badges/gcp-associate-cloud-engineer.png",
+    "url": "https://www.credly.com/badges/65582184-f59c-49e8-bf95-383c3ae1168d/public_url",
+    "issued": "2023-04-09",
+    "issuedLabel": "9 April 2023",
+    "expires": "2029-04-09",
+    "expiresLabel": "9 April 2029"
+  }
+]

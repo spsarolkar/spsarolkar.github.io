@@ -1,75 +1,72 @@
-# Skills & Technologies Data
-
+---
 - name: Languages
-  icon: "fas fa-code"
-  color: "#667eea" # Light/Purple
+  icon: fas fa-code
+  color: "#667eea"
   items:
-    - name: Java
-      icon: "devicon-java-plain"
-      level: 95
-    - name: Python
-      icon: "devicon-python-plain"
-      level: 90
-    - name: C++
-      icon: "devicon-cplusplus-plain"
-      level: 80
-    - name: HTML/CSS
-      icon: "devicon-html5-plain"
-      level: 85
-    - name: SQL
-      icon: "devicon-mysql-plain"
-      level: 85
-
+  - name: Java
+    icon: devicon-java-plain
+  - name: Python
+    icon: devicon-python-plain
+  - name: C++
+    icon: devicon-cplusplus-plain
+  - name: HTML/CSS
+    icon: devicon-html5-plain
+  - name: SQL
+    icon: devicon-mysql-plain
 - name: Frameworks & Libraries
-  icon: "fas fa-layer-group"
-  color: "#06b6d4" # Cyan
+  icon: fas fa-layer-group
+  color: "#06b6d4"
   items:
-    - name: Spring Boot
-      icon: "devicon-spring-plain"
-      level: 95
-    - name: PyTorch
-      icon: "devicon-pytorch-original"
-      level: 85
-    - name: Keras
-      icon: "devicon-keras-plain"
-      level: 80
-    - name: LangChain
-      icon: "fas fa-link" # Fallback if devicon missing
-      level: 90
-    - name: Transformers
-      icon: "fas fa-robot"
-      level: 85
-
+  - name: Spring Boot
+    icon: devicon-spring-plain
+  - name: PyTorch
+    icon: devicon-pytorch-original
+  - name: Keras
+    icon: devicon-keras-plain
+  - name: LangChain
+    icon: fas fa-link
+  - name: Transformers
+    icon: fas fa-robot
+  - name: LangGraph
 - name: Cloud & DevOps
-  icon: "fas fa-cloud"
-  color: "#f59e0b" # Amber
+  icon: fas fa-cloud
+  color: "#f59e0b"
   items:
-    - name: Google Cloud
-      icon: "devicon-googlecloud-plain"
-      level: 90
-    - name: Docker
-      icon: "devicon-docker-plain"
-      level: 85
-    - name: Microservices
-      icon: "fas fa-network-wired"
-      level: 90
-    - name: Distributed Systems
-      icon: "fas fa-server"
-      level: 85
-
+  - name: Google Cloud
+    icon: devicon-googlecloud-plain
+  - name: Docker
+    icon: devicon-docker-plain
+  - name: Microservices
+    icon: fas fa-network-wired
+  - name: Distributed Systems
+    icon: fas fa-server
+  - name: Azure
+  - name: AWS
+  - name: Kubernetes
+  - name: Helm
 - name: AI / ML
-  icon: "fas fa-brain"
-  color: "#ec4899" # Pink
+  icon: fas fa-brain
+  color: "#ec4899"
   items:
-    - name: Generative AI
-      icon: "fas fa-magic"
-      level: 95
-    - name: Computer Vision
-      icon: "fas fa-eye"
-      level: 85
-    - name: Predictive Maintenance
-      icon: "fas fa-chart-line"
-      level: 80
-    - name: NLP
-      icon: "fas fa-comment-dots"
-      level: 85
+  - name: Generative AI
+    icon: fas fa-magic
+  - name: Computer Vision
+    icon: fas fa-eye
+  - name: Predictive Maintenance
+    icon: fas fa-chart-line
+  - name: NLP
+    icon: fas fa-comment-dots
+  - name: Vertex AI
+  - name: Retrieval-Augmented Generation (RAG)
+  - name: Text-to-SQL
+  - name: Model & Agent Evaluation
+- name: Data Engineering & Integration
+  items:
+  - name: Kafka
+  - name: Spark
+  - name: Airflow
+  - name: BigQuery
+  - name: Dataflow
+  - name: Model Context Protocol (MCP)
+  - name: OpenAPI
+  - name: Event-Driven Architectures

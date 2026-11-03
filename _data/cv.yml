@@ -1,107 +1,188 @@
+---
 - title: General Information
   type: map
   contents:
-    - name: Full Name
-      value: Sunil Sarolkar
-    - name: Role
-      value: Lead Data Engineer & AI/ML Architect
-    - name: Location
-      value: Pune, India
-    - name: Languages
-      value: English, Hindi, Marathi
-
+  - name: Full Name
+    value: Sunil Sarolkar
+  - name: Role
+    value: Principal Solution Architect (AI & GenAI Toolchain)
+  - name: Location
+    value: Pune, India
+  - name: Languages
+    value: English, Hindi, Marathi
+  - name: Focus
+    value: GenAI & Financial Services / Insurance
+- title: Summary
+  type: list
+  contents:
+  - AI architecture leader with 16+ years designing and deploying enterprise-scale solutions for Financial Services. Deep BFSI domain expertise across capital markets, derivatives and regulatory reporting, paired with proven strength architecting GenAI and agentic systems (LangGraph, LangChain, Vertex AI) that bridge cutting-edge AI with legacy banking data. Trusted technical authority in customer-facing and executive-advisory roles, translating complex business requirements into secure, scalable, cloud-native architectures.
+  - 16+ years in BFSI — Capital Markets & Derivatives (CDS/IRS, Dodd-Frank) · Regulatory Reporting · Corporate Cashflow · Credit Bureau / Microfinance · Middle & Back-Office Banking — at Deutsche Bank, Credit Suisse via Cognizant & HSBC.
 - title: Professional Experience
   type: time_table
   contents:
-    - title: Assistant Vice President / Lead Data Engineer
-      institution: Deutsche Bank, Pune
-      year: 2015 - Present
-      description:
-        - "**Strategic Leadership**: Spearheaded the architectural migration of legacy financial platforms to Google Cloud (GCP), reducing infrastructure costs by 30% and improving scalability."
-        - "**AI/ML Innovation**: Architected and deployed GenAI solutions for \"Community of Practice,\" enabling business users to leverage LLMs for automated document processing and insight generation."
-        - "**Engineering Excellence**: Led the development of \"Feed and Adjustment Workstation,\" a critical accounting sub-ledger system processing millions of daily transactions. Optimized data pipelines using Spark and BigQuery."
-        - "**Team Management**: Mentored a cross-functional team of 10+ engineers, establishing best practices in CI/CD, microservices architecture (Spring Boot), and TDD."
-        - "**Key Projects**:"
-        - "&nbsp;&nbsp;• **Structform**: Designed a high-performance Data Transformation Engine using Transformer models, achieving 99% accuracy in mapping complex financial message formats."
-        - "&nbsp;&nbsp;• **GenAI Test Automation**: Built a LangChain-based framework to automate JUnit test case generation, cutting developer testing time by 40%."
-    
-    - title: Senior Software Engineer
-      institution: Cognizant Technology Solutions, Pune
-      year: 2013 - 2015
-      description:
-        - "**Core Systems Development**: Played a pivotal role in the \"Global Securities Infrastructure (GSI)\" initiative, designing robust backend services for managing complex stock and cash positions."
-        - "**Quality Assurance**: Engineered a custom TestSuite using JUnit for comprehensive end-to-end testing of position management applications, significantly reducing production defects."
-        - "**Performance Optimization**: Refactored critical database queries and application logic, resulting in a 20% improvement in transaction processing speed."
-
-    - title: Senior Software Engineer
-      institution: HSBC GLT
-      year: 2011 - 2013
-      description:
-        - "**Trading Platform Development**: Core contributor to the award-winning \"Barracuda\" trading platform. Collaborated directly with global stakeholders in the UK and US to interpret and implement complex DFA regulatory requirements."
-        - "**System Integration**: successfully integrated the trading platform with major external financial networks (DTCC, MarkitWire), ensuring seamless real-time data exchange."
-        - "**Crisis Management**: provided critical disaster recovery support for the trading desk during Hurricane Sandy, ensuring business continuity."
-
-    - title: Software Engineer
-      institution: High Mark Credit Information Services
-      year: 2010 - 2011
-      description:
-        - "**Data Product Development**: Developed analytical engines for Credit Bureau reports using Java/J2EE ecosystem (Struts, Spring, Hibernate)."
-        - "**Risk Analytics**: Built the \"Overlap Report\" and \"Incidence High Default (IHD)\" report generators, key products used by banks for risk assessment and decision-making."
-
+  - title: Principal Solution Architect, Customer Facing
+    institution: US Insurance Client via Zensar Technologies, Pune
+    year: June 2026 – Present
+    description:
+    - "**Agent-Assist Next Best Offer Engine (Insurance):** Architected a recommendation engine combining a Neo4j persona knowledge graph with lifetime-value, likelihood-to-act and product-fit models — served from AKS via Helm with Azure Blob-backed model artifacts."
+    - "**Legacy Modernization — COBOL/Tandem to .NET on Azure:** Leading discovery and phased migration strategy for a mainframe-to-cloud program — AST-driven transformation pipeline, spec-driven development with AI coding agents, and golden-master validation to guarantee functional equivalence."
+  - title: Assistant Vice President, Engineering Lead
+    institution: Deutsche Bank, Pune
+    year: Jul 2015 – May 2026
+    description:
+    - "**Executive Advisory & Technical Presales (BFSI):** Primary AI technical architect for global BFSI business lines — led design workshops and presented GenAI ROI and architecture strategy directly to executive leadership."
+    - "**Prioritization Rubrics across Business Units:** Built and executed a standardized evaluation rubric to prioritize architecture requirements across multiple business units in parallel, matching recommendations to each unit's engineering maturity and business velocity."
+    - "**Enterprise-Scale RAG — DB Omni:** Implemented an organisation-wide RAG pipeline integrating GitHub, Bitbucket and Confluence into a single unified search; enabled code explainability with business context and surfaced knowledge gaps — materially reduced information-search time."
+    - "**Agentic QA & Reconciliation Automation:** Architected an enterprise multi-agent system (LangGraph, LangChain) automating end-to-end test execution and post-trade data reconciliation across banking platforms — QA testing cycles reduced by ~60%."
+    - "**Corporate Cashflow Analytics — Deterministic ML at Scale:** Implemented agentic workflow using deterministic tool calls and a custom-trained model with confidence scoring; low-confidence cases route to human review, feeding continuous retraining. Processes 10B+ monthly records — ~70% reduction in compliance rule-change effort, ~30% performance improvement."
+    - "**Regulatory Data-Adjustment Automation:** Automated manual data adjustments in the back-office regulatory reporting warehouse (event-driven architecture on GCP — BigQuery, Dataflow — and AWS), reducing Functional Analyst adjustment effort by ~70%."
+    - "**Enterprise LLMOps:** Established distributed tracing and audit logging so every automated financial decision is traceable; designed functional evaluation metrics for real-time model and agent quality."
+  - title: Software Engineer
+    institution: Credit Suisse via Cognizant Technology Solutions
+    year: Dec 2013 – Jul 2015
+    description:
+    - "**Back-Office Position Management (Capital Markets):** Built core backend for an enterprise transactional Data Warehouse managing real-time account-position changes across global securities infrastructures; used ESB to handle high-frequency capital-markets data."
+  - title: Software Engineer
+    institution: HSBC Software Development India
+    year: Aug 2011 – Dec 2013
+    description:
+    - "**Dodd-Frank Compliance & Derivatives Processing:** Engineered middle-office integration platforms handling FIXML APIs for DTCC and MarkitWire to process Credit Default Swaps (CDS) and Interest Rate Swaps (IRS) trade data for Dodd-Frank regulatory reporting."
+    - '**Trading Platform Integrations:** Built secure, low-latency "Smart Client Frameworks" to route real-time transaction data from Bloomberg front-office terminals downstream into Global Calypso back-office systems for post-trade clearing and settlement.'
+  - title: Software Engineer
+    institution: High Mark Credit Information Services (now CRIF High Mark)
+    year: Mar 2010 – Aug 2011
+    description:
+    - "**Credit Bureau Bulk Ingestion (Consumer Credit / Fintech):** Designed high-volume, secure ETL pipelines ingesting bulk financial data from Micro-Finance Institutions; automated cleansing and transformation into regulator-mandated formats for credit-bureau reporting."
+- title: Core Competencies
+  type: nested_list
+  contents:
+  - title: BFSI Domain Expertise
+    items:
+    - Capital Markets & Derivatives (CDS, IRS, FIXML)
+    - Dodd-Frank & Regulatory Reporting
+    - Corporate Cashflow
+    - Credit Bureau / Microfinance
+    - Middle & Back-Office Operations
+    - Financial Data Warehousing
+  - title: Customer Engineering & Advisory
+    items:
+    - Technical Discovery
+    - Architectural Scoping
+    - Rapid Prototyping & PoC Delivery
+    - Executive Presales
+    - Value-Realization Mapping
+    - Cross-Functional Stakeholder Alignment
+  - title: Agentic AI & Search Engineering
+    items:
+    - LangGraph
+    - LangChain
+    - Vertex AI
+    - Production RAG Pipelines
+    - Text-to-SQL
+    - Semantic & Hybrid Retrieval
+    - Evaluation (LLM-as-a-judge)
+  - title: Enterprise Integration & API Governance
+    items:
+    - Model Context Protocol (MCP)
+    - OpenAPI
+    - API Gateways
+    - ESB
+    - Event-Driven Architectures
+    - Distributed Systems
+  - title: Data Engineering & Pipelines
+    items:
+    - Kafka
+    - Spark
+    - Airflow
+    - BigQuery
+    - Dataflow
+    - Streaming & Batch Processing
+  - title: Security, Observability & Cloud
+    items:
+    - OAuth2
+    - Short-Lived Credential Management
+    - Distributed Tracing
+    - Audit Logging
+    - Blast-Radius Containment
+    - Cloud-Native Design (GCP, AWS)
+- title: Technologies & Tools
+  type: skills
+  contents: []
+- title: Key Projects
+  type: time_table
+  contents:
+  - title: Trade Data Insights Pipeline
+    institution: Corporate Cashflow, Deutsche Bank (enterprise multi-agent workflow)
+    description:
+    - Led technical discovery and scoping to ingest and process unstructured corporate cashflow telemetry; translated vague business requests into a concrete multi-agent architecture (LangChain) reasoning over complex financial data. ~70% reduction in compliance rule-change effort, ~30% performance improvement.
+    - Applied Model Context Protocol (MCP) principles for safe agent-to-database interaction, with evaluation guardrails ensuring deterministic outputs for compliance review.
+  - title: Structformer — Regulatory Data Text-to-SQL Engine
+    institution: Deutsche Bank regulatory reporting
+    description:
+    - Designed a custom Transformer engine (SentencePiece tokenizer) automating data adjustments for financial regulatory reports. ~70% time saved in data adjustment.
+    - Built automated Text-to-SQL workflows letting non-technical compliance stakeholders query complex data lakes securely; validated against deterministic financial-accuracy metrics (99%).
+    linkitems:
+    - link: https://github.com/spsarolkar/StructFormer
+      linkname: Source on GitHub
+  - title: AI-Driven Indian Sign Language Translation
+    institution: IISc Capstone
+    description:
+    - Real-time, low-latency multimodal ML pipeline for continuous streaming under strict edge constraints; custom temporal recognition (OpenPose + Transformer/LSTM) delivering high-speed inference without heavy cloud compute.
+    linkitems:
+    - link: https://huggingface.co/spaces/sunilsarolkar/ISL-SignLanguageTranslation
+      linkname: Capstone demo on Hugging Face
 - title: Education
   type: time_table
   contents:
-    - title: PG Certification in Computational Data Science (CDS)
-      institution: Indian Institute of Science, Bangalore
-      year: 2024
-      logo: assets/img/iisc_logo.png
-      description:
-        - "Specialized in **Scalable Computing for AI/ML**, **Neural Networks**, and **Data Engineering**. Capstone project focused on maximizing parallel processing efficiency."
-    - title: Diploma in Advanced Computing (DAC)
-      institution: ACTS, Pune
-      year: 2007
-      logo: assets/img/C-DAC_LogoTransp.png
-      description:
-        - "Intensive training in System Programming, Enterprise Java, and Database Technologies."
-    - title: Bachelor of Engineering, Electronics
-      institution: Pune University / VIT, Pune
-      year: 2006
-      logo: assets/img/sppu_logo.png
-    - title: Professional Data Engineer
-      institution: Google Cloud
-      year: 2024
-      logo: assets/img/gcp_logo.png
-      description:
-        - "Demonstrated proficiency in designing and building data processing systems and operationalizing machine learning models on Google Cloud."
+  - title: PG Certification, Computational Data Science
+    institution: IISc Bangalore
+    year: '2024'
+    logo: "/assets/img/iisc_logo.png"
+    description:
+    - Grade A+ (94%; 100% in Scalable Computing & 90% in ML). Top Talent Pass (TTPS) Eligible.
+  - title: Professional Machine Learning Engineer
+    institution: Google Cloud
+    year: '2025'
+    logo: "/assets/img/gcp_logo.png"
+    description: []
+  - title: Professional Data Engineer
+    institution: Google Cloud
+    year: '2024'
+    logo: "/assets/img/gcp_logo.png"
+    description:
+    - Demonstrated proficiency in designing and building data processing systems and operationalizing machine learning models on Google Cloud.
+  - title: Associate Cloud Engineer
+    institution: Google Cloud
+    year: '2023'
+    logo: "/assets/img/gcp_logo.png"
+    description: []
+  - title: Diploma in Advanced Computing
+    institution: C-DAC / ACTS, Pune
+    year: '2007'
+    logo: "/assets/img/C-DAC_LogoTransp.png"
+    description: []
+  - title: B.E. Electronics
+    institution: Pune University, VIT College
+    year: '2006'
+    logo: "/assets/img/sppu_logo.png"
+    description: []
 - title: Certifications & Badges
   type: badges
   contents: []
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/spsarolkar/structform">Structform</a>
-      year: 2024
-      description: "**Creator**. An open-source, Transformer-based engine for structured data transformation. Demonstrates the application of Deep Learning to solve traditional ETL challenges with 99% accuracy."
-    - title: <a href="#">Indian Sign Language Translator</a>
-      year: 2024
-      description: "**Lead Developer**. A computer vision solution combining Pose Estimation and Transformers to translate sign language in real-time. Hosted on Hugging Face."
-
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 2022
-      items:
-        - "**Deutsche Bank Excellence Award**: Recognized for outstanding contribution to Cloud Migration initiatives."
-    - year: 2018
-      items:
-        - "**Deutsche Bank Excellence Award**: Awarded for delivery excellence in the Accounting Subledger project."
-    - year: 2012
-      items:
-        - "**GBM, AMG & GBP Awards (HSBC)**: For exceptional delivery and crisis support."
-
+  - year: 2022
+    items:
+    - "**Deutsche Bank Excellence Award**: Recognized for outstanding contribution to Cloud Migration initiatives."
+  - year: 2018
+    items:
+    - "**Deutsche Bank Excellence Award**: Awarded for delivery excellence in the Accounting Subledger project."
+  - year: 2012
+    items:
+    - "**GBM, AMG & GBP Awards (HSBC)**: For exceptional delivery and crisis support."
 - title: Interests
   type: list
   contents:
-    - "<u>Professional:</u> **GenAI & LLMs**, **Distributed Systems Architecture**, **Astrophysics**, **Quantum Computing**."
-    - "<u>Personal:</u> Trekking (Himalayas), Chess Strategy, Yoga & Mindfulness."
+  - "<u>Professional:</u> **GenAI & LLMs**, **Distributed Systems Architecture**, **Astrophysics**, **Quantum Computing**."
+  - "<u>Personal:</u> Trekking (Himalayas), Chess Strategy, Yoga & Mindfulness."
