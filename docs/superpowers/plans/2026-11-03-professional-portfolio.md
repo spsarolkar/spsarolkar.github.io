@@ -82,7 +82,7 @@ Baseline: ed0ea2d archived independently and built before comparison. All94 old
 sitemap routes remain; /publications/ and /books/2024/ compatibility pages repair
 old links. A missing old /images/ screenshot path is retained as an asset alias.
 Image generation now also covers assets/projects and assets/blog, correcting45
-existing missing srcset URLs. Current inventory:96 routes,99 HTML files,177 WebP
+existing missing srcset URLs. Current inventory:96 sitemap routes,100 HTML files,177 WebP
 files, zero missing local href/src/srcset references. All24 authored files
 (15 posts,6 projects,1 book,2 news) remain. Twenty-two are byte-identical; two
 articles have only three broken image URL references repaired. The previous PDF URL and
@@ -140,6 +140,15 @@ The post-deploy link check exposed one malformed old vehicle-telemetry image
 reference. Expanding the host check to resolve relative URLs also exposed two old
 mock-exam screenshot paths. Those three references now resolve to existing media;
 article text is unchanged. tests/site_links_test.py reproduces the failures and
-passes3548 local references across99 generated HTML files after repair. It runs
+passes3581 local references across100 generated HTML files after repair. It runs
 before publication in both publishing workflows and both Ruby check workflows.
 The final comparison build uses TZ=UTC to match GitHub's date formatting.
+
+The broader public check includes same-origin absolute links as well. One old
+Docker article address embedded in the Kubernetes post now has a compatibility
+page that redirects to its current article and sets the current canonical URL;
+the compatibility page stays out of the sitemap. The two separately hosted
+GitHub Pages app roots both return200. No other missing same-origin paths exist.
+Both publishing jobs and the post-deploy link check passed for83f9b07; the
+official deploy job needed one retry after the two pre-existing publishers
+overlapped. Final source also includes the legacy Docker compatibility page.
