@@ -63,7 +63,7 @@ indexes. Update the existing YAML CV rather than introducing a second active CV.
       baseline. Static visual changes do not need tests mirroring CSS markup.
 - [x] Desktop/mobile, light/dark, search/menu, reading and credential checks.
 - [x] Independent review and correction of blocking defects.
-- [ ] Scoped commits, existing GitHub Pages deployment and live verification.
+- [x] Scoped commits, existing GitHub Pages deployment and live verification.
 
 Logs, baseline and verification receipts: /private/tmp/professional-site-*.
 
@@ -152,3 +152,26 @@ GitHub Pages app roots both return200. No other missing same-origin paths exist.
 Both publishing jobs and the post-deploy link check passed for83f9b07; the
 official deploy job needed one retry after the two pre-existing publishers
 overlapped. Final source also includes the legacy Docker compatibility page.
+
+## Final delivery receipt
+
+Published source:0a6cccd6e1b1884d4b133a2ff5be895ce00df30f on master.
+Both existing publishers succeeded for that source, without a retry:
+
+- Official Pages: https://github.com/spsarolkar/spsarolkar.github.io/actions/runs/41596225635
+- Legacy publisher: https://github.com/spsarolkar/spsarolkar.github.io/actions/runs/41596225441
+- Post-deploy link check: https://github.com/spsarolkar/spsarolkar.github.io/actions/runs/41596381582 (passed)
+
+Final live receipt /private/tmp/professional-site-live/receipt.json verifies
+all96 sitemap routes return200 and match rendered text from the tested UTC
+production build. All181 additional same-origin references resolve successfully
+(including normal archive redirects and the two independently hosted demo apps).
+The legacy Docker article alias serves the intended canonical URL and automatic
+redirect. The missing-page route serves the styled404. Both résumé versions and
+three supplied/verified badge assets match the tested exact SHA256 hashes.
+
+The original local checkout is clean on master at the published source. The
+temporary preview server is stopped. This completion receipt is retained on the
+review branch without triggering another production deployment. The pre-existing
+repository-wide Prettier check remains failing; no unrelated archive formatting
+or application dependency update was introduced.
