@@ -22,7 +22,7 @@ env:
 jobs:
   check:
     # available images: https://github.com/actions/runner-images#available-images
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
@@ -46,10 +46,11 @@ jobs:
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade jupyter
           export JEKYLL_ENV=production
+          bundle exec ruby tests/css_cache_test.rb
           bundle exec jekyll build
       - name: Purge unused CSS 🧹
         run: |
-          npm install -g purgecss
+          npm install -g purgecss@8.0.0
           purgecss -c purgecss.config.js
       - name: Get Chromium version 🌐
         # https://github.com/GoogleChromeLabs/chrome-for-testing?tab=readme-ov-file#other-api-endpoints
