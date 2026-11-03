@@ -3,32 +3,32 @@ const ninja = document.querySelector('ninja-keys');
 
 // add the home and posts menu items
 ninja.data = [{
-    id: "nav-about",
-    title: "about",
+    id: "nav-sunil-sarolkar-ai-solutions-architecture",
+    title: "Sunil Sarolkar — AI & Solutions Architecture",
     section: "Navigation",
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-blog",
-          title: "blog",
-          description: "",
+  },{id: "nav-projects",
+          title: "Projects",
+          description: "Applied machine learning, data systems, and developer tools — with project notes, source code, and demos.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/blog/";
+            window.location.href = "/projects/";
           },
-        },{id: "nav-apps",
-          title: "apps",
-          description: "Publications by Sunil Sarolkar",
+        },{id: "nav-apps-amp-demos",
+          title: "Apps &amp; demos",
+          description: "Public applications, learning tools and demos by Sunil Sarolkar.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/apps/";
           },
-        },{id: "nav-projects",
-          title: "projects",
-          description: "A growing collection of your cool projects.",
+        },{id: "nav-writing",
+          title: "Writing",
+          description: "Notes on data systems, machine learning, and software engineering.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/projects/";
+            window.location.href = "/blog/";
           },
         },{id: "nav-repositories",
           title: "repositories",
@@ -37,9 +37,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
-        },{id: "nav-cv",
-          title: "cv",
-          description: "Lead Data Engineer and AI/ML Architect blending 15+ years of distributed systems expertise with cutting-edge Generative AI and Computer Vision solutions.",
+        },{id: "nav-experience-amp-cv",
+          title: "Experience &amp; CV",
+          description: "Principal Solution Architect with 16+ years across enterprise AI, financial services and data platforms.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
