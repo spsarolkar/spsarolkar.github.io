@@ -51,11 +51,11 @@ As I was preparing for the GCP ML Engineer exam, I noticed a lack of high-qualit
 
 ### Welcome page
 
-![GCP ML Mock Exam Welcome Page](assets/blog/GCP-ML-MockExamapp/WelcomePage.png "GCP ML Mock Exam Welcome Page")
+![GCP ML Mock Exam Welcome Page](/assets/blog/GCP-ML-MockExamapp/WelcomePage.png "GCP ML Mock Exam Welcome Page")
 
 ### Selecting Exam Mode
 
-![GCP ML Mock Exam Selecting Exam Mode](assets/blog/GCP-ML-MockExamapp/SelectingExamMode.png "Selecting Mock Exam Mode")
+![GCP ML Mock Exam Selecting Exam Mode](/assets/blog/GCP-ML-MockExamapp/SelectingExamMode.png "Selecting Mock Exam Mode")
 
 ---
 

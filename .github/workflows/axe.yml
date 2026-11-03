@@ -48,6 +48,7 @@ jobs:
           export JEKYLL_ENV=production
           bundle exec ruby tests/css_cache_test.rb
           bundle exec jekyll build
+          python3 tests/site_links_test.py
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss@8.0.0

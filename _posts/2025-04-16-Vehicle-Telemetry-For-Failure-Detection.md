@@ -10,7 +10,7 @@ In 2019, I built a hobby project to collect real-time vehicle parameters from th
 
 ![Architecture Diagram][Architecture Diagram]
 
-[Architecture Diagram]: (/assets/projects/VehicleTelemetry/OBD2_Vehicle_detection.png)
+[Architecture Diagram]: /assets/projects/VehicleTelemetry/Vehicle_Telemetry_Architecture.png
 
 The hardware flow looked like this:
 

@@ -52,6 +52,8 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      - name: Check local site links
+        run: python3 tests/site_links_test.py
       - name: Purge unused CSS
         run: npx --yes purgecss@8.0.0 --config purgecss.config.js
       - name: Upload artifact

@@ -70,8 +70,9 @@ Logs, baseline and verification receipts: /private/tmp/professional-site-*.
 
 ## Implementation decisions and verification
 
-The original master checkout remains untouched. Work lives at
-/private/tmp/spsarolkar-professional-site on codex/professional-portfolio.
+Implementation lives at /private/tmp/spsarolkar-professional-site on
+codex/professional-portfolio. The clean original master checkout is fast-forwarded
+to published source after verification.
 User delegated the design and execution choices. Local Ruby3.3.8 bootstraps the
 locked Bundler4.0.4/Jekyll4.4.1 stack in isolated temporary directories; CI retains
 Ruby3.3.5. No application dependency input changed. ImageMagick, an existing build
@@ -83,7 +84,8 @@ old links. A missing old /images/ screenshot path is retained as an asset alias.
 Image generation now also covers assets/projects and assets/blog, correcting45
 existing missing srcset URLs. Current inventory:96 routes,99 HTML files,177 WebP
 files, zero missing local href/src/srcset references. All24 authored files
-(15 posts,6 projects,1 book,2 news) remain byte-identical. The previous PDF URL and
+(15 posts,6 projects,1 book,2 news) remain. Twenty-two are byte-identical; two
+articles have only three broken image URL references repaired. The previous PDF URL and
 bytes remain. Latest PDF and supplied AI Engineer image match upload SHA256.
 
 Content checks cover all118 current CV values,35 technical skill names,5 training
@@ -120,3 +122,24 @@ generated site are committed. Existing Sass deprecation notices and3 duplicate
 prof_pic WebP output warnings predate the refresh; both sources depict the same
 existing photograph. Old experimental articles retain their historical claims;
 the professional homepage does not repeat disputed accuracy highlights.
+
+## Publication compatibility checks
+
+GitHub's ubuntu-latest moved to26.04, which cannot supply pinned Ruby3.3.5.
+All four Ruby build/check workflows now use ubuntu-24.04 and the same tested CSS
+tool version; existing targets and permissions remain. An explicitly included
+.nojekyll marker preserves the generated /_pages/dropdown/ legacy route on Pages.
+
+Source87513ea passed both publishing workflows. Live verification returned200 for
+all96 sitemap routes, matched all96 pages' rendered content to the tested build,
+checked116 root asset references, exact PDF/badge hashes, CSS fingerprint and the
+styled404. Browser inspection confirmed the public homepage/CV and working Giscus
+comment form. The local server is stopped and the public homepage remains open.
+
+The post-deploy link check exposed one malformed old vehicle-telemetry image
+reference. Expanding the host check to resolve relative URLs also exposed two old
+mock-exam screenshot paths. Those three references now resolve to existing media;
+article text is unchanged. tests/site_links_test.py reproduces the failures and
+passes3548 local references across99 generated HTML files after repair. It runs
+before publication in both publishing workflows and both Ruby check workflows.
+The final comparison build uses TZ=UTC to match GitHub's date formatting.
