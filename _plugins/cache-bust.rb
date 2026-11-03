@@ -43,7 +43,12 @@ module Jekyll
     end
 
     def bust_css_cache(file_name)
-      CacheDigester.new(file_name: file_name, directory: 'assets/_sass').digest!
+      # The Sass partials live at _sass, not assets/_sass. Include the entry
+      # point as well so changing imports also invalidates a visitor's CSS.
+      paths = Dir['_sass/**/*'].select { |path| File.file?(path) }.sort
+      paths << 'assets/css/main.scss'
+      contents = paths.map { |path| File.binread(path) }.join
+      [file_name, '?', Digest::MD5.hexdigest(contents)].join
     end
   end
 end
