@@ -1,4 +1,4 @@
-I am Sunil Sarolkar, an Assistant Vice President at Deutsche Bank in Pune, India, with 15 years of experience in enterprise software engineering and architecture and 5 years of active contributions in AI/ML and Generative AI projects. My core expertise lies in Java, Spring Boot, microservices, distributed systems, and cloud-native platforms, while my AI/ML focus includes predictive maintenance, generative AI automation, structured data transformation, and computer vision models.
+I am Sunil Sarolkar, a Principal Solution Architect, Customer Facing, via Zensar Technologies in Pune, India, with 16+ years of experience in enterprise software engineering and architecture and 5 years of active contributions in AI/ML and Generative AI projects. My core expertise lies in Java, Spring Boot, microservices, distributed systems, and cloud-native platforms, while my AI/ML focus includes predictive maintenance, generative AI automation, structured data transformation, and computer vision models.
 
 Notable AI/ML contributions:
 
@@ -8,7 +8,7 @@ Contributed in AIML Community of practice team for using Generative AI within ba
 
 Developed a LangChain + Hugging Face solution for generative AI-based JUnit test case automation.
 
-Created Structform, an open-source Transformer-based data transformation engine with 99% accuracy.
+Created StructFormer, an open-source Transformer-based experiment in structured data transformation.
 
 Previously, I have contributed to major enterprise projects such as the Feed and Adjustment Workstation at Deutsche Bank, the Global Securities Infrastructure (GSI) initiative at Cognizant, and the award-winning Barracuda trading platform at HSBC.
 

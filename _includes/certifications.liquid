@@ -1,0 +1,10 @@
+<div class="badge-grid certification-grid">
+  {% for credential in site.data.certifications %}
+    <article class="badge-item">
+      <a href="{{ credential.url }}" target="_blank" rel="noopener noreferrer"><img src="{{ credential.image | relative_url }}" alt="{{ credential.title | escape }} credential" loading="lazy"></a>
+      <h3 class="credential-title"><a href="{{ credential.url }}" target="_blank" rel="noopener noreferrer">{{ credential.title | escape }}</a></h3>
+      <p class="credential-meta">Google Cloud</p>
+      <p class="credential-meta">Issued <time datetime="{{ credential.issued }}">{{ credential.issuedLabel }}</time><br>Expires <time datetime="{{ credential.expires }}">{{ credential.expiresLabel }}</time></p>
+    </article>
+  {% endfor %}
+</div>

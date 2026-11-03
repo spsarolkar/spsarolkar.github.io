@@ -1,140 +1,48 @@
 ---
 layout: about
-title: about
+title: Sunil Sarolkar — AI & Solutions Architecture
 permalink: /
-subtitle: "<a href='/cv/'>Affiliations</a> | Pune, India | Contact: sunil.sarolkar@gmail.com | Motto: 'Build. Learn. Simplify.'"
-profile:
-  align: right
-  image: prof_pic.png
-  image_circular: true
-  more_info: >
-    <p>DSK Vishwa, Dhayari</p>
-    <p>Pune, Maharashtra 411041</p>
-    <p>mob. +91-9823578815</p>
-selected_papers: true
-social: true
-announcements:
-  enabled: true
-  scrollable: true
-  limit: 5
-latest_posts:
-  enabled: true
-  scrollable: true
-  limit: 3
+description: Principal Solution Architect with 16+ years in enterprise engineering, financial services, GenAI and data platforms. Selected work, technical writing and professional experience.
 ---
 
-I am **Sunil Sarolkar**, a **Lead Data Engineer** and **AI/ML Architect** with over 15 years of experience in building scalable enterprise systems. Currently serving as an **Assistant Vice President at Deutsche Bank** in Pune, India, I specialize in bridging the gap between distributed data engineering and cutting-edge AI solutions. My expertise spans **Generative AI**, **LLMs**, and **Computer Vision**, integrated with robust cloud-native platforms on **Google Cloud**. I combine deep technical strategies in **Java/Spring Boot** and **Python/TensorFlow** to deliver intelligent, high-performance software.
+<section class="profile-hero" aria-labelledby="profile-title">
+  <div class="hero-copy">
+    <p class="eyebrow">Sunil Sarolkar · Solutions Architect</p>
+    <h1 id="profile-title">AI architecture for complex systems.</h1>
+    <p class="hero-lead">I connect enterprise AI, data engineering and financial-services expertise to turn complex business problems into practical systems.</p>
+    <p class="hero-detail">16+ years across banking, capital markets and insurance. Currently a Principal Solution Architect, Customer Facing, via Zensar Technologies.</p>
+    <div class="hero-actions"><a class="button button-primary" href="{{ '/cv/' | relative_url }}">Explore my experience <span aria-hidden="true">↗</span></a><a class="text-link" href="#contact">Get in touch <span aria-hidden="true">→</span></a></div>
+  </div>
+  <figure class="profile-portrait"><picture><source type="image/webp" srcset="{{ '/assets/img/prof_pic-480.webp' | relative_url }} 480w, {{ '/assets/img/prof_pic-800.webp' | relative_url }} 800w" sizes="(max-width: 767px) 440px, 300px"><img src="{{ '/assets/img/prof_pic.png' | relative_url }}" alt="Sunil Sarolkar trekking in the mountains" width="1258" height="1076" fetchpriority="high"></picture><figcaption>Pune, India <span aria-hidden="true">·</span> Build. Learn. Simplify.</figcaption></figure>
+</section>
 
-<div style="text-align: left; margin-top: 1rem; margin-bottom: 2rem;">
-  <a href="https://spsarolkar.github.io/assets/pdf/Sunil_Sarolkar_Lead_ML_Engineer.pdf" class="btn-resume" target="_blank">
-    <i class="fas fa-file-pdf"></i> Resume
-  </a>
-</div>
+<section class="home-section" aria-labelledby="focus-title">
+  <div class="section-heading"><div><p class="eyebrow">Where I focus</p><h2 id="focus-title">From architecture to implementation.</h2></div><a class="text-link" href="{{ '/cv/' | relative_url }}#Core%20Competencies">Full expertise <span aria-hidden="true">→</span></a></div>
+  <div class="focus-grid">
+    <section><span class="section-number" aria-hidden="true">01</span><h3>Applied AI</h3><p>Agentic workflows, retrieval and search, model evaluation, and the engineering that connects them to enterprise data.</p></section>
+    <section><span class="section-number" aria-hidden="true">02</span><h3>Enterprise systems</h3><p>Distributed platforms, event-driven integration and phased modernisation, built around real operational constraints.</p></section>
+    <section><span class="section-number" aria-hidden="true">03</span><h3>Financial services</h3><p>Capital markets, regulatory reporting, cashflow and insurance, with a focus on traceable decisions and reliable data.</p></section>
+  </div>
+</section>
 
-Notable AI/ML contributions:
+<section class="home-section" aria-labelledby="selected-title">
+  <div class="section-heading"><div><p class="eyebrow">Selected public work</p><h2 id="selected-title">Ideas made tangible.</h2></div><a class="text-link" href="{{ '/projects/' | relative_url }}">All projects <span aria-hidden="true">→</span></a></div>
+  <div class="selected-work-grid">
+    <article><p class="project-category">Machine learning / Data</p><h3><a href="{{ '/projects/1_project/' | relative_url }}">StructFormer</a></h3><p>A Transformer-based experiment in generating corrective SQL from structured validation errors.</p><a class="text-link" href="{{ '/projects/1_project/' | relative_url }}">Explore the project <span aria-hidden="true">→</span></a></article>
+    <article><p class="project-category">Computer vision / Accessibility</p><h3><a href="{{ '/projects/2_project/' | relative_url }}">Indian Sign Language</a></h3><p>Pose estimation and sequence modelling explored through the IISc capstone and its web demo.</p><a class="text-link" href="{{ '/projects/2_project/' | relative_url }}">Explore the project <span aria-hidden="true">→</span></a></article>
+    <article><p class="project-category">Learning / Web application</p><h3><a href="{{ '/projects/6_project/' | relative_url }}">ML Engineer practice app</a></h3><p>A static practice application with timed sessions, topic selection and answer review.</p><a class="text-link" href="{{ '/projects/6_project/' | relative_url }}">Explore the project <span aria-hidden="true">→</span></a></article>
+  </div>
+</section>
 
-Built an Indian Sign Language Translator using Pose Estimation + Transformers (Keras, PyTorch), hosted on Hugging Face.
+<section class="home-section" aria-labelledby="writing-title">
+  <div class="section-heading"><div><p class="eyebrow">From the notebook</p><h2 id="writing-title">Writing about the work.</h2></div><a class="text-link" href="{{ '/blog/' | relative_url }}">All articles <span aria-hidden="true">→</span></a></div>
+  <ul class="recent-writing">{% for post in site.posts limit:3 %}<li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %Y' }}</time><h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3><span aria-hidden="true">↗</span></li>{% endfor %}</ul>
+</section>
 
-Contributed in AIML Community of practice team for using Generative AI within bank business users.
+<section class="home-section" aria-labelledby="learning-title">
+  <div class="section-heading"><div><p class="eyebrow">Continuous learning</p><h2 id="learning-title">Credentials with a record.</h2></div><a class="text-link" href="{{ '/cv/' | relative_url }}#Certifications%20%26%20Badges">All learning & badges <span aria-hidden="true">→</span></a></div>
+  {% include certifications.liquid %}
+  <p class="learning-note">PG Certification in Computational Data Science, IISc Bangalore · Google Cloud certifications · Professional development at Deutsche Bank.</p>
+</section>
 
-Developed a LangChain + Hugging Face solution for generative AI-based JUnit test case automation.
-
-Created Structform, an open-source Transformer-based data transformation engine with 99% accuracy.
-
-Previously, I have contributed to major enterprise projects such as the Feed and Adjustment Workstation at Deutsche Bank, the Global Securities Infrastructure (GSI) initiative at Cognizant, and the award-winning Barracuda trading platform at HSBC.
-
-I hold a PG Certification in Computational Data Science from IISc Bangalore, an Associate Cloud Engineer Certification, a Diploma in Advanced Computing (DAC), and a B.E. in Electronics.
-
-Outside of work, I enjoy trekking, reading, swimming, and exploring astrophysics. I am also active on Stack Overflow (username: Xinus) and share projects and insights on my [personal blog](https://spsarolkar.github.io/blog/)
-.
-
-📍 DSK Vishwa, Dhayari, Pune – 411041, Maharashtra, India
-
-
-## Skills & Technologies
-{% include skills.liquid %}
-
-## Internal Recognition
-{% include internal_badges.liquid %}
-
-
-
-## Education & Certifications
-
-
-<div class="row">
-    <div class="col-12">
-        <div class="card mt-3">
-             <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                    <div class="row align-items-center">
-                        <div class="col-auto">
-                            <img src="assets/img/gcp_logo.png" alt="Google Cloud Logo" style="max-height: 50px; max-width: 60px;">
-                        </div>
-                        <div class="col">
-                            <h6 class="mb-0 font-weight-bold"><a href="https://www.credly.com/badges/0c8f21e3-1228-461c-97ce-a1a5be401c34/public_url">Professional Machine Learning Engineer</a></h6>
-                            <small class="text-muted">Google Cloud (2025)</small>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="row align-items-center">
-                        <div class="col-auto">
-                            <img src="assets/img/iisc_logo.png" alt="IISc Logo" style="max-height: 50px; max-width: 60px;">
-                        </div>
-                        <div class="col">
-                            <h6 class="mb-0 font-weight-bold">PG Certification — Computational Data Science (CDS)</h6>
-                            <small class="text-muted">Indian Institute of Science, Bangalore (2024)</small>
-                        </div>
-                    </div>
-                </li>
-                 <li class="list-group-item">
-                    <div class="row align-items-center">
-                        <div class="col-auto">
-                             <img src="assets/img/gcp_logo.png" alt="Google Cloud Logo" style="max-height: 50px; max-width: 60px;">
-                        </div>
-                        <div class="col">
-                            <h6 class="mb-0 font-weight-bold"><a href="https://www.credly.com/badges/97997fd6-bd29-4f49-8e39-4741f3ca0719/public_url">Associate Cloud Engineer Certification</a></h6>
-                             <small class="text-muted">Google Cloud (2023)</small>
-                        </div>
-                    </div>
-                </li>
-                 <li class="list-group-item">
-                    <div class="row align-items-center">
-                         <div class="col-auto">
-                            <img src="assets/img/C-DAC_LogoTransp.png" alt="CDAC Logo" style="max-height: 50px; max-width: 60px;">
-                        </div>
-                        <div class="col">
-                            <h6 class="mb-0 font-weight-bold">Diploma in Advanced Computing (DAC)</h6>
-                            <small class="text-muted">ACTS, Pune (2007)</small>
-                        </div>
-                    </div>
-                </li>
-                  <li class="list-group-item">
-                    <div class="row align-items-center">
-                        <div class="col-auto">
-                            <img src="assets/img/sppu_logo.png" alt="Pune University Logo" style="max-height: 50px; max-width: 60px;">
-                        </div>
-                         <div class="col">
-                            <h6 class="mb-0 font-weight-bold">B.E. (Electronics)</h6>
-                            <small class="text-muted">Pune University / VIT College (2006)</small>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-
----
-
-## Download Resume
-
-<div style="text-align: center;">
-  <a href="https://spsarolkar.github.io/assets/pdf/Sunil_Sarolkar_Lead_ML_Engineer.pdf" class="btn-resume" target="_blank" style="margin: 0;">
-    View Full Resume <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
-  </a>
-</div>
-
----
+<section class="home-section contact-section" id="contact" aria-labelledby="contact-title"><p class="eyebrow">Let’s connect</p><h2 id="contact-title">A conversation starts with a problem.</h2><p>For architecture discussions, professional opportunities or a shared engineering interest.</p><div class="hero-actions"><a class="button button-primary" href="mailto:sunil.sarolkar@gmail.com">Email Sunil <span aria-hidden="true">↗</span></a><a class="text-link" href="https://www.linkedin.com/in/sunil-sarolkar-451b2023/">Connect on LinkedIn ↗</a></div><p class="personal-note">Beyond work: trekking, reading, swimming and astrophysics. More experiments live in my <a href="https://sunilsarolkar.in/">personal lab ↗</a>.</p></section>

@@ -1,0 +1,20 @@
+<details class="learning-badges">
+  <summary>View all {{ site.data.credly_badges.size }} learning badges &amp; certifications</summary>
+  <div class="badge-grid">
+    {% for badge in site.data.credly_badges %}
+      <article class="badge-item">
+        {% assign badge_image = badge.image340 | default: badge.image %}
+        {% if badge_image contains '://' %}{% assign badge_image_url = badge_image %}{% else %}{% assign badge_image_url = badge_image | relative_url %}{% endif %}
+        <a href="{{ badge.url }}" target="_blank" rel="noopener noreferrer"><img src="{{ badge_image_url }}" alt="{{ badge.name | escape }} badge" loading="lazy"></a>
+        <h4 class="credential-title"><a href="{{ badge.url }}" target="_blank" rel="noopener noreferrer">{{ badge.name | escape }}</a></h4>
+        {% if badge.issuer %}<p class="credential-meta">{{ badge.issuer | escape }}</p>{% endif %}
+        {% if badge.issued != blank %}
+          <p class="credential-meta">Issued {% if badge.issuedLabel %}<time datetime="{{ badge.issued }}">{{ badge.issuedLabel }}</time>{% else %}{{ badge.issued | escape }}{% endif %}</p>
+        {% endif %}
+        {% if badge.expires != blank %}
+          <p class="credential-meta">Expires <time datetime="{{ badge.expires }}">{{ badge.expiresLabel | default: badge.expires }}</time></p>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div>
+</details>

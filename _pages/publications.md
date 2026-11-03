@@ -1,8 +1,8 @@
 ---
 layout: page
 permalink: /apps/
-title: apps
-description: Publications by Sunil Sarolkar
+title: Apps & demos
+description: Public applications, learning tools and demos by Sunil Sarolkar.
 nav: true
 nav_order: 2
 ---
