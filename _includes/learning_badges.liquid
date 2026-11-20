@@ -1,12 +1,15 @@
-<details class="learning-badges">
-  <summary>View all {{ site.data.credly_badges.size }} learning badges &amp; certifications</summary>
-  <div class="badge-grid">
-    {% for badge in site.data.credly_badges %}
+{% assign badge_limit = include.limit | default: site.data.credly_badges.size %}
+<section id="credly-badges" class="learning-badges{% if include.limit %} learning-badges-preview{% endif %}" data-credly-gallery data-credly-limit="{{ include.limit | default: 0 }}" aria-labelledby="credly-badges-title">
+  <div class="credly-heading">
+    <div><h3 id="credly-badges-title">Learning badges from Credly</h3><p><span data-credly-count>{{ site.data.credly_badges.size }}</span> public credentials and learning badges.</p></div>
+    {% if include.limit %}<a class="text-link" data-credly-all-link href="{{ '/cv/' | relative_url }}#credly-badges">View all {{ site.data.credly_badges.size }} badges</a>{% else %}<a class="text-link" href="https://www.credly.com/users/sunil-sarolkar/badges" target="_blank" rel="noopener noreferrer">View my Credly profile</a>{% endif %}
+  </div>
+  <div class="badge-grid" data-credly-grid>
+    {% for badge in site.data.credly_badges limit:badge_limit %}
       <article class="badge-item">
         {% assign badge_image = badge.image340 | default: badge.image %}
         {% if badge_image contains '://' %}{% assign badge_image_url = badge_image %}{% else %}{% assign badge_image_url = badge_image | relative_url %}{% endif %}
-        <a href="{{ badge.url }}" target="_blank" rel="noopener noreferrer"><img src="{{ badge_image_url }}" alt="{{ badge.name | escape }} badge" loading="lazy"></a>
-        <h4 class="credential-title"><a href="{{ badge.url }}" target="_blank" rel="noopener noreferrer">{{ badge.name | escape }}</a></h4>
+        <a class="credly-badge-link" href="{{ badge.url }}" target="_blank" rel="noopener noreferrer"><img src="{{ badge_image_url }}" alt="" width="100" height="100" loading="lazy"><h4 class="credential-title">{{ badge.name | escape }}</h4></a>
         {% if badge.issuer %}<p class="credential-meta">{{ badge.issuer | escape }}</p>{% endif %}
         {% if badge.issued != blank %}
           <p class="credential-meta">Issued {% if badge.issuedLabel %}<time datetime="{{ badge.issued }}">{{ badge.issuedLabel }}</time>{% else %}{{ badge.issued | escape }}{% endif %}</p>
@@ -17,4 +20,6 @@
       </article>
     {% endfor %}
   </div>
-</details>
+  <p class="credly-feed-status" data-credly-status role="status">Each badge links to its public credential record.</p>
+</section>
+<script defer src="{{ '/assets/js/credly-badges.js' | relative_url | bust_file_cache }}"></script>

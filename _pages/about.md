@@ -43,6 +43,7 @@ description: Principal Solution Architect with 16+ years in enterprise engineeri
   <div class="section-heading"><div><p class="eyebrow">Continuous learning</p><h2 id="learning-title">Credentials with a record.</h2></div><a class="text-link" href="{{ '/cv/' | relative_url }}#Certifications%20%26%20Badges">All learning & badges <span aria-hidden="true">→</span></a></div>
   {% include certifications.liquid %}
   <p class="learning-note">PG Certification in Computational Data Science, IISc Bangalore · Google Cloud certifications · Professional development at Deutsche Bank.</p>
+  {% include learning_badges.liquid limit=6 %}
 </section>
 
 <section class="home-section contact-section" id="contact" aria-labelledby="contact-title"><p class="eyebrow">Let’s connect</p><h2 id="contact-title">A conversation starts with a problem.</h2><p>For architecture discussions, professional opportunities or a shared engineering interest.</p><div class="hero-actions"><a class="button button-primary" href="mailto:sunil.sarolkar@gmail.com">Email Sunil <span aria-hidden="true">↗</span></a><a class="text-link" href="https://www.linkedin.com/in/sunil-sarolkar-451b2023/">Connect on LinkedIn ↗</a></div><p class="personal-note">Beyond work: trekking, reading, swimming and astrophysics. More experiments live in my <a href="https://sunilsarolkar.in/">personal lab ↗</a>.</p></section>

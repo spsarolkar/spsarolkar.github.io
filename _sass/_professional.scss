@@ -205,10 +205,16 @@ html[data-theme="dark"] {
   .certification-grid .badge-item { display: grid; grid-template-columns: 90px minmax(0, 1fr); column-gap: 22px; text-align: left; align-items: start; }
   .certification-grid .badge-item > a { grid-row: 1 / 4; }
   .certification-grid .badge-item img { width: 90px; height: 90px; margin: 0; }
-  .learning-badges { margin-top: 30px; }
-  .learning-badges summary { cursor: pointer; font-size: 14px; color: var(--portfolio-accent); padding: 14px 0; }
+  .learning-badges { margin-top: 38px; scroll-margin-top: 30px; }
+  .credly-heading { display: flex; align-items: start; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; }
+  .credly-heading h3 { margin: 0 0 8px; font-size: 1.125rem; }
+  .credly-heading p, .credly-feed-status { color: var(--portfolio-muted); font-size: .875rem; line-height: 1.8; margin: 0; }
   .learning-badges .badge-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .learning-badges .credential-title { font-size: 13px; }
+  .learning-badges-preview .badge-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .learning-badges .badge-item { padding: 24px 18px 18px; }
+  .credly-badge-link { display: block; color: var(--portfolio-ink); }
+  .learning-badges .credential-title { font-size: .875rem; line-height: 1.6; overflow-wrap: anywhere; }
+  .learning-badges .credential-meta { font-size: .875rem; line-height: 1.7; margin-top: 8px; }
   .site-footer { margin-top: 36px; padding: 34px 0; border-top: 1px solid var(--portfolio-rule); background: var(--portfolio-bg); font-size: 12px; }
   .footer-primary, .footer-secondary { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px 30px; }
   .footer-primary { margin-bottom: 17px; }
@@ -299,4 +305,7 @@ html[data-theme="dark"] {
 }
 @media (prefers-reduced-motion: reduce) {
   .professional-site *, .professional-site *::before, .professional-site *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
+}
+@media (max-width: 380px) {
+  .professional-site .learning-badges .badge-grid { grid-template-columns: 1fr; }
 }
