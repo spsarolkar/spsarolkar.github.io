@@ -164,6 +164,8 @@ def refresh_badges(html, output=OUTPUT_FILE, certifications_file=CERTIFICATIONS_
 def fetch_html(username):
     # Selenium Manager uses the runner's installed Chrome and matching driver.
     from selenium import webdriver
+    from selenium.common.exceptions import TimeoutException
+    from selenium.webdriver.common.by import By
     from selenium.webdriver.support.wait import WebDriverWait
 
     if not re.fullmatch(r"[a-zA-Z0-9-]+", username):
@@ -185,7 +187,14 @@ def fetch_html(username):
             except ValueError:
                 return False
 
-        WebDriverWait(driver, 45).until(loaded, "Public Credly badge cards did not become available")
+        try:
+            WebDriverWait(driver, 45).until(loaded, "Public Credly badge cards did not become available")
+        except TimeoutException as error:
+            # Public-page text explains selector or page failures without logging
+            # source HTML, cookies, session tokens or browser storage.
+            body = " ".join(driver.find_element(By.TAG_NAME, "body").text.split())[:1200]
+            test_ids = sorted({element.get_attribute("data-testid") for element in driver.find_elements(By.CSS_SELECTOR, "[data-testid]")})[:12]
+            raise RuntimeError(f"Credly page title={driver.title!r}; card markers={test_ids!r}; public page text={body!r}") from error
         return driver.page_source
     finally:
         driver.quit()
