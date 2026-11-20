@@ -1,64 +1,27 @@
-"""Refresh the public Credly feed without discarding previously earned badges."""
+"""Refresh badges from the same public JSON feed used by Credly's profile page."""
 
-from html.parser import HTMLParser
+from datetime import date, datetime, timezone
 import json
 import os
 from pathlib import Path
 import re
-import shutil
 import sys
 import tempfile
 from urllib.parse import urljoin, urlsplit, urlunsplit
+from urllib.request import Request, urlopen
 from uuid import UUID
 
 
 ROOT = Path(__file__).resolve().parent
 OUTPUT_FILE = ROOT / "_data/credly_badges.json"
 CERTIFICATIONS_FILE = ROOT / "_data/certifications.json"
-
-
-class BadgePage(HTMLParser):
-    """Keep the card/anchor relationship so image IDs cannot become credentials."""
-
-    def __init__(self, html):
-        super().__init__(convert_charrefs=True)
-        self.stack = []
-        self.cards = []
-        self.feed(html)
-
-    def handle_starttag(self, tag, attributes):
-        node = {"tag": tag, "attributes": dict(attributes), "parent": self.stack[-1] if self.stack else None, "children": []}
-        if self.stack:
-            self.stack[-1]["children"].append(node)
-        if node["attributes"].get("data-testid") in ("desktop-badge-card", "mobile-badge-card"):
-            self.cards.append(node)
-        if tag not in ("area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"):
-            self.stack.append(node)
-
-    def handle_endtag(self, tag):
-        for index in range(len(self.stack) - 1, -1, -1):
-            if self.stack[index]["tag"] == tag:
-                del self.stack[index:]
-                break
-
-    def handle_data(self, data):
-        if self.stack:
-            self.stack[-1]["children"].append(data)
-
-
-def descendants(node):
-    for child in node["children"]:
-        if isinstance(child, dict):
-            yield child
-            yield from descendants(child)
-
-
-def text_content(node):
-    return " ".join(" ".join(text_content(child) if isinstance(child, dict) else child for child in node["children"]).split())
+ORIGIN = "https://www.credly.com"
+MAX_PAGES = 20
+MONTHS = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
 
 
 def credential_id(url):
-    parsed = urlsplit(urljoin("https://www.credly.com", url or ""))
+    parsed = urlsplit(urljoin(ORIGIN, url or ""))
     match = re.fullmatch(r"/badges/([0-9a-fA-F-]{36})(?:/public_url)?/?", parsed.path)
     if parsed.scheme != "https" or parsed.hostname not in ("credly.com", "www.credly.com") or not match:
         raise ValueError("Badge has no valid public Credly credential link")
@@ -75,53 +38,116 @@ def validate_badge(record):
         raise ValueError("Badge image is not a public Credly image or a retained local asset")
 
 
-def parse_badges(html):
-    cards = BadgePage(html).cards
-    if not cards:
-        raise ValueError("Credly returned no badge cards; keeping the existing collection")
-    records = {}
-    for card in cards:
-        children = list(descendants(card))
-        image = next((node for node in children if node["tag"] == "img"), None)
-        spans = [text_content(node) for node in children if node["tag"] == "span" and not any(child["tag"] == "span" for child in descendants(node))]
-        anchor = card
-        while anchor is not None and anchor["tag"] != "a":
-            anchor = anchor["parent"]
-        if anchor is None:
-            anchor = next((node for node in children if node["tag"] == "a" and "/badges/" in node["attributes"].get("href", "")), None)
-        badge_id = credential_id(anchor["attributes"].get("href") if anchor else None)
-        if image is None or len(spans) < 2:
-            raise ValueError("Credly badge card is incomplete; keeping the existing collection")
-        image_url = image["attributes"].get("src") or image["attributes"].get("data-src", "")
+def date_fields(value):
+    if value is None or value == "":
+        return "", ""
+    if not isinstance(value, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
+        raise ValueError("Credly returned an invalid credential date")
+    parsed = date.fromisoformat(value)
+    return value, f"{parsed.day} {MONTHS[parsed.month - 1]} {parsed.year}"
+
+
+def parse_badges(payload):
+    if not isinstance(payload, dict) or not isinstance(payload.get("data"), list) or not payload["data"]:
+        raise ValueError("Credly returned no valid public badges; keeping the existing collection")
+    records = []
+    for raw in payload["data"]:
+        try:
+            badge_id = str(UUID(raw["id"]))
+            name = raw["badge_template"]["name"]
+            entities = raw["issuer"]["entities"]
+            issuer = next(entity["entity"]["name"] for entity in entities if entity.get("primary") is True)
+            image_url = raw["image_url"]
+            issued, issued_label = date_fields(raw.get("issued_at_date"))
+            expires, expires_label = date_fields(raw.get("expires_at_date"))
+        except (KeyError, TypeError, AttributeError, StopIteration) as error:
+            raise ValueError("Credly returned incomplete credential metadata") from error
         parsed_image = urlsplit(image_url)
         sized_path = re.sub(r"/(?:size/[^/]+/)?images/", "/size/340x340/images/", parsed_image.path, count=1)
         record = {
-            "name": spans[0],
-            "issuer": spans[1],
-            "image": image_url,
-            "uuid": badge_id,
-            "url": f"https://www.credly.com/badges/{badge_id}",
-            "issued": next((text.removeprefix("Issued ").strip() for text in spans[2:] if text.startswith("Issued ")), ""),
+            "name": name, "issuer": issuer, "image": image_url, "uuid": badge_id,
+            "url": f"{ORIGIN}/badges/{badge_id}", "issued": issued,
             "image340": urlunsplit(parsed_image._replace(path=sized_path)),
         }
+        if issued_label:
+            record["issuedLabel"] = issued_label
+        if expires:
+            record.update(expires=expires, expiresLabel=expires_label)
         validate_badge(record)
-        records[badge_id] = record
-    return list(records.values())
+        records.append(record)
+    return records
+
+
+def profile_url(username):
+    if not re.fullmatch(r"[a-zA-Z0-9-]+", username):
+        raise ValueError("Invalid Credly username")
+    return f"{ORIGIN}/users/{username}/badges"
+
+
+def validate_page_url(url, username):
+    absolute = urljoin(ORIGIN, url)
+    parsed = urlsplit(absolute)
+    if parsed.scheme != "https" or parsed.netloc != "www.credly.com" or parsed.path != urlsplit(profile_url(username)).path or parsed.fragment:
+        raise ValueError("Credly pagination left the expected public profile")
+    return absolute
+
+
+def read_public_page(url):
+    request = Request(url, headers={"Accept": "application/json"})
+    with urlopen(request, timeout=25) as response:
+        final = urlsplit(response.geturl())
+        expected = urlsplit(url)
+        if (final.scheme, final.netloc, final.path) != (expected.scheme, expected.netloc, expected.path):
+            raise ValueError("Credly redirected away from the public badge feed")
+        body = response.read(2_000_001)
+        if len(body) > 2_000_000:
+            raise ValueError("Credly badge response is unexpectedly large")
+        return json.loads(body)
+
+
+def fetch_badges(username):
+    url = profile_url(username) + "?page=1&page_size=48&sort=rank"
+    seen, records = set(), {}
+    total, pages = None, None
+    for number in range(1, MAX_PAGES + 1):
+        url = validate_page_url(url, username)
+        if url in seen:
+            raise ValueError("Credly returned repeated pagination")
+        seen.add(url)
+        payload = read_public_page(url)
+        current = parse_badges(payload)
+        metadata = payload.get("metadata")
+        if not isinstance(metadata, dict) or any(type(metadata.get(key)) is not int for key in ("count", "current_page", "total_count", "total_pages")):
+            raise ValueError("Credly returned incomplete pagination metadata")
+        if total is None:
+            total, pages = metadata["total_count"], metadata["total_pages"]
+        if not (0 < pages <= MAX_PAGES and total > 0 and metadata["current_page"] == number and metadata["count"] == len(current) and metadata["total_count"] == total and metadata["total_pages"] == pages):
+            raise ValueError("Credly pagination changed or is incomplete")
+        records.update((record["uuid"], record) for record in current)
+        following = metadata.get("next_page_url")
+        if following is None:
+            if number != pages or len(records) != total:
+                raise ValueError("Credly did not return the complete public collection")
+            return list(records.values())
+        if not isinstance(following, str) or not following or number >= pages:
+            raise ValueError("Credly returned invalid pagination")
+        url = validate_page_url(following, username)
+    raise ValueError("Credly exceeded the public pagination limit")
 
 
 def merge_badges(existing, fetched, certifications):
     if not isinstance(existing, list) or not isinstance(fetched, list) or not fetched:
         raise ValueError("Empty or invalid refresh; keeping the existing collection")
     records = {}
+    for record in existing + fetched:
+        validate_badge(record)
     for record in existing:
-        validate_badge(record)
         records[record["uuid"]] = dict(record)
-    # Preserve known records when Credly only renders part of a profile.
-    for record in sorted(fetched, key=lambda badge: (str(badge.get("name", "")).casefold(), str(badge.get("uuid", "")))):
-        validate_badge(record)
+    # Preserve known records when a previously public credential is absent.
+    for record in sorted(fetched, key=lambda badge: (badge["name"].casefold(), badge["uuid"])):
         previous = records.get(record["uuid"], {})
         records[record["uuid"]] = {**previous, **{key: value for key, value in record.items() if value not in (None, "")}}
-    # The verified certification records own their exact artwork and dates.
+    # Verified certification records own their exact artwork and dates.
     for certification in certifications:
         badge_id = credential_id(certification["url"])
         previous = records.get(badge_id, {})
@@ -129,10 +155,8 @@ def merge_badges(existing, fetched, certifications):
             **previous,
             "name": previous.get("name") or f"Google Cloud Certified - {certification['title']}",
             "issuer": previous.get("issuer") or "Google Cloud",
-            "uuid": badge_id,
-            "url": certification["url"],
-            "image": certification["image"],
-            "image340": certification["image"],
+            "uuid": badge_id, "url": certification["url"],
+            "image": certification["image"], "image340": certification["image"],
             **{key: certification[key] for key in ("issued", "issuedLabel", "expires", "expiresLabel") if certification.get(key)},
         }
         validate_badge(record)
@@ -140,12 +164,10 @@ def merge_badges(existing, fetched, certifications):
     return list(records.values())
 
 
-def refresh_badges(html, output=OUTPUT_FILE, certifications_file=CERTIFICATIONS_FILE):
+def write_json_atomic(output, data):
     output = Path(output)
-    fetched = parse_badges(html)
-    merged = merge_badges(json.loads(output.read_text()), fetched, json.loads(Path(certifications_file).read_text()))
-    content = json.dumps(merged, ensure_ascii=False, indent=2) + "\n"
-    if output.read_text() == content:
+    content = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
+    if output.exists() and output.read_text() == content:
         return False
     temporary = None
     try:
@@ -161,48 +183,28 @@ def refresh_badges(html, output=OUTPUT_FILE, certifications_file=CERTIFICATIONS_
     return True
 
 
-def fetch_html(username):
-    # Selenium Manager uses the runner's installed Chrome and matching driver.
-    from selenium import webdriver
-    from selenium.common.exceptions import TimeoutException
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.wait import WebDriverWait
+def refresh_badges(fetched, output=OUTPUT_FILE, certifications_file=CERTIFICATIONS_FILE):
+    output = Path(output)
+    merged = merge_badges(json.loads(output.read_text()), fetched, json.loads(Path(certifications_file).read_text()))
+    return write_json_atomic(output, merged)
 
-    if not re.fullmatch(r"[a-zA-Z0-9-]+", username):
-        raise ValueError("Invalid Credly username")
-    options = webdriver.ChromeOptions()
-    chrome = shutil.which("google-chrome") or shutil.which("google-chrome-stable")
-    if chrome:
-        options.binary_location = chrome
-    for argument in ("--headless=new", "--no-sandbox", "--disable-dev-shm-usage", "--window-size=1440,1200"):
-        options.add_argument(argument)
-    driver = webdriver.Chrome(options=options)
-    try:
-        driver.set_page_load_timeout(60)
-        driver.get(f"https://www.credly.com/users/{username}")
 
-        def loaded(browser):
-            try:
-                return parse_badges(browser.page_source)
-            except ValueError:
-                return False
-
-        try:
-            WebDriverWait(driver, 45).until(loaded, "Public Credly badge cards did not become available")
-        except TimeoutException as error:
-            # Public-page text explains selector or page failures without logging
-            # source HTML, cookies, session tokens or browser storage.
-            body = " ".join(driver.find_element(By.TAG_NAME, "body").text.split())[:1200]
-            test_ids = sorted({element.get_attribute("data-testid") for element in driver.find_elements(By.CSS_SELECTOR, "[data-testid]")})[:12]
-            raise RuntimeError(f"Credly page title={driver.title!r}; card markers={test_ids!r}; public page text={body!r}") from error
-        return driver.page_source
-    finally:
-        driver.quit()
+def refresh_from_credly(username, output=OUTPUT_FILE, certifications_file=CERTIFICATIONS_FILE):
+    output = Path(output)
+    fetched = fetch_badges(username)
+    changed = refresh_badges(fetched, output, certifications_file)
+    write_json_atomic(output.parent / "credly_sync.json", {
+        "checked_at": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
+        "public_badges": len(fetched),
+        "retained_badges": len(json.loads(output.read_text())),
+        "source_url": profile_url(username),
+    })
+    return changed
 
 
 def main():
     username = os.environ.get("CREDLY_USERNAME", "sunil-sarolkar")
-    changed = refresh_badges(fetch_html(username))
+    changed = refresh_from_credly(username)
     total = len(json.loads(OUTPUT_FILE.read_text()))
     print(f"Credly refresh complete: {total} retained badges; {'updated' if changed else 'unchanged'} feed.")
 
