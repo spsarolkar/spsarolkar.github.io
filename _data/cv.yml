@@ -125,12 +125,14 @@
     - link: https://github.com/spsarolkar/StructFormer
       linkname: Source on GitHub
   - title: AI-Driven Indian Sign Language Translation
-    institution: IISc Capstone
+    institution: IISc capstone and ongoing SignLanguageTranslate project
     description:
-    - Real-time, low-latency multimodal ML pipeline for continuous streaming under strict edge constraints; custom temporal recognition (OpenPose + Transformer/LSTM) delivering high-speed inference without heavy cloud compute.
+    - Built an OpenPose and LSTM capstone; extended the project with Apple Vision keypoints and on-device Transformer training using MLX Swift. The hosted demo compares rolling and causal Transformers on saved isolated-sign validation clips.
     linkitems:
-    - link: https://huggingface.co/spaces/sunilsarolkar/ISL-SignLanguageTranslation
-      linkname: Capstone demo on Hugging Face
+    - link: https://huggingface.co/spaces/spsarolkar/SignLanguageTranslate
+      linkname: Current Transformer demo on Hugging Face
+    - link: /projects/2_project/#model-and-data
+      linkname: Project, model and dataset details
 - title: Education
   type: time_table
   contents:

@@ -29,9 +29,15 @@ description: Principal Solution Architect with 16+ years in enterprise engineeri
   <div class="section-heading"><div><p class="eyebrow">Selected public work</p><h2 id="selected-title">Ideas made tangible.</h2></div><a class="text-link" href="{{ '/projects/' | relative_url }}">All projects <span aria-hidden="true">→</span></a></div>
   <div class="selected-work-grid">
     <article><p class="project-category">Machine learning / Data</p><h3><a href="{{ '/projects/1_project/' | relative_url }}">StructFormer</a></h3><p>A Transformer-based experiment in generating corrective SQL from structured validation errors.</p><a class="text-link" href="{{ '/projects/1_project/' | relative_url }}">Explore the project <span aria-hidden="true">→</span></a></article>
-    <article><p class="project-category">Computer vision / Accessibility</p><h3><a href="{{ '/projects/2_project/' | relative_url }}">Indian Sign Language</a></h3><p>Pose estimation and sequence modelling explored through the IISc capstone and its web demo.</p><a class="text-link" href="{{ '/projects/2_project/' | relative_url }}">Explore the project <span aria-hidden="true">→</span></a></article>
+    <article><p class="project-category">Computer vision / Accessibility</p><h3><a href="{{ '/projects/2_project/' | relative_url }}">SignLanguageTranslate</a></h3><p>From an IISc capstone to on-device MLX training and a hosted comparison of rolling and causal Transformers for Indian Sign Language.</p><a class="text-link" href="#sign-language-demo">Try the interactive demo</a></article>
     <article><p class="project-category">Learning / Web application</p><h3><a href="{{ '/projects/6_project/' | relative_url }}">ML Engineer practice app</a></h3><p>A static practice application with timed sessions, topic selection and answer review.</p><a class="text-link" href="{{ '/projects/6_project/' | relative_url }}">Explore the project <span aria-hidden="true">→</span></a></article>
   </div>
+</section>
+
+<section class="home-section" id="sign-language-demo" aria-labelledby="sign-demo-title">
+  <div class="section-heading"><div><p class="eyebrow">SignLanguageTranslate</p><h2 id="sign-demo-title">See the model in action.</h2></div><a class="text-link" href="{{ '/projects/2_project/' | relative_url }}#model-and-data">Project, model &amp; data</a></div>
+  <p>Explore Indian Sign Language sample videos and compare two Transformer checkpoints. Inference runs on Hugging Face using the clips’ saved Apple Vision keypoints.</p>
+  {% include sign_language_demo.liquid collapsible=true %}
 </section>
 
 <section class="home-section" aria-labelledby="writing-title">

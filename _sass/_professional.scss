@@ -86,6 +86,25 @@ html[data-theme="dark"] {
   .profile-portrait figcaption { color: var(--portfolio-muted); font-size: 11px; line-height: 1.8; margin-top: 14px; text-align: center; }
   .profile-portrait figcaption span { margin-inline: 5px; color: inherit; }
   .home-section { padding: 58px 0; border-top: 1px solid var(--portfolio-rule); }
+  .sign-demo-shell { margin-block: 26px; min-width: 0; }
+  .sign-demo { border: 1px solid var(--portfolio-rule); border-radius: 6px; overflow: hidden; background: var(--portfolio-bg); }
+  .sign-demo > summary { min-height: 60px; padding: 16px 20px; cursor: pointer; font-size: 1rem; font-weight: 600; color: var(--portfolio-accent); background: var(--portfolio-surface); }
+  .sign-demo > summary:focus-visible { outline: 3px solid var(--portfolio-accent); outline-offset: -6px; }
+  .sign-demo > summary span { display: inline-block; margin-left: 12px; color: var(--portfolio-muted); font-size: .875rem; font-weight: 400; }
+  .sign-demo-content > p { padding: 20px; margin: 0; font-size: 1rem; border-top: 1px solid var(--portfolio-rule); }
+  .sign-demo-frame { display: block; width: 100%; height: 1000px; border: 0; background: var(--portfolio-surface); }
+  .sign-demo-footer { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin-top: 18px; }
+  .sign-demo-footer p { flex: 1 1 260px; margin: 0; color: var(--portfolio-muted); font-size: .875rem; line-height: 1.7; }
+  .sign-model-flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; list-style: none; padding: 0; margin: 24px 0; }
+  .sign-model-flow li { min-width: 0; border-top: 3px solid var(--portfolio-accent); background: var(--portfolio-surface); padding: 18px; font-size: .875rem; }
+  .sign-model-flow strong { display: block; font-size: 1rem; margin-bottom: 8px; }
+  .sign-data-links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-block: 20px; }
+  @media (max-width: 767px) {
+    .sign-demo > summary span { display: block; margin: 6px 0 0; }
+    .sign-demo-frame { height: 1100px; }
+    .sign-model-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 420px) { .sign-model-flow { grid-template-columns: 1fr; } }
   .section-heading { display: flex; justify-content: space-between; align-items: end; flex-wrap: wrap; gap: 16px 30px; margin-bottom: 30px; }
   .section-heading .eyebrow { margin-bottom: 10px; }
   .section-heading h2 { margin: 0; }

@@ -1,0 +1,22 @@
+<div class="sign-demo-shell">
+  <details class="sign-demo"{% unless include.collapsible %} open{% endunless %}>
+    <summary>Try the interactive demo <span>Hosted on Hugging Face</span></summary>
+    <div class="sign-demo-content">
+      <p>Choose an <strong>Expected sign</strong> and a <strong>Validation clip</strong>, then select <strong>Run both models on this clip</strong>. Compare the predictions with the source video and timeline.</p>
+      <iframe
+        src="https://spsarolkar-signlanguagetranslate.hf.space/?embed=true"
+        title="SignLanguageTranslate: Indian Sign Language Transformer demo"
+        class="sign-demo-frame"
+        width="100%"
+        height="1000"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="fullscreen"
+      ></iframe>
+    </div>
+  </details>
+  <div class="sign-demo-footer">
+    <a class="button button-primary" href="https://huggingface.co/spaces/spsarolkar/SignLanguageTranslate" target="_blank" rel="noopener noreferrer">Open demo on Hugging Face</a>
+    <p>The Space may take a little time to start after being idle. If the embedded view does not load, use the direct link.</p>
+  </div>
+</div>

@@ -1,11 +1,14 @@
 ---
 layout: page
 title: Indian Sign Language Translation
-description: A neural-network based system for translating Indian Sign Language using OpenPose keypoints and LSTM.
+description: Indian Sign Language recognition with Apple Vision keypoints, MLX training and a Hugging Face Transformer demo, building on the original IISc capstone.
 img: assets/projects/ISL/ISL-Thumbnail.png
 importance: 3
 category: work
 tech_stack:
+  - Swift / MLX
+  - Apple Vision
+  - Transformer
   - Python
   - TensorFlow
   - OpenPose
@@ -13,8 +16,37 @@ tech_stack:
 giscus_comments: true
 ---
 
-Indian Sign Language (ISL) translation bridges the gap between the hearing-impaired community and those who don’t know sign.  
-Our system uses OpenPose to extract body‐ and hand-keypoints from video frames, then feeds the time-series of those points into an LSTM network to produce text translations in real time.
+SignLanguageTranslate explores recognition of Indian Sign Language (ISL), from an IISc capstone using OpenPose and an LSTM to an iPad application that extracts Apple Vision keypoints and trains Transformer classifiers on device with MLX Swift.
+
+The current hosted demo compares rolling and causal Transformers on isolated signs from INCLUDE. It pairs public sample videos with the corresponding saved keypoints, so visitors can inspect predictions and run the uploaded checkpoints without installing the iPad app.
+
+<section id="demo" aria-labelledby="current-demo-title">
+  <h2 id="current-demo-title">Try SignLanguageTranslate</h2>
+  <p>Select a sign and clip in the demo below. The timeline starts with clearly labeled archived predictions; use the per-clip inference button to compute a fresh prediction on Hugging Face.</p>
+  {% include sign_language_demo.liquid %}
+</section>
+
+<section id="model-and-data" aria-labelledby="model-data-title">
+  <h2 id="model-data-title">The model and data behind the demo</h2>
+  <p>The Space is configured for the latest uploaded inference artifacts in my <strong>isl-transformer-mlx</strong> repository: the rolling Transformer at epoch 31 and the causal Transformer at epoch 102. Both use the same saved Apple Vision validation inputs. The Space reports final accuracy and wrong early confirmations separately.</p>
+  <ol class="sign-model-flow" aria-label="Current Transformer demo pipeline">
+    <li><strong>INCLUDE videos</strong>Public sample clips provide the source playback.</li>
+    <li><strong>Apple Vision poses</strong>Saved body and hand keypoints provide the model input.</li>
+    <li><strong>Two Transformers</strong>The Hugging Face server runs the uploaded rolling and causal checkpoints.</li>
+    <li><strong>Inspect predictions</strong>Compare the expected sign, final guess and early confirmations.</li>
+  </ol>
+  <div class="sign-data-links">
+    <a href="https://huggingface.co/datasets/spsarolkar/AI4Bharat-INCLUDE-dataset">Browse public video dataset</a>
+    <a href="https://huggingface.co/datasets/ai4bharat/INCLUDE">Original INCLUDE dataset and attribution</a>
+    <a href="https://huggingface.co/spaces/spsarolkar/SignLanguageTranslate/tree/main">Demo source and evaluation contract</a>
+  </div>
+  <p>The <a href="https://huggingface.co/spsarolkar/isl-transformer-mlx">model repository (private)</a> and <a href="https://huggingface.co/datasets/spsarolkar/AI4Bharat-INCLUDE-keypoints">keypoint dataset (private)</a> require owner access. The public demo loads them on the Hugging Face server; visitors can use it without a token or access to the private repositories.</p>
+  <p>This demo uses saved poses for isolated-sign recognition. It does not process a visitor’s camera or uploaded video. The validation panel was also used for checkpoint selection, so its scores describe that panel rather than an independent test set; signer independence is unverified. The source-video repository’s splits and the saved iPad validation split are labeled separately inside the demo.</p>
+</section>
+
+## Original IISc capstone
+
+The original system used OpenPose to extract body and hand keypoints from video frames, then passed the sequence to a TensorFlow LSTM classifier. The diagrams, dataset notes and model definition below document that earlier implementation.
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
@@ -22,10 +54,10 @@ Our system uses OpenPose to extract body‐ and hand-keypoints from video frames
   </div>
 </div>
 
-We preprocess each frame’s keypoints into a flat vector and stack them across time to form the network input. The LSTM learns to map these motion patterns to text tokens—for example, translating the sign for “HELLO,” “THANK YOU,” or “WHERE” in real time.
+We preprocessed each frame’s keypoints into a flat vector and stacked them across time to form the network input. The LSTM learned to classify the motion sequence into a sign label.
 
 <div class="caption">
-  Diagram of the end-to-end pipeline: video frames → keypoint extraction → sequence model → final translation.
+  Historical capstone pipeline: video frames → OpenPose keypoints → LSTM → sign label.
 </div>
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
@@ -33,12 +65,13 @@ We preprocess each frame’s keypoints into a flat vector and stack them across 
   </div>
 </div>
 <div class="caption">
-  Above: successive video frames with body and hand keypoints overlaid. These are the inputs to our LSTM time-series network.
+  The original OpenPose and LSTM data flow, retained for the capstone’s implementation history.
 </div>
 
-## Key Statistics for the dataset is as follows
+## Historical dataset analysis
 
-```markdown
+These figures are retained from the original capstone notes. The summary and category table report different video totals; they are not the size of the current Transformer validation panel.
+
 | Characteristic       |  Details  |
 | :------------------- | :-------: |
 | Categories           |    15     |
@@ -50,7 +83,6 @@ We preprocess each frame’s keypoints into a flat vector and stack them across 
 | Max Video Length     |   6.16s   |
 | Frame Rate           |  25 fps   |
 | Resolution           | 1920x1080 |
-```
 
 ### Size of each category
 
@@ -72,7 +104,7 @@ We preprocess each frame’s keypoints into a flat vector and stack them across 
 | Society            |        23         |        324        |
 |                    |  Categories# 263  | Total Videos-4287 |
 
-### Model Structure
+### Original LSTM model structure
 
 ```python
     translation_model = Sequential()
@@ -119,17 +151,16 @@ Non-trainable params: 440 (1.72 KB)
   </div>
 </div>
 
-### Tensorboard training stats
+### Historical training logs
 
-🔗 [Tensorboard](https://huggingface.co/cdsteameight/ISL-SignLanguageTranslation/tensorboard)
+[Original TensorBoard location](https://huggingface.co/cdsteameight/ISL-SignLanguageTranslation/tensorboard) — retained as a historical reference; it is not the current Transformer demo.
 
-### Features
+### What changed since the capstone
 
-- **Real-time inference** on live webcam or uploaded videos
-- **Works offline** once the model is loaded in the browser via TensorFlow.js
-- **Custom vocabulary**: you can retrain on your own signs by supplying new CSV keypoint trajectories
+- The current application uses Apple Vision keypoints and on-device MLX Swift training.
+- The public Space compares uploaded rolling and causal Transformer checkpoints on the same saved validation clips.
+- Visitors can inspect available source videos, prediction timelines and validation exports, or run inference on a selected clip.
 
-### Future Expansion
+### Next steps
 
-- We need to use Transformer instead of LSTM to avoid exploding and diminishing gradient problems
-- This model can be enhanced further using more data, Door Darshan has huge dataset of news published for sign language translation, we are planning to request the same from Govt of India
+Continuous signing, broader data coverage and independently qualified evaluation remain areas for further work. The isolated-sign demo does not establish sentence translation or general-purpose real-world recognition.

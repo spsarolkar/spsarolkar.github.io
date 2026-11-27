@@ -121,7 +121,7 @@
       "name": "Indian Sign Language Translator",
       "publisher": "Sunil Sarolkar",
       "releaseDate": "2024-06-21",
-      "url": "https://huggingface.co/spaces/sunilsarolkar/ISL-SignLanguageTranslation",
+      "url": "https://spsarolkar.github.io/projects/2_project/",
       "summary": "In this application we are demonstrating model developed for translating the Indian Sign Language(ISL) using LSTM"
     }
   ],
@@ -180,7 +180,7 @@
       ],
       "startDate": "2024-05-01",
       "endDate": "2023-08-01",
-      "url": "https://huggingface.co/spaces/sunilsarolkar/ISL-SignLanguageTranslation"
+      "url": "https://spsarolkar.github.io/projects/2_project/"
     },
     {
       "name": "Financial Data Warehouse",
