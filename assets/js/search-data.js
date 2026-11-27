@@ -243,7 +243,7 @@ ninja.data = [{
               window.location.href = "/projects/1_project/";
             },},{id: "projects-indian-sign-language-translation",
           title: 'Indian Sign Language Translation',
-          description: "A neural-network based system for translating Indian Sign Language using OpenPose keypoints and LSTM.",
+          description: "Indian Sign Language recognition with Apple Vision keypoints, MLX training and a Hugging Face Transformer demo, building on the original IISc capstone.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-vehicle-telemetry-with-raspberry-pi-amp-kafka",
