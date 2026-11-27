@@ -22,7 +22,7 @@
 - [x] Implement the progressive charts with readable exact counts, source switching, class search/sort and no-secret fallback HTML.
 - [x] Replace primary old-chart placement while preserving authored historical material.
 - [x] Run the existing suites, new behavior tests, production build, link checks and published CSS check.
-- [ ] Fresh review, publish through existing Pages workflows, and verify live source totals and browser behavior.
+- [x] Fresh review, publish through existing Pages workflows, and verify live source totals and browser behavior.
 
 ## Review focus
 
@@ -43,3 +43,15 @@
 - Final production build passed in 21.021 seconds; existing unrelated portrait image warnings remain. Link check: 3,586 references / 100 HTML files. PurgeCSS 8 processed 12 CSS files and retained all current chart selectors.
 - Generated HTML embeds the exact aggregate JSON, renders 15 category rows and 20 default class rows, and encloses both historical chart images in a closed archive. New script URL is fingerprinted; no duplicate project IDs or exposed credentials found.
 - Fresh independent review found no P1/P2 issues and independently verified aggregate sums, source distinctions, fixed scales and distinct-label coverage.
+
+## Publication receipt
+
+- Application source: `21d2f6fee9551679ec7b2a54aa6017d76cb98595`, pushed to `master` and `codex/current-dataset-charts`. The original professional checkout was fast-forwarded cleanly to this source.
+- Official Pages build and deploy succeeded: https://github.com/spsarolkar/spsarolkar.github.io/actions/runs/45950724542
+- Existing legacy publisher also succeeded: https://github.com/spsarolkar/spsarolkar.github.io/actions/runs/45950724519
+- Live page returned 200 and its parsed embedded snapshot exactly matched the reviewed source JSON: https://spsarolkar.github.io/projects/2_project/#dataset-analysis
+- Desktop browser QA confirmed both source views, correct split counts and coverage, source-revision switching, Clock search, fewest-clips sorting, measured zeros, show-all263rows and the closed historical disclosure. No model inference was run.
+- Clock is 10/2/1 under Electronics and 0/1/0 under Home. Home has one total clip; the remote QA report's phrase `Home (0 total clips)` was a narrative error, not an application value or count basis.
+- Browser run: https://agent.tinyfish.ai/runs/cb101de1-27f7-45f3-8b6f-9152e3d8a2ca
+- Verification limit: the remote browser did not expose viewport resizing, so direct375px rendering was not tested. Responsive media rules were reviewed; no horizontal overflow was observed on desktop. The theme control was observed but the chart theme toggle was not exercised in that run.
+- This receipt-only follow-up is retained on the implementation branch; deployed application source is unchanged.
