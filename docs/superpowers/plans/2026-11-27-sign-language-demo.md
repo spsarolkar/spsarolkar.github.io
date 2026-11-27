@@ -16,7 +16,7 @@
 - [x] Update homepage, CV and Apps links; retain and label the historical capstone and dataset analysis.
 - [x] Run production build, local-link check, existing test suites and CSS purging; inspect rendered embeds and links.
 - [x] Run one live validation-clip inference in the Space; do not rerun the full evaluation or train models.
-- [ ] Obtain a fresh scoped review, publish through existing GitHub Pages, and verify live routes.
+- [x] Obtain a fresh scoped review, publish through existing GitHub Pages, and verify live routes.
 
 ## Review focus
 
@@ -35,3 +35,14 @@
 - Generated homepage has a closed native disclosure, the project demo opens by default, and both retain titled lazy frames and persistent direct links. No duplicate IDs were found on either page. HTML CV and Apps links point to the current Space; historical JSON resume entries point to the project history. Authored PDF resumes are preserved.
 - One live `Woman` / `include-004` clip ran successfully in the Space. The caption changed from archived predictions to `Predictions computed by the Space at 250 ms intervals.` No full evaluation, training, model upload or repository visibility change was performed.
 - Fresh review found two issues: clipped disclosure focus and the current Apps entry retaining the capstone's 2024 year. Both corrected before publication; production build and checks repeated.
+
+## Publication receipt
+
+- Application source: `8dd8c8c78607102deeffe7ad1b7a6bbacba5add2`, pushed to `master` and `codex/sign-language-hf-demo`. The original professional checkout was fast-forwarded cleanly to the published source.
+- Official Pages build and deploy succeeded: https://github.com/spsarolkar/spsarolkar.github.io/actions/runs/45948642051
+- Existing legacy publisher also succeeded: https://github.com/spsarolkar/spsarolkar.github.io/actions/runs/45948642186
+- Live homepage and project page both return HTTP 200 with the new embed: https://spsarolkar.github.io/#sign-language-demo and https://spsarolkar.github.io/projects/2_project/#demo
+- Read-only browser QA confirmed the homepage disclosure, default Transformer iframe, direct fallback link, open project demo, source links, pipeline, historical capstone, usable iframe scrolling, and readable surrounding text after theme toggle. No visible rendering errors or outer horizontal overflow reported. External Streamlit theme remains independently controlled.
+- Browser QA run: https://agent.tinyfish.ai/runs/7ec470ce-09f2-4241-a401-3880bc2a0019
+- Live single-clip inference run: https://agent.tinyfish.ai/runs/503142b5-7fc2-450e-a2c2-0ee933dce4c6
+- This receipt-only follow-up is retained on the implementation branch; the deployed application source is unchanged.
