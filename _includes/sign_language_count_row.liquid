@@ -1,0 +1,9 @@
+<li class="count-chart-row">
+  <div class="count-chart-label"><strong>{{ include.row.name | escape }}</strong>{% if include.row.category %}<small>{{ include.row.category | escape }}</small>{% endif %}</div>
+  <div class="count-chart-bars">
+    {% assign count_splits = 'train,validation,test' | split: ',' %}
+    {% for count_split in count_splits %}
+      <div class="count-split"><span class="count-split-key">{% if count_split == 'train' %}Train{% elsif count_split == 'validation' %}Validation{% else %}Test{% endif %}</span><span class="count-track" aria-hidden="true"><span class="count-fill split-{{ count_split }}" style="width: {{ include.row[count_split] | times: 100.0 | divided_by: include.maximum }}%"></span></span><span class="count-value">{{ include.row[count_split] }}</span></div>
+    {% endfor %}
+  </div>
+</li>

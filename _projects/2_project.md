@@ -44,6 +44,11 @@ The current hosted demo compares rolling and causal Transformers on isolated sig
   <p>This demo uses saved poses for isolated-sign recognition. It does not process a visitor’s camera or uploaded video. The validation panel was also used for checkpoint selection, so its scores describe that panel rather than an independent test set; signer independence is unverified. The source-video repository’s splits and the saved iPad validation split are labeled separately inside the demo.</p>
 </section>
 
+{% include sign_language_dataset.liquid %}
+
+<details class="sign-legacy-analysis" markdown="1">
+<summary>Original IISc capstone and archived dataset charts</summary>
+
 ## Original IISc capstone
 
 The original system used OpenPose to extract body and hand keypoints from video frames, then passed the sequence to a TensorFlow LSTM classifier. The diagrams, dataset notes and model definition below document that earlier implementation.
@@ -154,6 +159,8 @@ Non-trainable params: 440 (1.72 KB)
 ### Historical training logs
 
 [Original TensorBoard location](https://huggingface.co/cdsteameight/ISL-SignLanguageTranslation/tensorboard) — retained as a historical reference; it is not the current Transformer demo.
+
+</details>
 
 ### What changed since the capstone
 
