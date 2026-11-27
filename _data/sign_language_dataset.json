@@ -4,2409 +4,175 @@
   "datasets": [
     {
       "id": "public-videos",
-      "label": "Public source videos",
+      "label": "INCLUDE v2 videos and keypoints",
       "repository": "spsarolkar/AI4Bharat-INCLUDE-dataset",
       "repository_url": "https://huggingface.co/datasets/spsarolkar/AI4Bharat-INCLUDE-dataset",
-      "revision": "d12293ab05cb5dc2cb6a342c364132a18adc49c9",
+      "revision": "6c3e75429a36680db0831793504cbe5be0b2256e",
       "private": false,
-      "count_basis": "Actual video files present in the pinned repository inventory, including Extra subfolders.",
-      "total": 3679,
-      "splits": {
-        "train": 2678,
-        "validation": 292,
-        "test": 709
-      },
-      "categories": [
-        {
-          "name": "Adjectives",
-          "train": 577,
-          "validation": 66,
-          "test": 148,
-          "total": 791
-        },
-        {
-          "name": "Animals",
-          "train": 111,
-          "validation": 11,
-          "test": 28,
-          "total": 150
-        },
-        {
-          "name": "Clothes",
-          "train": 134,
-          "validation": 15,
-          "test": 39,
-          "total": 188
-        },
-        {
-          "name": "Colours",
-          "train": 151,
-          "validation": 19,
-          "test": 41,
-          "total": 211
-        },
-        {
-          "name": "Days_and_Time",
-          "train": 190,
-          "validation": 15,
-          "test": 18,
-          "total": 223
-        },
-        {
-          "name": "Electronics",
-          "train": 84,
-          "validation": 6,
-          "test": 20,
-          "total": 110
-        },
-        {
-          "name": "Greetings",
-          "train": 132,
-          "validation": 17,
-          "test": 41,
-          "total": 190
-        },
-        {
-          "name": "Home",
-          "train": 130,
-          "validation": 13,
-          "test": 46,
-          "total": 189
-        },
-        {
-          "name": "Jobs",
-          "train": 124,
-          "validation": 15,
-          "test": 38,
-          "total": 177
-        },
-        {
-          "name": "Means_of_Transportation",
-          "train": 120,
-          "validation": 16,
-          "test": 32,
-          "total": 168
-        },
-        {
-          "name": "People",
-          "train": 350,
-          "validation": 41,
-          "test": 96,
-          "total": 487
-        },
-        {
-          "name": "Places",
-          "train": 296,
-          "validation": 29,
-          "test": 74,
-          "total": 399
-        },
-        {
-          "name": "Pronouns",
-          "train": 120,
-          "validation": 16,
-          "test": 32,
-          "total": 168
-        },
-        {
-          "name": "Seasons",
-          "train": 47,
-          "validation": 4,
-          "test": 15,
-          "total": 66
-        },
-        {
-          "name": "Society",
-          "train": 112,
-          "validation": 9,
-          "test": 41,
-          "total": 162
-        }
-      ],
-      "labels": [
-        {
-          "name": "alive",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
-          "name": "bad",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "Beautiful",
-          "category": "Adjectives",
-          "train": 8,
-          "validation": 0,
-          "test": 1,
-          "total": 9
-        },
-        {
-          "name": "big large",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "Blind",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
-          "name": "cheap",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 0,
-          "test": 2,
-          "total": 8
-        },
-        {
-          "name": "clean",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
-          "name": "cold",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 1,
-          "test": 4,
-          "total": 20
-        },
-        {
-          "name": "cool",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "curved",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
-          "name": "dead",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
-          "name": "Deaf",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
-          "name": "deep",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 0,
-          "test": 2,
-          "total": 8
-        },
-        {
-          "name": "dirty",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
-          "name": "dry",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "expensive",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 0,
-          "test": 2,
-          "total": 8
-        },
-        {
-          "name": "famous",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
-          "name": "fast",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "female",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 0,
-          "test": 2,
-          "total": 8
-        },
-        {
-          "name": "flat",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
-          "name": "good",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "happy",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "hard",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 0,
-          "test": 2,
-          "total": 8
-        },
-        {
-          "name": "healthy",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "heavy",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
-          "name": "high",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 0,
-          "test": 2,
-          "total": 8
-        },
-        {
-          "name": "hot",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "light",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 0,
-          "test": 2,
-          "total": 8
-        },
-        {
-          "name": "long",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "loose",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
-          "name": "loud",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "low",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
-          "name": "male",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 0,
-          "test": 2,
-          "total": 8
-        },
-        {
-          "name": "Mean",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 0,
-          "test": 2,
-          "total": 8
-        },
-        {
-          "name": "narrow",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "new",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "Nice",
-          "category": "Adjectives",
-          "train": 3,
-          "validation": 0,
-          "test": 1,
-          "total": 4
-        },
-        {
-          "name": "old",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "poor",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
-          "name": "quiet",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "rich",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 0,
-          "test": 2,
-          "total": 8
-        },
-        {
-          "name": "sad",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
-          "name": "shallow",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
-          "name": "short",
-          "category": "Adjectives",
-          "train": 16,
-          "validation": 2,
-          "test": 4,
-          "total": 22
-        },
-        {
-          "name": "sick",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "slow",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "small little",
-          "category": "Adjectives",
-          "train": 16,
-          "validation": 2,
-          "test": 4,
-          "total": 22
-        },
-        {
-          "name": "soft",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
-          "name": "strong",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 0,
-          "test": 2,
-          "total": 8
-        },
-        {
-          "name": "tall",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "thick",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 0,
-          "test": 2,
-          "total": 8
-        },
-        {
-          "name": "thin",
-          "category": "Adjectives",
-          "train": 3,
-          "validation": 0,
-          "test": 1,
-          "total": 4
-        },
-        {
-          "name": "tight",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
-          "name": "Ugly",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 0,
-          "test": 2,
-          "total": 8
-        },
-        {
-          "name": "warm",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "weak",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 0,
-          "test": 2,
-          "total": 8
-        },
-        {
-          "name": "wet",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "wide",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "young",
-          "category": "Adjectives",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "Animal",
-          "category": "Animals",
-          "train": 13,
-          "validation": 1,
-          "test": 4,
-          "total": 18
-        },
-        {
-          "name": "Bird",
-          "category": "Animals",
-          "train": 19,
-          "validation": 0,
-          "test": 4,
-          "total": 23
-        },
-        {
-          "name": "Cat",
-          "category": "Animals",
-          "train": 14,
-          "validation": 1,
-          "test": 3,
-          "total": 18
-        },
-        {
-          "name": "Cow",
-          "category": "Animals",
-          "train": 14,
-          "validation": 2,
-          "test": 3,
-          "total": 19
-        },
-        {
-          "name": "Dog",
-          "category": "Animals",
-          "train": 14,
-          "validation": 2,
-          "test": 2,
-          "total": 18
-        },
-        {
-          "name": "Fish",
-          "category": "Animals",
-          "train": 12,
-          "validation": 2,
-          "test": 4,
-          "total": 18
-        },
-        {
-          "name": "Horse",
-          "category": "Animals",
-          "train": 12,
-          "validation": 2,
-          "test": 4,
-          "total": 18
-        },
-        {
-          "name": "Mouse",
-          "category": "Animals",
-          "train": 13,
-          "validation": 1,
-          "test": 4,
-          "total": 18
-        },
-        {
-          "name": "Clothing",
-          "category": "Clothes",
-          "train": 14,
-          "validation": 1,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Dress",
-          "category": "Clothes",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Hat",
-          "category": "Clothes",
-          "train": 14,
-          "validation": 1,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Pant",
-          "category": "Clothes",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Pocket",
-          "category": "Clothes",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Shirt",
-          "category": "Clothes",
-          "train": 14,
-          "validation": 1,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Shoes",
-          "category": "Clothes",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Skirt",
-          "category": "Clothes",
-          "train": 13,
-          "validation": 1,
-          "test": 4,
-          "total": 18
-        },
-        {
-          "name": "Suit",
-          "category": "Clothes",
-          "train": 14,
-          "validation": 1,
-          "test": 3,
-          "total": 18
-        },
-        {
-          "name": "T-Shirt",
-          "category": "Clothes",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Black",
-          "category": "Colours",
-          "train": 14,
-          "validation": 2,
-          "test": 3,
-          "total": 19
-        },
-        {
-          "name": "Blue",
-          "category": "Colours",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Brown",
-          "category": "Colours",
-          "train": 14,
-          "validation": 2,
-          "test": 4,
-          "total": 20
-        },
-        {
-          "name": "Colour",
-          "category": "Colours",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Green",
-          "category": "Colours",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Grey",
-          "category": "Colours",
-          "train": 15,
-          "validation": 2,
-          "test": 3,
-          "total": 20
-        },
-        {
-          "name": "Orange",
-          "category": "Colours",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Pink",
-          "category": "Colours",
-          "train": 14,
-          "validation": 2,
-          "test": 3,
-          "total": 19
-        },
-        {
-          "name": "Red",
-          "category": "Colours",
-          "train": 14,
-          "validation": 1,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "White",
-          "category": "Colours",
-          "train": 14,
-          "validation": 1,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Yellow",
-          "category": "Colours",
-          "train": 14,
-          "validation": 1,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Afternoon",
-          "category": "Days_and_Time",
-          "train": 9,
-          "validation": 1,
-          "test": 1,
-          "total": 11
-        },
-        {
-          "name": "Evening",
-          "category": "Days_and_Time",
-          "train": 9,
-          "validation": 1,
-          "test": 1,
-          "total": 11
-        },
-        {
-          "name": "Friday",
-          "category": "Days_and_Time",
-          "train": 9,
-          "validation": 1,
-          "test": 1,
-          "total": 11
-        },
-        {
-          "name": "Hour",
-          "category": "Days_and_Time",
-          "train": 9,
-          "validation": 1,
-          "test": 1,
-          "total": 11
-        },
-        {
-          "name": "Minute",
-          "category": "Days_and_Time",
-          "train": 9,
-          "validation": 1,
-          "test": 1,
-          "total": 11
-        },
-        {
-          "name": "Monday",
-          "category": "Days_and_Time",
-          "train": 9,
-          "validation": 1,
-          "test": 1,
-          "total": 11
-        },
-        {
-          "name": "Month",
-          "category": "Days_and_Time",
-          "train": 9,
-          "validation": 1,
-          "test": 1,
-          "total": 11
-        },
-        {
-          "name": "Morning",
-          "category": "Days_and_Time",
-          "train": 10,
-          "validation": 0,
-          "test": 1,
-          "total": 11
-        },
-        {
-          "name": "Night",
-          "category": "Days_and_Time",
-          "train": 10,
-          "validation": 0,
-          "test": 1,
-          "total": 11
-        },
-        {
-          "name": "Saturday",
-          "category": "Days_and_Time",
-          "train": 10,
-          "validation": 1,
-          "test": 0,
-          "total": 11
-        },
-        {
-          "name": "Second",
-          "category": "Days_and_Time",
-          "train": 2,
-          "validation": 0,
-          "test": 1,
-          "total": 3
-        },
-        {
-          "name": "Sunday",
-          "category": "Days_and_Time",
-          "train": 9,
-          "validation": 1,
-          "test": 1,
-          "total": 11
-        },
-        {
-          "name": "Thursday",
-          "category": "Days_and_Time",
-          "train": 9,
-          "validation": 1,
-          "test": 1,
-          "total": 11
-        },
-        {
-          "name": "Time",
-          "category": "Days_and_Time",
-          "train": 11,
-          "validation": 0,
-          "test": 0,
-          "total": 11
-        },
-        {
-          "name": "Today",
-          "category": "Days_and_Time",
-          "train": 9,
-          "validation": 1,
-          "test": 1,
-          "total": 11
-        },
-        {
-          "name": "Tomorrow",
-          "category": "Days_and_Time",
-          "train": 10,
-          "validation": 0,
-          "test": 1,
-          "total": 11
-        },
-        {
-          "name": "Tuesday",
-          "category": "Days_and_Time",
-          "train": 9,
-          "validation": 1,
-          "test": 1,
-          "total": 11
-        },
-        {
-          "name": "Wednesday",
-          "category": "Days_and_Time",
-          "train": 10,
-          "validation": 0,
-          "test": 1,
-          "total": 11
-        },
-        {
-          "name": "Week",
-          "category": "Days_and_Time",
-          "train": 9,
-          "validation": 1,
-          "test": 1,
-          "total": 11
-        },
-        {
-          "name": "Year",
-          "category": "Days_and_Time",
-          "train": 10,
-          "validation": 1,
-          "test": 0,
-          "total": 11
-        },
-        {
-          "name": "Yesterday",
-          "category": "Days_and_Time",
-          "train": 9,
-          "validation": 1,
-          "test": 1,
-          "total": 11
-        },
-        {
-          "name": "Camera",
-          "category": "Electronics",
-          "train": 8,
-          "validation": 1,
-          "test": 2,
-          "total": 11
-        },
-        {
-          "name": "Cell phone",
-          "category": "Electronics",
-          "train": 8,
-          "validation": 1,
-          "test": 2,
-          "total": 11
-        },
-        {
-          "name": "Clock",
-          "category": "Electronics",
-          "train": 7,
-          "validation": 1,
-          "test": 2,
-          "total": 10
-        },
-        {
-          "name": "Computer",
-          "category": "Electronics",
-          "train": 9,
-          "validation": 0,
-          "test": 2,
-          "total": 11
-        },
-        {
-          "name": "Fan",
-          "category": "Electronics",
-          "train": 10,
-          "validation": 1,
-          "test": 1,
-          "total": 12
-        },
-        {
-          "name": "Lamp",
-          "category": "Electronics",
-          "train": 9,
-          "validation": 1,
-          "test": 1,
-          "total": 11
-        },
-        {
-          "name": "Laptop",
-          "category": "Electronics",
-          "train": 8,
-          "validation": 0,
-          "test": 3,
-          "total": 11
-        },
-        {
-          "name": "Radio",
-          "category": "Electronics",
-          "train": 8,
-          "validation": 1,
-          "test": 2,
-          "total": 11
-        },
-        {
-          "name": "Screen",
-          "category": "Electronics",
-          "train": 9,
-          "validation": 0,
-          "test": 2,
-          "total": 11
-        },
-        {
-          "name": "Television",
-          "category": "Electronics",
-          "train": 8,
-          "validation": 0,
-          "test": 3,
-          "total": 11
-        },
-        {
-          "name": "Alright",
-          "category": "Greetings",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "Good afternoon",
-          "category": "Greetings",
-          "train": 14,
-          "validation": 2,
-          "test": 6,
-          "total": 22
-        },
-        {
-          "name": "Good evening",
-          "category": "Greetings",
-          "train": 13,
-          "validation": 1,
-          "test": 7,
-          "total": 21
-        },
-        {
-          "name": "Good Morning",
-          "category": "Greetings",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "Good night",
-          "category": "Greetings",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "Hello",
-          "category": "Greetings",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "How are you",
-          "category": "Greetings",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "Pleased",
-          "category": "Greetings",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "Thank you",
-          "category": "Greetings",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "Bag",
-          "category": "Home",
-          "train": 4,
-          "validation": 1,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Bathroom",
-          "category": "Home",
-          "train": 5,
-          "validation": 0,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Bed",
-          "category": "Home",
-          "train": 3,
-          "validation": 1,
-          "test": 3,
-          "total": 7
-        },
-        {
-          "name": "Bedroom",
-          "category": "Home",
-          "train": 6,
-          "validation": 0,
-          "test": 1,
-          "total": 7
-        },
-        {
-          "name": "Book",
-          "category": "Home",
-          "train": 6,
-          "validation": 0,
-          "test": 1,
-          "total": 7
-        },
-        {
-          "name": "Box",
-          "category": "Home",
-          "train": 6,
-          "validation": 0,
-          "test": 1,
-          "total": 7
-        },
-        {
-          "name": "Card",
-          "category": "Home",
-          "train": 4,
-          "validation": 1,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Chair",
-          "category": "Home",
-          "train": 5,
-          "validation": 1,
-          "test": 1,
-          "total": 7
-        },
-        {
-          "name": "Door",
-          "category": "Home",
-          "train": 4,
-          "validation": 1,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Dream",
-          "category": "Home",
-          "train": 6,
-          "validation": 0,
-          "test": 1,
-          "total": 7
-        },
-        {
-          "name": "Gift",
-          "category": "Home",
-          "train": 5,
-          "validation": 1,
-          "test": 1,
-          "total": 7
-        },
-        {
-          "name": "Key",
-          "category": "Home",
-          "train": 4,
-          "validation": 1,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Kitchen",
-          "category": "Home",
-          "train": 5,
-          "validation": 0,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Letter",
-          "category": "Home",
-          "train": 5,
-          "validation": 0,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Lock",
-          "category": "Home",
-          "train": 4,
-          "validation": 1,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Page",
-          "category": "Home",
-          "train": 4,
-          "validation": 1,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Paint",
-          "category": "Home",
-          "train": 4,
-          "validation": 1,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Paper",
-          "category": "Home",
-          "train": 5,
-          "validation": 0,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Pen",
-          "category": "Home",
-          "train": 5,
-          "validation": 1,
-          "test": 1,
-          "total": 7
-        },
-        {
-          "name": "Pencil",
-          "category": "Home",
-          "train": 5,
-          "validation": 0,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Photograph",
-          "category": "Home",
-          "train": 6,
-          "validation": 0,
-          "test": 1,
-          "total": 7
-        },
-        {
-          "name": "Ring",
-          "category": "Home",
-          "train": 6,
-          "validation": 0,
-          "test": 1,
-          "total": 7
-        },
-        {
-          "name": "Soap",
-          "category": "Home",
-          "train": 4,
-          "validation": 1,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Table",
-          "category": "Home",
-          "train": 5,
-          "validation": 0,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Telephone",
-          "category": "Home",
-          "train": 5,
-          "validation": 0,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Tool",
-          "category": "Home",
-          "train": 6,
-          "validation": 0,
-          "test": 1,
-          "total": 7
-        },
-        {
-          "name": "Window",
-          "category": "Home",
-          "train": 3,
-          "validation": 1,
-          "test": 3,
-          "total": 7
-        },
-        {
-          "name": "Actor",
-          "category": "Jobs",
-          "train": 8,
-          "validation": 1,
-          "test": 2,
-          "total": 11
-        },
-        {
-          "name": "Artist",
-          "category": "Jobs",
-          "train": 7,
-          "validation": 1,
-          "test": 3,
-          "total": 11
-        },
-        {
-          "name": "Author",
-          "category": "Jobs",
-          "train": 9,
-          "validation": 0,
-          "test": 2,
-          "total": 11
-        },
-        {
-          "name": "Doctor",
-          "category": "Jobs",
-          "train": 8,
-          "validation": 1,
-          "test": 2,
-          "total": 11
-        },
-        {
-          "name": "Job",
-          "category": "Jobs",
-          "train": 8,
-          "validation": 1,
-          "test": 2,
-          "total": 11
-        },
-        {
-          "name": "Lawyer",
-          "category": "Jobs",
-          "train": 8,
-          "validation": 1,
-          "test": 2,
-          "total": 11
-        },
-        {
-          "name": "Manager",
-          "category": "Jobs",
-          "train": 8,
-          "validation": 1,
-          "test": 2,
-          "total": 11
-        },
-        {
-          "name": "Patient",
-          "category": "Jobs",
-          "train": 8,
-          "validation": 1,
-          "test": 2,
-          "total": 11
-        },
-        {
-          "name": "Police",
-          "category": "Jobs",
-          "train": 7,
-          "validation": 1,
-          "test": 3,
-          "total": 11
-        },
-        {
-          "name": "Priest",
-          "category": "Jobs",
-          "train": 8,
-          "validation": 1,
-          "test": 3,
-          "total": 12
-        },
-        {
-          "name": "Reporter",
-          "category": "Jobs",
-          "train": 7,
-          "validation": 1,
-          "test": 3,
-          "total": 11
-        },
-        {
-          "name": "Secretary",
-          "category": "Jobs",
-          "train": 7,
-          "validation": 1,
-          "test": 3,
-          "total": 11
-        },
-        {
-          "name": "Soldier",
-          "category": "Jobs",
-          "train": 7,
-          "validation": 1,
-          "test": 3,
-          "total": 11
-        },
-        {
-          "name": "Student",
-          "category": "Jobs",
-          "train": 8,
-          "validation": 1,
-          "test": 2,
-          "total": 11
-        },
-        {
-          "name": "Teacher",
-          "category": "Jobs",
-          "train": 8,
-          "validation": 1,
-          "test": 2,
-          "total": 11
-        },
-        {
-          "name": "Waiter",
-          "category": "Jobs",
-          "train": 8,
-          "validation": 1,
-          "test": 2,
-          "total": 11
-        },
-        {
-          "name": "Bicycle",
-          "category": "Means_of_Transportation",
-          "train": 12,
-          "validation": 2,
-          "test": 4,
-          "total": 18
-        },
-        {
-          "name": "Boat",
-          "category": "Means_of_Transportation",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Bus",
-          "category": "Means_of_Transportation",
-          "train": 12,
-          "validation": 2,
-          "test": 4,
-          "total": 18
-        },
-        {
-          "name": "Car",
-          "category": "Means_of_Transportation",
-          "train": 14,
-          "validation": 1,
-          "test": 3,
-          "total": 18
-        },
-        {
-          "name": "Plane",
-          "category": "Means_of_Transportation",
-          "train": 14,
-          "validation": 1,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Train",
-          "category": "Means_of_Transportation",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "train ticket",
-          "category": "Means_of_Transportation",
-          "train": 14,
-          "validation": 2,
-          "test": 3,
-          "total": 19
-        },
-        {
-          "name": "Transportation",
-          "category": "Means_of_Transportation",
-          "train": 14,
-          "validation": 2,
-          "test": 3,
-          "total": 19
-        },
-        {
-          "name": "Truck",
-          "category": "Means_of_Transportation",
-          "train": 14,
-          "validation": 2,
-          "test": 3,
-          "total": 19
-        },
-        {
-          "name": "Adult",
-          "category": "People",
-          "train": 15,
-          "validation": 0,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Baby",
-          "category": "People",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Boy",
-          "category": "People",
-          "train": 14,
-          "validation": 2,
-          "test": 4,
-          "total": 20
-        },
-        {
-          "name": "Brother",
-          "category": "People",
-          "train": 14,
-          "validation": 2,
-          "test": 4,
-          "total": 20
-        },
-        {
-          "name": "Child",
-          "category": "People",
-          "train": 15,
-          "validation": 1,
-          "test": 3,
-          "total": 19
-        },
-        {
-          "name": "Crowd",
-          "category": "People",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Daughter",
-          "category": "People",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Family",
-          "category": "People",
-          "train": 13,
-          "validation": 1,
-          "test": 2,
-          "total": 16
-        },
-        {
-          "name": "Father",
-          "category": "People",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Friend",
-          "category": "People",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Girl",
-          "category": "People",
-          "train": 14,
-          "validation": 1,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Grandfather",
-          "category": "People",
-          "train": 12,
-          "validation": 1,
-          "test": 3,
-          "total": 16
-        },
-        {
-          "name": "Grandmother",
-          "category": "People",
-          "train": 13,
-          "validation": 1,
-          "test": 2,
-          "total": 16
-        },
-        {
-          "name": "Husband",
-          "category": "People",
-          "train": 15,
-          "validation": 1,
-          "test": 3,
-          "total": 19
-        },
-        {
-          "name": "King",
-          "category": "People",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Man",
-          "category": "People",
-          "train": 14,
-          "validation": 1,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Mother",
-          "category": "People",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Neighbour",
-          "category": "People",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Parent",
-          "category": "People",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Player",
-          "category": "People",
-          "train": 14,
-          "validation": 2,
-          "test": 3,
-          "total": 19
-        },
-        {
-          "name": "President",
-          "category": "People",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Queen",
-          "category": "People",
-          "train": 14,
-          "validation": 1,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Sister",
-          "category": "People",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Son",
-          "category": "People",
-          "train": 14,
-          "validation": 1,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Wife",
-          "category": "People",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Woman",
-          "category": "People",
-          "train": 13,
-          "validation": 2,
-          "test": 4,
-          "total": 19
-        },
-        {
-          "name": "Bank",
-          "category": "Places",
-          "train": 16,
-          "validation": 2,
-          "test": 4,
-          "total": 22
-        },
-        {
-          "name": "City",
-          "category": "Places",
-          "train": 15,
-          "validation": 1,
-          "test": 4,
-          "total": 20
-        },
-        {
-          "name": "Court",
-          "category": "Places",
-          "train": 18,
-          "validation": 1,
-          "test": 4,
-          "total": 23
-        },
-        {
-          "name": "Ground",
-          "category": "Places",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "Hospital",
-          "category": "Places",
-          "train": 15,
-          "validation": 1,
-          "test": 4,
-          "total": 20
-        },
-        {
-          "name": "House",
-          "category": "Places",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "India",
-          "category": "Places",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "Library",
-          "category": "Places",
-          "train": 14,
-          "validation": 2,
-          "test": 4,
-          "total": 20
-        },
-        {
-          "name": "Location",
-          "category": "Places",
-          "train": 16,
-          "validation": 2,
-          "test": 4,
-          "total": 22
-        },
-        {
-          "name": "Market",
-          "category": "Places",
-          "train": 17,
-          "validation": 1,
-          "test": 3,
-          "total": 21
-        },
-        {
-          "name": "Office",
-          "category": "Places",
-          "train": 15,
-          "validation": 1,
-          "test": 4,
-          "total": 20
-        },
-        {
-          "name": "Park",
-          "category": "Places",
-          "train": 17,
-          "validation": 1,
-          "test": 4,
-          "total": 22
-        },
-        {
-          "name": "Restaurant",
-          "category": "Places",
-          "train": 15,
-          "validation": 1,
-          "test": 4,
-          "total": 20
-        },
-        {
-          "name": "School",
-          "category": "Places",
-          "train": 14,
-          "validation": 2,
-          "test": 4,
-          "total": 20
-        },
-        {
-          "name": "Store or Shop",
-          "category": "Places",
-          "train": 17,
-          "validation": 2,
-          "test": 3,
-          "total": 22
-        },
-        {
-          "name": "Street or Road",
-          "category": "Places",
-          "train": 15,
-          "validation": 1,
-          "test": 4,
-          "total": 20
-        },
-        {
-          "name": "Temple",
-          "category": "Places",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "Train Station",
-          "category": "Places",
-          "train": 16,
-          "validation": 2,
-          "test": 4,
-          "total": 22
-        },
-        {
-          "name": "University",
-          "category": "Places",
-          "train": 16,
-          "validation": 1,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "he",
-          "category": "Pronouns",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "I",
-          "category": "Pronouns",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "it",
-          "category": "Pronouns",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "she",
-          "category": "Pronouns",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "they",
-          "category": "Pronouns",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "we",
-          "category": "Pronouns",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "you",
-          "category": "Pronouns",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "you (plural)",
-          "category": "Pronouns",
-          "train": 15,
-          "validation": 2,
-          "test": 4,
-          "total": 21
-        },
-        {
-          "name": "Ex. Monsoon",
-          "category": "Seasons",
-          "train": 7,
-          "validation": 1,
-          "test": 3,
-          "total": 11
-        },
-        {
-          "name": "Fall",
-          "category": "Seasons",
-          "train": 8,
-          "validation": 0,
-          "test": 3,
-          "total": 11
-        },
-        {
-          "name": "Season",
-          "category": "Seasons",
-          "train": 8,
-          "validation": 1,
-          "test": 2,
-          "total": 11
-        },
-        {
-          "name": "Spring",
-          "category": "Seasons",
-          "train": 8,
-          "validation": 1,
-          "test": 2,
-          "total": 11
-        },
-        {
-          "name": "Summer",
-          "category": "Seasons",
-          "train": 8,
-          "validation": 0,
-          "test": 3,
-          "total": 11
-        },
-        {
-          "name": "Winter",
-          "category": "Seasons",
-          "train": 8,
-          "validation": 1,
-          "test": 2,
-          "total": 11
-        },
-        {
-          "name": "Attack",
-          "category": "Society",
-          "train": 8,
-          "validation": 0,
-          "test": 0,
-          "total": 8
-        },
-        {
-          "name": "Ball",
-          "category": "Society",
-          "train": 5,
-          "validation": 0,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Bill",
-          "category": "Society",
-          "train": 4,
-          "validation": 0,
-          "test": 3,
-          "total": 7
-        },
-        {
-          "name": "Death",
-          "category": "Society",
-          "train": 5,
-          "validation": 1,
-          "test": 1,
-          "total": 7
-        },
-        {
-          "name": "Election",
-          "category": "Society",
-          "train": 6,
-          "validation": 0,
-          "test": 1,
-          "total": 7
-        },
-        {
-          "name": "Energy",
-          "category": "Society",
-          "train": 5,
-          "validation": 0,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Exercise",
-          "category": "Society",
-          "train": 4,
-          "validation": 1,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "God",
-          "category": "Society",
-          "train": 4,
-          "validation": 1,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Gun",
-          "category": "Society",
-          "train": 6,
-          "validation": 0,
-          "test": 1,
-          "total": 7
-        },
-        {
-          "name": "Marriage",
-          "category": "Society",
-          "train": 5,
-          "validation": 1,
-          "test": 1,
-          "total": 7
-        },
-        {
-          "name": "Medicine",
-          "category": "Society",
-          "train": 5,
-          "validation": 0,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Money",
-          "category": "Society",
-          "train": 5,
-          "validation": 0,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Newspaper",
-          "category": "Society",
-          "train": 4,
-          "validation": 1,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Peace",
-          "category": "Society",
-          "train": 4,
-          "validation": 1,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Price",
-          "category": "Society",
-          "train": 6,
-          "validation": 0,
-          "test": 1,
-          "total": 7
-        },
-        {
-          "name": "Race (ethnicity)",
-          "category": "Society",
-          "train": 4,
-          "validation": 0,
-          "test": 3,
-          "total": 7
-        },
-        {
-          "name": "Religion",
-          "category": "Society",
-          "train": 5,
-          "validation": 1,
-          "test": 1,
-          "total": 7
-        },
-        {
-          "name": "Science",
-          "category": "Society",
-          "train": 4,
-          "validation": 0,
-          "test": 3,
-          "total": 7
-        },
-        {
-          "name": "Sign",
-          "category": "Society",
-          "train": 5,
-          "validation": 0,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Sport",
-          "category": "Society",
-          "train": 4,
-          "validation": 1,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Team",
-          "category": "Society",
-          "train": 5,
-          "validation": 0,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "Technology",
-          "category": "Society",
-          "train": 5,
-          "validation": 0,
-          "test": 2,
-          "total": 7
-        },
-        {
-          "name": "War",
-          "category": "Society",
-          "train": 4,
-          "validation": 1,
-          "test": 2,
-          "total": 7
-        }
-      ],
-      "category_count": 15,
-      "unique_labels": 262,
-      "class_groups": 262,
-      "split_class_coverage": {
-        "train": 262,
-        "validation": 202,
-        "test": 258
-      },
-      "split_label_coverage": {
-        "train": 262,
-        "validation": 202,
-        "test": 258
-      },
-      "clips_per_class_group": {
-        "min": 3,
-        "median": 11.0,
-        "max": 23
-      },
-      "manifest_audit": {
-        "train": {
-          "manifest": "include_train.txt",
-          "sha256": "1d3f0f21c10f8a6b4bf984aea5354f6841b53cc2b9a11a63fd459c1f527d8ea5",
-          "manifest_rows": 3127,
-          "manifest_unique_rows": 3127,
-          "actual_files": 2678,
-          "manifest_paths_missing_from_split": 456,
-          "actual_paths_unlisted_in_split_manifest": 7
-        },
-        "validation": {
-          "manifest": "include_val.txt",
-          "sha256": "75556b02dc9833e5c5a12a4e43294778eaa97f23fd72ba2114d26596ad694ea1",
-          "manifest_rows": 348,
-          "manifest_unique_rows": 348,
-          "actual_files": 292,
-          "manifest_paths_missing_from_split": 56,
-          "actual_paths_unlisted_in_split_manifest": 0
-        },
-        "test": {
-          "manifest": "include_test.txt",
-          "sha256": "48a6219b6b78c68e4831f03171ac377fcf980430bd7ea557106e111fe59d0e65",
-          "manifest_rows": 817,
-          "manifest_unique_rows": 817,
-          "actual_files": 709,
-          "manifest_paths_missing_from_split": 108,
-          "actual_paths_unlisted_in_split_manifest": 0
-        }
-      },
-      "audit": {
-        "unique_paths": 3679,
-        "unique_category_label_filename_identities": 3679,
-        "extra_subfolder_videos": 27,
-        "manifest_total_rows": 4292,
-        "manifest_missing_exact_paths": 620,
-        "actual_paths_unlisted_in_own_split_manifest": 7,
-        "actual_split_differs_from_any_listed_manifest_split": 7
-      },
-      "notes": [
-        "Counts measure the files currently present in this public mirror, not the original full INCLUDE dataset.",
-        "The source repository calls the validation folder val; the chart uses validation.",
-        "The three text manifests list 4,292 rows. 620 exact paths are absent from their listed split; seven videos stored in train are listed in the validation manifest. Charts count the 3,679 actual files.",
-        "Twenty-seven present videos live inside Extra subfolders and are included in these totals.",
-        "These public folder splits differ from the saved iPad assignments used by the demo; they do not establish signer independence."
-      ]
-    },
-    {
-      "id": "apple-vision",
-      "label": "Processed Apple Vision clips",
-      "repository": "spsarolkar/AI4Bharat-INCLUDE-keypoints",
-      "repository_url": "https://huggingface.co/datasets/spsarolkar/AI4Bharat-INCLUDE-keypoints",
-      "revision": "4b6668cee69e0c9812e8bf2fd92092d35ae47822",
-      "private": true,
-      "count_basis": "One unique video_id per current metadata/clips.jsonl row; exactly one category and one word label per clip.",
+      "keypoint_revision": "94e40d1d22ff9df69fe8382812959f0dd8d607e1",
+      "count_basis": "One row per aligned v2 video, joined by clip ID to the matching keypoints for category labels.",
       "total": 4257,
       "splits": {
-        "train": 3330,
-        "validation": 743,
-        "test": 184
+        "train": 3384,
+        "validation": 486,
+        "test": 387
       },
       "categories": [
         {
           "name": "Adjectives",
-          "train": 598,
-          "validation": 132,
-          "test": 58,
+          "train": 620,
+          "validation": 84,
+          "test": 84,
           "total": 788
         },
         {
           "name": "Animals",
-          "train": 128,
-          "validation": 32,
-          "test": 1,
+          "train": 129,
+          "validation": 16,
+          "test": 16,
           "total": 161
         },
         {
           "name": "Clothes",
           "train": 158,
-          "validation": 38,
-          "test": 2,
+          "validation": 20,
+          "test": 20,
           "total": 198
         },
         {
           "name": "Colours",
-          "train": 176,
-          "validation": 44,
-          "test": 2,
+          "train": 178,
+          "validation": 22,
+          "test": 22,
           "total": 222
         },
         {
           "name": "Days_and_Time",
           "train": 235,
-          "validation": 46,
-          "test": 17,
+          "validation": 42,
+          "test": 21,
           "total": 298
         },
         {
           "name": "Electronics",
-          "train": 110,
-          "validation": 21,
+          "train": 111,
+          "validation": 20,
           "test": 9,
           "total": 140
         },
         {
           "name": "Greetings",
-          "train": 145,
-          "validation": 36,
-          "test": 9,
+          "train": 154,
+          "validation": 18,
+          "test": 18,
           "total": 190
         },
         {
           "name": "Home",
-          "train": 298,
-          "validation": 55,
-          "test": 26,
+          "train": 301,
+          "validation": 50,
+          "test": 28,
           "total": 379
         },
         {
           "name": "Jobs",
           "train": 177,
-          "validation": 33,
-          "test": 15,
+          "validation": 32,
+          "test": 16,
           "total": 225
         },
         {
           "name": "Means_of_Transportation",
-          "train": 144,
-          "validation": 36,
-          "test": 6,
+          "train": 150,
+          "validation": 18,
+          "test": 18,
           "total": 186
         },
         {
           "name": "People",
-          "train": 407,
-          "validation": 101,
-          "test": 5,
+          "train": 409,
+          "validation": 52,
+          "test": 52,
           "total": 513
         },
         {
           "name": "Places",
           "train": 304,
-          "validation": 76,
-          "test": 0,
+          "validation": 38,
+          "test": 38,
           "total": 380
         },
         {
           "name": "Pronouns",
-          "train": 128,
-          "validation": 32,
-          "test": 8,
+          "train": 136,
+          "validation": 16,
+          "test": 16,
           "total": 168
         },
         {
           "name": "Seasons",
           "train": 67,
-          "validation": 13,
-          "test": 5,
+          "validation": 12,
+          "test": 6,
           "total": 85
         },
         {
           "name": "Society",
           "train": 255,
-          "validation": 48,
-          "test": 21,
+          "validation": 46,
+          "test": 23,
           "total": 324
         }
       ],
       "labels": [
+        {
+          "name": "Beautiful",
+          "category": "Adjectives",
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "Blind",
+          "category": "Adjectives",
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "Deaf",
+          "category": "Adjectives",
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "Mean",
+          "category": "Adjectives",
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "Nice",
+          "category": "Adjectives",
+          "train": 2,
+          "validation": 1,
+          "test": 1,
+          "total": 4
+        },
+        {
+          "name": "Ugly",
+          "category": "Adjectives",
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
         {
           "name": "alive",
           "category": "Adjectives",
@@ -2418,34 +184,18 @@
         {
           "name": "bad",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
-        },
-        {
-          "name": "Beautiful",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
         },
         {
           "name": "big large",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
-        },
-        {
-          "name": "Blind",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
         },
         {
           "name": "cheap",
@@ -2467,16 +217,16 @@
           "name": "cold",
           "category": "Adjectives",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "cool",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
@@ -2489,14 +239,6 @@
         },
         {
           "name": "dead",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
-          "name": "Deaf",
           "category": "Adjectives",
           "train": 6,
           "validation": 1,
@@ -2522,9 +264,9 @@
         {
           "name": "dry",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
@@ -2546,9 +288,9 @@
         {
           "name": "fast",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
@@ -2570,17 +312,17 @@
         {
           "name": "good",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "happy",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
@@ -2594,9 +336,9 @@
         {
           "name": "healthy",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
@@ -2618,9 +360,9 @@
         {
           "name": "hot",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
@@ -2634,9 +376,9 @@
         {
           "name": "long",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
@@ -2650,9 +392,9 @@
         {
           "name": "loud",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
@@ -2672,43 +414,27 @@
           "total": 8
         },
         {
-          "name": "Mean",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
           "name": "narrow",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "new",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
-        },
-        {
-          "name": "Nice",
-          "category": "Adjectives",
-          "train": 3,
-          "validation": 0,
-          "test": 1,
-          "total": 4
         },
         {
           "name": "old",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
@@ -2722,9 +448,9 @@
         {
           "name": "quiet",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
@@ -2754,33 +480,33 @@
         {
           "name": "short",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "sick",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "slow",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "small little",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
@@ -2802,9 +528,9 @@
         {
           "name": "tall",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
@@ -2818,8 +544,8 @@
         {
           "name": "thin",
           "category": "Adjectives",
-          "train": 3,
-          "validation": 0,
+          "train": 2,
+          "validation": 1,
           "test": 1,
           "total": 4
         },
@@ -2832,19 +558,11 @@
           "total": 8
         },
         {
-          "name": "Ugly",
-          "category": "Adjectives",
-          "train": 6,
-          "validation": 1,
-          "test": 1,
-          "total": 8
-        },
-        {
           "name": "warm",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
@@ -2858,257 +576,257 @@
         {
           "name": "wet",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "wide",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "young",
           "category": "Adjectives",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "Animal",
           "category": "Animals",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Bird",
           "category": "Animals",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Cat",
           "category": "Animals",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Cow",
           "category": "Animals",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "Dog",
           "category": "Animals",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Fish",
           "category": "Animals",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Horse",
           "category": "Animals",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Mouse",
           "category": "Animals",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Clothing",
           "category": "Clothes",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Dress",
           "category": "Clothes",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Hat",
           "category": "Clothes",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Pant",
           "category": "Clothes",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Pocket",
           "category": "Clothes",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Shirt",
           "category": "Clothes",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Shoes",
           "category": "Clothes",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Skirt",
           "category": "Clothes",
           "train": 15,
-          "validation": 3,
-          "test": 1,
+          "validation": 2,
+          "test": 2,
           "total": 19
         },
         {
           "name": "Suit",
           "category": "Clothes",
           "train": 15,
-          "validation": 3,
-          "test": 1,
+          "validation": 2,
+          "test": 2,
           "total": 19
         },
         {
           "name": "T-Shirt",
           "category": "Clothes",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Black",
           "category": "Colours",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Blue",
           "category": "Colours",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Brown",
           "category": "Colours",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "Colour",
           "category": "Colours",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Green",
           "category": "Colours",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Grey",
           "category": "Colours",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "Orange",
           "category": "Colours",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Pink",
           "category": "Colours",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Red",
           "category": "Colours",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "White",
           "category": "Colours",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Yellow",
           "category": "Colours",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
@@ -3179,8 +897,8 @@
           "name": "Night",
           "category": "Days_and_Time",
           "train": 12,
-          "validation": 3,
-          "test": 0,
+          "validation": 2,
+          "test": 1,
           "total": 15
         },
         {
@@ -3195,8 +913,8 @@
           "name": "Second",
           "category": "Days_and_Time",
           "train": 12,
-          "validation": 3,
-          "test": 0,
+          "validation": 2,
+          "test": 1,
           "total": 15
         },
         {
@@ -3219,8 +937,8 @@
           "name": "Time",
           "category": "Days_and_Time",
           "train": 12,
-          "validation": 3,
-          "test": 0,
+          "validation": 2,
+          "test": 1,
           "total": 15
         },
         {
@@ -3267,8 +985,8 @@
           "name": "Year",
           "category": "Days_and_Time",
           "train": 12,
-          "validation": 3,
-          "test": 0,
+          "validation": 2,
+          "test": 1,
           "total": 15
         },
         {
@@ -3298,9 +1016,9 @@
         {
           "name": "Clock",
           "category": "Electronics",
-          "train": 10,
+          "train": 11,
           "validation": 2,
-          "test": 1,
+          "test": 0,
           "total": 13
         },
         {
@@ -3315,8 +1033,8 @@
           "name": "Fan",
           "category": "Electronics",
           "train": 12,
-          "validation": 3,
-          "test": 0,
+          "validation": 2,
+          "test": 1,
           "total": 15
         },
         {
@@ -3362,73 +1080,73 @@
         {
           "name": "Alright",
           "category": "Greetings",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
-          "total": 21
-        },
-        {
-          "name": "Good afternoon",
-          "category": "Greetings",
           "train": 17,
-          "validation": 4,
-          "test": 1,
-          "total": 22
-        },
-        {
-          "name": "Good evening",
-          "category": "Greetings",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "Good Morning",
           "category": "Greetings",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "Good afternoon",
+          "category": "Greetings",
+          "train": 18,
+          "validation": 2,
+          "test": 2,
+          "total": 22
+        },
+        {
+          "name": "Good evening",
+          "category": "Greetings",
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "Good night",
           "category": "Greetings",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "Hello",
           "category": "Greetings",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "How are you",
           "category": "Greetings",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "Pleased",
           "category": "Greetings",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "Thank you",
           "category": "Greetings",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
@@ -3499,8 +1217,8 @@
           "name": "Clock",
           "category": "Home",
           "train": 0,
-          "validation": 1,
-          "test": 0,
+          "validation": 0,
+          "test": 1,
           "total": 1
         },
         {
@@ -3522,8 +1240,8 @@
         {
           "name": "Gift",
           "category": "Home",
-          "train": 10,
-          "validation": 2,
+          "train": 11,
+          "validation": 1,
           "test": 1,
           "total": 13
         },
@@ -3538,8 +1256,8 @@
         {
           "name": "Kitchen",
           "category": "Home",
-          "train": 10,
-          "validation": 2,
+          "train": 11,
+          "validation": 1,
           "test": 1,
           "total": 13
         },
@@ -3571,8 +1289,8 @@
           "name": "Paint",
           "category": "Home",
           "train": 12,
-          "validation": 3,
-          "test": 0,
+          "validation": 2,
+          "test": 1,
           "total": 15
         },
         {
@@ -3610,16 +1328,16 @@
         {
           "name": "Ring",
           "category": "Home",
-          "train": 10,
-          "validation": 2,
+          "train": 11,
+          "validation": 1,
           "test": 1,
           "total": 13
         },
         {
           "name": "Soap",
           "category": "Home",
-          "train": 10,
-          "validation": 2,
+          "train": 11,
+          "validation": 1,
           "test": 1,
           "total": 13
         },
@@ -3642,8 +1360,8 @@
         {
           "name": "Tool",
           "category": "Home",
-          "train": 12,
-          "validation": 1,
+          "train": 11,
+          "validation": 2,
           "test": 1,
           "total": 14
         },
@@ -3731,8 +1449,8 @@
           "name": "Priest",
           "category": "Jobs",
           "train": 12,
-          "validation": 3,
-          "test": 0,
+          "validation": 2,
+          "test": 1,
           "total": 15
         },
         {
@@ -3787,496 +1505,496 @@
           "name": "Bicycle",
           "category": "Means_of_Transportation",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Boat",
           "category": "Means_of_Transportation",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "Bus",
           "category": "Means_of_Transportation",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Car",
           "category": "Means_of_Transportation",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Plane",
           "category": "Means_of_Transportation",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "Train",
           "category": "Means_of_Transportation",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
-          "total": 21
-        },
-        {
-          "name": "train ticket",
-          "category": "Means_of_Transportation",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "Transportation",
           "category": "Means_of_Transportation",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "Truck",
           "category": "Means_of_Transportation",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "train ticket",
+          "category": "Means_of_Transportation",
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "Adult",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Baby",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Boy",
           "category": "People",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "Brother",
           "category": "People",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "Child",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Crowd",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Daughter",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Family",
           "category": "People",
           "train": 13,
-          "validation": 3,
-          "test": 1,
+          "validation": 2,
+          "test": 2,
           "total": 17
         },
         {
           "name": "Father",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Friend",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Girl",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Grandfather",
           "category": "People",
           "train": 13,
-          "validation": 3,
-          "test": 1,
+          "validation": 2,
+          "test": 2,
           "total": 17
         },
         {
           "name": "Grandmother",
           "category": "People",
           "train": 13,
-          "validation": 3,
-          "test": 1,
+          "validation": 2,
+          "test": 2,
           "total": 17
         },
         {
           "name": "Husband",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "King",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Man",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Mother",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Neighbour",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Parent",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Player",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "President",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Queen",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Sister",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Son",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Wife",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Woman",
           "category": "People",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Bank",
           "category": "Places",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "City",
           "category": "Places",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Court",
           "category": "Places",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Ground",
           "category": "Places",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Hospital",
           "category": "Places",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "House",
           "category": "Places",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "India",
           "category": "Places",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Library",
           "category": "Places",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Location",
           "category": "Places",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Market",
           "category": "Places",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Office",
           "category": "Places",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Park",
           "category": "Places",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Restaurant",
           "category": "Places",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "School",
           "category": "Places",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Store or Shop",
           "category": "Places",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Street or Road",
           "category": "Places",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Temple",
           "category": "Places",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "Train Station",
           "category": "Places",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "University",
           "category": "Places",
           "train": 16,
-          "validation": 4,
-          "test": 0,
+          "validation": 2,
+          "test": 2,
           "total": 20
-        },
-        {
-          "name": "he",
-          "category": "Pronouns",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
-          "total": 21
         },
         {
           "name": "I",
           "category": "Pronouns",
-          "train": 17,
-          "validation": 4,
-          "test": 1,
+          "train": 18,
+          "validation": 2,
+          "test": 2,
           "total": 22
+        },
+        {
+          "name": "he",
+          "category": "Pronouns",
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
         },
         {
           "name": "it",
           "category": "Pronouns",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "she",
           "category": "Pronouns",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "they",
           "category": "Pronouns",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "we",
           "category": "Pronouns",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
           "name": "you",
           "category": "Pronouns",
-          "train": 15,
-          "validation": 4,
-          "test": 1,
+          "train": 16,
+          "validation": 2,
+          "test": 2,
           "total": 20
         },
         {
           "name": "you (plural)",
           "category": "Pronouns",
-          "train": 16,
-          "validation": 4,
-          "test": 1,
+          "train": 17,
+          "validation": 2,
+          "test": 2,
           "total": 21
         },
         {
@@ -4291,8 +2009,8 @@
           "name": "Fall",
           "category": "Seasons",
           "train": 12,
-          "validation": 3,
-          "test": 0,
+          "validation": 2,
+          "test": 1,
           "total": 15
         },
         {
@@ -4331,16 +2049,16 @@
           "name": "Attack",
           "category": "Society",
           "train": 12,
-          "validation": 3,
-          "test": 0,
+          "validation": 2,
+          "test": 1,
           "total": 15
         },
         {
           "name": "Ball",
           "category": "Society",
           "train": 12,
-          "validation": 3,
-          "test": 0,
+          "validation": 2,
+          "test": 1,
           "total": 15
         },
         {
@@ -4512,49 +2230,2639 @@
           "total": 14
         }
       ],
-      "category_count": 15,
+      "signs": [
+        {
+          "name": "Actor",
+          "categories": [
+            "Jobs"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Adult",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Afternoon",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Alright",
+          "categories": [
+            "Greetings"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "Animal",
+          "categories": [
+            "Animals"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Artist",
+          "categories": [
+            "Jobs"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Attack",
+          "categories": [
+            "Society"
+          ],
+          "train": 12,
+          "validation": 2,
+          "test": 1,
+          "total": 15
+        },
+        {
+          "name": "Author",
+          "categories": [
+            "Jobs"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Baby",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Bag",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Ball",
+          "categories": [
+            "Society"
+          ],
+          "train": 12,
+          "validation": 2,
+          "test": 1,
+          "total": 15
+        },
+        {
+          "name": "Bank",
+          "categories": [
+            "Places"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Bathroom",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Beautiful",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "Bed",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Bedroom",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Bicycle",
+          "categories": [
+            "Means_of_Transportation"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Bill",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Bird",
+          "categories": [
+            "Animals"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Black",
+          "categories": [
+            "Colours"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Blind",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "Blue",
+          "categories": [
+            "Colours"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Boat",
+          "categories": [
+            "Means_of_Transportation"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "Book",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Box",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Boy",
+          "categories": [
+            "People"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "Brother",
+          "categories": [
+            "People"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "Brown",
+          "categories": [
+            "Colours"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "Bus",
+          "categories": [
+            "Means_of_Transportation"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Camera",
+          "categories": [
+            "Electronics"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Car",
+          "categories": [
+            "Means_of_Transportation"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Card",
+          "categories": [
+            "Home"
+          ],
+          "train": 12,
+          "validation": 2,
+          "test": 1,
+          "total": 15
+        },
+        {
+          "name": "Cat",
+          "categories": [
+            "Animals"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Cell phone",
+          "categories": [
+            "Electronics"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Chair",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Child",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "City",
+          "categories": [
+            "Places"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Clock",
+          "categories": [
+            "Electronics",
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Clothing",
+          "categories": [
+            "Clothes"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Colour",
+          "categories": [
+            "Colours"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Computer",
+          "categories": [
+            "Electronics"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Court",
+          "categories": [
+            "Places"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Cow",
+          "categories": [
+            "Animals"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "Crowd",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Daughter",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Deaf",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "Death",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Doctor",
+          "categories": [
+            "Jobs"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Dog",
+          "categories": [
+            "Animals"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Door",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Dream",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Dress",
+          "categories": [
+            "Clothes"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Election",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Energy",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Evening",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Ex. Monsoon",
+          "categories": [
+            "Seasons"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Exercise",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Fall",
+          "categories": [
+            "Seasons"
+          ],
+          "train": 12,
+          "validation": 2,
+          "test": 1,
+          "total": 15
+        },
+        {
+          "name": "Family",
+          "categories": [
+            "People"
+          ],
+          "train": 13,
+          "validation": 2,
+          "test": 2,
+          "total": 17
+        },
+        {
+          "name": "Fan",
+          "categories": [
+            "Electronics"
+          ],
+          "train": 12,
+          "validation": 2,
+          "test": 1,
+          "total": 15
+        },
+        {
+          "name": "Father",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Fish",
+          "categories": [
+            "Animals"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Friday",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Friend",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Gift",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 1,
+          "test": 1,
+          "total": 13
+        },
+        {
+          "name": "Girl",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "God",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Good Morning",
+          "categories": [
+            "Greetings"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "Good afternoon",
+          "categories": [
+            "Greetings"
+          ],
+          "train": 18,
+          "validation": 2,
+          "test": 2,
+          "total": 22
+        },
+        {
+          "name": "Good evening",
+          "categories": [
+            "Greetings"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "Good night",
+          "categories": [
+            "Greetings"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "Grandfather",
+          "categories": [
+            "People"
+          ],
+          "train": 13,
+          "validation": 2,
+          "test": 2,
+          "total": 17
+        },
+        {
+          "name": "Grandmother",
+          "categories": [
+            "People"
+          ],
+          "train": 13,
+          "validation": 2,
+          "test": 2,
+          "total": 17
+        },
+        {
+          "name": "Green",
+          "categories": [
+            "Colours"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Grey",
+          "categories": [
+            "Colours"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "Ground",
+          "categories": [
+            "Places"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Gun",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Hat",
+          "categories": [
+            "Clothes"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Hello",
+          "categories": [
+            "Greetings"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "Horse",
+          "categories": [
+            "Animals"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Hospital",
+          "categories": [
+            "Places"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Hour",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "House",
+          "categories": [
+            "Places"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "How are you",
+          "categories": [
+            "Greetings"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "Husband",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "I",
+          "categories": [
+            "Pronouns"
+          ],
+          "train": 18,
+          "validation": 2,
+          "test": 2,
+          "total": 22
+        },
+        {
+          "name": "India",
+          "categories": [
+            "Places"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Job",
+          "categories": [
+            "Jobs"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Key",
+          "categories": [
+            "Home"
+          ],
+          "train": 12,
+          "validation": 2,
+          "test": 1,
+          "total": 15
+        },
+        {
+          "name": "King",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Kitchen",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 1,
+          "test": 1,
+          "total": 13
+        },
+        {
+          "name": "Lamp",
+          "categories": [
+            "Electronics"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Laptop",
+          "categories": [
+            "Electronics"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Lawyer",
+          "categories": [
+            "Jobs"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Letter",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Library",
+          "categories": [
+            "Places"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Location",
+          "categories": [
+            "Places"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Lock",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Man",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Manager",
+          "categories": [
+            "Jobs"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Market",
+          "categories": [
+            "Places"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Marriage",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Mean",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "Medicine",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Minute",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Monday",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Money",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Month",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Morning",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Mother",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Mouse",
+          "categories": [
+            "Animals"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Neighbour",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Newspaper",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Nice",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 2,
+          "validation": 1,
+          "test": 1,
+          "total": 4
+        },
+        {
+          "name": "Night",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 12,
+          "validation": 2,
+          "test": 1,
+          "total": 15
+        },
+        {
+          "name": "Office",
+          "categories": [
+            "Places"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Orange",
+          "categories": [
+            "Colours"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Page",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Paint",
+          "categories": [
+            "Home"
+          ],
+          "train": 12,
+          "validation": 2,
+          "test": 1,
+          "total": 15
+        },
+        {
+          "name": "Pant",
+          "categories": [
+            "Clothes"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Paper",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Parent",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Park",
+          "categories": [
+            "Places"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Patient",
+          "categories": [
+            "Jobs"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Peace",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Pen",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Pencil",
+          "categories": [
+            "Home"
+          ],
+          "train": 12,
+          "validation": 2,
+          "test": 1,
+          "total": 15
+        },
+        {
+          "name": "Photograph",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Pink",
+          "categories": [
+            "Colours"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Plane",
+          "categories": [
+            "Means_of_Transportation"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "Player",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Pleased",
+          "categories": [
+            "Greetings"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "Pocket",
+          "categories": [
+            "Clothes"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Police",
+          "categories": [
+            "Jobs"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "President",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Price",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Priest",
+          "categories": [
+            "Jobs"
+          ],
+          "train": 12,
+          "validation": 2,
+          "test": 1,
+          "total": 15
+        },
+        {
+          "name": "Queen",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Race (ethnicity)",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Radio",
+          "categories": [
+            "Electronics"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Red",
+          "categories": [
+            "Colours"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Religion",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Reporter",
+          "categories": [
+            "Jobs"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Restaurant",
+          "categories": [
+            "Places"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Ring",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 1,
+          "test": 1,
+          "total": 13
+        },
+        {
+          "name": "Saturday",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "School",
+          "categories": [
+            "Places"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Science",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Screen",
+          "categories": [
+            "Electronics"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Season",
+          "categories": [
+            "Seasons"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Second",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 12,
+          "validation": 2,
+          "test": 1,
+          "total": 15
+        },
+        {
+          "name": "Secretary",
+          "categories": [
+            "Jobs"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Shirt",
+          "categories": [
+            "Clothes"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Shoes",
+          "categories": [
+            "Clothes"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Sign",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Sister",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Skirt",
+          "categories": [
+            "Clothes"
+          ],
+          "train": 15,
+          "validation": 2,
+          "test": 2,
+          "total": 19
+        },
+        {
+          "name": "Soap",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 1,
+          "test": 1,
+          "total": 13
+        },
+        {
+          "name": "Soldier",
+          "categories": [
+            "Jobs"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Son",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Sport",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Spring",
+          "categories": [
+            "Seasons"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Store or Shop",
+          "categories": [
+            "Places"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Street or Road",
+          "categories": [
+            "Places"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Student",
+          "categories": [
+            "Jobs"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Suit",
+          "categories": [
+            "Clothes"
+          ],
+          "train": 15,
+          "validation": 2,
+          "test": 2,
+          "total": 19
+        },
+        {
+          "name": "Summer",
+          "categories": [
+            "Seasons"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Sunday",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "T-Shirt",
+          "categories": [
+            "Clothes"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Table",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Teacher",
+          "categories": [
+            "Jobs"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Team",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Technology",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Telephone",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Television",
+          "categories": [
+            "Electronics"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Temple",
+          "categories": [
+            "Places"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Thank you",
+          "categories": [
+            "Greetings"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "Thursday",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Time",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 12,
+          "validation": 2,
+          "test": 1,
+          "total": 15
+        },
+        {
+          "name": "Today",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Tomorrow",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Tool",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Train",
+          "categories": [
+            "Means_of_Transportation"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "Train Station",
+          "categories": [
+            "Places"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Transportation",
+          "categories": [
+            "Means_of_Transportation"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "Truck",
+          "categories": [
+            "Means_of_Transportation"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "Tuesday",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Ugly",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "University",
+          "categories": [
+            "Places"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Waiter",
+          "categories": [
+            "Jobs"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "War",
+          "categories": [
+            "Society"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Wednesday",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Week",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "White",
+          "categories": [
+            "Colours"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Wife",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Window",
+          "categories": [
+            "Home"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Winter",
+          "categories": [
+            "Seasons"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "Woman",
+          "categories": [
+            "People"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Year",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 12,
+          "validation": 2,
+          "test": 1,
+          "total": 15
+        },
+        {
+          "name": "Yellow",
+          "categories": [
+            "Colours"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "Yesterday",
+          "categories": [
+            "Days_and_Time"
+          ],
+          "train": 11,
+          "validation": 2,
+          "test": 1,
+          "total": 14
+        },
+        {
+          "name": "alive",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "bad",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "big large",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "cheap",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "clean",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "cold",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "cool",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "curved",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "dead",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "deep",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "dirty",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "dry",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "expensive",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "famous",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "fast",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "female",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "flat",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "good",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "happy",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "hard",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "he",
+          "categories": [
+            "Pronouns"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "healthy",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "heavy",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "high",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "hot",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "it",
+          "categories": [
+            "Pronouns"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "light",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "long",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "loose",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "loud",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "low",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "male",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "narrow",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "new",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "old",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "poor",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "quiet",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "rich",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "sad",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "shallow",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "she",
+          "categories": [
+            "Pronouns"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "short",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "sick",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "slow",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "small little",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "soft",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "strong",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "tall",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "they",
+          "categories": [
+            "Pronouns"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "thick",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "thin",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 2,
+          "validation": 1,
+          "test": 1,
+          "total": 4
+        },
+        {
+          "name": "tight",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "train ticket",
+          "categories": [
+            "Means_of_Transportation"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "warm",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "we",
+          "categories": [
+            "Pronouns"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "weak",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 6,
+          "validation": 1,
+          "test": 1,
+          "total": 8
+        },
+        {
+          "name": "wet",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "wide",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "you",
+          "categories": [
+            "Pronouns"
+          ],
+          "train": 16,
+          "validation": 2,
+          "test": 2,
+          "total": 20
+        },
+        {
+          "name": "you (plural)",
+          "categories": [
+            "Pronouns"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        },
+        {
+          "name": "young",
+          "categories": [
+            "Adjectives"
+          ],
+          "train": 17,
+          "validation": 2,
+          "test": 2,
+          "total": 21
+        }
+      ],
       "unique_labels": 262,
-      "class_groups": 263,
-      "split_class_coverage": {
-        "train": 262,
-        "validation": 261,
-        "test": 184
-      },
       "split_label_coverage": {
         "train": 262,
-        "validation": 260,
-        "test": 184
-      },
-      "clips_per_class_group": {
-        "min": 1,
-        "median": 15,
-        "max": 22
-      },
-      "frames": 273515,
-      "total_duration_seconds": 10940.6,
-      "source_metadata": "metadata/clips.jsonl",
-      "source_metadata_sha256": "8040a8df8241cdb095590d24bed359cb515cf5fef4341d8850cb1498ad0ac49a",
-      "audit": {
-        "unique_video_ids": 4257,
-        "unique_source_paths": 4257,
-        "every_clip_has_one_word_and_one_category": true,
-        "rows_with_applied_label_correction": 9,
-        "label_corrections_by_split": {
-          "validation": 1,
-          "train": 8
-        },
-        "compared_to_demo_pinned_revision": "8a17a31ce8803cc1d5689f6249d088236d684943",
-        "only_changed_metadata_field": "labels",
-        "clip_id_membership_frame_counts_and_split_assignments_unchanged": true,
-        "applied_correction_rows_match_overlay_exactly": true
+        "validation": 262,
+        "test": 262
       },
       "notes": [
-        "These are the current saved iPad splits, not the public video repository folder splits or a signer-disjoint evaluation.",
-        "There are 262 distinct word labels and 263 category-plus-word groups. The stored Tool-to-Clock correction retains the Home category, so Clock appears under both Home and Electronics.",
-        "The current stored metadata applies nine documented label corrections (eight train, one validation). The chart reads those stored labels; the corrections were not independently re-reviewed for this page update.",
-        "Compared with the demo-pinned base revision, all 4,257 clip IDs, frame counts and split assignments are unchanged; only those nine word labels differ.",
-        "The model demo intentionally retains its pinned base labels. This chart does not rewrite its frozen 720-clip evaluation.",
-        "Only aggregate counts are published here. Private clips, keypoints and model credentials remain on the server."
+        "All video IDs, corrected sign labels and split assignments match the frozen v2 keypoint manifest.",
+        "Category counts use each clip’s dataset category. Clock has clips in Electronics and Home, with its test clip in Home.",
+        "Coverage counts distinct signs across all categories. The v2 release uses clip-level splits."
       ]
     }
   ],
@@ -4588,67 +4896,5 @@
       "Epoch 102 was selected on this validation panel. Signer independence and held-out test performance are not established.",
       "Nine later metadata label corrections are not applied to this pinned evaluation cohort."
     ]
-  },
-  "cross_source_coverage": {
-    "match_basis": "Source category folder, cleaned source class folder, and filename; independent of corrected stored word label.",
-    "matched_unique_source_clips": 3652,
-    "public_video_only": 27,
-    "keypoint_clip_only": 605,
-    "saved_ipad_split_to_public_folder_split": [
-      {
-        "saved_ipad_split": "test",
-        "public_folder_split": "test",
-        "clips": 30
-      },
-      {
-        "saved_ipad_split": "test",
-        "public_folder_split": "train",
-        "clips": 117
-      },
-      {
-        "saved_ipad_split": "test",
-        "public_folder_split": "validation",
-        "clips": 12
-      },
-      {
-        "saved_ipad_split": "train",
-        "public_folder_split": "test",
-        "clips": 526
-      },
-      {
-        "saved_ipad_split": "train",
-        "public_folder_split": "train",
-        "clips": 2085
-      },
-      {
-        "saved_ipad_split": "train",
-        "public_folder_split": "validation",
-        "clips": 230
-      },
-      {
-        "saved_ipad_split": "validation",
-        "public_folder_split": "test",
-        "clips": 153
-      },
-      {
-        "saved_ipad_split": "validation",
-        "public_folder_split": "train",
-        "clips": 449
-      },
-      {
-        "saved_ipad_split": "validation",
-        "public_folder_split": "validation",
-        "clips": 50
-      }
-    ],
-    "matching_does_not_prove_equal_video_bytes": true
-  },
-  "verification": {
-    "no_video_bytes_downloaded": true,
-    "no_frame_shards_downloaded": true,
-    "no_training_or_full_cohort_evaluation": true,
-    "both_category_and_label_sums_equal_dataset_and_split_totals": true,
-    "private_metadata_records_excluded_from_this_aggregate_file": true
-  },
-  "receipt_finalized_at": "2026-11-27T06:10:21Z"
+  }
 }

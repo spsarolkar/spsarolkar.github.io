@@ -27,6 +27,7 @@ The current hosted demo compares rolling and causal Transformers on isolated sig
 </section>
 
 <section id="model-and-data" aria-labelledby="model-data-title">
+  {% assign aligned_release = site.data.sign_language_dataset.datasets | first %}
   <h2 id="model-data-title">The model and data behind the demo</h2>
   <p>The Space is configured for the latest uploaded inference artifacts in my <strong>isl-transformer-mlx</strong> repository: the rolling Transformer at epoch 31 and the causal Transformer at epoch 102. Both use the same saved Apple Vision validation inputs. The Space reports final accuracy and wrong early confirmations separately.</p>
   <ol class="sign-model-flow" aria-label="Current Transformer demo pipeline">
@@ -36,7 +37,8 @@ The current hosted demo compares rolling and causal Transformers on isolated sig
     <li><strong>Inspect predictions</strong>Compare the expected sign, final guess and early confirmations.</li>
   </ol>
   <div class="sign-data-links">
-    <a href="https://huggingface.co/datasets/spsarolkar/AI4Bharat-INCLUDE-dataset">Browse public video dataset</a>
+    <a href="https://huggingface.co/datasets/{{ aligned_release.repository | escape }}/tree/{{ aligned_release.revision | escape }}">Browse aligned v2 video dataset</a>
+    <a href="#dataset-analysis">Explore v2 clip counts</a>
     <a href="https://huggingface.co/datasets/ai4bharat/INCLUDE">Original INCLUDE dataset and attribution</a>
     <a href="https://huggingface.co/spaces/spsarolkar/SignLanguageTranslate/tree/main">Demo source and evaluation contract</a>
   </div>
@@ -75,7 +77,7 @@ We preprocessed each frame’s keypoints into a flat vector and stacked them acr
 
 ## Historical dataset analysis
 
-These figures are retained from the original capstone notes. The summary and category table report different video totals; they are not the size of the current Transformer validation panel.
+These figures are retained from the original capstone notes. The summary and category table report different historical video totals. See [INCLUDE v2 dataset counts](#dataset-analysis) for the current split and coverage.
 
 | Characteristic       |  Details  |
 | :------------------- | :-------: |

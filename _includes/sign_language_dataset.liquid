@@ -1,18 +1,16 @@
 {% assign counts_snapshot = site.data.sign_language_dataset %}
-{% assign counts_default = counts_snapshot.datasets | where: 'id', 'apple-vision' | first %}
+{% assign counts_default = counts_snapshot.datasets | first %}
 {% assign count_splits = 'train,validation,test' | split: ',' %}
 {% assign count_categories = counts_default.categories | sort: 'total' | reverse %}
-{% assign count_labels = counts_default.labels | sort: 'total' | reverse %}
+{% assign count_labels = counts_default.signs | sort: 'total' | reverse %}
 {% assign category_maximum = 1 %}
 {% assign label_maximum = 1 %}
 {% for row in count_categories %}{% for split in count_splits %}{% if row[split] > category_maximum %}{% assign category_maximum = row[split] %}{% endif %}{% endfor %}{% endfor %}
 {% for row in count_labels %}{% for split in count_splits %}{% if row[split] > label_maximum %}{% assign label_maximum = row[split] %}{% endif %}{% endfor %}{% endfor %}
 <section id="dataset-analysis" class="sign-dataset" data-sign-counts aria-labelledby="dataset-analysis-title">
-  <h2 id="dataset-analysis-title">Current dataset counts</h2>
-  <p>Explore the current Apple Vision clip records or the actual video files in the public Hugging Face mirror. Each view uses its own recorded train, validation and test assignments.</p>
-  <p class="count-chart-note">Snapshot verified <time datetime="{{ counts_snapshot.checked_on | escape }}">{{ counts_snapshot.checked_on | escape }}</time>. Charts count the records and files present at the source revisions below.</p>
-  <div class="count-source-control"><label for="count-source">Collection</label><select id="count-source" data-sign-counts-source disabled>{% for dataset in counts_snapshot.datasets %}<option value="{{ dataset.id | escape }}"{% if dataset.id == counts_default.id %} selected{% endif %}>{{ dataset.label | escape }}</option>{% endfor %}</select></div>
-  <h3 data-sign-counts-title>{{ counts_default.label | escape }}</h3>
+  <h2 id="dataset-analysis-title">INCLUDE v2 dataset counts</h2>
+  <p>The public videos and Apple Vision keypoints share the same clip IDs, corrected signs and train, validation and test assignments.</p>
+  <p class="count-chart-note">Snapshot verified <time datetime="{{ counts_snapshot.checked_on | escape }}">{{ counts_snapshot.checked_on | escape }}</time>.</p>
   <dl class="count-metrics"><div><dt>Clips</dt><dd data-sign-counts-total>{{ counts_default.total }}</dd></div><div><dt>Distinct sign labels</dt><dd data-sign-counts-label-count>{{ counts_default.unique_labels }}</dd></div><div><dt>Categories</dt><dd data-sign-counts-category-count>{{ counts_default.categories.size }}</dd></div></dl>
   <h3>Split coverage</h3>
   <ul class="count-split-overview" data-sign-counts-splits>
@@ -24,18 +22,18 @@
   <p class="count-chart-note">Bar lengths share one scale across categories; numbers show exact clip counts.</p>
   <ul class="count-chart" data-sign-counts-categories>{% for row in count_categories %}{% include sign_language_count_row.liquid row=row maximum=category_maximum %}{% endfor %}</ul>
   <h3>Clips by sign</h3>
-  <p class="count-chart-note">Search by sign or category. A sign appearing in two categories has a separate row for each. Zero means no clips in that split. The scale stays fixed as you filter.</p>
+  <p class="count-chart-note">All categories combines clips by sign. Select a category to see just its clips. The scale stays fixed as you filter.</p>
   <div class="count-explorer-controls">
     <div><label for="count-search">Find a sign</label><input id="count-search" data-sign-counts-search type="search" placeholder="For example, Woman or Clock" disabled></div>
     <div><label for="count-category">Category</label><select id="count-category" data-sign-counts-category disabled><option value="">All categories</option>{% assign category_names = counts_default.categories | sort: 'name' %}{% for row in category_names %}<option value="{{ row.name | escape }}">{{ row.name | escape }}</option>{% endfor %}</select></div>
     <div><label for="count-sort">Sort signs</label><select id="count-sort" data-sign-counts-sort disabled><option value="most">Most clips</option><option value="fewest">Fewest clips</option><option value="name">A–Z</option><option value="train">Fewest training clips</option></select></div>
   </div>
-  <p class="count-chart-note" data-sign-counts-results role="status" aria-live="polite">Showing 20 of {{ count_labels.size }} sign/category rows.</p>
+  <p class="count-chart-note" data-sign-counts-results role="status" aria-live="polite">Showing {{ count_labels.size | at_most: 20 }} of {{ count_labels.size }} signs.</p>
   <ul class="count-chart" data-sign-counts-labels>{% for row in count_labels limit:20 %}{% include sign_language_count_row.liquid row=row maximum=label_maximum %}{% endfor %}</ul>
   <button class="count-more" type="button" data-sign-counts-more disabled>Show all signs</button>
-  <noscript><p>The charts above show the current processed-clip snapshot. Enable JavaScript for source switching, search and the complete sign explorer.</p></noscript>
-  <details class="count-provenance"><summary>Sources and count checks</summary><p>Verified {{ counts_snapshot.checked_on | escape }}. Source: <a data-sign-counts-repository href="https://huggingface.co/datasets/{{ counts_default.repository | escape }}/tree/{{ counts_default.revision | escape }}">{{ counts_default.repository | escape }}</a>. Revision <code data-sign-counts-revision>{{ counts_default.revision | escape }}</code>.</p><ul data-sign-counts-notes>{% for note in counts_default.notes %}<li>{{ note | escape }}</li>{% endfor %}</ul></details>
-  <p class="count-chart-note">The embedded demo uses {{ counts_snapshot.demo.total }} frozen validation clips across {{ counts_snapshot.demo.represented_labels }} signs, from a {{ counts_snapshot.demo.output_vocabulary_size }}-label model vocabulary. That subset is separate from both complete collections above; the demo’s older label snapshot is retained for reproducibility.</p>
+  <noscript><p>Enable JavaScript to search, filter and see the complete sign explorer.</p></noscript>
+  <details class="count-provenance"><summary>Sources and count checks</summary><p><a data-sign-counts-repository href="https://huggingface.co/datasets/{{ counts_default.repository | escape }}/tree/{{ counts_default.revision | escape }}">Public video release</a> <code data-sign-counts-revision>{{ counts_default.revision | escape }}</code>. Aligned keypoint revision <code>{{ counts_default.keypoint_revision | escape }}</code>.</p><ul>{% for note in counts_default.notes %}<li>{{ note | escape }}</li>{% endfor %}</ul></details>
+  <p class="count-chart-note">The embedded demo uses its original evaluation snapshot of {{ counts_snapshot.demo.total }} validation clips across {{ counts_snapshot.demo.represented_labels }} signs. The v2 release above is the dataset for future comparisons.</p>
   <script type="application/json" data-sign-counts-json>{{ counts_snapshot | jsonify | replace: '<', '\u003c' }}</script>
 </section>
 <script defer src="{{ '/assets/js/sign-language-counts.js' | relative_url | bust_file_cache }}"></script>

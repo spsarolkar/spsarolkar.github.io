@@ -1,5 +1,5 @@
 <li class="count-chart-row">
-  <div class="count-chart-label"><strong>{{ include.row.name | escape }}</strong>{% if include.row.category %}<small>{{ include.row.category | escape }}</small>{% endif %}</div>
+  <div class="count-chart-label"><strong>{{ include.row.name | escape }}</strong>{% if include.row.categories %}<small>{{ include.row.categories | join: ' · ' | escape }}</small>{% endif %}</div>
   <div class="count-chart-bars">
     {% assign count_splits = 'train,validation,test' | split: ',' %}
     {% for count_split in count_splits %}

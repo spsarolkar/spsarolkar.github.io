@@ -11,18 +11,24 @@ function snapshot() {
   ];
   return {
     checked_on: '2026-11-27',
-    datasets: ['apple-vision', 'public-videos'].map((id) => ({
-      id, label: id === 'apple-vision' ? 'Apple Vision keypoints' : 'Public video mirror',
-      repository: id === 'apple-vision' ? 'spsarolkar/AI4Bharat-INCLUDE-keypoints' : 'spsarolkar/AI4Bharat-INCLUDE-dataset',
+    datasets: [{
+      id: 'public-videos', label: 'Aligned INCLUDE v2 videos',
+      repository: 'spsarolkar/AI4Bharat-INCLUDE-dataset',
       revision: 'a'.repeat(40), total: 14, unique_labels: 3,
       splits: { train: 10, validation: 2, test: 2 },
+      split_label_coverage: { train: 3, validation: 2, test: 2 },
       categories: [
         { name: 'Time', train: 4, validation: 1, test: 1, total: 6 },
         { name: 'Objects', train: 2, validation: 0, test: 0, total: 2 },
         { name: 'Greetings', train: 4, validation: 1, test: 1, total: 6 },
       ],
       labels: rows.map((row) => ({ ...row })), notes: ['Metadata counts; not an accuracy measurement.'],
-    })),
+      signs: [
+        { name: 'Clock', categories: ['Objects', 'Time'], train: 6, validation: 1, test: 1, total: 8 },
+        { name: 'Hello', categories: ['Greetings'], train: 3, validation: 1, test: 0, total: 4 },
+        { name: 'Thanks', categories: ['Greetings'], train: 1, validation: 0, test: 1, total: 2 },
+      ],
+    }],
     demo: {},
   };
 }
@@ -51,9 +57,14 @@ test('rejects incomplete, duplicate, malformed or unreconciled count snapshots',
     (d) => { d.datasets[0].repository = 'https://evil.example/datasets/spsarolkar/test'; },
     (d) => { d.datasets[0].repository = 'https://huggingface.co/datasets/other/test'; },
     (d) => { d.datasets[0].id = 'other'; },
-    (d) => { d.datasets[1].id = d.datasets[0].id; },
+    (d) => { d.datasets.push({ ...d.datasets[0] }); },
     (d) => { d.datasets.pop(); },
     (d) => { d.datasets[0].notes = [7]; },
+    (d) => { d.datasets[0].signs[0].categories.pop(); },
+    (d) => { d.datasets[0].signs[0].categories = ['Objects', 'Objects']; },
+    (d) => { d.datasets[0].signs[0].test = 0; },
+    (d) => { d.datasets[0].signs[1] = { ...d.datasets[0].signs[0] }; },
+    (d) => { d.datasets[0].split_label_coverage.test = 3; },
   ];
   mutations.forEach((mutate, index) => {
     const data = snapshot(); mutate(data);
@@ -86,10 +97,10 @@ class Element {
 }
 
 function fixture(data) {
-  const selectors = ['json', 'source', 'search', 'sort', 'category', 'more', 'results', 'labels', 'categories', 'splits', 'total', 'label-count', 'category-count', 'title', 'notes', 'revision', 'repository'];
+  const selectors = ['json', 'search', 'sort', 'category', 'more', 'results', 'labels'];
   const nodes = Object.fromEntries(selectors.map((name) => [name, new Element()]));
   nodes.json.textContent = typeof data === 'string' ? data : JSON.stringify(data);
-  nodes.source.value = 'apple-vision'; nodes.sort.value = 'most'; nodes.category.value = 'all';
+  nodes.sort.value = 'most';
   nodes.labels.append(new Element('saved'));
   const root = { querySelector: (selector) => nodes[selector.match(/data-sign-counts-([^\]]+)/)?.[1]] || null };
   const doc = { createElement: (name) => new Element(name) };
@@ -101,19 +112,12 @@ function descendants(node) { return [node, ...node.children.flatMap(descendants)
 test('enhances verified data with accessible exact counts and fixed scales through search', () => {
   const { root, doc, nodes } = fixture(snapshot());
   assert.equal(initialise(root, doc), true);
-  assert.equal(nodes.source.disabled, false);
-  assert.equal(nodes.labels.children.length, 4);
-  assert.equal(nodes.categories.children.length, 3);
-  assert.equal(nodes.splits.children.length, 3);
-  const coverage = descendants(nodes.splits).filter((node) => node.attrs.class === 'count-coverage');
-  assert.deepEqual(coverage.map((node) => node.textContent), ['3 of 3 sign labels', '2 of 3 sign labels', '2 of 3 sign labels']);
-  assert.equal(nodes.total.textContent, '14');
-  assert.equal(nodes['label-count'].textContent, '3');
-  assert.equal(nodes.repository.attrs.href, 'https://huggingface.co/datasets/spsarolkar/AI4Bharat-INCLUDE-keypoints/tree/' + 'a'.repeat(40));
+  assert.equal(nodes.search.disabled, false);
+  assert.equal(nodes.labels.children.length, 3);
   nodes.search.value = 'Hello'; nodes.search.dispatch('input');
   assert.equal(nodes.labels.children.length, 1);
   const fills = descendants(nodes.labels).filter((node) => (node.attrs.class || '').includes('count-fill'));
-  assert.deepEqual(fills.map((node) => node.style.width), ['75%', '25%', '0%']);
+  assert.deepEqual(fills.map((node) => node.style.width), ['50%', (100 / 6) + '%', '0%']);
   assert.match(nodes.results.textContent, /1/);
 });
 
@@ -124,16 +128,18 @@ test('invalid JSON and counts preserve saved markup and leave controls disabled'
     const saved = nodes.labels.children[0];
     assert.equal(initialise(root, doc), false);
     assert.equal(nodes.labels.children[0], saved);
-    assert.equal(nodes.source.disabled, true);
+    assert.equal(nodes.search.disabled, true);
     assert.match(nodes.results.textContent, /saved|unavailable/i);
   }
 });
 
-test('expands the first twenty records, resets pagination on filters and updates source provenance', () => {
+test('expands the first twenty signs and resets pagination on filters', () => {
   const data = snapshot();
   data.datasets[0].labels = Array.from({ length: 25 }, (_, index) => ({ name: 'Sign ' + String(index).padStart(2, '0'), category: 'Words', train: 1, validation: 0, test: 1, total: 2 }));
   Object.assign(data.datasets[0], {
     total: 50, unique_labels: 25, splits: { train: 25, validation: 0, test: 25 },
+    split_label_coverage: { train: 25, validation: 0, test: 25 },
+    signs: data.datasets[0].labels.map(({ category, ...row }) => ({ ...row, categories: [category] })),
     categories: [{ name: 'Words', train: 25, validation: 0, test: 25, total: 50 }],
   });
   const { root, doc, nodes } = fixture(data);
@@ -148,20 +154,29 @@ test('expands the first twenty records, resets pagination on filters and updates
   assert.equal(nodes.more.hidden, true);
   nodes.search.value = ''; nodes.search.dispatch('input');
   assert.equal(nodes.labels.children.length, 20);
-  nodes.source.value = 'public-videos'; nodes.source.dispatch('change');
-  assert.equal(nodes.labels.children.length, 4);
-  assert.equal(nodes.total.textContent, '14');
-  assert.equal(nodes.title.textContent, 'Public video mirror');
-  assert.equal(nodes.repository.attrs.href, 'https://huggingface.co/datasets/spsarolkar/AI4Bharat-INCLUDE-dataset/tree/' + 'a'.repeat(40));
-  assert.equal(nodes.more.hidden, true);
 });
 
-test('treats source labels and notes as literal text, never source markup', () => {
+test('combines categories in the sign view and explains test coverage in a category with zero tests', () => {
+  const { root, doc, nodes } = fixture(snapshot());
+  assert.equal(initialise(root, doc), true);
+  nodes.search.value = 'Clock'; nodes.search.dispatch('input');
+  assert.equal(nodes.labels.children.length, 1);
+  const counts = () => descendants(nodes.labels).filter((node) => node.attrs.class === 'count-value').map((node) => node.textContent);
+  assert.deepEqual(counts(), ['6', '1', '1']);
+  nodes.category.value = 'Objects'; nodes.category.dispatch('change');
+  assert.deepEqual(counts(), ['2', '0', '0']);
+  assert.ok(descendants(nodes.labels).some((node) => node.textContent === '1 test clip across all categories'));
+  nodes.category.value = ''; nodes.category.dispatch('change');
+  assert.deepEqual(counts(), ['6', '1', '1']);
+});
+
+test('treats sign labels as literal text, never source markup', () => {
   const data = snapshot();
-  data.datasets[0].notes = ['<img src=x onerror=alert(1)>'];
+  const literal = '<img src=x onerror=alert(1)>';
+  data.datasets[0].labels[2].name = literal;
+  data.datasets[0].signs[1].name = literal;
   const { root, doc, nodes } = fixture(data);
   assert.equal(initialise(root, doc), true);
-  assert.equal(nodes.notes.children[0].textContent, data.datasets[0].notes[0]);
-  assert.equal(nodes.notes.children[0].children.length, 0);
+  assert.ok(descendants(nodes.labels).some((node) => node.textContent === literal && !node.children.length));
   assert.equal(descendants(nodes.labels).some((node) => Object.hasOwn(node, 'innerHTML')), false);
 });
